@@ -165,6 +165,56 @@
         max-width: 500px;
     }
 
+    /* === 她的影单 · 专栏 === */
+    .column-strip { margin: 0 0 56px; }
+    .column-head {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        padding-bottom: 16px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid var(--border);
+    }
+    .column-head .kicker {
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: var(--text-light);
+        text-transform: uppercase;
+    }
+    .column-head h3 {
+        font-family: var(--serif);
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+    }
+    .column-head p { font-size: 13px; color: var(--text-light); margin-left: auto; }
+    .column-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
+    }
+    .column-card {
+        display: flex;
+        background: var(--bg-light);
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s;
+    }
+    .column-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    .column-thumb {
+        width: 150px;
+        flex: 0 0 150px;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        display: block;
+    }
+    .column-body { padding: 16px 18px; display: flex; flex-direction: column; justify-content: center; }
+    .column-issue { font-size: 11px; letter-spacing: 1.4px; color: var(--text-light); margin-bottom: 6px; }
+    .column-title { font-family: var(--serif); font-size: 17px; font-weight: 700; line-height: 1.35; margin-bottom: 6px; }
+    .column-films { font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; }
+    .column-more { margin-top: 10px; font-size: 12px; color: var(--text); letter-spacing: 0.5px; }
+    .column-more::after { content: ' →'; }
+
     /* === Tabs === */
     .tabs {
         display: flex;
@@ -900,6 +950,10 @@
         <p>书籍、音乐、影视，那些打动我的美好事物。</p>
     </div>
 
+    <!-- 她的影单 · 专栏 -->
+    <div class="column-strip" id="filmColumns"></div>
+
+
     <div class="tabs">
         <button class="tab-btn active" onclick="switchShareTab('books')">书籍</button>
         <button class="tab-btn" onclick="switchShareTab('music')">音乐</button>
@@ -1381,6 +1435,40 @@ function renderFilms() {
         </div>
     `).join('') : '<div class="empty-state"><div class="empty-icon">🎬</div><div class="empty-text">暂无影视</div></div>';
 }
+
+// ═══ 她的影单 · 专栏（每期加一条即可）═══
+const FILM_COLUMNS = [
+    {
+        issue: '第 001 期',
+        date: '2026.10.17',
+        title: '她的名字，她自己写',
+        films: '《钢琴课》×《82年生的金智英》',
+        img: 'https://image.tmdb.org/t/p/w780/hUf0DUvEHAAERi5tEuxsYcACK9m.jpg',
+        url: './issue-001/'
+    }
+];
+function renderFilmColumns() {
+    const box = document.getElementById('filmColumns');
+    if (!box || !FILM_COLUMNS.length) return;
+    box.innerHTML = `
+        <div class="column-head">
+            <span class="kicker">Column</span>
+            <h3>她的影单</h3>
+            <p>每期两部电影，慢慢攒着看。</p>
+        </div>
+        <div class="column-cards">${FILM_COLUMNS.map(c => `
+            <a class="column-card" href="${c.url}">
+                <img class="column-thumb" src="${c.img}" alt="${c.films}" loading="lazy">
+                <div class="column-body">
+                    <div class="column-issue">${c.issue} · ${c.date}</div>
+                    <div class="column-title">${c.title}</div>
+                    <div class="column-films">${c.films}</div>
+                    <span class="column-more">阅读本期</span>
+                </div>
+            </a>`).join('')}
+        </div>`;
+}
+renderFilmColumns();
 
 // ═══ Form System ═══
 let formMode = 'add', formKey = '', formEditId = null, formUploadImgs = [], formDataKey = '';
