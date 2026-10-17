@@ -76,13 +76,23 @@
     .cover-title { font-size:21px; }
     .bar-in { padding:10px 14px; font-size:12px; }
   }
+  .bar-in { align-items:center; }
+  .home-btn {
+    display:inline-flex; align-items:center; gap:5px;
+    padding:5px 13px; border:1px solid #e0cba4; border-radius:999px;
+    font-size:12px; letter-spacing:.04em; color:#7e202c; background:#fdfaf4;
+    text-decoration:none; white-space:nowrap; transition:background .2s, border-color .2s;
+  }
+  .home-btn:hover { background:#f7ead8; border-color:#cba660; }
+  @media (max-width:560px) { .bar-brand { display:none; } }
 </style>
 </head>
 <body id="top">
 
 <div class="bar">
   <div class="bar-in">
-    <b>草 莓 味 口 气 · 她 的 影 单</b>
+    <a class="home-btn" href="https://ouyangmingyue060-ship-it.github.io/">← 主页</a>
+    <b class="bar-brand">草 莓 味 口 气 · 她 的 影 单</b>
     <span>第 001 期 · 2026 年 10 月 17 日</span>
   </div>
 </div>
