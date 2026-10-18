@@ -143,11 +143,12 @@
 
 
   /* ---------- 背景飘落皇冠（全站通用，纯装饰） ---------- */
-  /* 皇冠层是负 z-index，而 body 背景绘制在它之上 —— 底色必须交给 html，
-     body 透明，否则整层会被 body 背景整块盖住（2026-10-19 实测）。 */
+  /* 层叠：皇冠 z-index:0（在 body 底色之上），正文各容器 z-index:1（在皇冠之上）。
+     负 z-index 会被 body 背景整块盖住，所以底色交给 html、body 透明。 */
   html { background:#faf7f2; }
   body { background-color:transparent !important; }
-  .crowns { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:-1; }
+  .crowns { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:0; }
+  .crowns ~ *:not(.totop) { position:relative; z-index:1; }
   .crowns i { position:absolute; top:-10vh; aspect-ratio:1; display:block;
     background:url(/assets/badge-96.png) center/contain no-repeat;
     animation-name:fall; animation-timing-function:linear; animation-iteration-count:infinite;
