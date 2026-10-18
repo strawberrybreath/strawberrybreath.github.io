@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>草莓味口气 · 她的影单</title>
-<meta name="description" content="草莓味口气的电影分享栏目：每期两部电影，主角大多是女人——她们怎么选、怎么活。不剧透，也不替你做结论。">
+<meta name="description" content="草莓味口气 · 她的影单：一份女性主义的观影清单，每周末更新两部。挑的都是自己拿主意的女人，讲这片子到底在说什么。">
 <meta name="theme-color" content="#7e202c">
 <link rel="icon" href="/assets/favicon.png" sizes="64x64">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="草莓味口气 · 她的影单">
 <meta property="og:title" content="草莓味口气 · 她的影单">
-<meta property="og:description" content="每期两部电影，慢慢攒着看。">
+<meta property="og:description" content="一份女性主义的观影清单：挑的都是自己拿主意的女人，每周末更新两部。">
 <meta property="og:image" content="https://strawberrybreath.github.io/assets/column-cover.jpg">
 <meta property="og:url" content="https://strawberrybreath.github.io/">
 <link rel="canonical" href="https://strawberrybreath.github.io/">
@@ -143,6 +143,10 @@
 
 
   /* ---------- 背景飘落皇冠（全站通用，纯装饰） ---------- */
+  /* 皇冠层是负 z-index，而 body 背景绘制在它之上 —— 底色必须交给 html，
+     body 透明，否则整层会被 body 背景整块盖住（2026-10-19 实测）。 */
+  html { background:#faf7f2; }
+  body { background-color:transparent !important; }
   .crowns { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:-1; }
   .crowns i { position:absolute; top:-10vh; aspect-ratio:1; display:block;
     background:url(/assets/badge-96.png) center/contain no-repeat;
@@ -158,7 +162,7 @@
 </head>
 <body>
 
-<div class="crowns" aria-hidden="true"><i style="left:85.68%;width:18px;opacity:0.3;animation-duration:20.6s;animation-delay:-28.1s;--dx:10px"></i><i style="left:50.23%;width:28px;opacity:0.3;animation-duration:27.1s;animation-delay:-5.0s;--dx:-41px"></i><i style="left:61.75%;width:20px;opacity:0.3;animation-duration:24.1s;animation-delay:-4.5s;--dx:-25px"></i><i style="left:73.17%;width:28px;opacity:0.3;animation-duration:28.9s;animation-delay:-22.8s;--dx:-32px"></i><i style="left:89.76%;width:16px;opacity:0.3;animation-duration:17.1s;animation-delay:-6.3s;--dx:-20px"></i><i style="left:60.69%;width:18px;opacity:0.3;animation-duration:28.3s;animation-delay:-15.0s;--dx:46px"></i><i style="left:9.64%;width:32px;opacity:0.3;animation-duration:22.8s;animation-delay:-5.4s;--dx:23px"></i><i style="left:10.23%;width:18px;opacity:0.3;animation-duration:27.0s;animation-delay:-11.2s;--dx:-43px"></i><i style="left:56.81%;width:16px;opacity:0.3;animation-duration:20.7s;animation-delay:-1.2s;--dx:-34px"></i><i style="left:90.23%;width:16px;opacity:0.3;animation-duration:23.9s;animation-delay:-27.6s;--dx:10px"></i><i style="left:51.80%;width:32px;opacity:0.3;animation-duration:22.6s;animation-delay:-14.6s;--dx:7px"></i><i style="left:51.91%;width:16px;opacity:0.3;animation-duration:26.5s;animation-delay:-1.6s;--dx:25px"></i><i style="left:67.73%;width:18px;opacity:0.3;animation-duration:18.8s;animation-delay:-0.5s;--dx:-31px"></i><i style="left:52.38%;width:20px;opacity:0.3;animation-duration:21.7s;animation-delay:-24.0s;--dx:-47px"></i><i style="left:37.43%;width:32px;opacity:0.3;animation-duration:22.3s;animation-delay:-6.8s;--dx:27px"></i><i style="left:7.62%;width:18px;opacity:0.3;animation-duration:27.7s;animation-delay:-24.3s;--dx:30px"></i></div>
+<div class="crowns" aria-hidden="true"><i style="left:85.68%;width:18px;opacity:1.0;animation-duration:20.6s;animation-delay:-28.1s;--dx:10px"></i><i style="left:50.23%;width:28px;opacity:1.0;animation-duration:27.1s;animation-delay:-5.0s;--dx:-41px"></i><i style="left:61.75%;width:20px;opacity:1.0;animation-duration:24.1s;animation-delay:-4.5s;--dx:-25px"></i><i style="left:73.17%;width:28px;opacity:1.0;animation-duration:28.9s;animation-delay:-22.8s;--dx:-32px"></i><i style="left:89.76%;width:16px;opacity:1.0;animation-duration:17.1s;animation-delay:-6.3s;--dx:-20px"></i><i style="left:60.69%;width:18px;opacity:1.0;animation-duration:28.3s;animation-delay:-15.0s;--dx:46px"></i><i style="left:9.64%;width:32px;opacity:1.0;animation-duration:22.8s;animation-delay:-5.4s;--dx:23px"></i><i style="left:10.23%;width:18px;opacity:1.0;animation-duration:27.0s;animation-delay:-11.2s;--dx:-43px"></i><i style="left:56.81%;width:16px;opacity:1.0;animation-duration:20.7s;animation-delay:-1.2s;--dx:-34px"></i><i style="left:90.23%;width:16px;opacity:1.0;animation-duration:23.9s;animation-delay:-27.6s;--dx:10px"></i><i style="left:51.80%;width:32px;opacity:1.0;animation-duration:22.6s;animation-delay:-14.6s;--dx:7px"></i><i style="left:51.91%;width:16px;opacity:1.0;animation-duration:26.5s;animation-delay:-1.6s;--dx:25px"></i><i style="left:67.73%;width:18px;opacity:1.0;animation-duration:18.8s;animation-delay:-0.5s;--dx:-31px"></i><i style="left:52.38%;width:20px;opacity:1.0;animation-duration:21.7s;animation-delay:-24.0s;--dx:-47px"></i><i style="left:37.43%;width:32px;opacity:1.0;animation-duration:22.3s;animation-delay:-6.8s;--dx:27px"></i><i style="left:7.62%;width:18px;opacity:1.0;animation-duration:27.7s;animation-delay:-24.3s;--dx:30px"></i></div>
 <div class="bar">
   <div class="bar-in">
     <a class="brand" href="./">草 莓 味 口 气</a>
@@ -174,7 +178,7 @@
   <div class="en">Her Film List</div>
   <h1>她的影单</h1>
   <p class="lead">两部电影，慢慢攒着看。这里不评片，只把那些让我心里一亮的女人记下来——她们怎么选、怎么活，怎么把日子过成自己的。</p>
-  <p class="lead">每期两部，不剧透，也不替你做结论。</p>
+  <p class="lead">每周末更新，每期两部；不剧透，也不替你做结论。</p>
   <svg class="orn" viewBox="0 0 236 26" aria-hidden="true">
     <line x1="0" y1="13" x2="72" y2="13" stroke="#e2d7bd" stroke-width="1"/>
     <line x1="164" y1="13" x2="236" y2="13" stroke="#e2d7bd" stroke-width="1"/>
