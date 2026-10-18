@@ -149,10 +149,20 @@
   body { background-color:transparent !important; }
   .crowns { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:0; }
   .crowns ~ *:not(.totop) { position:relative; z-index:1; }
-  .crowns i { position:absolute; top:-10vh; aspect-ratio:1; display:block;
+  .crowns i { position:absolute; top:-10vh; aspect-ratio:1; display:block; width:var(--w);
     background:url(/assets/badge-96.png) center/contain no-repeat;
     animation-name:fall; animation-timing-function:linear; animation-iteration-count:infinite;
     will-change:transform; }
+  /* 只沿文字栏两侧飘：中间留 --edge*2 的空白（左路易斯侧还要再扣掉自身宽度）
+     —— 皇冠用 left:50% + margin 定位，并用 .l / .r 区分左右。 */
+  .crowns { --edge:262px; --band:170px; }
+  .crowns i.l { left:50%;
+    margin-left:calc(-1 * (var(--edge) + var(--k) * var(--band) + var(--w))); }
+  .crowns i.r { left:50%;
+    margin-left:calc(var(--edge) + var(--k) * var(--band)); }
+  @media (max-width:1080px) { .crowns { --edge:186px; --band:110px; } }
+  @media (max-width:860px) {       /* 窄屏没有留白空间，恢复全宽飘落 */
+    .crowns i.l, .crowns i.r { left:calc(var(--k) * 97% + 1%); margin-left:0; } }
   @keyframes fall {
     0%   { transform:translate3d(0,-12vh,0) rotate(-14deg); }
     100% { transform:translate3d(var(--dx,0px),114vh,0) rotate(26deg); }
@@ -163,7 +173,7 @@
 </head>
 <body>
 
-<div class="crowns" aria-hidden="true"><i style="left:85.68%;width:18px;opacity:1.0;animation-duration:20.6s;animation-delay:-28.1s;--dx:10px"></i><i style="left:50.23%;width:28px;opacity:1.0;animation-duration:27.1s;animation-delay:-5.0s;--dx:-41px"></i><i style="left:61.75%;width:20px;opacity:1.0;animation-duration:24.1s;animation-delay:-4.5s;--dx:-25px"></i><i style="left:73.17%;width:28px;opacity:1.0;animation-duration:28.9s;animation-delay:-22.8s;--dx:-32px"></i><i style="left:89.76%;width:16px;opacity:1.0;animation-duration:17.1s;animation-delay:-6.3s;--dx:-20px"></i><i style="left:60.69%;width:18px;opacity:1.0;animation-duration:28.3s;animation-delay:-15.0s;--dx:46px"></i><i style="left:9.64%;width:32px;opacity:1.0;animation-duration:22.8s;animation-delay:-5.4s;--dx:23px"></i><i style="left:10.23%;width:18px;opacity:1.0;animation-duration:27.0s;animation-delay:-11.2s;--dx:-43px"></i><i style="left:56.81%;width:16px;opacity:1.0;animation-duration:20.7s;animation-delay:-1.2s;--dx:-34px"></i><i style="left:90.23%;width:16px;opacity:1.0;animation-duration:23.9s;animation-delay:-27.6s;--dx:10px"></i><i style="left:51.80%;width:32px;opacity:1.0;animation-duration:22.6s;animation-delay:-14.6s;--dx:7px"></i><i style="left:51.91%;width:16px;opacity:1.0;animation-duration:26.5s;animation-delay:-1.6s;--dx:25px"></i><i style="left:67.73%;width:18px;opacity:1.0;animation-duration:18.8s;animation-delay:-0.5s;--dx:-31px"></i><i style="left:52.38%;width:20px;opacity:1.0;animation-duration:21.7s;animation-delay:-24.0s;--dx:-47px"></i><i style="left:37.43%;width:32px;opacity:1.0;animation-duration:22.3s;animation-delay:-6.8s;--dx:27px"></i><i style="left:7.62%;width:18px;opacity:1.0;animation-duration:27.7s;animation-delay:-24.3s;--dx:30px"></i></div>
+<div class="crowns" aria-hidden="true"><i class="l" style="--k:0.092;--w:18px;opacity:1.0;animation-duration:22.4s;animation-delay:-1.4s;--dx:-34px"></i><i class="r" style="--k:0.629;--w:18px;opacity:1.0;animation-duration:19.6s;animation-delay:-0.5s;--dx:-25px"></i><i class="r" style="--k:0.925;--w:32px;opacity:1.0;animation-duration:19.4s;animation-delay:-6.1s;--dx:33px"></i><i class="l" style="--k:0.795;--w:16px;opacity:1.0;animation-duration:19.1s;animation-delay:-7.4s;--dx:-21px"></i><i class="r" style="--k:0.884;--w:28px;opacity:1.0;animation-duration:17.4s;animation-delay:-2.8s;--dx:14px"></i><i class="r" style="--k:0.570;--w:16px;opacity:1.0;animation-duration:25.6s;animation-delay:-6.4s;--dx:32px"></i><i class="r" style="--k:0.581;--w:28px;opacity:1.0;animation-duration:16.5s;animation-delay:-13.6s;--dx:43px"></i><i class="r" style="--k:0.124;--w:16px;opacity:1.0;animation-duration:16.8s;animation-delay:-8.7s;--dx:10px"></i><i class="l" style="--k:0.988;--w:28px;opacity:1.0;animation-duration:22.6s;animation-delay:-14.6s;--dx:7px"></i><i class="l" style="--k:0.756;--w:28px;opacity:1.0;animation-duration:29.3s;animation-delay:-12.8s;--dx:-23px"></i><i class="r" style="--k:0.051;--w:18px;opacity:1.0;animation-duration:23.3s;animation-delay:-20.8s;--dx:-23px"></i><i class="r" style="--k:0.393;--w:16px;opacity:1.0;animation-duration:25.8s;animation-delay:-23.9s;--dx:-34px"></i><i class="l" style="--k:0.908;--w:28px;opacity:1.0;animation-duration:27.7s;animation-delay:-24.3s;--dx:30px"></i><i class="r" style="--k:0.695;--w:16px;opacity:1.0;animation-duration:24.0s;animation-delay:-23.5s;--dx:17px"></i><i class="l" style="--k:0.968;--w:24px;opacity:1.0;animation-duration:22.4s;animation-delay:-24.4s;--dx:22px"></i><i class="r" style="--k:0.485;--w:20px;opacity:1.0;animation-duration:27.2s;animation-delay:-27.7s;--dx:-19px"></i></div>
 <div class="bar">
   <div class="bar-in">
     <a class="brand" href="./">草 莓 味 口 气</a>
