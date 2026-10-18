@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>关于「她的影单」｜一份女性主义的观影清单 · 草莓味口气</title>
-<meta name="description" content="「她的影单」是一份女性主义的观影清单：只推荐那些自己拿主意的女人，不追新、不卖惨，每期两部，看完手里得有东西。">
+<meta name="description" content="「她的影单」是一份女性主义的观影清单：挑的都是自己拿主意的女人，每周末更新两部，讲这片子到底在说什么，也说它跟现在的日子有什么关系。">
 <meta name="author" content="草莓味口气">
 <meta name="theme-color" content="#7e202c">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="草莓味口气 · 她的影单">
 <meta property="og:title" content="关于「她的影单」｜一份女性主义的观影清单">
-<meta property="og:description" content="「她的影单」是一份女性主义的观影清单：只推荐那些自己拿主意的女人，不追新、不卖惨，每期两部，看完手里得有东西。">
+<meta property="og:description" content="「她的影单」是一份女性主义的观影清单：挑的都是自己拿主意的女人，每周末更新两部，讲这片子到底在说什么，也说它跟现在的日子有什么关系。">
 <meta property="og:image" content="https://strawberrybreath.github.io/assets/column-cover.jpg">
 <meta property="og:url" content="https://strawberrybreath.github.io/about/">
 <meta property="article:published_time" content="2026-10-18">
@@ -79,6 +79,26 @@
     transition:opacity .8s cubic-bezier(.22,.7,.3,1),
                transform .8s cubic-bezier(.22,.7,.3,1); }
   .js .read > .in { opacity:1; transform:none; }
+
+  /* ── 正文排印：正文有内联样式，这里统一压一层，层级用 CLASSLIST 区分 ── */
+  .read { font-family:"PingFang SC","HarmonyOS Sans SC","Hiragino Sans GB",
+    "Noto Sans CJK SC","Microsoft YaHei",sans-serif; }
+  .read > section:not([data-site]) > p {
+    font-size:16.5px !important; line-height:1.98 !important;
+    margin:0 0 20px !important; color:#33333a; }
+  .read > section:not([data-site]) > p:last-child { margin-bottom:0 !important; }
+  /* 点题卡：略小半号、行更松 */
+  .read section[data-note] > p { font-size:16px !important; line-height:2.05 !important;
+    color:#45454e !important; }
+  /* 网址卡三行各归各位 */
+  .read section[data-site] > p:nth-child(2) { font-size:13.5px !important; line-height:1.9 !important; }
+  .read section[data-site] > p:nth-child(3) { font-size:16.5px !important; letter-spacing:.02em; }
+  .read section[data-site] > p:nth-child(4) { font-size:11.5px !important; }
+  /* 分节标题（web_post 已语义化为 h3.sec-h）：宋体，与正文拉开字体层级 */
+  .read h3.sec-h {
+    font-family:"Songti SC","Songti TC",STSong,serif;
+    font-size:18.5px; font-weight:600; letter-spacing:.05em; }
+  .read b { font-weight:600; }
 
   /* ── 分节两侧短金线：随该块浮现时向两边展开 ── */
   .js .read > section > span:first-child,
@@ -175,6 +195,10 @@
   /* ---------- 背景飘落皇冠（全站共用，见 crowns.py） ---------- */
 
   /* ---------- 背景飘落皇冠（全站通用，纯装饰） ---------- */
+  /* 皇冠层是负 z-index，而 body 背景绘制在它之上 —— 底色必须交给 html，
+     body 透明，否则整层会被 body 背景整块盖住（2026-10-19 实测）。 */
+  html { background:#faf7f2; }
+  body { background-color:transparent !important; }
   .crowns { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:-1; }
   .crowns i { position:absolute; top:-10vh; aspect-ratio:1; display:block;
     background:url(/assets/badge-96.png) center/contain no-repeat;
@@ -191,7 +215,7 @@
 <body id="top">
 
 <div class="prog" aria-hidden="true"></div>
-<div class="crowns" aria-hidden="true"><i style="left:85.68%;width:18px;opacity:0.3;animation-duration:20.6s;animation-delay:-28.1s;--dx:10px"></i><i style="left:50.23%;width:28px;opacity:0.3;animation-duration:27.1s;animation-delay:-5.0s;--dx:-41px"></i><i style="left:61.75%;width:20px;opacity:0.3;animation-duration:24.1s;animation-delay:-4.5s;--dx:-25px"></i><i style="left:73.17%;width:28px;opacity:0.3;animation-duration:28.9s;animation-delay:-22.8s;--dx:-32px"></i><i style="left:89.76%;width:16px;opacity:0.3;animation-duration:17.1s;animation-delay:-6.3s;--dx:-20px"></i><i style="left:60.69%;width:18px;opacity:0.3;animation-duration:28.3s;animation-delay:-15.0s;--dx:46px"></i><i style="left:9.64%;width:32px;opacity:0.3;animation-duration:22.8s;animation-delay:-5.4s;--dx:23px"></i><i style="left:10.23%;width:18px;opacity:0.3;animation-duration:27.0s;animation-delay:-11.2s;--dx:-43px"></i><i style="left:56.81%;width:16px;opacity:0.3;animation-duration:20.7s;animation-delay:-1.2s;--dx:-34px"></i><i style="left:90.23%;width:16px;opacity:0.3;animation-duration:23.9s;animation-delay:-27.6s;--dx:10px"></i><i style="left:51.80%;width:32px;opacity:0.3;animation-duration:22.6s;animation-delay:-14.6s;--dx:7px"></i><i style="left:51.91%;width:16px;opacity:0.3;animation-duration:26.5s;animation-delay:-1.6s;--dx:25px"></i><i style="left:67.73%;width:18px;opacity:0.3;animation-duration:18.8s;animation-delay:-0.5s;--dx:-31px"></i><i style="left:52.38%;width:20px;opacity:0.3;animation-duration:21.7s;animation-delay:-24.0s;--dx:-47px"></i><i style="left:37.43%;width:32px;opacity:0.3;animation-duration:22.3s;animation-delay:-6.8s;--dx:27px"></i><i style="left:7.62%;width:18px;opacity:0.3;animation-duration:27.7s;animation-delay:-24.3s;--dx:30px"></i></div>
+<div class="crowns" aria-hidden="true"><i style="left:85.68%;width:18px;opacity:1.0;animation-duration:20.6s;animation-delay:-28.1s;--dx:10px"></i><i style="left:50.23%;width:28px;opacity:1.0;animation-duration:27.1s;animation-delay:-5.0s;--dx:-41px"></i><i style="left:61.75%;width:20px;opacity:1.0;animation-duration:24.1s;animation-delay:-4.5s;--dx:-25px"></i><i style="left:73.17%;width:28px;opacity:1.0;animation-duration:28.9s;animation-delay:-22.8s;--dx:-32px"></i><i style="left:89.76%;width:16px;opacity:1.0;animation-duration:17.1s;animation-delay:-6.3s;--dx:-20px"></i><i style="left:60.69%;width:18px;opacity:1.0;animation-duration:28.3s;animation-delay:-15.0s;--dx:46px"></i><i style="left:9.64%;width:32px;opacity:1.0;animation-duration:22.8s;animation-delay:-5.4s;--dx:23px"></i><i style="left:10.23%;width:18px;opacity:1.0;animation-duration:27.0s;animation-delay:-11.2s;--dx:-43px"></i><i style="left:56.81%;width:16px;opacity:1.0;animation-duration:20.7s;animation-delay:-1.2s;--dx:-34px"></i><i style="left:90.23%;width:16px;opacity:1.0;animation-duration:23.9s;animation-delay:-27.6s;--dx:10px"></i><i style="left:51.80%;width:32px;opacity:1.0;animation-duration:22.6s;animation-delay:-14.6s;--dx:7px"></i><i style="left:51.91%;width:16px;opacity:1.0;animation-duration:26.5s;animation-delay:-1.6s;--dx:25px"></i><i style="left:67.73%;width:18px;opacity:1.0;animation-duration:18.8s;animation-delay:-0.5s;--dx:-31px"></i><i style="left:52.38%;width:20px;opacity:1.0;animation-duration:21.7s;animation-delay:-24.0s;--dx:-47px"></i><i style="left:37.43%;width:32px;opacity:1.0;animation-duration:22.3s;animation-delay:-6.8s;--dx:27px"></i><i style="left:7.62%;width:18px;opacity:1.0;animation-duration:27.7s;animation-delay:-24.3s;--dx:30px"></i></div>
 
 
 <div class="bar">
@@ -226,7 +250,7 @@
   </section>
 
   <!-- 点题卡 -->
-  <section style="border-left:3px solid #b23a48;background:#faf8f5;border-radius:0 10px 10px 0;padding:15px 18px;margin-bottom:24px;">
+  <section data-note="1" style="border-left:3px solid #b23a48;background:#faf8f5;border-radius:0 10px 10px 0;padding:15px 18px;margin-bottom:24px;">
     <p style="margin:0;font-size:15.5px;color:#3a3a40;line-height:1.9;">
       这个栏目的起点很小。有阵子我重看老片子，才发现一件事：屏幕上女人是有的，但多数待在别人的故事里——真正轮到她自己拿主意的那一刻，很少。后来我专挑「她说了算」的那类片去找，本来以为没几部，结果越翻越多，还一部比一部好看。真正让我心里一动的是另一件事：看了一阵子以后，我自己有点不一样了——以前那些忍一忍就过去的时刻，<b style="color:#7e202c;">现在我能叫出它的名字</b>。把它们一部一部排出来，每周末两部，就是我现在想做的事。
     </p>
@@ -279,7 +303,7 @@
 
 <footer class="foot">
   <div style="max-width:677px;margin:0 auto;">
-    <p>「她的影单」是一份女性主义的观影清单，每周末更新，每期两部公认经典。本页为栏目介绍。</p>
+    <p>「她的影单」是一份女性主义的观影清单，每周末更新，每期两部。本页为栏目介绍。</p>
     <p>封面与配图版权归各出品方所有，本站只做影片推荐之引用。</p>
     <p>本站只做影片推荐：不提供、不存放、不代传任何影片文件。请通过正版渠道观看，并遵守当地法律法规。</p>
     <p>草莓味口气的分享 · <a href="https://strawberrybreath.github.io/">返回主页</a>　<a class="top" href="#top">回到顶部 ↑</a></p>
