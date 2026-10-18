@@ -93,7 +93,10 @@
   /* 导语（首段）：宋体、大一号，像杂志开篇 */
   .read p.lead-in { font-family:var(--f-serif) !important; font-size:18px !important;
     line-height:1.95 !important; color:#2b2b2f !important; letter-spacing:.01em; }
-  /* 点题卡：略小半号、行更松 */
+  /* 点题卡：略小半号、行更松；底色在白页上比公众号里再压深一点，才看得出是一张卡 */
+  .read section[data-note] { background:#f8f1e6 !important;
+    padding:20px 22px 20px 20px !important; margin:6px 0 28px !important;
+    border-radius:0 12px 12px 0; }
   .read section[data-note] > p { font-size:16px !important; line-height:2.05 !important;
     color:#45454e !important; }
   /* 网址卡三行各归各位 */
@@ -284,7 +287,7 @@
 
   <!-- 导语 -->
   <section style="margin-bottom:14px;">
-    <p class="lead-in" style="margin:0 0 12px;font-size:16px;color:#3a3a40;line-height:1.9;">恭喜你，发现了这个小栏目。这篇不放片子，只想跟你聊聊「她的影单」是怎么来的，也说说我为什么想做一件跟女性主义有关的事。每周末更新，<span style="white-space:nowrap;">合口味就关注一下，周末见～</span></p>
+    <p class="lead-in" style="margin:0 0 12px;font-size:16px;color:#3a3a40;line-height:1.9;">恭喜你，发现了这个小栏目。这篇不放片子，只想跟你聊聊「她的影单」是怎么来的，也说说我为什么想做一件跟女性主义有关的事。每周末更新，合口味就关注一下，周末见～</p>
   </section>
 
   <!-- 点题卡 -->
