@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="草莓味口气 · 她的影单">
 <meta property="og:title" content="草莓味口气 · 她的影单">
 <meta property="og:description" content="每期两部电影，慢慢攒着看。">
-<meta property="og:image" content="https://image.tmdb.org/t/p/w780/hUf0DUvEHAAERi5tEuxsYcACK9m.jpg">
+<meta property="og:image" content="https://strawberrybreath.github.io/assets/column-cover.jpg">
 <meta property="og:url" content="https://strawberrybreath.github.io/">
 <link rel="canonical" href="https://strawberrybreath.github.io/">
 <style>
@@ -44,7 +44,7 @@
   .nav a:hover { color:var(--wine); }
 
   /* ── 首屏 ── */
-  .hero { max-width:920px; margin:0 auto; padding:74px 24px 54px; text-align:center; }
+  .hero { max-width:920px; margin:0 auto; padding:62px 24px 40px; text-align:center; }
   .hero h1 { font-family:"Songti SC","Songti TC",STSong,serif; font-size:56px;
     line-height:1.25; color:var(--wine); margin:16px 0 10px; letter-spacing:.06em; font-weight:700; }
   .hero .en { font-size:12.5px; letter-spacing:.34em; color:var(--gold-deep); text-transform:uppercase; }
@@ -76,6 +76,24 @@
   .issue-more { margin-top:16px; font-size:12.5px; color:var(--wine); letter-spacing:.06em; }
   .issue-more::after { content:" →"; }
 
+  /* ── 置顶：栏目介绍 ── */
+  .pinned { max-width:920px; margin:0 auto; padding:0 24px 52px; }
+  .pin { display:grid; grid-template-columns:440px 1fr; background:var(--card);
+    border:1px solid #ecdcdd; border-radius:6px; overflow:hidden;
+    box-shadow:0 18px 44px -30px rgba(126,32,44,.5);
+    transition:transform .3s ease, box-shadow .3s ease; }
+  .pin:hover { transform:translateY(-3px); box-shadow:0 22px 48px -28px rgba(126,32,44,.62); }
+  .pin-cover { background:#2a1418; }
+  .pin-cover img { width:100%; height:100%; min-height:212px; object-fit:cover; display:block; }
+  .pin-body { padding:28px 32px; display:flex; flex-direction:column; justify-content:center; }
+  .pin-tag { align-self:flex-start; font-size:11.5px; letter-spacing:.2em; color:#fff;
+    background:var(--wine); border-radius:999px; padding:3px 11px; margin-bottom:13px; }
+  .pin-title { font-family:"Songti SC","Songti TC",STSong,serif; font-size:25px; font-weight:700;
+    color:var(--ink); margin:0 0 10px; letter-spacing:.02em; }
+  .pin-text { margin:0; font-size:14px; color:var(--muted); line-height:1.85; }
+  .pin-more { margin-top:18px; font-size:13px; color:var(--wine); letter-spacing:.06em; }
+  .pin-more::after { content:" →"; }
+
   /* ── 关于 ── */
   .about { background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
     padding:64px 0 68px; margin-top:8px; }
@@ -105,8 +123,13 @@
     .bar-in { padding:11px 16px; }
     .nav { gap:16px; font-size:12px; }
     .brand { font-size:11px; letter-spacing:.16em; }
-    .hero { padding:52px 20px 40px; }
+    .hero { padding:48px 20px 30px; }
     .hero h1 { font-size:38px; }
+    .pinned { padding:0 20px 40px; }
+    .pin { grid-template-columns:1fr; }
+    .pin-cover img { min-height:0; max-height:none; height:auto; }
+    .pin-body { padding:22px 20px 24px; }
+    .pin-title { font-size:22px; }
     .issue { grid-template-columns:1fr; }
     .issue-thumb img { min-height:180px; max-height:210px; }
     .issue-body { padding:20px 20px 22px; }
@@ -170,38 +193,21 @@
 </header>
 
 <main>
-  <section class="sec" id="issues">
-    <div class="sec-head">
-      <h2>往 期</h2>
-      <span class="line"></span>
-    </div>
-    <div class="issues">
-      <a class="issue" href="./issue-002/">
-        <div class="issue-thumb">
-          <img src="https://image.tmdb.org/t/p/w780/5U8iWkB5qdPzpNcy79goKBwlxrL.jpg" alt="《喜福会》×《伯德小姐》" loading="lazy">
-        </div>
-        <div class="issue-body">
-          <div class="issue-meta">第 002 期 · 2026.10.18</div>
-          <h3 class="issue-title">她先成为自己</h3>
-          <div class="issue-films">《喜福会》×《伯德小姐》</div>
-          <p class="issue-quote">把别人写好的剧本拿过来，自己改。</p>
-          <span class="issue-more">阅读本期</span>
-        </div>
-      </a>
-      <a class="issue" href="./issue-001/">
-        <div class="issue-thumb">
-          <img src="https://image.tmdb.org/t/p/w780/hUf0DUvEHAAERi5tEuxsYcACK9m.jpg" alt="《钢琴课》×《82年生的金智英》" loading="lazy">
-        </div>
-        <div class="issue-body">
-          <div class="issue-meta">第 001 期 · 2026.10.17</div>
-          <h3 class="issue-title">她的名字，她自己写</h3>
-          <div class="issue-films">《钢琴课》×《82年生的金智英》</div>
-          <p class="issue-quote">一个把话弹进琴声里，一个把话咽进日子里。</p>
-          <span class="issue-more">阅读本期</span>
-        </div>
-      </a>
-    </div>
+  <section class="pinned">
+    <a class="pin" href="./about/">
+      <div class="pin-cover">
+        <img src="./assets/column-cover.jpg" alt="她的影单 · 栏目介绍封面" />
+      </div>
+      <div class="pin-body">
+        <span class="pin-tag">关 于 本 栏</span>
+        <h3 class="pin-title">她的影单是怎么来的</h3>
+        <p class="pin-text">这篇不放片子，只想聊聊为什么要做一份女性主义的观影清单：我挑片的三条规矩、每期你会拿到什么，以及多看这类作品，人会慢慢变的那一点。</p>
+        <span class="pin-more">读一读</span>
+      </div>
+    </a>
   </section>
+
+
 
   <section class="about" id="about">
     <div class="inner">
