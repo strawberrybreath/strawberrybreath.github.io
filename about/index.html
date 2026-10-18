@@ -28,12 +28,15 @@
   "inLanguage":"zh-CN"}
 </script>
 <style>
-  :root { --wine:#7e202c; --gold:#9a7b3f; --ink:#2b2b2f; --paper:#faf7f2; --line:#e8e0d4; }
+  :root { --wine:#7e202c; --gold:#9a7b3f; --ink:#2b2b2f; --paper:#faf7f2; --line:#e8e0d4;
+    --f-serif:"Songti SC","Songti TC","Source Han Serif SC","Noto Serif CJK SC",STSong,Georgia,serif;
+    --f-sans:"PingFang SC","HarmonyOS Sans SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+    --f-latin:Georgia,"Times New Roman","Songti SC",serif; }
   * { box-sizing:border-box; }
   html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
   body {
     margin:0; background:var(--paper); color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Songti SC",serif;
+    font-family:var(--f-sans);
     -webkit-font-smoothing:antialiased;
   }
   ::selection { background:rgba(126,32,44,.14); }
@@ -45,7 +48,7 @@
   .bar-in { max-width:760px; margin:0 auto; padding:11px 20px; display:flex;
     align-items:baseline; justify-content:space-between; gap:12px;
     font-size:12.5px; letter-spacing:.02em; color:#5f574c; }
-  .bar-in b { color:var(--wine); font-weight:600; letter-spacing:.14em; }
+  .bar-in b { font-family:var(--f-serif); color:var(--wine); font-weight:600; letter-spacing:.18em; }
   .bar-in span { white-space:nowrap; }
   .bar-in a { text-decoration:none; color:#5f574c; padding:10px 0; display:inline-block; }
   .bar-in a.home { padding:10px 12px; margin:-10px 0; border-radius:999px; }
@@ -87,6 +90,9 @@
     font-size:16.5px !important; line-height:1.98 !important;
     margin:0 0 20px !important; color:#33333a; }
   .read > section:not([data-site]) > p:last-child { margin-bottom:0 !important; }
+  /* 导语（首段）：宋体、大一号，像杂志开篇 */
+  .read p.lead-in { font-family:var(--f-serif) !important; font-size:18px !important;
+    line-height:1.95 !important; color:#2b2b2f !important; letter-spacing:.01em; }
   /* 点题卡：略小半号、行更松 */
   .read section[data-note] > p { font-size:16px !important; line-height:2.05 !important;
     color:#45454e !important; }
@@ -96,8 +102,8 @@
   .read section[data-site] > p:nth-child(4) { font-size:11.5px !important; }
   /* 分节标题（web_post 已语义化为 h3.sec-h）：宋体，与正文拉开字体层级 */
   .read h3.sec-h {
-    font-family:"Songti SC","Songti TC",STSong,serif;
-    font-size:18.5px; font-weight:600; letter-spacing:.05em; }
+    font-family:var(--f-serif);
+    font-size:19px; font-weight:600; letter-spacing:.06em; color:#2b2b2f; }
   .read b { font-weight:600; }
 
   /* ── 分节两侧短金线：随该块浮现时向两边展开 ── */
@@ -121,6 +127,23 @@
     box-shadow:0 18px 36px -28px rgba(60,30,30,.55); }
   .copy-tip { display:block; min-height:14px; margin-top:7px; font-size:11.5px;
     letter-spacing:.06em; color:#2f7a4f; }
+
+  /* ── 封面灯箱：点封面看大图 ── */
+  .cover img { cursor:zoom-in; }
+  .lb { position:fixed; inset:0; z-index:40; display:flex; align-items:center;
+    justify-content:center; padding:4vh 4vw; background:rgba(26,12,14,.9);
+    opacity:0; pointer-events:none; transition:opacity .35s ease;
+    -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); }
+  .lb.on { opacity:1; pointer-events:auto; }
+  .lb img { max-width:100%; max-height:100%; border-radius:8px; display:block;
+    box-shadow:0 30px 80px -30px rgba(0,0,0,.85); transform:scale(.985);
+    transition:transform .45s cubic-bezier(.22,.7,.3,1); }
+  .lb.on img { transform:none; }
+  .lb-close { position:absolute; top:14px; right:16px; width:36px; height:36px;
+    border-radius:50%; border:1px solid rgba(255,255,255,.35); background:transparent;
+    color:#f4ece0; font-size:17px; line-height:1; cursor:pointer;
+    transition:background .3s ease, transform .3s ease; }
+  .lb-close:hover { background:rgba(255,255,255,.12); transform:rotate(90deg); }
 
   /* ── 悬浮回顶 ── */
   .totop { position:fixed; right:18px; bottom:20px; width:42px; height:42px;
@@ -226,6 +249,10 @@
 <body id="top">
 
 <div class="prog" aria-hidden="true"></div>
+<div class="lb" id="lb" aria-hidden="true">
+  <img alt="她的影单 · 栏目封面大图">
+  <button class="lb-close" aria-label="关闭">×</button>
+</div>
 <div class="crowns" aria-hidden="true"><i class="l" style="--k:0.092;--w:18px;opacity:1.0;animation-duration:22.4s;animation-delay:-1.4s;--dx:24px"></i><i class="r" style="--k:0.880;--w:16px;opacity:1.0;animation-duration:24.6s;animation-delay:-22.3s;--dx:-15px"></i><i class="r" style="--k:0.925;--w:32px;opacity:1.0;animation-duration:19.4s;animation-delay:-6.1s;--dx:14px"></i><i class="l" style="--k:0.795;--w:16px;opacity:1.0;animation-duration:19.1s;animation-delay:-7.4s;--dx:-13px"></i><i class="r" style="--k:0.884;--w:28px;opacity:1.0;animation-duration:17.4s;animation-delay:-2.8s;--dx:5px"></i><i class="r" style="--k:0.570;--w:16px;opacity:1.0;animation-duration:25.6s;animation-delay:-6.4s;--dx:14px"></i><i class="r" style="--k:0.581;--w:28px;opacity:1.0;animation-duration:16.5s;animation-delay:-13.6s;--dx:19px"></i><i class="r" style="--k:0.124;--w:16px;opacity:1.0;animation-duration:16.8s;animation-delay:-8.7s;--dx:3px"></i><i class="l" style="--k:0.988;--w:28px;opacity:1.0;animation-duration:22.6s;animation-delay:-14.6s;--dx:1px"></i><i class="l" style="--k:0.756;--w:28px;opacity:1.0;animation-duration:29.3s;animation-delay:-12.8s;--dx:26px"></i><i class="l" style="--k:0.985;--w:18px;opacity:1.0;animation-duration:17.9s;animation-delay:-26.5s;--dx:-1px"></i><i class="l" style="--k:0.038;--w:18px;opacity:1.0;animation-duration:21.2s;animation-delay:-16.6s;--dx:23px"></i><i class="r" style="--k:0.104;--w:16px;opacity:1.0;animation-duration:28.7s;animation-delay:-4.9s;--dx:-14px"></i><i class="r" style="--k:0.538;--w:28px;opacity:1.0;animation-duration:25.6s;animation-delay:-12.9s;--dx:-13px"></i><i class="r" style="--k:0.201;--w:24px;opacity:1.0;animation-duration:29.5s;animation-delay:-16.3s;--dx:-14px"></i><i class="l" style="--k:0.399;--w:28px;opacity:1.0;animation-duration:27.7s;animation-delay:-20.4s;--dx:-25px"></i></div>
 
 
@@ -257,7 +284,7 @@
 
   <!-- 导语 -->
   <section style="margin-bottom:14px;">
-    <p style="margin:0 0 12px;font-size:16px;color:#3a3a40;line-height:1.9;">恭喜你，发现了这个小栏目。这篇不放片子，只想跟你聊聊「她的影单」是怎么来的，也说说我为什么想做一件跟女性主义有关的事。每周末更新，<span style="white-space:nowrap;">合口味就关注一下，周末见～</span></p>
+    <p class="lead-in" style="margin:0 0 12px;font-size:16px;color:#3a3a40;line-height:1.9;">恭喜你，发现了这个小栏目。这篇不放片子，只想跟你聊聊「她的影单」是怎么来的，也说说我为什么想做一件跟女性主义有关的事。每周末更新，<span style="white-space:nowrap;">合口味就关注一下，周末见～</span></p>
   </section>
 
   <!-- 点题卡 -->
@@ -362,6 +389,42 @@
     blocks.forEach(function (el) { el.classList.add('in'); });
   }
 
+  /* 封面灯箱 */
+  var lb = document.getElementById('lb');
+  var lbImg = lb ? lb.querySelector('img') : null;
+  var cover = document.querySelector('.cover img');
+  function lbClose() {
+    lb.classList.remove('on');
+    lb.setAttribute('aria-hidden', 'true');
+  }
+  if (lb && cover) {
+    cover.addEventListener('click', function () {
+      lbImg.src = cover.currentSrc || cover.src;
+      lb.classList.add('on');
+      lb.setAttribute('aria-hidden', 'false');
+    });
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.classList.contains('lb-close')) lbClose();
+    });
+    addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lb.classList.contains('on')) lbClose();
+    });
+  }
+
+  /* 复制文本：优先 clipboard API，失败退回 execCommand */
+  function copyText(t) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t);
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement('textarea');
+      ta.value = t; ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;top:-1000px;left:0;opacity:0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); resolve(); }
+      catch (err) { reject(err); }
+      document.body.removeChild(ta);
+    });
+  }
+
   /* 网址卡：点一下复制链接 */
   document.querySelectorAll('.read section[data-site]').forEach(function (card) {
     var tip = document.createElement('span');
@@ -369,8 +432,8 @@
     card.appendChild(tip);
     card.addEventListener('click', function () {
       var m = card.textContent.match(/https?:\/\/\S+/);
-      if (!m || !navigator.clipboard) return;
-      navigator.clipboard.writeText(m[0]).then(function () {
+      if (!m) return;
+      copyText(m[0]).then(function () {
         tip.textContent = '已复制 ✓';
         setTimeout(function () { tip.textContent = ''; }, 1600);
       }).catch(function () {});
