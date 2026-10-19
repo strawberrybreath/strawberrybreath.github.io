@@ -90,9 +90,15 @@
     font-size:16.5px !important; line-height:1.98 !important;
     margin:0 0 20px !important; color:#33333a; }
   .read > section:not([data-site]) > p:last-child { margin-bottom:0 !important; }
-  /* 导语（首段）：宋体、大一号，像杂志开篇 */
-  .read p.lead-in { font-family:var(--f-serif) !important; font-size:18px !important;
-    line-height:1.95 !important; color:#2b2b2f !important; letter-spacing:.01em; }
+  /* 导语三段式（与公众号同构）：主句酒红宋体 / 副句常规 / 金点小注 */
+  .read section[data-lead] > p:nth-child(1) { font-family:var(--f-serif) !important;
+    font-size:22px !important; font-weight:700 !important; color:var(--wine) !important;
+    line-height:1.72 !important; margin:0 0 12px !important; letter-spacing:.01em; }
+  .read section[data-lead] > p:nth-child(2) { font-size:16.5px !important;
+    line-height:2 !important; margin:0 0 12px !important; color:#33333a !important; }
+  .read section[data-lead] > p:nth-child(3) { font-size:11.5px !important;
+    line-height:1.8 !important; margin:0 !important; color:#9d9184 !important;
+    letter-spacing:0; }
   /* 点题卡：略小半号、行更松；底色在白页上比公众号里再压深一点，才看得出是一张卡 */
   .read section[data-note] { background:#f8f1e6 !important;
     padding:20px 22px 20px 20px !important; margin:6px 0 28px !important;
@@ -285,10 +291,8 @@
   <!-- 主标题卡（栏目版） -->
   
 
-  <!-- 导语 -->
-  <section style="margin-bottom:14px;">
-    <p class="lead-in" style="margin:0 0 12px;font-size:16px;color:#3a3a40;line-height:1.9;">恭喜你，发现了这个小栏目。这篇不放片子，只想跟你聊聊「她的影单」是怎么来的，也说说我为什么想做一件跟女性主义有关的事。每周末更新，合口味就关注一下，周末见～</p>
-  </section>
+  <!-- 导语（三段式：主句 / 副句 / 金点小注，与网站 hero 同构） -->
+  <section data-lead="1" style="margin-bottom:20px;"><p style="margin:0 0 10px;font-size:19px;font-weight:700;color:#b23a48;line-height:1.7;letter-spacing:normal;font-family:'Songti SC',STSong,serif;">恭喜你，发现了这个小栏目。</p><p style="margin:0 0 12px;font-size:15px;color:#3a3a40;line-height:2;letter-spacing:normal;">这篇不放片子，只想跟你聊聊「她的影单」是怎么来的，也说说我为什么想做一件跟<span style="color:#7e202c;">女性主义</span>有关的事。每周末更新，合口味就关注一下，周末见～</p><p style="margin:0;font-size:11.5px;color:#9a9aa4;line-height:1.7;letter-spacing:normal;">一期两部 · 不剧透 · 你来，就刚刚好</p></section>
 
   <!-- 点题卡 -->
   <section data-note="1" style="border-left:3px solid #b23a48;background:#faf8f5;border-radius:0 10px 10px 0;padding:15px 18px;margin-bottom:24px;">
