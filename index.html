@@ -169,11 +169,18 @@
 
   /* ── 关注的议题 ── */
   .orgs{ padding:clamp(36px,4.4vw,56px) 0 clamp(34px,4.4vw,52px); border-bottom:1px solid var(--line); }
-  .org-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:clamp(10px,1.4vw,18px); align-items:start; }
+  .org-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(18px,2.4vw,30px); align-items:stretch; }
   .org-lead{ grid-column:1/-1; }
   .org-lead h2{ font-family:var(--f-serif); font-weight:600; font-size:20px; line-height:1.5; margin:0 0 7px; color:var(--ink); white-space:normal; }
   .org-lead p{ margin:0; font-size:12.5px; line-height:1.9; color:var(--muted); }
-  .org{ display:flex; flex-direction:column; align-items:center; gap:9px; min-width:0; text-align:center; text-decoration:none; padding-top:2px; }
+  .org{ position:relative; overflow:hidden; display:flex; flex-direction:column; align-items:center;
+    gap:13px; min-width:0; text-align:center; text-decoration:none;
+    padding:28px 22px 26px; background:#fffdf9; border:1px solid var(--line); border-radius:14px;
+    transition:transform .35s cubic-bezier(.22,.7,.3,1), border-color .35s ease, box-shadow .35s ease, background .35s ease; }
+  .org:hover{ transform:translateY(-5px); border-color:#e4c3bb; background:#fffefc;
+    box-shadow:0 20px 42px -28px rgba(116,29,42,.62); }
+  .org:active{ transform:translateY(-2px) scale(.985); }
+  .org > .org-b, .org > b, .org > small{ position:relative; z-index:1; }
   .org-b{ width:60px; height:60px; padding:0; background:#fffdf9; overflow:hidden;
     border:1px solid var(--line); border-radius:50%;
     display:inline-flex; align-items:center; justify-content:center; color:var(--red);
@@ -182,10 +189,14 @@
   .org-b svg{ width:30px; height:30px; display:block; }
   .org-b img.org-logo{ max-width:46px; max-height:46px; width:auto; height:auto; object-fit:contain; display:block; }
   .org-b .abbr{ font-family:var(--f-latin); font-size:20px; font-weight:700; letter-spacing:.02em; color:var(--red); }
-  .org b{ font-family:var(--f-serif); font-weight:600; font-size:12.5px; line-height:1.5; color:var(--ink); }
-  .org small{ font-size:11.5px; line-height:1.55; color:var(--muted); }
-  .org:hover .org-b, .org:focus-visible .org-b{ transform:translateY(-2px); border-color:#e4c3bb;
-    box-shadow:0 10px 22px -16px rgba(116,29,42,.75); }
+  .org b{ font-family:var(--f-serif); font-weight:600; font-size:14.5px; line-height:1.5; color:var(--ink); }
+  .org small{ font-size:12px; line-height:1.7; color:var(--muted); }
+  .org:hover .org-b, .org:focus-visible .org-b{ transform:translateY(-2px) scale(1.05); border-color:#e4c3bb;
+    box-shadow:0 12px 24px -15px rgba(116,29,42,.8); }
+  .ripple{ position:absolute; z-index:0; border-radius:50%; pointer-events:none;
+    background:radial-gradient(circle,rgba(160,44,57,.20),rgba(160,44,57,0) 70%);
+    transform:scale(0); animation:ripple .62s ease-out forwards; }
+  @keyframes ripple{ to{ transform:scale(1); opacity:0; } }
   .org-note{ margin:20px 0 0; font-size:11.5px; line-height:1.9; color:var(--muted); }
 
   /* ── 联系（点一下即复制） ── */
@@ -256,7 +267,7 @@
     .hero-copy{ order:1; }
     .hero-fig{ order:2; }
     .hero-fig img{ aspect-ratio:1.5/1; object-fit:cover; }
-    .org-grid{ grid-template-columns:repeat(3,1fr); row-gap:24px; }
+    .org-grid{ grid-template-columns:repeat(2,1fr); }
     .org-lead{ grid-column:1/-1; }
   }
   @media (max-width:620px){
@@ -272,13 +283,15 @@
     .ribbon{ font-size:14px; padding:13px 18px; }
     .col-grid{ grid-template-columns:1fr; }
     .org-grid{ grid-template-columns:repeat(2,1fr); }
+    .org{ padding:20px 13px 18px; gap:10px; }
     .ft-in{ flex-direction:column; align-items:flex-start; gap:8px; }
   }
   @media (prefers-reduced-motion:reduce){
     html{ scroll-behavior:auto; }
     .js .hero-copy > *, .js .hero-fig{ opacity:1; animation:none; }
     .js .rv{ opacity:1; transform:none; transition:none; }
-    .org-b, .totop, .lb, .lb img, .col, .col-cover img, .nav a::after, .hero-fig .zin{ transition:none; }
+    .org-b, .org, .totop, .lb, .lb img, .col, .col-cover img, .nav a::after, .hero-fig .zin{ transition:none; }
+    .ripple{ display:none; }
   }
 </style>
 </head>
@@ -577,6 +590,21 @@
     cell.addEventListener('click', copy);
     cell.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); copy(); }
+    });
+  });
+
+  /* 组织卡片：点击涟漪 */
+  [].forEach.call(document.querySelectorAll('.org'), function (org) {
+    org.addEventListener('click', function (e) {
+      var rect = org.getBoundingClientRect();
+      var size = Math.max(rect.width, rect.height) * 1.6;
+      var rip = document.createElement('span');
+      rip.className = 'ripple';
+      rip.style.width = rip.style.height = size + 'px';
+      rip.style.left = (e.clientX - rect.left - size / 2) + 'px';
+      rip.style.top = (e.clientY - rect.top - size / 2) + 'px';
+      org.appendChild(rip);
+      setTimeout(function () { rip.remove(); }, 650);
     });
   });
 })();
