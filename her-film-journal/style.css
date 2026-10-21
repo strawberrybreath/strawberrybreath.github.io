@@ -16,9 +16,8 @@
 @media(max-width:760px){.photo-gallery{grid-template-columns:1fr 1fr;gap:9px}.photo-gallery img{height:190px}.photo-gallery figure:first-child{grid-column:1/-1}.photo-gallery figure:first-child img{height:230px}}
 
 .still-art{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;min-height:240px;aspect-ratio:16/10;color:#fff5e6;text-align:center;font-family:Georgia,serif;letter-spacing:.14em;box-shadow:0 7px 20px #4d35251a}
-.still-art .sa-letter{font-size:110px;line-height:1;opacity:.55}
-.still-art .sa-word{font-size:15px;letter-spacing:.3em}
-.still-art em{font-style:normal;font-size:11px;letter-spacing:.12em;opacity:.8;font-family:'Noto Sans SC',sans-serif}
-.still-one{background:linear-gradient(150deg,#7e4a42,#c17e68 52%,#e0b58c)}
-.still-two{background:linear-gradient(145deg,#4c5550,#a15c4e 58%,#dfb789)}
-.still-three{background:linear-gradient(145deg,#536b72,#a56d5a 58%,#e7c69e)}
+
+.photo-gallery img.still-photo{width:100%;height:auto;max-height:520px;object-fit:cover}
+
+.feature-photo{width:100%;height:100%;min-height:420px;object-fit:cover;display:block}
+img.film-poster{display:block;width:72px;aspect-ratio:3/4;object-fit:cover;border-radius:2px}
