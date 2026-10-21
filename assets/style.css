@@ -122,3 +122,55 @@ h1,h2,h3,.lead,.closing blockquote,.site-footer{font-family:var(--serif)}
  .column-card{grid-template-columns:35% minmax(0,1fr)}.column-content{padding:11px}
  .column-content h3{font-size:17px}
 }
+
+/* 2026-10-22 launch polish: mobile readability, navigation and accessibility */
+.skip-link{position:absolute;left:12px;top:-60px;z-index:1000;background:var(--wine2);color:#fffaf3;padding:9px 14px;border-radius:3px}
+.skip-link:focus{top:10px}
+#main-content{scroll-margin-top:20px}
+.issue-toc{width:min(850px,calc(100% - 40px));margin:0 auto;padding:20px 0 8px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;border-bottom:1px solid var(--line)}
+.issue-toc span{font-size:11px;letter-spacing:.12em;color:var(--muted);margin-right:5px}
+.issue-toc a{font-size:12px;color:var(--wine);padding:5px 9px;border:1px solid var(--line);background:var(--cream);border-radius:2px}
+.issue-toc a:hover,.issue-toc a:focus-visible{background:#efe0dc;border-color:#cda6a4}
+.issue-body section[id]{scroll-margin-top:24px}
+@media(max-width:767px){
+ .featured-opening{grid-template-columns:1fr;gap:22px;padding:27px 0 32px;align-items:start}
+ .featured-copy{max-width:600px}
+ .featured-copy .eyebrow{font-size:10px;letter-spacing:.14em}
+ .feature-number{margin-top:16px}
+ .featured-copy h1{font-size:clamp(39px,11vw,58px);overflow-wrap:normal}
+ .feature-deck{font-size:clamp(18px,5vw,23px);margin-bottom:12px}
+ .feature-summary{font-size:14px;line-height:1.95;max-width:620px}
+ .cta-dark{font-size:12px;padding:11px 16px;gap:15px}
+ .feature-meta{font-size:10px}
+ .featured-image{width:min(78%,360px);max-width:none;justify-self:center;margin-top:0;padding:8px 8px 30px;transform:rotate(.5deg)}
+ .featured-image img{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover}
+ .image-caption{left:13px;bottom:9px;font-size:8px}
+ .issue-hero-inner{grid-template-columns:1fr;padding:30px 20px 34px;gap:22px}
+ .issue-hero-inner>div:first-child{order:1}
+ .issue-hero-inner>div:last-child{order:0}
+ .issue-poster{width:min(58%,230px)}
+ .issue-hero h1{font-size:clamp(30px,8vw,42px)}
+ .issue-body{padding:8px 20px 48px}
+ .film-deck{gap:9px}
+ .film-deck figure{padding:6px}
+ .film-deck figcaption{font-size:10px;line-height:1.6}
+ .official-stills{gap:10px}
+ .official-stills figure{padding:6px}
+ .official-stills figcaption{font-size:10px;line-height:1.6}
+ .issue-toc{width:calc(100% - 32px);gap:7px;padding:15px 0}
+ .issue-toc span{width:100%}
+ .issue-toc a{font-size:11px;padding:5px 7px}
+ .bottom-nav{display:none}
+}
+@media(max-width:380px){
+ .featured-opening{width:calc(100% - 30px)}
+ .featured-image{width:82%}
+ .issue-body{padding-inline:16px}
+ .film-deck{grid-template-columns:1fr 1fr}
+ .film-deck figure:last-child{grid-column:1/-1;width:52%;justify-self:center}
+ .official-stills{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
