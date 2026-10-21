@@ -3,3 +3,13 @@
 
 /* Film cards: official promotional assets only */
 .film-deck{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:30px 0 42px}.film-card{background:#fffaf2;border:1px solid #e7d9ca;border-radius:16px;overflow:hidden;box-shadow:0 8px 26px #351c1c0d}.film-card .poster{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;background:#e9dfd2}.film-card .film-body{padding:18px}.film-card h3{margin:0 0 8px;font-family:inherit;font-size:1.15rem}.film-card p{font-size:.93rem;line-height:1.75}.film-card .official-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.film-card .official-links a{font-size:.82rem;color:#873b48;text-decoration:underline;text-underline-offset:3px}.official-stills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0}.official-stills figure{margin:0;background:#f8f0e6;border-radius:12px;overflow:hidden;border:1px solid #e7d9ca}.official-stills img{display:block;width:100%;height:240px;object-fit:cover}.official-stills figcaption{padding:10px 12px;font-size:.8rem;line-height:1.6;color:#6f5a55}.source-note{font-size:.82rem;color:#796a63;line-height:1.7;border-left:3px solid #8a3b49;padding-left:12px;margin:18px 0}.poster-row{display:flex;gap:20px;align-items:flex-start}.poster-row img{width:155px;aspect-ratio:2/3;object-fit:cover;border-radius:8px;flex-shrink:0}@media(max-width:760px){.film-deck{grid-template-columns:1fr}.film-card{display:grid;grid-template-columns:120px 1fr}.film-card .poster{height:190px;aspect-ratio:auto}.film-card .film-body{padding:12px}.official-stills{grid-template-columns:1fr}.official-stills img{height:auto;max-height:320px}.poster-row img{width:110px}}
+
+.film-card .poster.poster-art{display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:30px 16px;text-align:center;font-family:'Noto Serif SC',serif;color:#fff5ec}
+.film-card .poster.poster-art span{font-weight:600;letter-spacing:.14em;font-size:1.15rem;line-height:1.5}
+.film-card .poster.poster-art small{font-size:.8rem;letter-spacing:.3em;opacity:.85}
+.poster-art.poster-one{background:linear-gradient(160deg,#7a3140,#b06a76)}
+.poster-art.poster-two{background:linear-gradient(160deg,#41506b,#8a9ab5)}
+.poster-art.poster-three{background:linear-gradient(160deg,#54644a,#93a473)}
+.still-links{list-style:none;margin:20px 0;padding:0}
+.still-links li{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--berry);margin:10px 0;padding:12px 16px;font-size:14px}
+.still-links a{text-decoration:underline;text-underline-offset:3px}

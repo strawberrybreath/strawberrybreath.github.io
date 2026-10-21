@@ -3,9 +3,9 @@
 @media(max-width:760px){.site-header{height:62px;padding:0 5%}.brand{font-size:14px}.brand-light{font-size:11px}.site-header nav{gap:13px;font-size:10px}.hero{padding:48px 7% 50px;grid-template-columns:1fr;gap:22px}.hero h1{font-size:48px}.hero-art{min-height:400px;grid-row:1}.portrait-card{height:340px;width:255px}.portrait-silhouette{height:280px}.art-orbit{width:350px;height:350px}.orbit-two{width:390px;height:390px}.hero-copy{grid-row:2}.hero-deck{font-size:13px}.ticker{padding:13px 5%;font-size:10px}.section{padding:60px 7%}.intro-grid,.feature{grid-template-columns:1fr;gap:24px}.intro h2{font-size:35px}.feature-image{min-height:340px}.image-composition{height:290px}.big-e{font-size:210px}.section-heading{display:block}.section-heading>p{margin-top:8px}.theme-grid{grid-template-columns:1fr}.theme-card{min-height:0}.theme-card h3{margin-top:18px}.film-row{grid-template-columns:25px 72px 1fr 30px;gap:12px;padding:16px 0}.film-poster{width:72px}.film-info h3{font-size:16px}.film-info p{font-size:10px}.film-tags{font-size:8px}.round-arrow{height:28px;width:28px}.reading-grid{grid-template-columns:1fr}.reading-grid>a{min-height:160px}.quote-section{padding:65px 7%}.quote-section blockquote{font-size:25px}.closing{padding:65px 7%}footer{padding:22px 5%;gap:10px;flex-wrap:wrap}footer>span{font-size:9px}.article-page{padding:25px 7% 55px}.article-page h1{font-size:36px}.article-lead{font-size:15px}.article-hero{grid-template-columns:115px 1fr;gap:18px;padding:16px;margin-bottom:38px}.article-poster{width:115px}.article-poster span{font-size:16px}.article-meta p{font-size:10px;padding:7px 0}.article-meta b{width:68px}.prose{font-size:13px}.prose h2{font-size:22px;margin-top:38px}.prose blockquote{font-size:18px}.article-end{gap:10px;flex-wrap:wrap}.next-films b{font-size:13px}}
 
 /* Official Netflix stills: remote CDN images; internet connection required */
-.poster-one{background:linear-gradient(180deg,rgba(24,20,18,.08),rgba(24,20,18,.55)),url("https://dnm.nflximg.net/api/v6/a01MIaQTUgSJoLaS_OCn68Eg3hU/AAAAQRV6dSiqXOxB9xCzx0hhk4We4U6_ht8ckrFPfenglfv9F5ToXoA_-Bo9OoQzBkPm2UmLxpcuOiyA--unrIUrFDQ3_xXuvHDzbQyGhdKi2yDKLOhKiwwGqzulMTuglkEJPoAnw2BlLGMMy0z4SCevBFJx4dc.jpg?r=e40") center/cover!important}
-.poster-two{background:linear-gradient(180deg,rgba(24,20,18,.05),rgba(24,20,18,.5)),url("https://dnm.nflximg.net/api/v6/a01MIaQTUgSJoLaS_OCn68Eg3hU/AAAAQQu8ZMq1s-WfxkYJ7PC8tl4zCRS86tBn1A5ochdlqEtPom9B2m12cclZgUVi8yvpywX-K04hJd0I-LsBKoLnGqIg9qOKkl6HVcY19dMv-4-aesfwqKl8bqcHtnYV4hxMzB6UsfkdBhZHrDNWOFdM6v3bvAE.jpg?r=40c") center/cover!important}
-.poster-three{background:linear-gradient(180deg,rgba(24,20,18,.05),rgba(24,20,18,.5)),url("https://dnm.nflximg.net/api/v6/a01MIaQTUgSJoLaS_OCn68Eg3hU/AAAAQULA_PiB7JpYqZf3mHSjo6-rR_y5HxXIBCI37OiUlAxsybCH0o2PqFiLsbJJVVNZt4McHLjw3jpSOV593b8uH0GRyuF4Hg1ME8FTqndZzccwXtxO7rLQmdQ9jCzaPvXesP0pI2331r3uZlHLH7SlzzfA.jpg?r=00e") center/cover!important}
+
+
+
 .feature-image{background:linear-gradient(0deg,rgba(30,20,15,.18),rgba(30,20,15,.02)),url("https://dnm.nflximg.net/api/v6/a01MIaQTUgSJoLaS_OCn68Eg3hU/AAAAQRV6dSiqXOxB9xCzx0hhk4We4U6_ht8ckrFPfenglfv9F5ToXoA_-Bo9OoQzBkPm2UmLxpcuOiyA--unrIUrFDQ3_xXuvHDzbQyGhdKi2yDKLOhKiwwGqzulMTuglkEJPoAnw2BlLGMMy0z4SCevBFJx4dc.jpg?r=e40") center/cover!important}
 .image-composition{background:linear-gradient(0deg,rgba(40,20,15,.42),rgba(40,20,15,.03))!important;border-color:rgba(255,245,230,.65)}
 .photo-gallery{display:grid;grid-template-columns:1.35fr 1fr;gap:14px;margin:0 0 44px}
@@ -14,3 +14,11 @@
 .photo-gallery figcaption{font-size:10px;color:#82766b;padding-top:8px;line-height:1.7}
 .photo-credit{font-size:10px;color:#8a8178;margin:-28px 0 40px}
 @media(max-width:760px){.photo-gallery{grid-template-columns:1fr 1fr;gap:9px}.photo-gallery img{height:190px}.photo-gallery figure:first-child{grid-column:1/-1}.photo-gallery figure:first-child img{height:230px}}
+
+.still-art{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;min-height:240px;aspect-ratio:16/10;color:#fff5e6;text-align:center;font-family:Georgia,serif;letter-spacing:.14em;box-shadow:0 7px 20px #4d35251a}
+.still-art .sa-letter{font-size:110px;line-height:1;opacity:.55}
+.still-art .sa-word{font-size:15px;letter-spacing:.3em}
+.still-art em{font-style:normal;font-size:11px;letter-spacing:.12em;opacity:.8;font-family:'Noto Sans SC',sans-serif}
+.still-one{background:linear-gradient(150deg,#7e4a42,#c17e68 52%,#e0b58c)}
+.still-two{background:linear-gradient(145deg,#4c5550,#a15c4e 58%,#dfb789)}
+.still-three{background:linear-gradient(145deg,#536b72,#a56d5a 58%,#e7c69e)}
