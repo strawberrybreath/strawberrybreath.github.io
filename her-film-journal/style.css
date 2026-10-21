@@ -6,7 +6,7 @@
 
 
 
-.feature-image{background:linear-gradient(0deg,rgba(30,20,15,.18),rgba(30,20,15,.02)),url("https://dnm.nflximg.net/api/v6/a01MIaQTUgSJoLaS_OCn68Eg3hU/AAAAQRV6dSiqXOxB9xCzx0hhk4We4U6_ht8ckrFPfenglfv9F5ToXoA_-Bo9OoQzBkPm2UmLxpcuOiyA--unrIUrFDQ3_xXuvHDzbQyGhdKi2yDKLOhKiwwGqzulMTuglkEJPoAnw2BlLGMMy0z4SCevBFJx4dc.jpg?r=e40") center/cover!important}
+
 .image-composition{background:linear-gradient(0deg,rgba(40,20,15,.42),rgba(40,20,15,.03))!important;border-color:rgba(255,245,230,.65)}
 .photo-gallery{display:grid;grid-template-columns:1.35fr 1fr;gap:14px;margin:0 0 44px}
 .photo-gallery figure{margin:0;min-width:0}
