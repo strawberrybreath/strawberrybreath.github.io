@@ -140,3 +140,24 @@ a:focus-visible, button:focus-visible { outline: 3px solid #b56b78; outline-offs
   .page-issue .article h2 { font-size: 23px; line-height: 1.55; }
   .page-issue .pullquote { font-size: 20px; line-height: 1.8; }
 }
+
+/* Editorial reading refinements — October 2026 */
+.page-issue .article-hero .wrap { max-width: 920px; }
+.page-issue .article-hero img { display:block; width:min(100%, 420px); max-height:560px; object-fit:cover; object-position:center 20%; margin:24px auto 10px; }
+.page-issue .article-hero .poster-note { max-width:680px; margin:12px auto 0; }
+.page-issue .article-layout { display:grid; grid-template-columns:minmax(0,760px); justify-content:center; }
+.page-issue .article-layout > .article { width:100%; max-width:760px; }
+.page-issue .side-card { display:none; }
+.page-issue .article h2 { scroll-margin-top:100px; }
+.page-issue .article p { margin-bottom:1.15em; }
+.page-issue .article .image-card img { display:block; width:100%; max-height:440px; object-fit:cover; }
+.page-issue .article .image-card figcaption { font-size:12px; line-height:1.7; color:var(--muted); }
+.page-issue .film-card .poster { background:#eee2d7; }
+.page-issue .film-card .official-links a { line-height:1.6; }
+@media (max-width:760px) {
+  .page-issue .article-hero img { width:min(78%, 330px); max-height:460px; }
+  .page-issue .article-layout > .article { max-width:none; }
+  .page-issue .film-card .poster { min-height:0; height:100%; }
+  .page-issue .article .image-card { margin:22px 0; padding:10px; }
+  .page-issue .article .image-card img { max-height:320px; }
+}
