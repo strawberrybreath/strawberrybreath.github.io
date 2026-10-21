@@ -7,10 +7,9 @@
 ## 目录结构
 
 ```
-index.html                 首页（杂志式版式：英雄区 + 最新发表 + 她的影单）
-about/index.html           栏目介绍（她的影单）
+index.html                 首页（编辑专题 + 三个栏目 + 本期导读）
+about/index.html           栏目介绍（编辑理念与三个栏目）
 issue-001/index.html       第一期专题：Enola Holmes 三部曲
-her-film-journal/          独立栏目「她的影单」第一期（index + film-1/2/3 影评）
 assets/                    样式与本地图片
   ├─ posters/              三部影片官方海报
   ├─ stills/               Netflix 官方剧照
@@ -42,4 +41,4 @@ assets/                    样式与本地图片
 
 1. 新建 `issue-00N/index.html`，沿用现有页面结构；
 2. 官方素材下载后放入 `assets/`，避免热链外部 CDN；
-3. 在首页「最新发表」与影评集列表中添加入口。
+3. 在首页专题入口与相关栏目页面中添加入口。
