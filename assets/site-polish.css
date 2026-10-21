@@ -161,3 +161,17 @@ a:focus-visible, button:focus-visible { outline: 3px solid #b56b78; outline-offs
   .page-issue .article .image-card { margin:22px 0; padding:10px; }
   .page-issue .article .image-card img { max-height:320px; }
 }
+
+/* Final responsive and accessibility pass */
+.page-home .hero-art img { width:100%; height:auto; object-fit:cover; }
+.page-home .shelf img, .page-home .feat img { display:block; }
+.page-about .poster img { width:100%; height:100%; object-fit:cover; }
+.page-issue .article-hero img, .page-issue .official-stills img { height:auto; width:100%; }
+.page-issue .article-layout, .page-issue .article, .page-issue .film-body { min-width:0; }
+@media (max-width:420px) {
+ .page-home .hero-copy h1 { font-size:38px; }
+ .page-home .feat { grid-template-columns:96px minmax(0,1fr); }
+ .page-issue .film-card { grid-template-columns:108px minmax(0,1fr); }
+ .page-issue .film-card .film-body { padding:11px 10px; }
+ .page-issue .film-card .official-links { flex-direction:column; align-items:flex-start; }
+}
