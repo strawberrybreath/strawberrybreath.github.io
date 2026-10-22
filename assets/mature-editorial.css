@@ -169,3 +169,42 @@ body { font-family:var(--sans) !important; font-size:16px; line-height:1.9; }
  .wechat-qr-panel img{max-width:min(82vw,360px);max-height:calc(100dvh - 112px)}
 }
 @media(min-width:768px) and (max-width:1100px){.wechat-qr-panel img{max-width:min(58vw,380px);max-height:62vh}}
+
+
+/* Responsive contact icons and restrained QR sizing across phone, tablet and desktop */
+.contact-icon.contact-image-icon {
+  width: clamp(60px, 7vw, 76px) !important;
+  height: clamp(60px, 7vw, 76px) !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+.contact-icon.contact-image-icon img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+}
+.wechat-qr-panel img {
+  max-width: min(64vw, 340px) !important;
+  max-height: calc(100dvh - 118px) !important;
+}
+@media (max-width: 767px) {
+  .contact-icon.contact-image-icon {
+    width: clamp(50px, 14vw, 64px) !important;
+    height: clamp(50px, 14vw, 64px) !important;
+  }
+  .wechat-qr-panel img {
+    max-width: min(76vw, 300px) !important;
+    max-height: calc(100dvh - 100px) !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  .wechat-qr-panel img {
+    max-width: min(42vw, 290px) !important;
+    max-height: 48vh !important;
+  }
+}
