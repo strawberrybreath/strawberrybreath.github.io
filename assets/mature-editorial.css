@@ -1,0 +1,58 @@
+/* Mature editorial refinement — October 2026
+   A calm, confident visual system for a woman around 30.
+   Existing page content and functionality remain intact. */
+:root {
+  --paper: #f7f4ee !important;
+  --cream: #fffdf8 !important;
+  --ink: #302a27 !important;
+  --wine: #70434b !important;
+  --wine2: #49343a !important;
+  --rose: #c9a5a0 !important;
+  --muted: #766b65 !important;
+  --line: #e3dbd1 !important;
+}
+body { color:var(--ink); background:var(--paper); letter-spacing:0 !important; }
+.site-header { background:rgba(247,244,238,.97) !important; border-color:var(--line) !important; }
+.brand { font-family:"Iowan Old Style","Baskerville","Noto Serif SC",Georgia,serif !important; font-weight:600 !important; letter-spacing:.025em !important; }
+.brand-tagline,.brand small { letter-spacing:.12em !important; color:var(--muted) !important; }
+.site-nav { font-size:12px !important; letter-spacing:.025em; }
+.site-nav a { transition:color .18s ease,border-color .18s ease; }
+.featured-copy h1,.about-hero h1,.issue-hero h1,.section-head h2,.column-content h3,.issue-body h2,.issue-body h3 {
+  font-family:"Iowan Old Style","Baskerville","Noto Serif SC",Georgia,serif !important;
+  letter-spacing:-.012em !important;
+}
+.featured-copy h1 { color:#49343a !important; font-weight:500 !important; }
+.feature-deck,.manifesto p,.closing-home blockquote,.about-hero .lead { color:#65424a !important; }
+.eyebrow,.feature-number,.column-index,.contact-label { letter-spacing:.12em !important; }
+.featured-image { background:#eee8df !important; box-shadow:0 12px 32px rgba(49,36,30,.09) !important; transform:none !important; }
+.featured-image img { filter:saturate(.9); }
+.image-caption { color:#75645e !important; }
+.cta-dark { background:#70434b !important; border-color:#70434b !important; border-radius:2px !important; }
+.cta-dark:hover { background:#49343a !important; }
+.manifesto { border-color:var(--line) !important; }
+.column-card,.reading-card,.point,.contact-card,.issue-toc,.film-deck figure,.official-stills figure {
+  border-radius:2px !important; box-shadow:none !important;
+}
+.column-card { background:var(--cream) !important; border-color:var(--line) !important; }
+.column-card:hover { transform:translateY(-2px) !important; border-color:#c9a5a0 !important; }
+.column-image img { filter:saturate(.88); }
+.column-content { padding:21px !important; }
+.column-content h3 { color:#49343a !important; }
+.column-content p { color:#756a64 !important; }
+.status { border-radius:0 !important; }
+.closing-home,.closing,.issue-callout,.reading-note { background:#eee7e0 !important; border-color:#e1d4cb !important; }
+.issue-hero { background:#49343a !important; }
+.issue-hero .eyebrow { color:#d9b9b5 !important; }
+.issue-body p,.about-hero p,.about-column p { color:#48403b !important; }
+.contact-card { background:var(--cream) !important; border-color:var(--line) !important; }
+.bottom-nav { background:rgba(255,253,248,.97) !important; border-color:var(--line) !important; }
+a:focus-visible { outline-color:#70434b !important; }
+@media (max-width:767px) {
+  .site-header { min-height:66px !important; }
+  .featured-opening { gap:22px !important; }
+  .featured-copy h1 { font-size:clamp(40px,10vw,53px) !important; }
+  .column-content { padding:14px !important; }
+}
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after { transition:none !important; }
+}
