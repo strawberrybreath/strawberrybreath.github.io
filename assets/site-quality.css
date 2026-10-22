@@ -1,0 +1,36 @@
+/* Shared quality layer — P0–P2: responsive safety, keyboard access, and consistent media behavior. */
+:root { color-scheme: light; }
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 5.5rem; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { max-width: 100%; overflow-wrap: anywhere; }
+main, header, footer, nav, section, article, aside { min-width: 0; }
+img, picture, video, canvas, svg { max-width: 100%; }
+img { height: auto; }
+a, button, input, textarea, select, summary { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 3px solid #9c6467;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+.site-nav a, .bottom-nav a, .cta, .column-card, .contact-card { touch-action: manipulation; }
+.bottom-nav a { min-height: 44px; }
+.site-nav a[aria-current="page"], .bottom-nav a[aria-current="page"] { text-decoration-thickness: 2px; text-underline-offset: .28em; }
+main[id], section[id], article[id] { scroll-margin-top: 5.5rem; }
+@media (max-width: 390px) {
+  .bottom-nav { padding-left: max(6px, env(safe-area-inset-left)); padding-right: max(6px, env(safe-area-inset-right)); }
+  .bottom-nav a { min-width: 0; }
+  img { max-width: 100%; }
+}
+@media (min-width: 391px) and (max-width: 767px) {
+  .bottom-nav { padding-left: max(10px, env(safe-area-inset-left)); padding-right: max(10px, env(safe-area-inset-right)); }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  img { max-width: 100%; }
+}
+@media (min-width: 1024px) {
+  img { max-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
