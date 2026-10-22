@@ -1299,3 +1299,144 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
   .film-overview-card .film-overview-copy .bilingual .zh-line{font-size:12px}
   .film-overview-card .film-overview-copy .bilingual .en-line{font-size:9px}
 }
+
+
+/* 2026-10-22: final film layout — one clear editorial row per film. */
+.film-overview-grid{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  margin:28px 0 24px;
+}
+.film-overview-grid > .film-overview-card{
+  display:grid;
+  grid-template-columns:176px minmax(0,1fr);
+  grid-template-areas:"heading heading" "poster copy";
+  align-items:start;
+  min-width:0;
+  height:auto;
+  padding:0;
+  overflow:hidden;
+  border:1px solid #e8ddd3;
+  border-radius:12px;
+  background:#fffdf9;
+  box-shadow:0 4px 16px rgba(70,44,42,.035);
+}
+.film-overview-card .film-card-heading{
+  grid-area:heading;
+  min-height:0;
+  padding:19px 22px 15px;
+  border-bottom:1px solid #eee4dc;
+  background:linear-gradient(100deg,#fbf3eb,#fffdf9 72%);
+}
+.film-overview-card .film-card-heading .eyebrow{
+  margin:0 0 5px;
+  color:#9a7770;
+  font-size:9px;
+  line-height:1.5;
+  letter-spacing:.15em;
+}
+.film-overview-card .film-card-heading h3{
+  margin:0 0 7px;
+  color:#4c3035;
+  font-size:clamp(20px,2.1vw,25px);
+  line-height:1.25;
+  letter-spacing:0;
+  overflow-wrap:anywhere;
+}
+.film-overview-card .film-card-heading .film-credits{
+  margin:0;
+  color:#89756f;
+  font-size:10px;
+  line-height:1.7;
+}
+.film-overview-card .film-poster-wrap{
+  grid-area:poster;
+  margin:18px 0 20px;
+  padding:0 18px 0 20px;
+  border-right:1px solid #eee4dc;
+}
+.film-overview-card .film-poster-link{
+  display:block;
+  overflow:hidden;
+  border-radius:5px;
+  background:#f0e5dc;
+}
+.film-overview-card .film-overview-poster{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:2/3;
+  object-fit:cover;
+}
+.film-overview-card .film-poster-credit{
+  padding-top:6px;
+  color:#a08e86;
+  font-size:8px;
+  line-height:1.5;
+  letter-spacing:.08em;
+}
+.film-overview-card .film-overview-copy{
+  grid-area:copy;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  padding:20px 24px 20px 22px;
+}
+.film-overview-card .film-overview-copy .film-field-label{
+  margin:0 0 8px;
+  color:#94616b;
+  font-size:9px;
+  line-height:1.5;
+  letter-spacing:.12em;
+}
+.film-overview-card .film-overview-copy .bilingual .zh-line{
+  display:block;
+  color:#514442;
+  font-size:13px;
+  line-height:1.95;
+  letter-spacing:.01em;
+}
+.film-overview-card .film-overview-copy .bilingual .en-line{
+  display:block;
+  margin-top:10px;
+  color:#96847d;
+  font-size:10px;
+  line-height:1.8;
+}
+.film-overview-card .film-overview-copy .film-official-link{
+  align-self:flex-start;
+  margin-top:15px;
+  padding-top:9px;
+  border-top:1px solid #eee4dc;
+  color:#81505b;
+  font-size:10px;
+  line-height:1.5;
+}
+@media(max-width:767px){
+  .film-overview-grid{gap:15px;margin:20px 0}
+  .film-overview-grid > .film-overview-card{
+    grid-template-columns:104px minmax(0,1fr);
+    grid-template-areas:"heading heading" "poster copy";
+    border-radius:9px;
+  }
+  .film-overview-card .film-card-heading{padding:14px 14px 11px}
+  .film-overview-card .film-card-heading .eyebrow{font-size:8px;margin-bottom:4px}
+  .film-overview-card .film-card-heading h3{font-size:19px;margin-bottom:5px}
+  .film-overview-card .film-card-heading .film-credits{font-size:9px;line-height:1.65}
+  .film-overview-card .film-poster-wrap{margin:13px 0 14px;padding:0 10px 0 12px}
+  .film-overview-card .film-overview-copy{padding:14px 12px 14px 11px}
+  .film-overview-card .film-overview-copy .film-field-label{font-size:8px;margin-bottom:5px}
+  .film-overview-card .film-overview-copy .bilingual .zh-line{font-size:12px;line-height:1.85}
+  .film-overview-card .film-overview-copy .bilingual .en-line{font-size:9px;line-height:1.7;margin-top:7px}
+  .film-overview-card .film-overview-copy .film-official-link{font-size:9px;margin-top:10px;padding-top:7px}
+  .film-overview-card .film-poster-credit{font-size:7px;letter-spacing:0}
+}
+@media(min-width:768px) and (max-width:1023px){
+  .film-overview-grid > .film-overview-card{grid-template-columns:145px minmax(0,1fr)}
+  .film-overview-card .film-card-heading{padding:16px 18px 13px}
+  .film-overview-card .film-poster-wrap{padding-inline:14px}
+  .film-overview-card .film-overview-copy{padding:17px 18px}
+  .film-overview-card .film-overview-copy .bilingual .zh-line{font-size:12px;line-height:1.9}
+  .film-overview-card .film-overview-copy .bilingual .en-line{font-size:9px}
+}
