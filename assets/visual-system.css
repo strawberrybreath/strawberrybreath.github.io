@@ -327,3 +327,30 @@ img,video,svg { max-width:100%; }
   .journal-card { grid-template-columns:100px minmax(0,1fr)!important; }
   .journal-card img { min-height:150px!important; aspect-ratio:auto!important; object-fit:contain!important; }
 }
+
+
+/* Article cover layouts follow the same responsive grid at every viewport */
+.issue-hero-inner { width:100%; box-sizing:border-box; }
+.issue-hero-inner .hero-image,
+.issue-hero-inner .issue-poster { display:block; width:min(100%,340px); height:auto; aspect-ratio:2/3; object-fit:contain; justify-self:center; }
+@media (min-width:761px) and (max-width:900px) and (orientation:portrait) {
+  .issue-hero-inner { grid-template-columns:minmax(0,1fr)!important; gap:24px!important; padding:34px 28px 40px!important; }
+  .issue-hero-inner .hero-image,.issue-hero-inner .issue-poster { width:min(56vw,280px)!important; }
+  .issue-hero h1 { font-size:clamp(30px,5vw,42px)!important; }
+  .issue-hero .intro,.issue-hero .subtitle,.issue-hero .issue-subtitle { font-size:14px!important; line-height:1.9!important; }
+}
+@media (min-width:901px) and (max-width:1199px) {
+  .issue-hero-inner { grid-template-columns:minmax(0,1.2fr) minmax(220px,.6fr)!important; gap:30px!important; padding:38px 34px 42px!important; }
+  .issue-hero-inner .hero-image,.issue-hero-inner .issue-poster { width:min(100%,290px)!important; }
+}
+@media (max-width:760px) {
+  .issue-hero-inner { grid-template-columns:minmax(0,1fr)!important; gap:20px!important; padding:30px 18px 34px!important; }
+  .issue-hero-inner .hero-image,.issue-hero-inner .issue-poster { width:min(68vw,230px)!important; max-width:100%; margin:0 auto!important; }
+  .issue-hero h1 { font-size:clamp(27px,7.3vw,36px)!important; line-height:1.35!important; }
+  .issue-hero .intro,.issue-hero .subtitle,.issue-hero .issue-subtitle { font-size:13px!important; line-height:1.9!important; }
+  .issue-hero-inner span[style*="Playfair Display"] { font-size:12px!important; line-height:1.75!important; }
+}
+@media (max-width:390px) {
+  .issue-hero-inner { padding:26px 16px 30px!important; }
+  .issue-hero-inner .hero-image,.issue-hero-inner .issue-poster { width:min(72vw,205px)!important; }
+}
