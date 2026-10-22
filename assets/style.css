@@ -367,3 +367,30 @@ html{scroll-padding-top:100px}.site-header .site-nav{gap:clamp(18px,3vw,42px)}
 .quote-card-voice{background-image:linear-gradient(135deg,#5b2934 0%,#743746 100%)}
 .quote-card-future{background-image:linear-gradient(135deg,#f7e9dd 0%,#fffaf2 100%)}
 @media(max-width:767px){.quote-card-top{min-height:29px;padding-right:36px}.flower-seal{width:30px;height:35px;flex-basis:30px}}
+
+
+/* Issue 01 — each pressed flower has its own stationery palette */
+.quote-card-mother{background:#f8e5e5!important;border-color:#d6a2a4!important}
+.quote-card-mother:before{border-color:rgba(143,66,78,.18)!important}
+.quote-card-mother .quote-mark{color:#b45f70!important}
+.quote-card-mother .quote-kicker,.quote-card-mother .quote-theme{color:#884657!important}
+.quote-card-mother .quote-card-foot{border-color:#e3bfc0!important;color:#966a6b!important}
+.quote-card-path{background:#fbf0c9!important;border-color:#d8c17b!important}
+.quote-card-path:before{border-color:rgba(151,117,44,.2)!important}
+.quote-card-path .quote-mark{color:#b78c31!important}
+.quote-card-path .quote-kicker,.quote-card-path .quote-theme{color:#806329!important}
+.quote-card-path .quote-card-foot{border-color:#e4d39b!important;color:#8e7848!important}
+.quote-card-voice{background:#eee5f5!important;border-color:#c1acd8!important}
+.quote-card-voice:before{border-color:rgba(107,78,137,.2)!important}
+.quote-card-voice .quote-mark{color:#9274b1!important}
+.quote-card-voice .quote-kicker,.quote-card-voice blockquote .zh-line,.quote-card-voice .quote-theme{color:#514064!important}
+.quote-card-voice blockquote .en-line{color:#6d5b80!important}
+.quote-card-voice .quote-card-foot{border-color:#d2c2e2!important;color:#766487!important}
+.quote-card-future{background:#e4eff8!important;border-color:#a8c4dd!important}
+.quote-card-future:before{border-color:rgba(73,117,157,.2)!important}
+.quote-card-future .quote-mark{color:#5f91bb!important}
+.quote-card-future .quote-kicker,.quote-card-future .quote-theme{color:#426b8c!important}
+.quote-card-future .quote-card-foot{border-color:#bfd4e6!important;color:#6686a0!important}
+.flower-seal{width:34px;height:42px;flex-basis:34px;opacity:1}
+.flower-seal svg{filter:drop-shadow(0 2px 2px rgba(67,43,50,.12))}
+@media(max-width:767px){.flower-seal{width:29px;height:36px;flex-basis:29px}}
