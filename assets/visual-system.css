@@ -354,3 +354,14 @@ img,video,svg { max-width:100%; }
   .issue-hero-inner { padding:26px 16px 30px!important; }
   .issue-hero-inner .hero-image,.issue-hero-inner .issue-poster { width:min(72vw,205px)!important; }
 }
+
+
+/* 2026-10-23 refinements: show the full cover artwork without cropping. */
+.home-intro-art img{object-fit:contain!important;object-position:center center!important;background:var(--sb-wine-deep)!important;}
+.home-intro-art:after{pointer-events:none;}
+/* Column cover art must describe the whole column, not an individual issue. */
+.column-landing-hero .column-cover{aspect-ratio:4/5!important;object-fit:cover!important;object-position:center!important;}
+/* Preserve full original book-cover proportions on cards and article heroes. */
+.journal-card img{object-fit:contain!important;background:#eee7df!important;}
+.issue-hero-inner .hero-image{object-fit:contain!important;background:#eee7df!important;}
+@media(max-width:760px){.home-intro-art img{object-fit:contain!important;object-position:center!important;}}
