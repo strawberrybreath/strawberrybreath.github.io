@@ -846,3 +846,44 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
   text-transform:uppercase;
 }
 .film-field-label + .bilingual{margin-top:.25rem}
+
+
+/* 2026-10-22: calm reading progress, image provenance captions, and accessible related reading. */
+.reading-progress-wrap{
+  display:grid;grid-template-columns:auto minmax(70px,1fr) auto;align-items:center;gap:10px;
+  max-width:1120px;margin:0 auto 1.25rem;padding:0 20px;
+  color:var(--letter-muted,#806c68);font:600 10px/1.5 "DM Sans","Noto Sans SC",sans-serif;
+  letter-spacing:.06em;
+}
+.reading-progress-wrap label{white-space:nowrap}
+.reading-progress-wrap progress{display:block;width:100%;height:4px;border:0;border-radius:99px;background:#eadfd5;accent-color:var(--letter-wine,#713746)}
+.reading-progress-wrap progress::-webkit-progress-bar{background:#eadfd5;border-radius:99px}
+.reading-progress-wrap progress::-webkit-progress-value{background:var(--letter-wine,#713746);border-radius:99px}
+.reading-progress-wrap progress::-moz-progress-bar{background:var(--letter-wine,#713746);border-radius:99px}
+.essay-still img{
+  display:block;width:100%;height:auto;aspect-ratio:3 / 2;object-fit:contain;object-position:center;
+  max-height:none;background:var(--letter-paper,#fbf7f0);border:1px solid var(--letter-rule,#d8c5b9);
+}
+.essay-still figcaption{display:flex;flex-direction:column;gap:3px;padding:9px 2px 0;font-size:10px;line-height:1.65;letter-spacing:0}
+.essay-still .caption-scene{color:var(--letter-ink,#4c3035);font-size:12px;font-weight:600;letter-spacing:0}
+.essay-still .caption-credit{color:var(--letter-muted,#806c68);font-size:10px;font-weight:500;overflow-wrap:anywhere}
+.essay-still figcaption a{font-size:inherit}
+.related-reading{margin:2.5rem 0 1.5rem;padding:1.4rem;border-top:1px solid var(--letter-rule,#d8c5b9);border-bottom:1px solid var(--letter-rule,#d8c5b9);background:rgba(242,231,220,.28)}
+.related-reading h2{margin:.25rem 0 1rem;font-family:"Noto Serif SC",serif;font-size:1.25rem;color:var(--letter-ink,#4c3035)}
+.related-reading-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.related-reading-links a{display:flex;flex-direction:column;gap:6px;padding:14px;border:1px solid var(--letter-rule,#d8c5b9);background:var(--letter-paper,#fbf7f0);color:var(--letter-ink,#4c3035);text-decoration:none}
+.related-reading-links a:hover{border-color:var(--letter-wine,#713746)}
+.related-reading-links a:focus-visible{outline:3px solid var(--letter-wine,#713746);outline-offset:3px}
+.related-reading-links strong{font-family:"Noto Serif SC",serif;font-size:1rem}
+.related-reading-links a>span:last-child{font-size:.8rem;line-height:1.65;color:var(--letter-muted,#806c68)}
+.related-kicker{font:700 9px/1.4 "DM Sans",sans-serif;letter-spacing:.12em;color:var(--letter-wine,#713746)}
+.next-issue-note{margin:.9rem 0 0;color:var(--letter-muted,#806c68);font-size:.8rem;line-height:1.7}
+@media(max-width:560px){
+  .reading-progress-wrap{grid-template-columns:1fr auto;gap:6px 10px;padding-inline:16px}
+  .reading-progress-wrap progress{grid-column:1 / -1;grid-row:2}
+  .related-reading{padding:1rem}
+  .related-reading-links{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+}
