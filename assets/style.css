@@ -821,3 +821,17 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
   .issue-body p.bilingual>.zh-line{font-size:14px;line-height:1.95}
   .issue-body p.bilingual>.en-line{font-size:11px;line-height:1.8}
 }
+
+
+/* Film metadata: factual credits are visibly separate from editorial analysis. */
+.film-credits{
+  margin:.65rem 0 1rem;
+  padding:.65rem .8rem;
+  border-left:2px solid var(--letter-rule,#d8c5b9);
+  background:rgba(242,231,220,.42);
+  color:var(--letter-muted,#806c68);
+  font-size:.78rem;
+  line-height:1.8;
+  letter-spacing:.01em;
+}
+.film-credits strong{color:var(--letter-ink,#4c3035);font-weight:600}
