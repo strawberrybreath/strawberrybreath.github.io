@@ -330,3 +330,6 @@ html{scroll-padding-top:100px}.site-header .site-nav{gap:clamp(18px,3vw,42px)}
 .official-stills figcaption{font-size:.68rem;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;opacity:.72;margin-top:.45rem}
 @media (min-width:760px){.film-overview-grid{gap:1.6rem}.film-overview-card{grid-template-columns:minmax(180px,30%) minmax(0,1fr);padding:1.2rem;gap:1.4rem}}
 @media (max-width:520px){.film-overview-card{grid-template-columns:112px minmax(0,1fr);gap:.85rem;padding:.7rem}.film-overview-copy h3{font-size:1.18rem}.film-overview-copy p{font-size:.9rem;line-height:1.75}.film-official-link{font-size:.75rem}}
+
+.film-poster-wrap{min-width:0}
+.film-poster-credit{font-size:.62rem;line-height:1.35;letter-spacing:.08em;text-transform:uppercase;opacity:.68;margin-top:.45rem}
