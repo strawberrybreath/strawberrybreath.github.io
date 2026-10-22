@@ -163,3 +163,81 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sb-gold)!important;
  .journal-card h3{font-size:16px!important}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Mobile typography refinement — prevent cramped, awkward wrapping */
+@media (max-width: 760px) {
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { font-size: 14px !important; line-height: 1.8 !important; overflow-wrap: break-word; }
+  .site-header { padding-left: 12px !important; padding-right: 12px !important; gap: 8px !important; }
+  .site-header .brand { flex: 1 1 auto; min-width: 0; max-width: calc(100% - 88px); }
+  .brand-copy { min-width: 0; }
+  .brand-en { font-size: clamp(11px, 3.2vw, 14px) !important; line-height: 1.2 !important; letter-spacing: .015em !important; white-space: nowrap; }
+  .brand-zh { font-size: 9px !important; line-height: 1.35 !important; letter-spacing: .09em !important; white-space: nowrap; }
+  .brand-tagline { font-size: 6px !important; letter-spacing: .025em !important; line-height: 1.3 !important; white-space: nowrap; }
+  .mobile-menu { min-width: 72px !important; min-height: 40px !important; padding: 7px 9px !important; font-size: 9px !important; }
+  .site-nav a { font-size: 12px !important; }
+  .home-intro.wrap { min-height: clamp(520px, 78svh, 680px) !important; padding: 34px 19px 42px !important; }
+  .home-intro-copy { width: 100%; max-width: 100%; }
+  .home-intro .eyebrow { font-size: 8px !important; letter-spacing: .11em !important; line-height: 1.6 !important; }
+  .home-intro h1 { font-size: clamp(29px, 7.4vw, 38px) !important; line-height: 1.35 !important; letter-spacing: -.035em !important; margin: 15px 0 17px !important; }
+  .home-intro h1 .zh-line { display: block; }
+  .home-intro h1 .en-line { font-size: clamp(14px, 3.8vw, 16px) !important; line-height: 1.65 !important; letter-spacing: 0 !important; margin-top: 12px !important; overflow-wrap: normal; word-break: normal; }
+  .home-intro-lead { font-size: 13px !important; line-height: 1.9 !important; letter-spacing: .005em; }
+  .home-intro-lead .en-line { font-size: 12px !important; line-height: 1.8 !important; overflow-wrap: normal; word-break: normal; }
+  .home-intro-note { font-size: 11px !important; line-height: 1.8 !important; padding-left: 12px !important; }
+  .home-intro-note .en-line { font-size: 11px !important; line-height: 1.75 !important; overflow-wrap: normal; word-break: normal; }
+  .manifesto.wrap { padding: 39px 19px !important; }
+  .manifesto-label { font-size: 8px !important; letter-spacing: .12em !important; }
+  .manifesto p { font-size: clamp(21px, 5.7vw, 25px) !important; line-height: 1.65 !important; letter-spacing: -.02em; }
+  .manifesto > span .zh-line { font-size: 12px !important; line-height: 1.9 !important; }
+  .manifesto > span .en-line, .manifesto > .bilingual .en-line { font-size: 11px !important; line-height: 1.75 !important; overflow-wrap: normal; word-break: normal; }
+  .section-head { gap: 8px !important; align-items: flex-start !important; }
+  .section-head h2 { font-size: clamp(22px, 5.8vw, 28px) !important; line-height: 1.4 !important; }
+  .section-note { max-width: 45%; font-size: 10px !important; line-height: 1.65 !important; }
+  .column-card { min-height: 350px !important; }
+  .column-content { padding: 20px !important; }
+  .column-index { font-size: 8px !important; letter-spacing: .11em !important; }
+  .column-content h3 { font-size: clamp(25px, 6.5vw, 30px) !important; line-height: 1.35 !important; }
+  .column-content h3 .en-line { font-size: 14px !important; line-height: 1.5 !important; }
+  .column-content p { font-size: 12px !important; line-height: 1.8 !important; }
+  .column-content p .en-line { font-size: 11px !important; line-height: 1.75 !important; overflow-wrap: normal; word-break: normal; }
+  .column-link { font-size: 11px !important; line-height: 1.7 !important; }
+  .column-link .en-line { font-size: 10px !important; }
+  .column-landing-hero { padding: 30px 19px 38px !important; }
+  .column-landing .eyebrow { font-size: 8px !important; letter-spacing: .11em !important; }
+  .column-landing h1 { font-size: clamp(33px, 8.5vw, 45px) !important; line-height: 1.18 !important; letter-spacing: -.03em !important; }
+  .column-landing .heading-en { font-size: .32em !important; line-height: 1.5 !important; letter-spacing: .07em !important; }
+  .column-deck { font-size: clamp(16px, 4.5vw, 19px) !important; line-height: 1.55 !important; }
+  .column-intro { font-size: 12px !important; line-height: 1.85 !important; overflow-wrap: normal; word-break: normal; }
+  .journal-head h2 { font-size: clamp(23px, 6vw, 29px) !important; line-height: 1.35 !important; }
+  .journal-head p { font-size: 10px !important; line-height: 1.65 !important; }
+  .journal-card h3 { font-size: 15px !important; line-height: 1.45 !important; overflow-wrap: break-word; }
+  .journal-card p { font-size: 11px !important; line-height: 1.75 !important; }
+  .article-layout, .article { padding-left: 17px !important; padding-right: 17px !important; }
+  .article-section h2, .section h2 { font-size: clamp(21px, 5.5vw, 26px) !important; line-height: 1.45 !important; }
+  .lang-block p, .lang p { font-size: 13px !important; line-height: 1.95 !important; }
+  .lang-block.en p, .en p { font-size: 13px !important; line-height: 1.85 !important; overflow-wrap: normal; word-break: normal; }
+  .site-footer .footer-main > p, .site-footer .contact-heading p { font-size: 12px !important; line-height: 1.85 !important; }
+  .site-footer .en-line { overflow-wrap: normal; word-break: normal; }
+}
+@media (max-width: 390px) {
+  .site-header { min-height: 60px !important; padding-left: 10px !important; padding-right: 10px !important; }
+  .site-header .brand { max-width: calc(100% - 80px); gap: 7px !important; }
+  .site-logo { width: 30px !important; height: 30px !important; flex-basis: 30px !important; }
+  .brand-en { font-size: clamp(10px, 3.05vw, 12px) !important; letter-spacing: 0 !important; }
+  .brand-zh { font-size: 8px !important; }
+  .mobile-menu { min-width: 68px !important; font-size: 8px !important; }
+  .home-intro.wrap { padding-left: 17px !important; padding-right: 17px !important; }
+  .home-intro h1 { font-size: clamp(27px, 7.4vw, 32px) !important; }
+  .home-intro-lead { font-size: 12px !important; }
+  .home-intro-lead .en-line { font-size: 11px !important; }
+  .section-note { max-width: 42%; font-size: 9px !important; }
+  .column-card { min-height: 330px !important; }
+  .column-content { padding: 17px !important; }
+  .column-content h3 { font-size: 24px !important; }
+  .column-content p { font-size: 11px !important; }
+  .column-content p .en-line { font-size: 10px !important; }
+  .column-landing h1 { font-size: clamp(30px, 8.2vw, 36px) !important; }
+  .column-deck { font-size: 16px !important; }
+}
