@@ -13,6 +13,13 @@
 .book-hero .sub{font:clamp(18px,2.2vw,25px)/1.6 var(--serif);color:var(--wine)}
 .book-cover{width:min(100%,300px);justify-self:center;aspect-ratio:2/3;object-fit:cover;background:#e8ddd1;box-shadow:0 18px 48px #39241a18}
 .book-cover-note{font-size:9px;color:var(--muted);text-align:center;margin-top:10px}
+.publisher-edition{width:min(100%,300px);aspect-ratio:2/3;justify-self:center;background:linear-gradient(155deg,#f2e5d7 0%,#dfc4b0 100%);border:1px solid #c8a997;box-shadow:0 18px 48px #39241a18;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px;color:#572c2c;text-align:center}
+.edition-label{font:600 9px/1.5 'DM Sans',sans-serif;letter-spacing:.2em}
+.edition-title{font:500 clamp(36px,4.5vw,52px)/.95 'Playfair Display',serif;letter-spacing:.035em;margin:26px 0 20px}
+.edition-rule{width:42px;height:1px;background:#8d5e51;margin-bottom:16px}
+.edition-author{font:500 10px/1.5 'DM Sans',sans-serif;letter-spacing:.16em}
+.edition-link{font-size:10px;line-height:1.6;color:#572c2c;border-bottom:1px solid #8d5e51;margin-top:28px;padding-bottom:4px}
+.publisher-edition .book-cover-note{margin-top:14px;color:#684b43;font-size:9px}
 .book-content{width:min(760px,calc(100% - 38px));margin:0 auto;padding-bottom:72px}
 .book-content section{padding:30px 0;border-bottom:1px solid var(--line)}
 .book-content h2{font:500 clamp(26px,3.5vw,36px)/1.35 var(--serif);color:var(--wine);margin:0 0 16px}
@@ -23,7 +30,7 @@
 .book-meta span{border:1px solid var(--line);padding:5px 9px;color:var(--muted);font-size:10px}
 .book-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
 .book-links a{border-bottom:1px solid var(--rose);padding:5px 0;color:var(--wine);font-size:12px}
-@media(max-width:767px){.book-hero{grid-template-columns:minmax(0,1fr) 104px;gap:13px;padding:30px 0}.book-hero h1{font-size:clamp(28px,8vw,40px);line-height:1.15}.book-hero .sub{font-size:16px;line-height:1.6}.book-cover{width:100%;margin-top:30px}.book-content{width:calc(100% - 38px);padding-bottom:calc(var(--mobile-nav-height) + 25px)}.book-content section{padding:25px 0}.book-content h2{font-size:26px}.book-content p{font-size:14px;line-height:2}.book-quote{padding:19px;font-size:23px}.book-meta span{font-size:9px}}
+@media(max-width:767px){.book-hero{grid-template-columns:minmax(0,1fr) 104px;gap:13px;padding:30px 0}.book-hero h1{font-size:clamp(28px,8vw,40px);line-height:1.15}.book-hero .sub{font-size:16px;line-height:1.6}.book-cover,.publisher-edition{width:100%;margin-top:30px}.edition-title{font-size:clamp(26px,7vw,36px)}.edition-link{font-size:9px;margin-top:18px}.book-content{width:calc(100% - 38px);padding-bottom:calc(var(--mobile-nav-height) + 25px)}.book-content section{padding:25px 0}.book-content h2{font-size:26px}.book-content p{font-size:14px;line-height:2}.book-quote{padding:19px;font-size:23px}.book-meta span{font-size:9px}}
 </style>
 </head>
 <body>
@@ -45,7 +52,14 @@
 <p style="color:var(--muted);font-size:12px;line-height:1.9">有些书并不急着告诉我们应该成为怎样的人。它只是替那些尚未被理解的感受，找到一种可以说出口的语言。</p>
 <div class="book-meta"><span>SYLVIA PLATH</span><span>1963</span><span>COMING OF AGE</span><span>WOMEN & SELFHOOD</span></div>
 </div>
-<div><img class="book-cover" src="../assets/栏目-书架.png" alt="书架主题图片，作为本期阅读专题的视觉封面"><div class="book-cover-note">Reading theme / 阅读专题视觉</div></div>
+<div class="publisher-edition">
+  <div class="edition-label">PUBLISHER'S EDITION</div>
+  <div class="edition-title">THE<br>BELL<br>JAR</div>
+  <div class="edition-rule"></div>
+  <div class="edition-author">SYLVIA PLATH</div>
+  <a class="edition-link" href="https://www.faber.co.uk/product/9780571327805-the-bell-jar/" target="_blank" rel="noopener">查看 Faber 官方版本与封面 ↗</a>
+  <div class="book-cover-note">Faber Collectors’ Edition · ISBN 9780571327805</div>
+</div>
 </section>
 <div class="book-content">
 <section><div class="eyebrow">01 / WHY THIS BOOK</div><h2>为什么是《钟形罩》？</h2>
@@ -64,7 +78,7 @@
 <section><div class="eyebrow">04 / FURTHER READING</div><h2>关于这本书</h2>
 <p>《钟形罩》是美国诗人、作家西尔维娅·普拉斯的半自传体小说，1963年首次出版。它以埃斯特·格林伍德的经历为线索，触及女性身份、社会期待、创作野心与心理健康。作品的黑色幽默与锋利观察，也是它持续被阅读的重要原因。</p>
 <p style="color:var(--muted);font-size:12px">The Bell Jar is Sylvia Plath's semi-autobiographical novel, first published in 1963. This page is an independent personal reading note; the book and its author remain the work of their respective rights holders.</p>
-<div class="book-links"><a href="https://www.faber.co.uk/product/9780571081783-the-bell-jar/" target="_blank" rel="noopener">Publisher information / 出版社介绍 ↗</a><a href="https://www.theguardian.com/books/2015/may/04/100-best-novels-no-85-the-bell-jar-sylvia-plath" target="_blank" rel="noopener">The Guardian review / 卫报书评 ↗</a></div></section>
+<div class="book-links"><a href="https://www.faber.co.uk/product/9780571327805-the-bell-jar/" target="_blank" rel="noopener">Publisher information / 出版社介绍 ↗</a><a href="https://www.theguardian.com/books/2015/may/04/100-best-novels-no-85-the-bell-jar-sylvia-plath" target="_blank" rel="noopener">The Guardian review / 卫报书评 ↗</a></div></section>
 </div></main>
 <footer class="site-footer" id="about-me"><div class="footer-main"><p>For the stories that help us see ourselves a little more clearly.</p><p>留给那些让我们更清楚看见自己的故事。</p></div><div class="site-meta"><span>STRAWBERRY BREATH</span><span>·</span><span>Personal film & reading journal</span><span>·</span><span>个人观影与阅读记录</span></div></footer>
 <nav class="bottom-nav" aria-label="Mobile navigation"><a href="../index.html"><span>⌂</span>首页</a><a href="../about/index.html"><span>✳</span>关于</a><a href="../issue-001/index.html"><span>▣</span>影视</a><a href="./index.html"><span>▤</span>书籍</a></nav>
