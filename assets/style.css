@@ -1725,3 +1725,50 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
 .contact-qr{width:92px;height:92px;object-fit:contain;margin:10px auto 0;border:1px solid var(--line);padding:4px;background:#fff;border-radius:8px;}
 .contact-hint{font-size:10px;letter-spacing:.04em;color:var(--muted);margin-top:3px;}
 @media(max-width:640px){.contact-qr{width:78px;height:78px}.contact-image-icon img{width:30px;height:30px}}
+
+
+/* Personal journal refinement — 2026-10-22 */
+.column-card{color:inherit;text-decoration:none}
+.column-card:focus-visible{outline:3px solid var(--wine);outline-offset:4px}
+.column-card.column-soon{opacity:1}
+.column-card.column-soon .status{display:none}
+.column-card .column-link.muted-link{color:var(--wine);border-bottom:1px solid var(--rose);width:fit-content;padding-bottom:3px}
+.section-note{max-width:260px;text-align:right;line-height:1.7}
+.site-footer .footer-main>p{max-width:640px;margin:0 auto 20px;color:var(--wine2);font-family:var(--serif);font-size:clamp(17px,2vw,21px);line-height:1.8}
+.site-footer .site-meta{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font:11px/1.8 var(--sans);letter-spacing:.04em}
+.contact-card{transition:transform .2s ease,border-color .2s ease}
+.contact-card:hover{transform:translateY(-2px);border-color:#cda8a4}
+@media(max-width:767px){
+  .featured-opening{grid-template-columns:minmax(0,1fr);width:calc(100% - 34px);gap:24px;padding:30px 0 34px}
+  .featured-copy h1{font-size:clamp(42px,12vw,60px)}
+  .featured-image{justify-self:center;max-width:420px;transform:none;padding:8px 8px 32px}
+  .featured-image img{height:auto;aspect-ratio:4/5;object-position:center 35%}
+  .feature-summary{font-size:14px;line-height:1.95}
+  .feature-meta{font-size:9px;line-height:1.8}
+  .manifesto{padding:26px 10px;margin-bottom:0}
+  .manifesto p{font-size:clamp(23px,6vw,30px);line-height:1.75}
+  .section{padding-block:30px}
+  .section-head{align-items:flex-start;flex-direction:column;gap:7px}
+  .section-note{text-align:left;max-width:none}
+  .column-grid{grid-template-columns:minmax(0,1fr);gap:14px}
+  .column-card{display:grid;grid-template-columns:112px minmax(0,1fr);align-items:stretch}
+  .column-card .column-image{min-height:100%;height:100%}
+  .column-card .column-image img{height:100%;min-height:170px;object-fit:cover}
+  .column-card .column-content{padding:15px 14px}
+  .column-card .column-content h3{font-size:18px;line-height:1.4}
+  .column-card .column-content p{font-size:12px;line-height:1.75}
+  .column-card .column-link{font-size:11px}
+  .closing-home{padding:34px 18px}
+  .closing-home blockquote{font-size:clamp(22px,5.8vw,29px);line-height:1.8}
+  .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact-wechat-card{grid-column:1/-1}
+  .site-footer{padding-bottom:28px}
+  .site-footer .site-meta{gap:4px 8px}
+}
+@media(min-width:768px) and (max-width:1023px){
+  .featured-opening{width:calc(100% - 52px);gap:30px;padding-block:48px}
+  .featured-copy h1{font-size:clamp(44px,6vw,64px)}
+  .column-grid{gap:14px}
+  .column-card .column-content{padding:16px}
+  .column-card .column-content p{font-size:12px}
+}
