@@ -314,3 +314,19 @@ html{scroll-padding-top:100px}.site-header .site-nav{gap:clamp(18px,3vw,42px)}
 .inline-rose-cover{background-image:url('../assets/column-card.jpg')}
 .inline-coast-cover{background-image:url('../assets/column-card.jpg')}
 @media(max-width:767px){.compact-image-credits{padding:.55rem .7rem!important}.contact-card{overflow:hidden}}
+
+
+/* Issue 01 — trilogy cards and restrained source-only image credits */
+.film-overview-grid{display:grid;grid-template-columns:1fr;gap:1.4rem;margin:2rem 0}
+.film-overview-card{display:grid;grid-template-columns:minmax(150px,32%) minmax(0,1fr);gap:1.2rem;align-items:start;padding:1rem;border:1px solid rgba(94,47,58,.16);border-radius:1rem;background:rgba(255,250,245,.62)}
+.film-poster-link{display:block;overflow:hidden;border-radius:.55rem;background:#e8ddd5}
+.film-overview-poster{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;object-position:center}
+.film-overview-copy h3{margin:.35rem 0 .7rem;font-family:"Playfair Display",serif;font-size:clamp(1.3rem,2.5vw,1.8rem);line-height:1.15}
+.film-overview-copy p{margin:.4rem 0 1rem;line-height:1.85}
+.film-official-link{display:inline-block;font-size:.82rem;letter-spacing:.04em;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:.16rem}
+.film-source-note{font-size:.78rem;opacity:.72;margin-top:.4rem}
+.issue-poster{object-fit:cover;object-position:center}
+.poster-note{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:.55rem}
+.official-stills figcaption{font-size:.68rem;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;opacity:.72;margin-top:.45rem}
+@media (min-width:760px){.film-overview-grid{gap:1.6rem}.film-overview-card{grid-template-columns:minmax(180px,30%) minmax(0,1fr);padding:1.2rem;gap:1.4rem}}
+@media (max-width:520px){.film-overview-card{grid-template-columns:112px minmax(0,1fr);gap:.85rem;padding:.7rem}.film-overview-copy h3{font-size:1.18rem}.film-overview-copy p{font-size:.9rem;line-height:1.75}.film-official-link{font-size:.75rem}}
