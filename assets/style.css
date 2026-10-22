@@ -906,3 +906,67 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
 .about-visual-note img{width:100%;height:clamp(180px,28vw,310px);object-fit:cover;object-position:center;border-radius:2px;}
 .about-visual-note p{font:500 clamp(20px,2.7vw,30px)/1.7 var(--serif);color:var(--wine2);margin:10px 0 0;}
 @media(max-width:767px){.column-card .column-image img{height:100%;min-height:205px;max-height:275px;object-fit:cover}.about-hero .about-hero-art{aspect-ratio:5/3;max-height:none}.about-visual-note{grid-template-columns:1fr;gap:12px;margin:8px 0 20px;padding:12px}.about-visual-note img{height:auto;aspect-ratio:16/9}.about-visual-note p{font-size:21px;line-height:1.65}}
+
+
+/* 2026-10-22 editorial refresh: serif Chinese reading face and clearer type hierarchy. */
+.issue-hero .intro .zh-line,
+.issue-body p.bilingual > .zh-line,
+.issue-body .quote-context .zh-line,
+.issue-body .film-source-note .zh-line {
+  font-family: "Noto Serif SC","Songti SC",STSong,serif !important;
+  font-size: 16px !important;
+  line-height: 2.05 !important;
+  color: inherit;
+  letter-spacing: .015em;
+}
+.issue-body p.bilingual > .en-line,
+.issue-hero .intro .en-line,
+.issue-body .quote-context .en-line,
+.issue-body .film-source-note .en-line {
+  display: block;
+  margin-top: 6px !important;
+  font-family: "DM Sans","Noto Sans SC",sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.85 !important;
+  color: #8a7772 !important;
+  letter-spacing: 0 !important;
+}
+.issue-body .film-field-label {
+  margin-top: 1rem;
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+.issue-body .film-credits,
+.issue-body .film-poster-credit,
+.issue-body .poster-note,
+.issue-body .film-source-note {
+  font-family: "DM Sans","Noto Sans SC",sans-serif;
+}
+.issue-body h2 .zh-line {
+  font-family: "Noto Serif SC","Songti SC",STSong,serif !important;
+  font-size: clamp(25px,3vw,34px) !important;
+  line-height: 1.5 !important;
+}
+.issue-body h2 .en-line {
+  display:block;
+  margin-top: 6px;
+  font-family: "DM Sans",sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: #8a6b6c !important;
+  letter-spacing: .06em !important;
+}
+@media (min-width: 768px) {
+  .issue-body p.bilingual > .zh-line,
+  .issue-hero .intro .zh-line { font-size: 17px !important; line-height: 2.1 !important; }
+  .issue-body p.bilingual > .en-line,
+  .issue-hero .intro .en-line { font-size: 12px !important; line-height: 1.9 !important; }
+}
+@media (max-width: 767px) {
+  .issue-body p.bilingual > .zh-line,
+  .issue-hero .intro .zh-line { font-size: 15px !important; line-height: 1.95 !important; }
+  .issue-body p.bilingual > .en-line,
+  .issue-hero .intro .en-line { font-size: 11px !important; line-height: 1.8 !important; }
+  .issue-body h2 .zh-line { font-size: 23px !important; }
+  .issue-body h2 .en-line { font-size: 11px !important; }
+}
