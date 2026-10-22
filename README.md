@@ -47,8 +47,11 @@ Look closely. Read critically. Think for yourself.
 index.html                 首页 / Home
 about/index.html           关于我 / About Me
 issue-001/index.html       第一期：Enola Holmes 三部曲
+books/index.html           书籍专题：《钟形罩》
 assets/                    样式、海报、剧照与编辑视觉素材
 .nojekyll                  以静态文件方式发布
+robots.txt                 搜索引擎抓取规则
+sitemap.xml                站点地图
 ```
 
 ## 编辑与素材原则 / Editorial Principles
