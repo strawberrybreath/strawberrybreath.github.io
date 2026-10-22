@@ -7,7 +7,7 @@
 <link rel="canonical" href="https://strawberrybreath.github.io/"><meta property="og:type" content="website"><meta property="og:site_name" content="STRAWBERRY BREATH"><meta property="og:title" content="STRAWBERRY BREATH — Women, Cinema & Selfhood"><meta property="og:description" content="从女性的目光出发，重新观看电影、关系与生活。 / A journal on women, cinema, relationships and the lives we choose."><meta property="og:url" content="https://strawberrybreath.github.io/"><meta property="og:image" content="https://strawberrybreath.github.io/assets/women-portrait-1536.jpg"><meta property="og:image:alt" content="女性群像主题图，草莓味口气女性文化刊物"><meta name="twitter:image:alt" content="Women-centered editorial artwork for Strawberry Breath"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="STRAWBERRY BREATH — Women, Cinema & Selfhood"><meta name="twitter:description" content="A bilingual journal on women, cinema, relationships and selfhood."><meta name="twitter:image" content="https://strawberrybreath.github.io/assets/women-portrait-1536.jpg">
 <link rel="icon" type="image/png" href="./assets/favicon.png"><link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./assets/style.css?v=20261022-editorial-refresh09">
+<link rel="stylesheet" href="./assets/style.css?v=20261022-progress-all-pages10">
 </head>
 <body><a class="skip-link" href="#main-content"><span class="zh-line">跳到正文</span><span class="en-line">Skip to content</span></a>
 <header class="site-header"><a class="brand" href="./index.html"><span class="brand-en">STRAWBERRY BREATH</span><span class="brand-zh">草莓味口气</span><span class="brand-tagline">WOMEN · CINEMA · SELFHOOD</span></a>
@@ -33,4 +33,23 @@
 <div class="contact-card"><span class="contact-icon brand-wechat" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#07C160" stroke="none" d="M9.5 3C5.36 3 2 5.8 2 9.25c0 1.96 1.1 3.72 2.84 4.88l-.62 2.3 2.5-1.25c.86.24 1.79.37 2.78.37.14 0 .28 0 .42-.01a5.6 5.6 0 0 1-.3-1.8c0-3.1 2.93-5.62 6.55-5.62.25 0 .5.01.74.04C16.03 5.2 13.07 3 9.5 3Z"/><path fill="#07C160" stroke="none" d="M16.2 9.35c-3.18 0-5.76 2.06-5.76 4.6 0 2.55 2.58 4.61 5.76 4.61.72 0 1.41-.1 2.04-.29l2.2 1.1-.54-2.01c1.29-.86 2.1-2.07 2.1-3.41 0-2.54-2.58-4.6-5.8-4.6Z"/><g fill="#fff" stroke="none"><circle cx="7" cy="8.8" r=".8"/><circle cx="12" cy="8.8" r=".8"/><circle cx="14.5" cy="13.5" r=".65"/><circle cx="18" cy="13.5" r=".65"/></g></svg></span><span class="contact-label">WECHAT</span><span class="zh-line">微信公众号</span><span class="en-line">搜索“草莓味口气”关注</span></div>
 </div><div class="site-meta"><span class="bilingual"><span class="zh-line">独立女性文化刊物 · 持续更新中</span><span class="en-line">An independent journal on women and culture · Updated over time</span></span><span class="meta-separator">·</span><span>© 2026 STRAWBERRY BREATH</span></div></div></footer>
 <nav class="bottom-nav"><a href="./index.html"><span class="zh-line">首页</span><span class="en-line">HOME</span></a><a href="./about/index.html"><span class="zh-line">栏目介绍</span><span class="en-line">ABOUT</span></a><a href="./issue-001/index.html"><span class="zh-line">第一期</span><span class="en-line">ISSUE 01</span></a></nav>
-</body></html>
+<script>
+(() => {
+  const wrap = document.querySelector(".reading-progress-wrap");
+  const bar = document.getElementById("reading-progress");
+  const value = document.getElementById("reading-progress-value");
+  if (!wrap || !bar || !value) return;
+  const update = () => {
+    const root = document.documentElement;
+    const max = root.scrollHeight - root.clientHeight;
+    const percent = max > 0 ? Math.round((root.scrollTop / max) * 100) : 0;
+    bar.value = percent;
+    bar.setAttribute("aria-valuetext", percent + "%");
+    value.value = percent + "%";
+    value.textContent = percent + "%";
+  };
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update, { passive: true });
+  update();
+})();
+</script></body></html>
