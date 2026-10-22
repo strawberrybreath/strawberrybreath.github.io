@@ -333,3 +333,13 @@ html{scroll-padding-top:100px}.site-header .site-nav{gap:clamp(18px,3vw,42px)}
 
 .film-poster-wrap{min-width:0}
 .film-poster-credit{font-size:.62rem;line-height:1.35;letter-spacing:.08em;text-transform:uppercase;opacity:.68;margin-top:.45rem}
+
+
+/* Issue 01 — bilingual quotation cards inspired by Victorian case files */
+.quote-card{position:relative;isolation:isolate;overflow:hidden;margin:1.5rem 0 1.8rem;padding:clamp(20px,4vw,34px);border:1px solid #d9b8ad;border-radius:3px;background:linear-gradient(135deg,#fffaf2 0%,#f3e5dc 100%);box-shadow:0 9px 24px rgba(63,31,35,.07)}
+.quote-card:before{content:"";position:absolute;z-index:-1;inset:8px;border:1px solid rgba(122,36,56,.16);pointer-events:none}
+.quote-card:after{content:"";position:absolute;z-index:-1;right:-22px;bottom:-48px;width:150px;height:150px;border:1px solid rgba(122,36,56,.12);border-radius:50%;box-shadow:0 0 0 12px rgba(122,36,56,.025),0 0 0 25px rgba(122,36,56,.02)}
+.quote-card-top{display:flex;align-items:center;gap:12px;margin-bottom:8px;color:var(--wine)}.quote-mark{font:400 54px/.75 "Playfair Display",Georgia,serif;color:#b77b7d}.quote-kicker{font:600 9px/1.5 var(--sans);letter-spacing:.17em}
+.quote-card blockquote{margin:0;padding:0 0 18px;color:var(--wine2);font-family:"Noto Serif SC",Georgia,serif}.quote-card blockquote .zh-line{font:600 clamp(17px,2.2vw,22px)/1.8 "Noto Serif SC",serif;letter-spacing:.015em}.quote-card blockquote .en-line{font:italic 500 clamp(14px,1.7vw,17px)/1.8 "Playfair Display",Georgia,serif;color:#775a56;margin-top:9px;letter-spacing:.01em}
+.quote-card-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;padding-top:11px;border-top:1px solid #dfc8bd;font:600 8px/1.6 var(--sans);letter-spacing:.1em;color:#8b6b64}.quote-theme{color:var(--wine)}.quote-card-path{background:linear-gradient(135deg,#f7eee4,#ead4cd)}.quote-card-voice{background:linear-gradient(135deg,#54202e,#7a2438);border-color:#a56d76;color:#fff8f0}.quote-card-voice:before{border-color:rgba(255,248,240,.2)}.quote-card-voice .quote-mark{color:#edc2bb}.quote-card-voice .quote-kicker,.quote-card-voice blockquote .zh-line{color:#fff8f0}.quote-card-voice blockquote .en-line{color:#f1d6d0}.quote-card-voice .quote-card-foot{border-color:#a66e78;color:#edc8c2}.quote-card-voice .quote-theme{color:#fff1e9}.quote-card-future{background:linear-gradient(135deg,#f4e5d9,#fffaf2)}
+@media(max-width:767px){.quote-card{margin:1.2rem 0 1.45rem;padding:19px 17px}.quote-card:before{inset:6px}.quote-mark{font-size:46px}.quote-kicker{font-size:8px;letter-spacing:.12em}.quote-card blockquote .zh-line{font-size:16px;line-height:1.85}.quote-card blockquote .en-line{font-size:13px;line-height:1.8}.quote-card-foot{font-size:7px;letter-spacing:.06em}}
