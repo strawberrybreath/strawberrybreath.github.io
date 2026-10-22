@@ -85,3 +85,17 @@ img{max-width:100%}
  .journal-card p{font-size:10px!important}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Screenshot-driven corrections: prevent contact labels breaking and give book covers a stable source. */
+.contact-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+.contact-card{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:12px!important;min-width:0!important;padding:22px 8px!important}
+.contact-card .contact-label{display:block!important;width:auto!important;max-width:100%!important;white-space:nowrap!important;word-break:normal!important;overflow-wrap:normal!important;letter-spacing:.1em!important;font-size:11px!important;line-height:1.4!important;text-align:center!important}
+.contact-card .contact-icon{flex:0 0 auto!important}
+.contact-card svg{display:block!important;width:34px!important;height:34px!important}
+@media(max-width:767px){
+ .contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+ .contact-card{min-height:112px!important;padding:16px 4px!important;gap:9px!important}
+ .contact-card .contact-label{font-size:9px!important;letter-spacing:.04em!important}
+ .contact-card svg{width:29px!important;height:29px!important}
+}
+@media(max-width:340px){.contact-grid{gap:5px!important}.contact-card .contact-label{font-size:8px!important;letter-spacing:0!important}}
