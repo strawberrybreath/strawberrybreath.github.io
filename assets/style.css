@@ -1029,3 +1029,36 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
  .film-overview-card .film-overview-copy .bilingual .zh-line{font-size:13px;line-height:1.9}
  .film-overview-card .film-overview-copy .bilingual .en-line{font-size:10.5px;line-height:1.75}
 }
+
+
+/* 2026-10-22: show the three film entries side by side to reduce vertical footprint. */
+.film-overview-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;
+  gap:clamp(10px,1.5vw,20px);
+}
+.film-overview-grid > .film-overview-card{min-width:0;height:100%}
+.film-overview-card .film-card-heading{padding:15px 14px 10px}
+.film-overview-card .film-card-heading h3{font-size:clamp(17px,1.5vw,22px);overflow-wrap:anywhere}
+.film-overview-card .film-card-heading .film-credits{font-size:11px;line-height:1.7;padding:8px}
+.film-overview-card .film-poster-wrap{margin:0 14px 12px}
+.film-overview-card .film-overview-copy{padding:0 14px 15px}
+.film-overview-card .film-overview-copy .bilingual .zh-line{font-size:13px;line-height:1.85}
+.film-overview-card .film-overview-copy .bilingual .en-line{font-size:10.5px;line-height:1.75}
+@media(max-width:767px){
+  .film-overview-grid{
+    grid-template-columns:repeat(3,minmax(220px,72vw));
+    gap:12px;
+    overflow-x:auto;
+    padding:0 0 12px;
+    scroll-snap-type:x mandatory;
+    overscroll-behavior-x:contain;
+  }
+  .film-overview-grid > .film-overview-card{scroll-snap-align:start}
+  .film-overview-card .film-card-heading{padding:13px 12px 9px}
+  .film-overview-card .film-card-heading h3{font-size:18px}
+  .film-overview-card .film-card-heading .film-credits{font-size:10px;line-height:1.65}
+  .film-overview-card .film-poster-wrap{margin:0 12px 10px}
+  .film-overview-card .film-overview-copy{padding:0 12px 13px}
+}
