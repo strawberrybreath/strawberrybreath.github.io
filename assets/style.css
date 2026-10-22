@@ -394,3 +394,21 @@ html{scroll-padding-top:100px}.site-header .site-nav{gap:clamp(18px,3vw,42px)}
 .flower-seal{width:34px;height:42px;flex-basis:34px;opacity:1}
 .flower-seal svg{filter:drop-shadow(0 2px 2px rgba(67,43,50,.12))}
 @media(max-width:767px){.flower-seal{width:29px;height:36px;flex-basis:29px}}
+
+
+/* Stronger floral stationery colors + enlarged botanical seals */
+.quote-card.quote-card-mother{background:#f4d7da!important;background-image:linear-gradient(135deg,#f9e5e6 0%,#efc9cf 100%)!important;border-color:#d39aa4!important}
+.quote-card.quote-card-path{background:#f8e6a8!important;background-image:linear-gradient(135deg,#fff3c9 0%,#f2d982 100%)!important;border-color:#d5b65b!important}
+.quote-card.quote-card-voice{background:#e1d1f0!important;background-image:linear-gradient(135deg,#f0e7f8 0%,#d8c2eb 100%)!important;border-color:#b59acb!important}
+.quote-card.quote-card-future{background:#cfe3f3!important;background-image:linear-gradient(135deg,#e5f1fa 0%,#c1dbef 100%)!important;border-color:#94bad8!important}
+.quote-card-mother:before{border-color:rgba(143,66,78,.25)!important}
+.quote-card-path:before{border-color:rgba(151,117,44,.25)!important}
+.quote-card-voice:before{border-color:rgba(107,78,137,.25)!important}
+.quote-card-future:before{border-color:rgba(73,117,157,.25)!important}
+.flower-seal{width:58px!important;height:64px!important;flex:0 0 58px!important;margin-right:2px!important;opacity:1!important}
+.quote-card-top{min-height:64px!important;padding-right:4px!important;gap:10px!important;align-items:center!important}
+.flower-seal svg{width:100%!important;height:100%!important;filter:drop-shadow(0 2px 2px rgba(67,43,50,.14))!important}
+@media(max-width:767px){
+ .flower-seal{width:48px!important;height:54px!important;flex-basis:48px!important}
+ .quote-card-top{min-height:54px!important;gap:8px!important}
+}
