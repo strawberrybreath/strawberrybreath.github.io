@@ -355,3 +355,15 @@ html{scroll-padding-top:100px}.site-header .site-nav{gap:clamp(18px,3vw,42px)}
 .quote-context{margin:.45rem 0 1.25rem;padding:0 0 0 13px;border-left:2px solid #c7a49a;color:#66544f;font-size:13px;line-height:1.9}.quote-context .context-label{display:block;margin-bottom:3px;font:600 8px/1.6 var(--sans);letter-spacing:.13em;color:#8c6663}.quote-context .zh-line,.quote-context .en-line{display:block}.quote-context .en-line{margin-top:5px;font-size:12px;color:#88736b;font-style:italic;line-height:1.75}
 .essay-still{margin:1.2rem auto 1.5rem;max-width:620px}.essay-still img{display:block;width:100%;height:auto;max-height:360px;object-fit:cover;border:5px solid #f7f0e6;outline:1px solid #d9c8b9;outline-offset:-1px}.essay-still figcaption{padding:7px 2px 0;font:600 8px/1.6 var(--sans);letter-spacing:.08em;color:#8b7469}.essay-still figcaption a{color:#7a2438;text-decoration:underline;text-underline-offset:2px}
 @media(max-width:767px){.quote-card{margin:.85rem 0 .4rem;padding:13px 15px 11px}.quote-card:before{inset:4px}.quote-card blockquote .zh-line{font-size:15px;line-height:1.7}.quote-card blockquote .en-line{font-size:12px;line-height:1.65}.quote-card-foot{font-size:6.5px}.quote-context{font-size:12px;line-height:1.85;margin-bottom:1rem}.quote-context .en-line{font-size:11px}.essay-still{margin:1rem auto 1.2rem}.essay-still img{max-height:260px}}
+
+
+/* Issue 01: pressed-flower correspondence motif inspired by Eudoria's flower clues */
+.quote-card{background-image:linear-gradient(135deg,rgba(255,251,243,.97),rgba(242,229,216,.97));}
+.quote-card-top{position:relative;min-height:35px;padding-right:45px}
+.flower-seal{display:inline-flex;align-items:center;justify-content:center;width:38px;height:43px;margin-left:auto;flex:0 0 38px;opacity:.92}
+.flower-seal svg{display:block;width:100%;height:100%;filter:drop-shadow(0 1px 1px rgba(84,32,46,.10))}
+.quote-card-voice .flower-seal{filter:grayscale(.15) brightness(1.16)}
+.quote-card-path{background-image:linear-gradient(135deg,#faf3e9 0%,#edddd1 100%)}
+.quote-card-voice{background-image:linear-gradient(135deg,#5b2934 0%,#743746 100%)}
+.quote-card-future{background-image:linear-gradient(135deg,#f7e9dd 0%,#fffaf2 100%)}
+@media(max-width:767px){.quote-card-top{min-height:29px;padding-right:36px}.flower-seal{width:30px;height:35px;flex-basis:30px}}
