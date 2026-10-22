@@ -144,3 +144,28 @@ body { font-family:var(--sans) !important; font-size:16px; line-height:1.9; }
 .contact-hint{font-size:10px!important;line-height:1.6!important;text-align:center!important;max-width:220px}
 .reading-progress-wrap,#reading-progress,.reading-progress-label{display:none!important}
 @media(max-width:767px){.site-header{top:0!important}.site-header .brand{gap:8px!important;max-width:none!important}.site-logo{width:34px;height:34px;flex-basis:34px}.site-header .brand-en{font-size:15px!important}.site-header .brand-tagline{font-size:7px!important}.contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}.contact-card{min-height:94px!important;padding:12px 5px!important;gap:7px!important}.contact-icon{width:38px!important;height:38px!important}.contact-image-icon img{width:20px!important;height:20px!important}.contact-label{font-size:8px!important;letter-spacing:.08em!important}.contact-hint{font-size:8px!important;line-height:1.4!important}}
+
+
+/* Contact icons: clean icon-only circles, with labels underneath */
+.contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:clamp(18px,4vw,44px)!important;max-width:540px!important;margin:12px auto 28px!important}
+.contact-card{min-height:0!important;padding:0!important;gap:10px!important;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:0!important;justify-content:flex-start!important;text-decoration:none!important}
+.contact-card:hover,.contact-card:focus-visible{background:transparent!important;border-color:transparent!important;transform:translateY(-2px)}
+.contact-icon{width:clamp(58px,8vw,78px)!important;height:clamp(58px,8vw,78px)!important;flex:0 0 auto!important;border-radius:50%!important;background:transparent!important;border:0!important;overflow:hidden!important;margin:0!important;display:grid!important;place-items:center!important}
+.contact-image-icon img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
+.contact-label{display:block!important;margin:0!important;font:600 11px/1.4 var(--sans)!important;letter-spacing:.12em!important;color:var(--wine)!important;text-align:center}
+.contact-hint{display:none!important}
+.wechat-qr-modal{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(31,24,22,.72);backdrop-filter:blur(5px)}
+.wechat-qr-modal:target{display:flex}
+.wechat-qr-panel{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;width:fit-content;max-width:calc(100vw - 32px);max-height:calc(100dvh - 32px);padding:clamp(12px,3vw,22px);background:#f7f4ee;box-shadow:0 18px 60px rgba(0,0,0,.22)}
+.wechat-qr-panel img{display:block;width:auto;height:auto;max-width:min(76vw,420px);max-height:calc(100dvh - 120px);object-fit:contain}
+.wechat-qr-close{align-self:flex-end;color:var(--wine);font:12px/1.4 var(--sans);text-decoration:none;padding:3px 5px}
+.wechat-qr-caption{margin:0;color:var(--muted);font:12px/1.5 var(--sans);text-align:center}
+@media(max-width:767px){
+ .contact-grid{gap:12px!important;max-width:360px!important;margin:12px auto 22px!important}
+ .contact-icon{width:clamp(52px,15vw,68px)!important;height:clamp(52px,15vw,68px)!important}
+ .contact-label{font-size:10px!important;letter-spacing:.08em!important}
+ .wechat-qr-modal{padding:12px}
+ .wechat-qr-panel{max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);padding:12px}
+ .wechat-qr-panel img{max-width:min(82vw,360px);max-height:calc(100dvh - 112px)}
+}
+@media(min-width:768px) and (max-width:1100px){.wechat-qr-panel img{max-width:min(58vw,380px);max-height:62vh}}
