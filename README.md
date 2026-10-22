@@ -22,15 +22,14 @@ Look closely. Read critically. Think for yourself.
 
 *Strawberry Breath is an independent journal exploring women, film, culture, feminist ideas, and the ongoing process of becoming oneself. We look closely at stories, read critically, and make room for independent thought rather than easy answers.*
 
-## 三个栏目 / Sections
+## 两个内容方向 / Editorial Sections
 
 | 栏目 | 方向 |
 | --- | --- |
 | **她的影单 · HER FILM NOTES** | 从女性角色、女性创作者与电影叙事出发，阅读银幕中的女性经验。 |
 | **她的书架 · HER BOOKSHELF** | 通过书籍、作者与思想，拓展理解世界和自己的方式。 |
-| **她的主体性 · HER AGENCY** | 讨论自我意识、独立判断、边界与个人选择。 |
 
-目前已上线：**她的影单 / HER FILM NOTES**。
+网站导航现为：**首页 / Home、关于我 / About Me、影视专题 / Film、书籍专题 / Books**。内容以女性视角为起点，关注电影与阅读中的人物、选择、关系和自我理解。
 
 ## 本期专题 / Current Feature
 
@@ -46,7 +45,7 @@ Look closely. Read critically. Think for yourself.
 
 ```text
 index.html                 首页 / Home
-about/index.html           栏目介绍 / About
+about/index.html           关于我 / About Me
 issue-001/index.html       第一期：Enola Holmes 三部曲
 assets/                    样式、海报、剧照与编辑视觉素材
 .nojekyll                  以静态文件方式发布
