@@ -378,3 +378,7 @@ img,video,svg { max-width:100%; }
 /* Complete artwork display across column cards, not cropped thumbnails. */
 .column-image img{object-fit:contain!important;object-position:center!important;background:var(--sb-wine-deep)!important;}
 .column-image:after{pointer-events:none;}
+
+/* Keep the column introduction cover inside its own grid cell. */
+.column-landing-hero .column-cover{position:relative!important;inset:auto!important;z-index:1!important;display:block!important;width:100%!important;height:auto!important;max-width:340px!important;aspect-ratio:4/5!important;object-fit:contain!important;object-position:center!important;justify-self:end!important;align-self:center!important;background:var(--sb-wine-deep)!important;}
+@media(max-width:760px){.column-landing-hero .column-cover{width:100%!important;max-width:100%!important;justify-self:stretch!important;}}
