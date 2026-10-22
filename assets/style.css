@@ -897,3 +897,12 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto!important}
 }
+
+/* 2026-10-22: place newly added original column artwork in editorial contexts. */
+.column-card .column-image img{display:block;width:100%;height:clamp(210px,25vw,310px);min-height:0;max-height:none;object-fit:cover;object-position:center;}
+.column-card.column-soon .column-image img{filter:none;}
+.about-hero .about-hero-art{display:block;width:100%;max-height:560px;aspect-ratio:4/5;object-fit:cover;object-position:center;border-radius:3px;box-shadow:0 18px 42px #38241a1c;}
+.about-visual-note{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(220px,.8fr);gap:clamp(22px,5vw,58px);align-items:center;margin:12px 0 28px;padding:18px;background:var(--cream);border:1px solid var(--line);}
+.about-visual-note img{width:100%;height:clamp(180px,28vw,310px);object-fit:cover;object-position:center;border-radius:2px;}
+.about-visual-note p{font:500 clamp(20px,2.7vw,30px)/1.7 var(--serif);color:var(--wine2);margin:10px 0 0;}
+@media(max-width:767px){.column-card .column-image img{height:100%;min-height:205px;max-height:275px;object-fit:cover}.about-hero .about-hero-art{aspect-ratio:5/3;max-height:none}.about-visual-note{grid-template-columns:1fr;gap:12px;margin:8px 0 20px;padding:12px}.about-visual-note img{height:auto;aspect-ratio:16/9}.about-visual-note p{font-size:21px;line-height:1.65}}
