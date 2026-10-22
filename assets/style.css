@@ -835,3 +835,14 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
   letter-spacing:.01em;
 }
 .film-credits strong{color:var(--letter-ink,#4c3035);font-weight:600}
+
+.film-field-label{
+  margin:1rem 0 .2rem;
+  color:var(--letter-wine,#713746);
+  font-family:"DM Sans","Noto Sans SC",sans-serif;
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.film-field-label + .bilingual{margin-top:.25rem}
