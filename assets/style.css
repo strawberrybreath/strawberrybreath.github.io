@@ -849,21 +849,18 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
 
 
 /* 2026-10-22: calm reading progress, image provenance captions, and accessible related reading. */
-.reading-progress-wrap{
-  display:grid;grid-template-columns:auto minmax(70px,1fr) auto;align-items:center;gap:10px;
-  max-width:1120px;margin:0 auto 1.25rem;padding:8px 20px;
-  color:var(--letter-muted,#806c68);font:600 10px/1.5 "DM Sans","Noto Sans SC",sans-serif;
-  letter-spacing:.06em;
+/* Reading progress sits inside the sticky masthead, between the brand and navigation. */
+.site-header .reading-progress-wrap{
+  display:grid;grid-template-columns:auto minmax(54px,1fr) auto;align-items:center;gap:8px;
+  flex:1;min-width:100px;max-width:300px;margin:0;padding:0;
+  color:var(--letter-muted,#806c68);font:600 9px/1.4 "DM Sans","Noto Sans SC",sans-serif;
+  letter-spacing:.04em;
 }
-/* Once readers pass the table of contents, keep a quiet progress indicator at the viewport top. */
-.reading-progress-wrap.is-fixed{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
-  width:100%;max-width:none;margin:0;padding:8px max(20px,calc((100vw - 1120px)/2));
-  background:rgba(251,247,240,.96);
-  border-bottom:1px solid var(--letter-rule,#d8c5b9);
-  box-shadow:0 3px 12px rgba(67,39,39,.055);
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-}
+.site-header .reading-progress-wrap label{white-space:nowrap}
+.site-header .reading-progress-wrap progress{display:block;width:100%;height:4px;border:0;border-radius:99px;background:#eadfd5;accent-color:var(--letter-wine,#713746)}
+.site-header .reading-progress-wrap progress::-webkit-progress-bar{background:#eadfd5;border-radius:99px}
+.site-header .reading-progress-wrap progress::-webkit-progress-value{background:var(--letter-wine,#713746);border-radius:99px}
+.site-header .reading-progress-wrap progress::-moz-progress-bar{background:var(--letter-wine,#713746);border-radius:99px}
 .reading-progress-wrap label{white-space:nowrap}
 .reading-progress-wrap progress{display:block;width:100%;height:4px;border:0;border-radius:99px;background:#eadfd5;accent-color:var(--letter-wine,#713746)}
 .reading-progress-wrap progress::-webkit-progress-bar{background:#eadfd5;border-radius:99px}
@@ -887,10 +884,13 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
 .related-reading-links a>span:last-child{font-size:.8rem;line-height:1.65;color:var(--letter-muted,#806c68)}
 .related-kicker{font:700 9px/1.4 "DM Sans",sans-serif;letter-spacing:.12em;color:var(--letter-wine,#713746)}
 .next-issue-note{margin:.9rem 0 0;color:var(--letter-muted,#806c68);font-size:.8rem;line-height:1.7}
+@media(max-width:767px){
+  .site-header .reading-progress-wrap{grid-template-columns:minmax(0,1fr) auto;gap:5px;min-width:52px;max-width:110px}
+  .site-header .reading-progress-wrap label{display:none}
+  .site-header .reading-progress-wrap progress{grid-column:1;grid-row:1}
+  .site-header .reading-progress-wrap output{font-size:8px;white-space:nowrap}
+}
 @media(max-width:560px){
-  .reading-progress-wrap{grid-template-columns:1fr auto;gap:6px 10px;padding:7px 16px}
-  .reading-progress-wrap progress{grid-column:1 / -1;grid-row:2}
-  .reading-progress-wrap.is-fixed{padding:7px 16px}
   .related-reading{padding:1rem}
   .related-reading-links{grid-template-columns:1fr}
 }
