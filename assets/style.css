@@ -1715,3 +1715,13 @@ body{font-family:"Noto Sans SC",var(--sans),sans-serif}
 @media(prefers-reduced-motion:reduce){
   .film-overview-card .film-overview-poster{transition:none}
 }
+
+
+/* Updated repository artwork: restrained editorial image treatment */
+.home-portrait-feature img{width:100%;height:100%;object-fit:cover;object-position:center 42%;}
+.contact-image-icon{display:flex;align-items:center;justify-content:center;overflow:hidden;background:transparent!important;}
+.contact-image-icon img{width:34px;height:34px;object-fit:contain;}
+.contact-wechat-card{align-items:center;}
+.contact-qr{width:92px;height:92px;object-fit:contain;margin:10px auto 0;border:1px solid var(--line);padding:4px;background:#fff;border-radius:8px;}
+.contact-hint{font-size:10px;letter-spacing:.04em;color:var(--muted);margin-top:3px;}
+@media(max-width:640px){.contact-qr{width:78px;height:78px}.contact-image-icon img{width:30px;height:30px}}
