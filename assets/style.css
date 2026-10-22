@@ -600,3 +600,224 @@ img{max-width:100%;height:auto}
   html{scroll-behavior:auto}
   *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
+
+
+/* 2026-10-22 flower stationery refinement: unified ink, paper, and botanical accents */
+:root{
+  --letter-paper:#fbf7f0;
+  --letter-paper-deep:#f2e7dc;
+  --letter-ink:#4c3035;
+  --letter-muted:#806c68;
+  --letter-rule:#d8c5b9;
+  --letter-wine:#713746;
+  --letter-shadow:rgba(67,39,39,.075);
+}
+/* All four quote cards share one stationery structure; each flower remains its own accent. */
+.issue-body .quote-card{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:clamp(17px,2.4vw,25px) clamp(18px,2.8vw,28px) 15px!important;
+  border:1px solid var(--letter-rule)!important;
+  border-radius:3px!important;
+  background:linear-gradient(145deg,#fffaf3 0%,var(--letter-paper) 62%,#f5ece2 100%)!important;
+  color:var(--letter-ink)!important;
+  box-shadow:0 5px 16px var(--letter-shadow),0 1px 2px rgba(67,39,39,.035)!important;
+}
+.issue-body .quote-card:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:5px;
+  border:1px solid rgba(113,55,70,.19)!important;
+  border-radius:1px;
+  pointer-events:none;
+}
+.issue-body .quote-card:after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:104px;height:104px;
+  right:-38px;bottom:-46px;
+  border:1px solid rgba(113,55,70,.07);
+  border-radius:50%;
+  box-shadow:0 0 0 8px rgba(113,55,70,.025),0 0 0 17px rgba(113,55,70,.018);
+  pointer-events:none;
+}
+.issue-body .quote-card-top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-height:44px!important;
+  padding:0 0 7px!important;
+  border-bottom:1px solid rgba(113,55,70,.15);
+}
+.issue-body .quote-mark{
+  color:var(--letter-wine)!important;
+  font-family:Georgia,"Noto Serif SC",serif;
+  font-size:clamp(32px,4vw,43px)!important;
+  line-height:.8;
+  opacity:.82;
+}
+.issue-body .quote-kicker{
+  color:#87666a!important;
+  font:600 9px/1.5 var(--sans)!important;
+  letter-spacing:.15em!important;
+}
+.issue-body .flower-seal{
+  width:42px!important;height:46px!important;flex:0 0 42px!important;
+  margin-left:auto;opacity:.94;
+  filter:none!important;
+}
+.issue-body .flower-seal svg{
+  width:100%;height:100%;
+  filter:drop-shadow(0 1px 1px rgba(84,32,46,.07))!important;
+}
+.issue-body .flower-seal svg path,
+.issue-body .flower-seal svg ellipse,
+.issue-body .flower-seal svg circle{
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.issue-body .flower-seal svg path[stroke],
+.issue-body .flower-seal svg ellipse[stroke],
+.issue-body .flower-seal svg circle[stroke]{
+  stroke-width:1.05px!important;
+}
+.issue-body .quote-card blockquote{
+  margin:15px 0 16px!important;
+  padding:0!important;
+  border:0!important;
+  font-family:"Noto Serif SC",var(--serif),serif;
+  font-weight:500;
+}
+.issue-body .quote-card blockquote .zh-line{
+  display:block;
+  color:#493239!important;
+  font:500 clamp(16px,1.7vw,19px)/1.9 "Noto Serif SC",var(--serif),serif!important;
+  letter-spacing:.025em!important;
+  margin-bottom:7px;
+}
+.issue-body .quote-card blockquote .en-line{
+  display:block;
+  color:#79666a!important;
+  font:400 clamp(12px,1.15vw,13px)/1.8 var(--sans)!important;
+  letter-spacing:.015em!important;
+}
+.issue-body .quote-card-foot{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:6px 14px;
+  padding-top:10px!important;
+  border-top:1px solid var(--letter-rule)!important;
+  color:#806b69!important;
+  font:500 8px/1.65 var(--sans)!important;
+  letter-spacing:.1em!important;
+}
+.issue-body .quote-card-foot .quote-theme{
+  color:var(--letter-wine)!important;
+  font-size:8px!important;
+  letter-spacing:.08em!important;
+}
+/* Rose, daisy, lavender, and forget-me-not: restrained pigments on the same paper stock. */
+.issue-body .quote-card-mother{border-left:3px solid #c88c91!important}
+.issue-body .quote-card-mother:before{border-color:rgba(153,79,89,.2)!important}
+.issue-body .quote-card-mother .quote-mark,
+.issue-body .quote-card-mother .quote-theme{color:#94545f!important}
+.issue-body .quote-card-path{border-left:3px solid #c7ae68!important}
+.issue-body .quote-card-path:before{border-color:rgba(151,117,44,.19)!important}
+.issue-body .quote-card-path .quote-mark,
+.issue-body .quote-card-path .quote-theme{color:#8c7135!important}
+.issue-body .quote-card-voice{border-left:3px solid #a99abb!important}
+.issue-body .quote-card-voice:before{border-color:rgba(107,78,137,.18)!important}
+.issue-body .quote-card-voice .quote-mark,
+.issue-body .quote-card-voice .quote-theme{color:#76618a!important}
+.issue-body .quote-card-future{border-left:3px solid #8eafc6!important}
+.issue-body .quote-card-future:before{border-color:rgba(68,111,142,.18)!important}
+.issue-body .quote-card-future .quote-mark,
+.issue-body .quote-card-future .quote-theme{color:#527b98!important}
+/* Keep scene notes distinct from the quoted line without competing for attention. */
+.issue-body .quote-context{
+  margin:13px 0 21px!important;
+  padding:12px 15px 13px!important;
+  border-left:2px solid #c8b3a8;
+  background:rgba(242,231,220,.52);
+  color:#62504c;
+}
+.issue-body .quote-context .context-label{
+  display:block;
+  margin-bottom:5px;
+  color:#8b6263;
+  font:600 9px/1.6 var(--sans);
+  letter-spacing:.12em;
+}
+.issue-body .quote-context .zh-line{
+  display:block;
+  color:#594844;
+  font:400 14px/1.95 "Noto Sans SC",var(--sans),sans-serif;
+  letter-spacing:.01em;
+}
+.issue-body .quote-context .en-line{
+  display:block;
+  margin-top:5px;
+  color:#82716c;
+  font:400 11px/1.85 var(--sans);
+  letter-spacing:0;
+}
+/* Reading hierarchy: Chinese first, English supportive, metadata quiet and consistent. */
+body{font-family:"Noto Sans SC",var(--sans),sans-serif}
+.issue-body p.bilingual>.zh-line,
+.about-hero p .zh-line,
+.essay-block p .zh-line{
+  font-size:15px;
+  line-height:2.05;
+  letter-spacing:.015em;
+}
+.issue-body p.bilingual>.en-line,
+.about-hero p .en-line,
+.essay-block p .en-line{
+  margin-top:5px;
+  color:#82716c;
+  font-size:12px;
+  line-height:1.85;
+  letter-spacing:0;
+}
+.issue-body h1 .en-line,.issue-body h2 .en-line,
+.about-hero h1 .en-line,.section-head h2 .en-line{
+  display:block;
+  margin-top:5px;
+  color:#8a6b6c;
+  font:400 .48em/1.6 "DM Sans",var(--sans),sans-serif;
+  letter-spacing:.075em;
+}
+.issue-body .section-index,.quote-kicker,.context-label,
+.issue-body figcaption,.image-credits,.site-meta{
+  font-family:"DM Sans",var(--sans),sans-serif;
+  letter-spacing:.1em;
+}
+@media(min-width:768px){
+  .issue-body .quote-card{max-width:900px;margin-inline:auto}
+  .issue-body .quote-card blockquote .zh-line{font-size:19px!important}
+  .issue-body .quote-card blockquote .en-line{font-size:13px!important}
+  .issue-body p.bilingual>.zh-line{font-size:16px;line-height:2.1}
+  .issue-body p.bilingual>.en-line{font-size:12px;line-height:1.9}
+}
+@media(max-width:767px){
+  .issue-body .quote-card{padding:15px 16px 13px!important;margin:13px 0 10px!important}
+  .issue-body .quote-card:before{inset:4px}
+  .issue-body .quote-card-top{min-height:36px!important;gap:7px;padding-bottom:6px!important}
+  .issue-body .quote-mark{font-size:30px!important}
+  .issue-body .quote-kicker{font-size:8px!important;letter-spacing:.1em!important}
+  .issue-body .flower-seal{width:34px!important;height:38px!important;flex-basis:34px!important}
+  .issue-body .quote-card blockquote{margin:12px 0 13px!important}
+  .issue-body .quote-card blockquote .zh-line{font-size:16px!important;line-height:1.85!important}
+  .issue-body .quote-card blockquote .en-line{font-size:11.5px!important;line-height:1.75!important}
+  .issue-body .quote-card-foot{font-size:7px!important;letter-spacing:.06em!important}
+  .issue-body .quote-card-foot .quote-theme{font-size:7px!important}
+  .issue-body .quote-context{padding:10px 12px 11px!important;margin:10px 0 18px!important}
+  .issue-body .quote-context .zh-line{font-size:13px;line-height:1.9}
+  .issue-body .quote-context .en-line{font-size:10.5px;line-height:1.8}
+  .issue-body p.bilingual>.zh-line{font-size:14px;line-height:1.95}
+  .issue-body p.bilingual>.en-line{font-size:11px;line-height:1.8}
+}
