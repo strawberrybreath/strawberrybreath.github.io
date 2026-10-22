@@ -365,3 +365,12 @@ img,video,svg { max-width:100%; }
 .journal-card img{object-fit:contain!important;background:#eee7df!important;}
 .issue-hero-inner .hero-image{object-fit:contain!important;background:#eee7df!important;}
 @media(max-width:760px){.home-intro-art img{object-fit:contain!important;object-position:center!important;}}
+
+
+/* Inline editorial stills and source-attributed film dialogue */
+.inline-still{max-width:780px;margin:32px auto 38px;padding:0;}
+.inline-still img{display:block;width:100%;height:auto;max-height:760px;object-fit:contain!important;background:#eee7df;}
+.inline-still figcaption{margin-top:10px;text-align:center;font:11px/1.7 var(--sb-sans);color:var(--sb-muted);letter-spacing:.03em;}
+.film-quote{margin:28px 0 34px!important;padding:20px 24px!important;background:#eee7e0!important;border-left:2px solid var(--sb-rose)!important;color:var(--sb-wine-deep)!important;font:500 18px/1.9 var(--sb-serif)!important;}
+.film-quote cite{display:block;margin-top:8px;font:11px/1.6 var(--sb-sans);font-style:normal;color:var(--sb-muted);}
+@media(max-width:760px){.inline-still{margin:24px auto 28px}.inline-still figcaption{font-size:10px}.film-quote{padding:16px!important;font-size:16px!important;}}
