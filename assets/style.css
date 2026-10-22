@@ -412,3 +412,114 @@ html{scroll-padding-top:100px}.site-header .site-nav{gap:clamp(18px,3vw,42px)}
  .flower-seal{width:48px!important;height:54px!important;flex-basis:48px!important}
  .quote-card-top{min-height:54px!important;gap:8px!important}
 }
+
+
+/* 2026-10-22: quieter pressed-flower palette + consistent contact cards */
+.quote-card.quote-card-mother{
+ background:linear-gradient(135deg,#ead1d0 0%,#dfbdbd 100%)!important;
+ border-color:#c89b9c!important;
+ color:#4c3035;
+}
+.quote-card.quote-card-mother:before{border-color:rgba(105,53,62,.2)!important}
+.quote-card-mother .quote-mark{color:#955b65!important}
+.quote-card-mother .quote-kicker,.quote-card-mother .quote-theme{color:#75434d!important}
+.quote-card-mother blockquote .zh-line{color:#4f3037}
+.quote-card-mother blockquote .en-line{color:#68484d!important}
+.quote-card-mother .quote-card-foot{border-color:#d2a9aa!important;color:#79585c!important}
+
+.quote-card.quote-card-path{
+ background:linear-gradient(135deg,#e9dfc2 0%,#d8c99d 100%)!important;
+ border-color:#c7b47c!important;
+}
+.quote-card.quote-card-path:before{border-color:rgba(106,87,44,.2)!important}
+.quote-card-path .quote-mark{color:#927b43!important}
+.quote-card-path .quote-kicker,.quote-card-path .quote-theme{color:#6f5a32!important}
+.quote-card-path blockquote .zh-line{color:#453c2b}
+.quote-card-path blockquote .en-line{color:#62553b!important}
+.quote-card-path .quote-card-foot{border-color:#d0c095!important;color:#746443!important}
+
+.quote-card.quote-card-voice{
+ background:linear-gradient(135deg,#ded5e4 0%,#c9bbd3 100%)!important;
+ border-color:#b4a1c1!important;
+}
+.quote-card.quote-card-voice:before{border-color:rgba(85,64,101,.2)!important}
+.quote-card-voice .quote-mark{color:#7c638f!important}
+.quote-card-voice .quote-kicker,.quote-card-voice .quote-theme{color:#584467!important}
+.quote-card-voice blockquote .zh-line{color:#3f3349!important}
+.quote-card-voice blockquote .en-line{color:#5d4d67!important}
+.quote-card-voice .quote-card-foot{border-color:#c3b3ce!important;color:#66566f!important}
+
+.quote-card.quote-card-future{
+ background:linear-gradient(135deg,#d8e2d5 0%,#bdcdbb 100%)!important;
+ border-color:#a6b9a3!important;
+}
+.quote-card-future:before{border-color:rgba(65,91,67,.2)!important}
+.quote-card-future .quote-mark{color:#5e8061!important}
+.quote-card-future .quote-kicker,.quote-card-future .quote-theme{color:#405f43!important}
+.quote-card-future blockquote .zh-line{color:#2f4532}
+.quote-card-future blockquote .en-line{color:#4c6650!important}
+.quote-card-future .quote-card-foot{border-color:#b4c6b1!important;color:#557057!important}
+.quote-card{box-shadow:0 4px 14px rgba(66,43,44,.045)!important}
+.flower-seal{filter:saturate(.78)!important}
+.quote-card-voice .flower-seal{filter:saturate(.7) brightness(1.04)!important}
+
+/* Contact area: one editorial system, matching alignment and quiet botanical tones */
+.site-footer{background:#eee3d9;border-top:1px solid #d8c5b9}
+.footer-main{max-width:1040px}
+.footer-main>p{margin-bottom:22px}
+.contact-grid{gap:14px;align-items:stretch}
+.contact-grid>a.contact-card,.contact-grid>div.contact-card{
+ display:grid!important;
+ grid-template-columns:40px minmax(0,1fr)!important;
+ grid-template-rows:auto auto auto!important;
+ align-content:center!important;
+ align-items:start!important;
+ column-gap:13px!important;
+ row-gap:4px!important;
+ min-height:128px!important;
+ padding:19px!important;
+ border:1px solid #d7c3b8!important;
+ border-radius:4px!important;
+ background:#f7f0e8!important;
+ box-shadow:0 3px 12px rgba(73,47,42,.035)!important;
+ text-align:left!important;
+ transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+.contact-grid>a.contact-card:hover{
+ background:#fbf6ef!important;
+ border-color:#b78b8b!important;
+ transform:translateY(-2px);
+}
+.contact-icon{
+ grid-column:1!important;grid-row:1/4!important;
+ width:38px!important;height:38px!important;
+ display:grid!important;place-items:center!important;
+ border-radius:50%!important;
+ background:#e5d0cc!important;color:#71444d!important;
+}
+.contact-icon.brand-email{background:#e4d9d0!important;color:#74594c!important}
+.contact-icon.brand-wechat{background:#dce3d6!important;color:#4d684f!important}
+.contact-icon svg{width:21px!important;height:21px!important}
+.contact-card .contact-label{
+ grid-column:2!important;font:600 9px/1.5 var(--sans)!important;
+ letter-spacing:.16em!important;color:#8b6263!important;margin:0 0 2px!important;
+}
+.contact-card .zh-line{
+ grid-column:2!important;font:600 14px/1.55 "Noto Serif SC",var(--serif)!important;
+ color:#4e3434!important;overflow-wrap:anywhere!important;
+}
+.contact-card .en-line{
+ grid-column:2!important;font:400 10px/1.65 var(--sans)!important;
+ color:#806d68!important;overflow-wrap:anywhere!important;
+}
+.site-meta{margin-top:24px;border-color:#d7c3b8}
+@media(max-width:767px){
+ .contact-grid{grid-template-columns:1fr!important;gap:9px!important}
+ .contact-grid>a.contact-card,.contact-grid>div.contact-card{
+  grid-template-columns:38px minmax(0,1fr)!important;
+  min-height:100px!important;padding:15px 16px!important;
+ }
+ .contact-icon{width:36px!important;height:36px!important}
+ .contact-card .zh-line{font-size:14px!important}
+ .contact-card .en-line{font-size:11px!important}
+}
