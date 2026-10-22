@@ -26,7 +26,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sb-gold)!important;
 .menu-icon{display:flex;flex-direction:column;gap:4px;width:15px}.menu-icon i{height:1.5px;width:15px;background:currentColor;display:block;transition:transform .2s,opacity .2s}.mobile-menu[aria-expanded=true] .menu-icon i:first-child{transform:translateY(5.5px) rotate(45deg)}.mobile-menu[aria-expanded=true] .menu-icon i:nth-child(2){opacity:0}.mobile-menu[aria-expanded=true] .menu-icon i:last-child{transform:translateY(-5.5px) rotate(-45deg)}
 /* Homepage: image-led editorial cover with typography placed directly on the image */
 .home-intro.wrap{position:relative;isolation:isolate;display:flex!important;align-items:center!important;min-height:clamp(560px,78svh,850px);width:100vw;max-width:none!important;margin:0 calc(50% - 50vw)!important;padding:clamp(50px,8vw,112px) clamp(22px,8vw,120px)!important;overflow:hidden;background:var(--sb-wine-deep)}
-.home-intro-art{position:absolute!important;inset:0!important;z-index:-2!important;width:100%!important;height:100%!important;margin:0!important}
+.home-intro-art{position:absolute!important;inset:0!important;z-index:0!important;width:100%!important;height:100%!important;margin:0!important}
 .home-intro-art:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(38,23,30,.86) 0%,rgba(47,29,35,.69) 42%,rgba(47,29,35,.14) 100%),linear-gradient(0deg,rgba(36,23,28,.48),transparent 45%)}
 .home-intro-art img{display:block;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:center 35%;filter:saturate(.82)!important}
 .home-intro-art .image-caption{position:absolute;z-index:2;right:clamp(20px,5vw,70px);bottom:24px;color:#fff3e8!important;font:9px/1.5 "DM Sans",sans-serif!important;letter-spacing:.18em}
@@ -66,7 +66,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sb-gold)!important;
 .column-link .en-line{display:block;font:11px/1.7 "Playfair Display",Georgia,serif!important;color:#e9d4cf!important}
 /* Column landing pages: image as full-bleed cover, copy above it */
 .column-landing{max-width:none!important;margin:0!important;padding:0 0 70px!important}
-.column-landing-hero{position:relative!important;isolation:isolate;display:flex!important;align-items:flex-end!important;min-height:clamp(470px,66svh,720px);width:100%;margin:0!important;padding:clamp(40px,8vw,100px) clamp(22px,8vw,120px)!important;border:0!important;overflow:hidden}
+.column-landing-hero{position:relative!important;isolation:isolate;display:flex!important;align-items:flex-end!important;min-height:clamp(470px,66svh,720px);width:100%;margin:0!important;padding:clamp(40px,8vw,100px) clamp(22px,8vw,120px)!important;border:0!important;overflow:hidden;background:var(--sb-wine-deep)}
 .column-landing-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(40,25,31,.84),rgba(40,25,31,.48) 55%,rgba(40,25,31,.12)),linear-gradient(0deg,rgba(40,25,31,.4),transparent 70%)}
 .column-landing-hero>div{position:relative;z-index:2;max-width:800px;color:var(--sb-cream)}
 .column-landing-hero .eyebrow{color:#edcbc5!important}
@@ -75,7 +75,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sb-gold)!important;
 .column-deck{font:500 clamp(19px,2.4vw,27px)/1.65 var(--sb-serif)!important;color:#fff3ec!important;margin:18px 0!important}
 .column-intro{max-width:650px;font-size:14px!important;line-height:2!important;color:#f4e7e0!important}
 .column-intro:after{content:"";display:block;width:50px;height:1px;background:var(--sb-rose);margin-top:22px}
-.column-cover{position:absolute!important;inset:0!important;z-index:-2!important;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:center 35%;filter:saturate(.78)!important}
+.column-cover{position:absolute!important;inset:0!important;z-index:0!important;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:center 35%;filter:saturate(.78)!important}
 .journal-head{max-width:1160px;margin:clamp(40px,6vw,70px) auto 22px!important;padding:0 22px!important;align-items:end!important}
 .journal-head h2{font:500 clamp(28px,3.4vw,40px)/1.35 var(--sb-serif)!important;color:var(--sb-wine-deep)!important}
 .journal-head p{color:var(--sb-muted)!important;font-size:12px!important}
