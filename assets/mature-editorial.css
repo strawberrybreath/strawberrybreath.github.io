@@ -215,3 +215,19 @@ body { font-family:var(--sans) !important; font-size:16px; line-height:1.9; }
 @media (max-width: 767px) {
   .issue-hero .issue-poster { width: min(100%, 220px) !important; aspect-ratio: 4 / 3 !important; margin: 0 auto !important; }
 }
+
+/* 2026-10: consistent navigation and accurate contact marks */
+.site-nav a,.bottom-nav a{white-space:nowrap}
+.site-nav a[aria-current="page"]{font-weight:600}
+.contact-heading{text-align:center;margin:0 auto 22px;max-width:560px}
+.contact-heading h2{margin:8px 0 7px;font:500 clamp(23px,3vw,31px)/1.35 var(--serif);color:var(--wine2)}
+.contact-heading p{margin:0 auto;color:var(--muted);font-size:12px;line-height:1.9}
+.contact-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;margin:0 auto 25px!important;max-width:620px}
+.contact-card{min-height:0!important;padding:18px 12px 15px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:9px!important;border:0!important;background:transparent!important}
+.contact-card:hover{background:transparent!important}
+.contact-icon{width:58px!important;height:58px!important;display:grid!important;place-items:center!important;border-radius:50%!important;background:#ead7d2!important;color:var(--wine2)!important;margin:0!important}
+.contact-image-icon img{width:100%;height:100%}
+.contact-icon svg{display:block;width:29px!important;height:29px!important;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.contact-icon svg path[fill="currentColor"]{fill:currentColor;stroke:none}
+.contact-label{font:600 10px/1.5 var(--sans)!important;letter-spacing:.14em!important;color:var(--wine)!important}
+@media(max-width:390px){.contact-grid{gap:4px!important}.contact-icon{width:50px!important;height:50px!important}}
