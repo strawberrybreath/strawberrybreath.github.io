@@ -193,7 +193,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #b56b78; outline-offs
 .page-about .about-footer { padding:18px 10px 12px; text-align:center; color:#8e4050; background:#f5e6e4; font:italic 14px "Songti SC","Noto Serif SC",serif; }
 .page-about .about-footer span { display:block; margin-top:4px; }
 .page-issue .article-hero { background:#74283b; color:#fff8f1; padding:0; }
-.page-issue .article-hero .wrap { max-width:none; padding:30px 22px 22px; background:linear-gradient(90deg,rgba(83,25,42,.96),rgba(83,25,42,.5)),url('../assets/posters/enola-poster-1.jpg') right center/auto 100% no-repeat; }
+.page-issue .article-hero .wrap { max-width:none; padding:30px 22px 22px; background:linear-gradient(90deg,rgba(83,25,42,.96),rgba(83,25,42,.5)),url('../assets/海报-01.jpg') right center/auto 100% no-repeat; }
 .page-issue .article-hero h1 { font-size:clamp(30px,7vw,43px); line-height:1.24; margin:10px 0; }
 .page-issue .article-hero .intro { max-width:620px; color:#f7e9e4; }
 .page-issue .article-hero img { width:1px; height:1px; max-height:1px; opacity:0; margin:0; }

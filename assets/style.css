@@ -311,8 +311,8 @@ html{scroll-padding-top:100px}.site-header .site-nav{gap:clamp(18px,3vw,42px)}
 .brand-email{background:#fff!important}
 .brand-wechat{background:#e7f7ed!important}
 .inline-rose-cover,.inline-coast-cover{display:block;width:100%;height:100%;min-height:180px;background-size:cover;background-position:center}
-.inline-rose-cover{background-image:url('../assets/column-card.jpg')}
-.inline-coast-cover{background-image:url('../assets/column-card.jpg')}
+.inline-rose-cover{background-image:url('../assets/栏目-卡片.jpg')}
+.inline-coast-cover{background-image:url('../assets/栏目-卡片.jpg')}
 @media(max-width:767px){.compact-image-credits{padding:.55rem .7rem!important}.contact-card{overflow:hidden}}
 
 
