@@ -29,7 +29,7 @@ Look closely. Read critically. Think for yourself.
 | **她的影单 · HER FILM NOTES** | 从女性角色、女性创作者与电影叙事出发，阅读银幕中的女性经验。 |
 | **她的书架 · HER BOOKSHELF** | 通过书籍、作者与思想，拓展理解世界和自己的方式。 |
 
-网站导航现为：**首页 / Home、关于我 / About Me、影视专题 / Film、书籍专题 / Books**。内容以女性视角为起点，关注电影与阅读中的人物、选择、关系和自我理解。
+网站导航现为：**首页 / Home、关于我 / About、影视与她 / Film、书与她 / Books**。内容以女性视角为起点，关注电影与阅读中的人物、选择、关系和自我理解。
 
 ## 本期专题 / Current Feature
 
@@ -38,7 +38,7 @@ Look closely. Read critically. Think for yourself.
 第一期以《Enola Holmes》系列为切入点，关注 Enola 与母亲 Eudoria 的关系、女性成长，以及个人选择与社会期待之间的张力。
 
 - [阅读第一期专题 / Read Issue 01](https://strawberrybreath.github.io/issue-001/)
-- [栏目介绍 / About the Journal](https://strawberrybreath.github.io/about/)
+- [关于我 / About](https://strawberrybreath.github.io/about/)
 - [返回首页 / Home](https://strawberrybreath.github.io/)
 
 ## 项目结构 / Project Structure
