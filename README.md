@@ -38,14 +38,13 @@ Look closely. Read critically. Think for yourself.
 第一期以《Enola Holmes》系列为切入点，关注 Enola 与母亲 Eudoria 的关系、女性成长，以及个人选择与社会期待之间的张力。
 
 - [阅读第一期专题 / Read Issue 01](https://strawberrybreath.github.io/issue-001/)
-- [关于我 / About](https://strawberrybreath.github.io/about/)
 - [返回首页 / Home](https://strawberrybreath.github.io/home/)
 
 ## 项目结构 / Project Structure
 
 ```text
-index.html                 首页 / Home
-about/index.html           关于我 / About Me
+index.html                 欢迎页 / Welcome
+home/index.html            正式主页（含刊物介绍） / Home
 issue-001/index.html       第一期：Enola Holmes 三部曲
 books/index.html           书籍栏目 / Books
 assets/                    样式、海报、剧照与编辑视觉素材
