@@ -14,7 +14,7 @@ Look closely. Read critically. Think for yourself.
 
 ---
 
-## 关于这个项目 / About
+## 关于这个项目 / About the Journal
 
 「草莓味口气」是一份独立女性文化刊物，关注女性电影、女性主义、女性经验，以及一个人如何逐渐建立自己的判断与主体性。
 
@@ -29,7 +29,7 @@ Look closely. Read critically. Think for yourself.
 | **她的影单 · HER FILM NOTES** | 从女性角色、女性创作者与电影叙事出发，阅读银幕中的女性经验。 |
 | **她的书架 · HER BOOKSHELF** | 通过书籍、作者与思想，拓展理解世界和自己的方式。 |
 
-网站导航现为：**首页 / Home、关于我 / About、影视与她 / Film、书与她 / Books**。内容以女性视角为起点，关注电影与阅读中的人物、选择、关系和自我理解。
+网站导航现为：**首页 / Home、影视与她 / Film、书与她 / Books**。刊物缘起、观看与阅读立场已整合进首页，内容以女性视角为起点，关注电影与阅读中的人物、选择、关系和自我理解。
 
 ## 本期专题 / Current Feature
 
@@ -39,7 +39,7 @@ Look closely. Read critically. Think for yourself.
 
 - [阅读第一期专题 / Read Issue 01](https://strawberrybreath.github.io/issue-001/)
 - [关于我 / About](https://strawberrybreath.github.io/about/)
-- [返回首页 / Home](https://strawberrybreath.github.io/)
+- [返回首页 / Home](https://strawberrybreath.github.io/home/)
 
 ## 项目结构 / Project Structure
 
@@ -47,7 +47,7 @@ Look closely. Read critically. Think for yourself.
 index.html                 首页 / Home
 about/index.html           关于我 / About Me
 issue-001/index.html       第一期：Enola Holmes 三部曲
-books/index.html           书籍专题：《钟形罩》
+books/index.html           书籍栏目 / Books
 assets/                    样式、海报、剧照与编辑视觉素材
 .nojekyll                  以静态文件方式发布
 robots.txt                 搜索引擎抓取规则
