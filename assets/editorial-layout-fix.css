@@ -157,3 +157,64 @@ img{max-width:100%}
  .column-landing .journal-card img{height:100%!important;min-height:180px!important;aspect-ratio:auto!important}
  .column-landing .journal-card-body{padding:0!important}
 }
+
+
+/* Final correction: one full-width row per article, centered and bounded on tablet/desktop. */
+.column-landing .journal-grid{
+ display:flex!important;
+ flex-direction:column!important;
+ width:100%!important;
+ max-width:900px!important;
+ margin-left:auto!important;
+ margin-right:auto!important;
+ gap:0!important;
+ border-top:1px solid var(--sb-line,#e2d8ce)!important;
+}
+.column-landing .journal-card{
+ display:grid!important;
+ grid-template-columns:clamp(140px,20vw,210px) minmax(0,1fr)!important;
+ flex-direction:initial!important;
+ align-items:stretch!important;
+ gap:clamp(18px,3vw,30px)!important;
+ width:100%!important;
+ max-width:none!important;
+ min-height:0!important;
+ padding:22px 0!important;
+ border:0!important;
+ border-bottom:1px solid var(--sb-line,#e2d8ce)!important;
+ border-radius:0!important;
+ background:transparent!important;
+ box-shadow:none!important;
+}
+.column-landing .journal-card img{
+ display:block!important;
+ width:100%!important;
+ height:100%!important;
+ min-height:180px!important;
+ aspect-ratio:3/4!important;
+ object-fit:cover!important;
+ object-position:center!important;
+}
+.column-landing .journal-card-body{
+ display:flex!important;
+ flex-direction:column!important;
+ justify-content:center!important;
+ min-width:0!important;
+ padding:0!important;
+}
+.column-landing .journal-card h3{font-size:clamp(19px,2vw,25px)!important;line-height:1.5!important}
+.column-landing .journal-card p{font-size:13px!important;line-height:1.9!important}
+@media(max-width:767px){
+ .column-landing .journal-grid{width:100%!important;max-width:none!important}
+ .column-landing .journal-card{
+  grid-template-columns:clamp(104px,29vw,132px) minmax(0,1fr)!important;
+  gap:14px!important;
+  padding:17px 0!important;
+ }
+ .column-landing .journal-card img{min-height:150px!important;aspect-ratio:3/4!important}
+ .column-landing .journal-card-body{padding:0!important}
+ .column-landing .journal-card h3{font-size:16px!important;line-height:1.5!important;margin:6px 0!important}
+ .column-landing .journal-card p{font-size:11px!important;line-height:1.75!important}
+ .column-landing .journal-card-meta{font-size:8px!important;gap:4px 8px!important}
+ .column-landing .read-link{font-size:10px!important;margin-top:8px!important;padding-top:6px!important}
+}
