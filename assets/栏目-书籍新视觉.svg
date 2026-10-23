@@ -1,11 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eee2d2"/><stop offset=".5" stop-color="#c5a18e"/><stop offset="1" stop-color="#76565a"/></linearGradient><linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#21191b" stop-opacity="0"/><stop offset="1" stop-color="#21191b" stop-opacity=".56"/></linearGradient></defs>
-<rect width="1600" height="1200" fill="url(#bg)"/><circle cx="1220" cy="210" r="280" fill="#f7e8d4" opacity=".45"/>
-<!-- shelves --> <g opacity=".72"><rect x="100" y="90" width="580" height="620" fill="#7d5351"/><rect x="120" y="110" width="540" height="8" fill="#e8d3bd"/><rect x="120" y="300" width="540" height="8" fill="#e8d3bd"/><rect x="120" y="490" width="540" height="8" fill="#e8d3bd"/><rect x="120" y="680" width="540" height="8" fill="#e8d3bd"/>
-<g><rect x="135" y="135" width="52" height="160" fill="#d6b7a1"/><rect x="194" y="125" width="64" height="170" fill="#f0dfca"/><rect x="267" y="155" width="44" height="140" fill="#a56e6b"/><rect x="320" y="130" width="72" height="165" fill="#c9a08f"/><rect x="401" y="145" width="58" height="150" fill="#e6cfb7"/><rect x="468" y="120" width="74" height="175" fill="#6e4549"/><rect x="551" y="150" width="85" height="145" fill="#d6b7a1"/></g>
-<g><rect x="135" y="325" width="70" height="165" fill="#e5cbb5"/><rect x="212" y="340" width="52" height="150" fill="#9a6765"/><rect x="272" y="320" width="72" height="170" fill="#d0ad99"/><rect x="352" y="330" width="48" height="160" fill="#f0dfca"/><rect x="409" y="315" width="66" height="175" fill="#7c5054"/><rect x="484" y="338" width="64" height="152" fill="#d7b8a3"/><rect x="557" y="325" width="78" height="165" fill="#c09083"/></g>
-<g><rect x="135" y="515" width="50" height="165" fill="#a56e6b"/><rect x="192" y="530" width="78" height="150" fill="#e8d5c0"/><rect x="277" y="510" width="58" height="170" fill="#7c5054"/><rect x="342" y="525" width="76" height="155" fill="#c7a08d"/><rect x="425" y="515" width="55" height="165" fill="#e9d6c0"/><rect x="488" y="530" width="64" height="150" fill="#9b6967"/><rect x="560" y="510" width="75" height="170" fill="#d8b6a0"/></g></g>
-<!-- reading woman --> <g transform="translate(1000 210)"><path d="M-120 680 Q-155 420 -90 225 Q-45 115 45 145 Q135 175 150 420 L180 680Z" fill="#4b3339"/><path d="M-95 270 Q-120 100 -5 65 Q100 70 110 220 L65 290Z" fill="#35252d"/><ellipse cx="0" cy="240" rx="83" ry="110" fill="#d9a88f"/><path d="M-84 215 Q-110 75 -8 60 Q90 65 90 210 L52 150 Q5 125 -35 160Z" fill="#473037"/><path d="M-27 250h12m34 0h12" stroke="#5a393a" stroke-width="4" stroke-linecap="round"/><path d="M-17 285 Q0 293 18 282" fill="none" stroke="#925a58" stroke-width="3"/><path d="M-85 370 Q0 420 90 360 L160 680 H-160Z" fill="#e9d8c5"/>
-<!-- open book --> <path d="M-170 455 Q-85 410 0 460 Q85 410 170 455 L160 580 Q80 545 0 590 Q-80 545 -160 580Z" fill="#f7eddf" stroke="#7e5554" stroke-width="5"/><path d="M0 460v130" stroke="#b98e82" stroke-width="4"/><g stroke="#c7a99a" stroke-width="3"><path d="M-135 480h95m-95 18h95m-95 18h95m-95 18h95M40 480h95m-95 18h95m-95 18h95m-95 18h95"/></g></g>
-<rect width="1600" height="1200" fill="url(#shade)"/><g fill="#fff3e7"><text x="95" y="840" font-family="Georgia,serif" font-size="30" letter-spacing="9">STRAWBERRY BREATH / COLUMN 02</text><text x="88" y="945" font-family="Georgia,serif" font-size="106" letter-spacing="-2">HER BOOKSHELF</text><text x="95" y="1005" font-family="Arial,sans-serif" font-size="25" letter-spacing="7">WOMEN · WORDS · INNER WORLDS</text></g><rect x="0" y="0" width="1600" height="1200" fill="none" stroke="#f4e7db" stroke-width="18" opacity=".65"/>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8bba5"/><stop offset=".45" stop-color="#a67d78"/><stop offset="1" stop-color="#392a34"/></linearGradient>
+ <radialGradient id="light" cx="74%" cy="18%" r="70%"><stop stop-color="#fff0d9" stop-opacity=".85"/><stop offset=".5" stop-color="#f1d5bc" stop-opacity=".18"/><stop offset="1" stop-color="#f1d5bc" stop-opacity="0"/></radialGradient>
+ <linearGradient id="shadow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#30232d" stop-opacity="0"/><stop offset="1" stop-color="#30232d" stop-opacity=".72"/></linearGradient>
+ <linearGradient id="book1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ead7c3"/><stop offset="1" stop-color="#b98b80"/></linearGradient>
+ <linearGradient id="book2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#74464d"/><stop offset="1" stop-color="#3c2a35"/></linearGradient>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="2" seed="12"/><feColorMatrix values="0 0 0 0 .32 0 0 0 0 .23 0 0 0 0 .25 0 0 0 .10 0"/></filter>
+ <filter id="blur"><feGaussianBlur stdDeviation="16"/></filter>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/><rect width="1600" height="1200" fill="url(#light)"/>
+<!-- quiet library in warm window light -->
+<g opacity=".66">
+ <rect x="82" y="95" width="600" height="740" rx="2" fill="#503640"/>
+ <rect x="106" y="118" width="552" height="12" fill="#e7cfb9"/>
+ <rect x="106" y="346" width="552" height="12" fill="#e7cfb9"/>
+ <rect x="106" y="574" width="552" height="12" fill="#e7cfb9"/>
+ <rect x="106" y="802" width="552" height="12" fill="#e7cfb9"/>
+ <g stroke="#f3dfcb" stroke-opacity=".32" stroke-width="3">
+  <path d="M106 132V346M658 132V346M106 360V574M658 360V574M106 588V802M658 588V802"/>
+ </g>
+ <g>
+  <rect x="132" y="160" width="50" height="182" fill="#d4b39d"/><rect x="190" y="145" width="70" height="197" fill="#f0dfcc"/><rect x="268" y="176" width="48" height="166" fill="#9a6869"/><rect x="323" y="151" width="66" height="191" fill="#c08f84"/><rect x="397" y="168" width="56" height="174" fill="#ead5c0"/><rect x="462" y="140" width="78" height="202" fill="#6d424b"/><rect x="549" y="170" width="79" height="172" fill="#d8b7a1"/>
+  <rect x="132" y="385" width="65" height="177" fill="#ead5c0"/><rect x="205" y="398" width="50" height="164" fill="#9b6768"/><rect x="264" y="375" width="76" height="187" fill="#cba38e"/><rect x="348" y="389" width="52" height="173" fill="#f1dfcb"/><rect x="408" y="372" width="69" height="190" fill="#784a51"/><rect x="485" y="396" width="61" height="166" fill="#d6b39d"/><rect x="554" y="380" width="74" height="182" fill="#b9877e"/>
+  <rect x="132" y="611" width="52" height="180" fill="#a36e6c"/><rect x="192" y="627" width="76" height="164" fill="#e7d3bf"/><rect x="276" y="603" width="58" height="188" fill="#75464d"/><rect x="342" y="619" width="72" height="172" fill="#c8a08d"/><rect x="422" y="609" width="58" height="182" fill="#efddca"/><rect x="488" y="625" width="65" height="166" fill="#966365"/><rect x="560" y="610" width="68" height="181" fill="#d8b7a1"/>
+ </g>
+</g>
+<!-- sunlight through a tall window -->
+<g opacity=".32" fill="none" stroke="#fff0df" stroke-width="7"><path d="M930 0V570M1200 0V570M1470 0V570M850 180H1600M850 390H1600"/></g>
+<ellipse cx="1190" cy="360" rx="350" ry="250" fill="#f5ddc4" opacity=".28" filter="url(#blur)"/>
+<!-- reader, absorbed in a book -->
+<g transform="translate(1060 160)">
+ <path d="M-170 900Q-190 650 -130 430Q-90 315 -15 300Q78 295 126 425Q178 650 190 900Z" fill="url(#book2)"/>
+ <path d="M-100 315Q-140 135 -52 60Q37 -10 105 77Q152 142 113 284L70 356L-25 365Z" fill="#382831"/>
+ <ellipse cx="9" cy="237" rx="82" ry="110" fill="#d7a48b"/>
+ <path d="M-72 220Q-111 91 -26 47Q60 10 105 99Q128 150 89 207L58 151Q5 111 -34 152Z" fill="#3c2932"/>
+ <path d="M-20 254Q4 266 27 249" fill="none" stroke="#965b5a" stroke-width="4" stroke-linecap="round"/>
+ <path d="M-118 468Q-8 530 108 465L166 900H-160Z" fill="#e5d0bc"/>
+ <!-- open book, prominent and readable as an object but no lettering -->
+ <path d="M-248 460Q-125 402 -4 470Q120 404 246 458L232 638Q115 594 -4 654Q-120 594 -232 638Z" fill="#f7eddf" stroke="#744a50" stroke-width="7"/>
+ <path d="M-4 470V654" stroke="#c3a091" stroke-width="5"/>
+ <g stroke="#c4a99a" stroke-width="4" stroke-linecap="round" opacity=".9"><path d="M-205 492h150m-150 22h150m-150 22h150m-150 22h150m-150 22h150m90-88h140m-140 22h140m-140 22h140m-140 22h140m-140 22h140"/></g>
+</g>
+<!-- foreground paper and quiet shadows -->
+<path d="M0 950Q340 870 650 950T1250 925T1600 880V1200H0Z" fill="#2c222c" opacity=".34"/>
+<rect width="1600" height="1200" fill="url(#shadow)"/>
+<rect width="1600" height="1200" filter="url(#grain)" opacity=".16"/>
+<rect x="14" y="14" width="1572" height="1172" fill="none" stroke="#f6e9dc" stroke-opacity=".42" stroke-width="2"/>
 </svg>
