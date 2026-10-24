@@ -1,42 +1,85 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f4ee">
-<meta name="description" content="草莓味口气 Strawberry Breath：独立女性文化刊物，记录女性电影笔记、女性主义书评、女性成长、亲密关系与自我选择。">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#625f60">
+<meta name="description" content="草莓味口气 Strawberry Breath：从女性的目光出发，重新观看电影、书籍与生活。记录女性角色、关系、成长与自我选择。">
 <link rel="canonical" href="https://strawberrybreath.github.io/">
-<meta property="og:type" content="website"><meta property="og:site_name" content="STRAWBERRY BREATH"><meta property="og:title" content="草莓味口气 · Strawberry Breath — 女性电影与书籍笔记"><meta property="og:description" content="从女性的目光出发，重新观看电影、书籍、关系与生活。"><meta property="og:url" content="https://strawberrybreath.github.io/">
-<title>草莓味口气 · Strawberry Breath｜女性电影笔记与女性主义书评</title>
-<link rel="icon" type="image/png" href="./assets/图标-网站.png"><link rel="apple-touch-icon" href="./assets/图标-苹果设备.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./assets/style.css?v=20261023-landing1"><link rel="stylesheet" href="./assets/visual-system.css?v=20261023-landing1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="STRAWBERRY BREATH">
+<meta property="og:title" content="草莓味口气 · Strawberry Breath — 从女性的目光出发">
+<meta property="og:description" content="记录电影、书籍与女性经验。由一个故事出发，慢慢看见人物、关系与世界。">
+<meta property="og:url" content="https://strawberrybreath.github.io/">
+<meta property="og:image" content="https://strawberrybreath.github.io/assets/头图-群像.jpg">
+<title>草莓味口气 · Strawberry Breath｜欢迎</title>
+<link rel="icon" type="image/png" href="./assets/图标-网站.png">
+<link rel="apple-touch-icon" href="./assets/图标-苹果设备.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/style.css?v=20261024-welcome-redesign">
 <style>
-:root{--welcome-paper:#f7f4ee;--welcome-ink:#302824;--welcome-wine:#713d42;--welcome-orange:#d87539}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--welcome-paper);color:var(--welcome-ink);font-family:'Noto Sans SC',sans-serif;min-height:100svh}
-.welcome-header{width:min(1280px,calc(100% - 56px));margin:auto;min-height:96px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid rgba(80,54,46,.13)}
-.welcome-brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none;min-width:0}.welcome-brand img{width:42px;height:42px;border-radius:50%;object-fit:cover}.brand-title{font:600 12px/1.4 'DM Sans',sans-serif;letter-spacing:.13em}.brand-sub{font-size:11px;color:#766a63;margin-top:3px}
-.welcome-nav{display:flex;align-items:center;gap:clamp(16px,3vw,38px)}.welcome-nav a{color:#554943;text-decoration:none;font-size:13px;white-space:nowrap;transition:color .2s}.welcome-nav a:hover,.welcome-nav a:focus-visible{color:var(--welcome-wine);text-decoration:underline;text-underline-offset:5px}
-.welcome-main{width:min(1160px,calc(100% - 44px));margin:auto;min-height:calc(100svh - 97px);display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(44px,7vh,84px) 0 42px}
-.welcome-kicker{font:500 10px/1.6 'DM Sans',sans-serif;letter-spacing:.24em;color:#89746c}.welcome-title{max-width:900px;margin:20px 0 15px;font:500 clamp(32px,5vw,62px)/1.45 'Noto Serif SC',serif;letter-spacing:.045em;color:var(--welcome-wine)}.welcome-subtitle{max-width:620px;margin:0 auto;color:#71635c;font-size:clamp(13px,1.5vw,16px);line-height:2}
-.welcome-art{width:min(860px,100%);margin:clamp(22px,4vh,40px) auto 0;position:relative;display:flex;justify-content:center;align-items:center;flex:1;min-height:220px;max-height:48vh}.welcome-art:after{content:"";position:absolute;z-index:0;left:4%;right:4%;bottom:4%;height:1px;background:linear-gradient(90deg,transparent,rgba(112,83,70,.38),transparent)}.welcome-art img{position:relative;z-index:1;display:block;width:100%;height:100%;max-height:44vh;object-fit:contain;object-position:center bottom;mix-blend-mode:multiply}
-.welcome-cta{margin:clamp(20px,3vh,32px) 0 0;display:inline-flex;align-items:center;justify-content:center;gap:14px;min-width:176px;padding:15px 25px;background:var(--welcome-orange);color:#fff;text-decoration:none;border-radius:3px;font-size:14px;font-weight:600;letter-spacing:.06em;box-shadow:0 7px 18px rgba(160,87,43,.12);transition:transform .2s,background .2s}.welcome-cta:hover{background:#bf602e;transform:translateY(-2px)}.welcome-cta:focus-visible,.welcome-nav a:focus-visible{outline:3px solid #302824;outline-offset:4px}
-.welcome-foot{margin-top:24px;color:#9a8a81;font:9px/1.5 'DM Sans',sans-serif;letter-spacing:.2em}
-@media(max-width:700px){.welcome-header{width:calc(100% - 32px);min-height:76px;align-items:center;gap:12px}.welcome-brand img{width:34px;height:34px}.brand-title{font-size:10px;letter-spacing:.08em}.brand-sub{font-size:10px}.welcome-nav{gap:12px}.welcome-nav a{font-size:11px}.welcome-main{width:calc(100% - 32px);min-height:calc(100svh - 77px);padding:clamp(38px,7vh,60px) 0 28px}.welcome-title{font-size:clamp(29px,7.8vw,42px);line-height:1.55;margin-top:17px}.welcome-subtitle{font-size:13px;line-height:1.9}.welcome-art{min-height:190px;max-height:37vh;width:100%;margin-top:24px}.welcome-art img{max-height:34vh}.welcome-cta{margin-top:22px;min-width:165px;padding:14px 22px}.welcome-foot{margin-top:18px}}
-@media(max-width:390px){.welcome-header{width:calc(100% - 22px)}.welcome-brand{gap:7px}.welcome-brand img{width:30px;height:30px}.brand-title{font-size:9px}.brand-sub{font-size:9px}.welcome-nav{gap:8px}.welcome-nav a{font-size:10px}.welcome-main{width:calc(100% - 24px)}}
-@media(orientation:landscape) and (max-height:560px){.welcome-header{min-height:64px}.welcome-main{min-height:calc(100svh - 65px);padding:20px 0}.welcome-title{font-size:clamp(25px,4vw,42px);margin:8px 0}.welcome-subtitle{font-size:12px}.welcome-art{min-height:110px;max-height:30vh;margin-top:8px}.welcome-art img{max-height:26vh}.welcome-cta{margin-top:10px;padding:10px 20px}.welcome-foot{display:none}}
+:root{--welcome-ink:#fffaf1;--welcome-muted:rgba(255,250,241,.78);--welcome-orange:#d87543;--welcome-bg:#625f60}
+*{box-sizing:border-box}
+html{min-height:100%;scroll-behavior:smooth}
+body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome-ink);font-family:'Noto Sans SC',sans-serif}
+.welcome-page{position:relative;isolation:isolate;min-height:100svh;overflow:hidden;background:var(--welcome-bg)}
+.welcome-page:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 50% 38%,rgba(255,255,255,.09),transparent 55%),linear-gradient(115deg,#626061,#686466 54%,#5d5b5c)}
+.welcome-header{width:min(1440px,calc(100% - 64px));min-height:84px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px;position:relative;z-index:5}
+.welcome-brand{display:flex;align-items:center;gap:12px;color:var(--welcome-ink);text-decoration:none;flex-shrink:0}
+.welcome-brand img{width:38px;height:38px;object-fit:cover;border-radius:50%;background:rgba(255,255,255,.1)}
+.welcome-brand-name{font:600 11px/1.4 'DM Sans',sans-serif;letter-spacing:.22em}
+.welcome-brand-sub{margin-top:4px;font:9px/1.4 'DM Sans',sans-serif;letter-spacing:.13em;color:rgba(255,250,241,.65)}
+.welcome-nav{display:flex;align-items:center;gap:clamp(18px,3.4vw,48px)}
+.welcome-nav a{color:rgba(255,250,241,.9);font:600 10px/1.5 'DM Sans','Noto Sans SC',sans-serif;letter-spacing:.16em;text-decoration:none;white-space:nowrap;transition:opacity .2s}
+.welcome-nav a:hover{opacity:.65}
+.welcome-nav a:focus-visible,.welcome-cta:focus-visible,.welcome-brand:focus-visible{outline:2px solid #fff;outline-offset:5px}
+.welcome-main{width:min(1180px,calc(100% - 48px));min-height:calc(100svh - 84px);margin:auto;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;padding:clamp(22px,4.2vh,48px) 0 clamp(22px,4vh,42px)}
+.welcome-copy{position:relative;z-index:2;max-width:980px;margin:0 auto}
+.welcome-kicker{font:500 9px/1.6 'DM Sans',sans-serif;letter-spacing:.28em;color:rgba(255,250,241,.72)}
+.welcome-title{margin:18px 0 12px;font:500 clamp(38px,6.5vw,78px)/1.2 'Noto Serif SC',serif;letter-spacing:.025em;color:#fffaf1;text-wrap:balance}
+.welcome-title .en-title{display:block;margin-top:7px;font:600 clamp(31px,5.4vw,66px)/1.05 'Playfair Display',serif;letter-spacing:-.025em}
+.welcome-subtitle{max-width:680px;margin:20px auto 0;color:var(--welcome-muted);font:400 clamp(13px,1.4vw,16px)/1.9 'Noto Sans SC',sans-serif;letter-spacing:.04em}
+.welcome-subtitle-en{display:block;margin-top:5px;font:400 clamp(11px,1.2vw,14px)/1.7 'DM Sans',sans-serif;letter-spacing:.035em;color:rgba(255,250,241,.68)}
+.welcome-art{width:min(920px,100%);height:clamp(190px,39vh,410px);margin:clamp(4px,1.2vh,14px) auto 0;position:relative;display:flex;align-items:center;justify-content:center;flex:1;min-height:0}
+.welcome-art:after{content:"";position:absolute;left:1%;right:1%;bottom:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,250,241,.72) 12%,rgba(255,250,241,.72) 88%,transparent);z-index:1}
+.welcome-art img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 12px 24px rgba(28,20,20,.12))}
+.welcome-cta{position:relative;z-index:3;display:inline-flex;align-items:center;justify-content:center;gap:15px;min-width:205px;min-height:48px;margin:clamp(10px,2vh,22px) 0 0;padding:14px 27px;border-radius:999px;background:var(--welcome-orange);color:#fff;text-decoration:none;font:600 10px/1.4 'DM Sans','Noto Sans SC',sans-serif;letter-spacing:.18em;box-shadow:0 6px 16px rgba(26,16,13,.2);transition:transform .2s,background .2s}
+.welcome-cta:hover{background:#c96537;transform:translateY(-2px)}
+.welcome-cta-arrow{font-size:16px;line-height:1}
+.welcome-foot{margin-top:20px;color:rgba(255,250,241,.52);font:9px/1.6 'DM Sans',sans-serif;letter-spacing:.24em}
+@media(min-width:1500px){.welcome-main{padding-top:4vh}.welcome-art{height:42vh}}
+@media(max-width:700px){.welcome-header{width:calc(100% - 30px);min-height:72px;gap:12px}.welcome-brand{gap:8px}.welcome-brand img{width:32px;height:32px}.welcome-brand-name{font-size:9px;letter-spacing:.14em}.welcome-brand-sub{font-size:8px;letter-spacing:.08em}.welcome-nav{gap:clamp(10px,3vw,18px)}.welcome-nav a{font-size:9px;letter-spacing:.05em}.welcome-main{width:calc(100% - 30px);min-height:calc(100svh - 72px);padding:clamp(30px,6vh,52px) 0 24px}.welcome-kicker{font-size:8px;letter-spacing:.17em}.welcome-title{font-size:clamp(31px,8.4vw,48px);line-height:1.35;margin-top:17px}.welcome-title .en-title{font-size:clamp(29px,7.7vw,43px);line-height:1.1;margin-top:8px}.welcome-subtitle{font-size:12px;line-height:1.85;margin-top:16px}.welcome-subtitle-en{font-size:10px;line-height:1.6}.welcome-art{height:clamp(190px,34vh,310px);width:100%;margin-top:12px}.welcome-art img{object-fit:contain;object-position:center bottom}.welcome-art:after{bottom:8%}.welcome-cta{margin-top:15px;min-width:182px;min-height:45px;padding:13px 22px}.welcome-foot{font-size:8px;letter-spacing:.16em;margin-top:15px}}
+@media(max-width:390px){.welcome-header{width:calc(100% - 20px)}.welcome-brand img{width:28px;height:28px}.welcome-brand-name{font-size:8px}.welcome-brand-sub{font-size:7px}.welcome-nav{gap:9px}.welcome-nav a{font-size:8px}.welcome-main{width:calc(100% - 22px)}.welcome-title{font-size:30px}.welcome-title .en-title{font-size:28px}.welcome-art{height:clamp(170px,31vh,240px)}}
+@media(orientation:landscape) and (max-height:560px){.welcome-header{min-height:58px}.welcome-brand img{width:28px;height:28px}.welcome-main{min-height:calc(100svh - 58px);padding:10px 0 12px}.welcome-kicker{display:none}.welcome-title{font-size:clamp(24px,4.2vw,38px);margin:0 0 6px}.welcome-title .en-title{font-size:clamp(23px,4vw,36px);margin-top:2px}.welcome-subtitle{font-size:10px;line-height:1.5;margin-top:7px}.welcome-subtitle-en{font-size:9px;margin-top:2px}.welcome-art{height:28vh;margin-top:2px}.welcome-cta{min-height:36px;padding:9px 20px;margin-top:5px}.welcome-foot{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.welcome-cta{transition:none}}
 </style>
 </head>
 <body>
+<div class="welcome-page">
 <header class="welcome-header">
-<a class="welcome-brand" href="./index.html" aria-label="STRAWBERRY BREATH 欢迎页"><img src="https://avatars.githubusercontent.com/u/307921277?v=4" alt="" width="42" height="42"><span><span class="brand-title">STRAWBERRY BREATH</span><span class="brand-sub">草莓味口气 · WOMEN / STORIES / LIFE</span></span></a>
-<nav class="welcome-nav" aria-label="主导航"><a href="./home/index.html">首页</a><a href="./film/index.html">影视与她</a><a href="./books/index.html">书与她</a></nav>
+<a class="welcome-brand" href="./index.html" aria-label="草莓味口气欢迎页 Strawberry Breath home">
+<img src="./assets/头像-圆形.png" alt="" width="38" height="38">
+<span><span class="welcome-brand-name">STRAWBERRY BREATH</span><span class="welcome-brand-sub">草莓味口气 · WOMEN / STORIES / LIFE</span></span>
+</a>
+<nav class="welcome-nav" aria-label="主导航 Main navigation">
+<a href="./home/index.html">首页 HOME</a>
+<a href="./home/index.html#about-this-journal">关于我 ABOUT</a>
+<a href="./film/index.html">影视 FILM</a>
+<a href="./books/index.html">书籍 BOOKS</a>
+</nav>
 </header>
 <main class="welcome-main">
-<div class="welcome-kicker">A PERSONAL JOURNAL OF FILM, BOOKS & WOMEN'S LIVES</div>
-<h1 class="welcome-title">让故事里的她们，<br>陪我们看见更辽阔的自己。</h1>
-<p class="welcome-subtitle">记录电影、书籍与女性经验。由一个故事出发，慢慢看见人物、关系与世界。</p>
-<div class="welcome-art"><img src="./assets/头图-群像.jpg" alt="不同年龄与经历的女性群像，象征电影、文学与女性生活的多种声音" fetchpriority="high" decoding="async"></div>
-<a class="welcome-cta" href="./home/index.html">开始探索 <span aria-hidden="true">→</span></a>
+<div class="welcome-copy">
+<div class="welcome-kicker">A PERSONAL JOURNAL OF WOMEN, CINEMA & BOOKS</div>
+<h1 class="welcome-title">从女性的目光出发<span class="en-title">Stories That Help Us See Ourselves.</span></h1>
+<p class="welcome-subtitle">重新观看电影、书籍与生活。记录女性角色、关系、成长，以及成为自己的种种可能。<span class="welcome-subtitle-en">A woman's lens on cinema, books, relationships, and the lives we choose.</span></p>
+</div>
+<div class="welcome-art"><img src="./assets/头图-群像.jpg?v=20261024-welcome-redesign" alt="女性群像：不同的女性面貌与生命经验，共同构成草莓味口气的视觉主题" fetchpriority="high" decoding="async"></div>
+<a class="welcome-cta" href="./home/index.html">开始探索 <span class="welcome-cta-arrow" aria-hidden="true">→</span></a>
 <div class="welcome-foot">WOMEN · CINEMA · BOOKS · SELFHOOD</div>
 </main>
-</body></html>
+</div>
+</body>
+</html>
