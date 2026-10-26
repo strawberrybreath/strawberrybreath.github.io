@@ -43,6 +43,30 @@
 .home-intro-overlay .home-intro-note{max-width:620px;color:#fff;border-left-color:#e9a27e}
 .home-intro-overlay .home-intro-note .zh-line,.home-intro-overlay .home-intro-note .en-line{color:#fff}
 @media(max-width:767px){.home-intro-overlay{min-height:560px;padding:26px 22px!important;margin-top:14px}.home-intro-overlay .home-intro-art img{object-position:58% center}.home-intro-overlay:after{background:linear-gradient(0deg,rgba(32,22,23,.82) 0%,rgba(32,22,23,.42) 62%,rgba(32,22,23,.08) 100%)}.home-intro-overlay h1{font-size:clamp(30px,8vw,43px)!important}.home-intro-overlay .home-intro-lead{font-size:12px;line-height:1.9}.home-intro-overlay .home-intro-note{font-size:11px}}
+.column-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:clamp(18px,2.5vw,34px)!important;align-items:stretch}
+.column-card{display:flex!important;flex-direction:column!important;min-width:0;background:#fffaf4;border:1px solid rgba(99,56,68,.12);box-shadow:0 12px 32px rgba(55,36,34,.06);text-decoration:none;overflow:hidden}
+.column-card .column-image{position:relative!important;display:block!important;width:100%;height:clamp(180px,23vw,290px)!important;min-height:0!important;aspect-ratio:auto!important;overflow:hidden;background:#e8ddd3}
+.column-card .column-image img{position:absolute;inset:0;width:100%;height:100%;min-height:0!important;aspect-ratio:auto!important;object-fit:cover;object-position:center;transition:transform .45s ease}
+.column-card:hover .column-image img{transform:scale(1.025)}
+.column-card .column-content{padding:clamp(18px,2.2vw,28px)!important;width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.column-card .column-content h3{margin:0;font-size:clamp(21px,2vw,28px);line-height:1.25}
+.column-card .column-content p{margin:0;max-width:48ch;font-size:14px;line-height:1.85}
+.column-card .column-link{margin-top:auto;padding-top:8px}
+.floral-illustration{display:block;width:clamp(100px,13vw,158px)!important;height:auto!important;max-height:none!important;object-fit:contain!important;margin:16px 0!important;border-radius:0!important;opacity:.96}
+.manifesto .floral-illustration{width:clamp(115px,15vw,175px)!important;margin:22px 0 0 auto!important}
+.journal-about-block .floral-illustration{width:clamp(105px,13vw,150px)!important;max-height:none!important;margin:18px 0 0 auto!important}
+.journal-about-note .floral-illustration{width:clamp(82px,10vw,115px)!important;max-height:none!important;float:right;margin:0 0 10px 18px!important}
+@media(max-width:760px){
+ .column-grid{grid-template-columns:minmax(0,1fr)!important;gap:18px!important}
+ .column-card .column-image{height:clamp(165px,54vw,230px)!important}
+ .column-card .column-content{padding:18px!important}
+ .column-card .column-content p{font-size:13px}
+ .floral-illustration{width:clamp(88px,28vw,120px)!important;margin:14px 0!important}
+ .manifesto .floral-illustration{width:112px!important;margin:14px 0 0 auto!important}
+ .journal-about-block .floral-illustration{width:100px!important;margin:14px 0 0 auto!important}
+ .journal-about-note .floral-illustration{width:76px!important;margin:0 0 8px 12px!important}
+}
+@media(min-width:761px){.column-card{min-height:100%}}
 </style>
 <!-- pages-redeploy-check-20261022 -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"草莓味口气 · Strawberry Breath","url":"https://strawberrybreath.github.io/","inLanguage":["zh-CN","en"],"description":"从女性视角出发，阅读电影、书籍与生活。A bilingual journal on women, cinema, books, and selfhood."}</script>
