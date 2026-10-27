@@ -107,43 +107,67 @@
  .journal-about-block .floral-illustration{width:58px!important;max-width:58px!important;margin:4px 0 5px 8px!important}
  .journal-about-note .floral-illustration{width:44px!important;max-width:44px!important;margin:0 8px 4px 0!important}
 }
+</style>
+<style id="homepage-editorial-essay">
+.home-intro-overlay{display:grid!important;grid-template-columns:minmax(0,1.1fr) minmax(170px,.58fr)!important;align-items:center!important;gap:clamp(24px,5vw,58px)!important;min-height:0!important;margin:26px auto 22px!important;padding:clamp(22px,4vw,42px)!important;background:#f0e8df!important;color:#302c2a!important}
+.home-intro-overlay:after{display:none!important}
+.home-intro-overlay .home-intro-art{position:relative!important;inset:auto!important;z-index:0!important;grid-column:2;grid-row:1;max-width:280px;justify-self:end;margin:0!important}
+.home-intro-overlay .home-intro-art img{width:100%;height:auto;max-height:330px;aspect-ratio:4/5!important;object-fit:cover;filter:none}
+.home-intro-overlay .home-intro-copy{grid-column:1;grid-row:1;max-width:720px;color:#302c2a}
+.home-intro-overlay .eyebrow,.home-intro-overlay h1,.home-intro-overlay h1 .zh-line,.home-intro-overlay h1 .en-line,.home-intro-overlay .home-intro-lead,.home-intro-overlay .home-intro-lead .en-line{color:#302c2a!important}
+.home-intro-overlay h1{font-size:clamp(32px,4.5vw,56px)!important;line-height:1.45!important}
+.home-intro-overlay .home-intro-lead{font-size:clamp(13px,1.25vw,15px)!important;line-height:2!important}
+.home-editorial{max-width:820px!important;margin:0 auto!important;padding:12px 24px 48px!important}
+.home-editorial p{font-size:clamp(15px,1.25vw,17px);line-height:2.15;color:#393431;margin:0 0 1.35em;text-align:justify;text-indent:2em}
+.home-editorial strong,.home-editorial .editorial-emphasis{color:#8d454e;font-weight:600}
+.home-columns{padding:clamp(30px,5vw,58px) 0 72px!important;border-top:1px solid #ddd4c9}
+.home-columns-heading{max-width:660px;margin:0 auto 28px;text-align:center}
+.home-columns-heading h2{font:500 clamp(28px,4vw,42px)/1.4 var(--serif);color:#713d42;margin:10px 0}
+.home-columns-heading h2 span{display:block;font:400 14px/1.7 'Playfair Display',serif;color:#8a7770}
+.home-columns-heading p{font-size:13px;line-height:1.9;color:#756b64}
+.home-columns .column-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:clamp(12px,2vw,24px)!important}
+.home-columns .column-card .column-image{height:clamp(100px,14vw,165px)!important}
+.home-columns .column-card .column-content{padding:18px!important}
+.home-columns .column-card .column-content p{font-size:12px;line-height:1.9}
+@media(max-width:760px){
+ .home-intro-overlay{grid-template-columns:minmax(0,1fr)!important;gap:18px!important;margin:12px auto 14px!important;padding:20px 18px!important}
+ .home-intro-overlay .home-intro-copy{grid-column:1;grid-row:1}
+ .home-intro-overlay .home-intro-art{grid-column:1;grid-row:2;justify-self:center;width:min(48%,180px);max-width:180px}
+ .home-intro-overlay .home-intro-art img{max-height:200px;aspect-ratio:4/3!important}
+ .home-editorial{padding:8px 18px 34px!important}
+ .home-editorial p{font-size:14px;line-height:2.05;text-align:left;text-indent:2em}
+ .home-columns{padding:28px 0 48px!important}
+ .home-columns .column-grid{grid-template-columns:minmax(0,1fr)!important;gap:14px!important}
+ .home-columns .column-card .column-image{height:clamp(100px,32vw,145px)!important}
+}
 </style></head>
 <body>
 <a class="skip-link" href="#main-content"><span class="zh-line">跳到正文</span><span class="en-line">Skip to content</span></a>
 <header class="site-header"><a class="brand" href="../index.html" aria-label="返回欢迎页 Welcome"><img class="site-logo" src="../assets/头像-圆形.png" alt="" width="42" height="42"><span class="brand-copy"><span class="brand-en">STRAWBERRY BREATH</span><span class="brand-zh">草莓味口气</span><span class="brand-tagline">WOMEN · CINEMA · SELFHOOD</span></span></a><nav class="site-nav" id="site-nav" aria-label="主导航 Main navigation"><a aria-current="page" href="../home/index.html"><span class="zh-line">首页</span><span class="en-line">Home</span></a><a href="../film/index.html"><span class="zh-line">影视与她</span><span class="en-line">Film</span></a><a href="../books/index.html"><span class="zh-line">书与她</span><span class="en-line">Books</span></a><a href="../rethinking/index.html"><span class="zh-line">重新思考</span><span class="en-line">Rethink</span></a></nav><button class="mobile-menu" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="打开导航 Open navigation"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">菜单 MENU</span></button></header>
 <main id="main-content">
-<section class="home-intro wrap home-intro-overlay"><div class="home-intro-art"><img src="../assets/头图-拼贴.jpg" alt="以女性群像为主题的编辑式拼贴图" fetchpriority="high" decoding="async"><span class="image-caption">WOMEN · STORIES · SELFHOOD</span></div><div class="home-intro-copy"><span class="eyebrow">STRAWBERRY BREATH / A PERSONAL JOURNAL</span><h1 class="bilingual"><span class="zh-line">从女性的目光出发，<br>重新观看电影、书籍与生活。</span><span class="en-line">A woman's lens on cinema, books, and everyday life.</span></h1><p class="home-intro-lead bilingual"><span class="zh-line">这里记录我看过的故事、读过的文字，以及它们引发的思考。我关心女性如何生活、如何选择，如何在关系与现实之中慢慢成为自己。</span><span class="en-line">A personal journal of stories watched, words read, and the questions they leave behind—about how women live, choose, and become themselves.</span></p><p class="home-intro-note bilingual"><span class="zh-line">不急着给出答案，先认真看见作品里的具体的人与真实的矛盾。</span><span class="en-line">No rush to offer answers. First, look closely at people and contradictions as they are.</span></p></div></section>
-
-<section class="manifesto wrap"><div class="manifesto-label">A PERSONAL BLOG, IN MY OWN WORDS</div><p class="bilingual"><span class="zh-line">不是替女性写出标准答案，<br>而是认真看见她们如何生活。</span><span class="en-line">We do not write standard answers for women.<br>We pay attention to how they actually live.</span></p><img class="floral-illustration" src="../assets/插画-花卉.jpg" alt="花卉插画：为阅读与思考留白" loading="lazy" decoding="async"><span class="bilingual"><span class="zh-line">从电影开始，谈选择、关系与自由，也谈那些尚未被说清楚的感受。</span><span class="en-line">Starting with cinema, we explore choice, relationships, freedom, and feelings that have yet to find their words.</span></span></section>
-
-<section class="journal-about wrap" id="about-this-journal">
-  <div class="journal-about-head">
-    <div><span class="eyebrow">ABOUT THIS PERSONAL BLOG</span><h2 class="bilingual"><span class="zh-line">关于这个个人博客</span><span class="en-line">About This Blog</span></h2></div>
-    <p class="journal-about-deck bilingual"><span class="zh-line">一个记录电影、阅读、关系与生活思考的个人博客。</span><span class="en-line">A personal blog for notes on cinema, books, relationships, and everyday life.</span></p>
+<section class="home-intro wrap home-intro-overlay">
+  <div class="home-intro-art"><img src="../assets/头图-拼贴.jpg" alt="以女性群像为主题的编辑式拼贴图" fetchpriority="high" decoding="async"><span class="image-caption">WOMEN · STORIES · SELFHOOD</span></div>
+  <div class="home-intro-copy">
+    <span class="eyebrow">STRAWBERRY BREATH / A PERSONAL JOURNAL</span>
+    <h1 class="bilingual"><span class="zh-line">我想记录自己如何看待这个世界。</span><span class="en-line">A journal of how I see the world.</span></h1>
+    <p class="home-intro-lead bilingual"><span class="zh-line">我开始写下这些文字，是因为有些电影看完之后并没有结束，有些书合上之后也没有真正读完。一个女性角色的选择、一段母女关系里没有说出口的话、一个人物在现实面前的犹豫，常常会把我带回自己的生活，让我重新思考那些曾经以为理所当然的事。</span><span class="en-line">I began writing because some films do not end when the screen goes dark, and some books keep speaking after they are closed. A woman character’s decision, an unspoken truth in a mother-daughter relationship, or a person’s hesitation in the face of reality can bring me back to my own life and make familiar assumptions feel new again.</span></p>
   </div>
-  <div class="journal-about-grid">
-    <article class="journal-about-block">
-      <h3 class="bilingual"><span class="zh-line">观看与阅读</span><span class="en-line">Watching & Reading</span></h3>
-      <img class="floral-illustration" src="../assets/插画-花卉1.jpg" alt="花卉插画" loading="lazy" decoding="async">
-      <p class="bilingual"><span class="zh-line">「草莓味口气」是我的个人博客，记录看电影、读书时留下的感受，也记录生活里不断冒出来的问题。我想把看电影、读书时那些没有立刻消失的感受留下来，也把它们放回真实的生活里，重新想一想。</span><span class="en-line">Strawberry Breath is my personal blog—a place for the thoughts that stay with me after a film or a book, and the questions that everyday life brings up.</span></p>
-      <p class="bilingual"><span class="zh-line">在「影视与她」里，我从女性角色、母女关系、女性友谊与成长经验出发；在「书与她」里，我记录阅读带来的触动，以及文字如何帮助我理解人物、关系和世界。</span><span class="en-line">In Her Film Notes, I explore women characters, mother-daughter relationships, friendship, and growth. In Her Bookshelf, I reflect on how literature changes the way I understand people and the world.</span></p>
-    </article>
-    <article class="journal-about-block">
-      <h3 class="bilingual"><span class="zh-line">我想留下什么</span><span class="en-line">What I Hope to Keep</span></h3>
-      <img class="floral-illustration" src="../assets/插画-花卉2.jpg" alt="花卉插画" loading="lazy" decoding="async">
-      <p class="bilingual"><span class="zh-line">我关心女性如何生活、如何选择，如何在亲密关系、社会期待与现实限制之间，一点点辨认自己的愿望。比起替人物总结出标准答案，我更想认真看见她们经历了什么、为什么这样选择，以及哪些矛盾无法轻易化解。</span><span class="en-line">I care about how women live and choose, and how they recognize their own desires amid intimacy, social expectations, and real constraints. Rather than prescribing answers, I want to look closely at their experiences, choices, and unresolved contradictions.</span></p>
-      <p class="bilingual"><span class="zh-line">每篇文章都从一次具体的观看或阅读开始。我的理解可能不完整，也可能随着新的阅读和生活经验而改变。我希望这里能容纳犹豫、修正和继续思考。</span><span class="en-line">Each piece begins with a particular viewing or reading. My understanding may be incomplete and may change with new experiences; this space should leave room for uncertainty, revision, and continued thought.</span></p>
-    </article>
-  </div>
-  <p class="journal-about-note bilingual"><img class="floral-illustration" src="../assets/插画-花卉4.jpg" alt="花卉插画" loading="lazy" decoding="async"><span class="zh-line">不是替女性写出标准答案，而是认真看见她们如何生活。</span><span class="en-line">Not to write standard answers for women, but to pay attention to how they actually live.</span></p>
 </section>
-\n<section class="section wrap"><div class="section-head"><div><span class="eyebrow">THREE WAYS TO EXPLORE</span><h2 class="bilingual"><span class="zh-line">三个记录方向</span><span class="en-line">Explore the Blog</span></h2></div><span class="section-note bilingual"><span class="zh-line">从不同角度记录生活与思考</span><span class="en-line">Notes on stories, books, relationships, and everyday life</span></span></div>
-<div class="column-grid">
-<a class="column-card column-live" href="../film/index.html"><div class="column-image"><img src="../assets/影视与她封面.jpeg" alt="影视与她栏目封面" loading="lazy" decoding="async"><span class="status status-live bilingual"><span class="zh-line">已上线</span><span class="en-line">Now reading</span></span></div><div class="column-content"><span class="column-index">COLUMN 01 / FILM</span><h3 class="bilingual"><span class="zh-line">影视与她</span><span class="en-line">Her Film Notes</span></h3><p class="bilingual"><span class="zh-line">从女性角色与女性创作者出发，细读人物的欲望、选择、矛盾与成长。</span><span class="en-line">Read films through women characters and filmmakers, attending to desire, choices, contradictions, and change.</span></p><span class="column-link bilingual"><span class="zh-line">进入影视栏目</span><span class="en-line">Explore the film column</span></span></div></a>
-<a class="column-card column-live" href="../books/index.html"><div class="column-image"><img src="../assets/书与她封面.jpeg" alt="书与她栏目封面" loading="lazy" decoding="async"><span class="status status-live bilingual"><span class="zh-line">已上线</span><span class="en-line">Now reading</span></span></div><div class="column-content"><span class="column-index">COLUMN 02 / BOOKS</span><h3 class="bilingual"><span class="zh-line">书与她</span><span class="en-line">Her Bookshelf</span></h3><p class="bilingual"><span class="zh-line">阅读女性作家、女性主义经典与书写性别经验的作品，从文学人物的处境出发，重新思考身份、野心与自我选择。</span><span class="en-line">Read women writers, feminist classics, and books about gendered experience. Through literary lives, reconsider identity, ambition, and the freedom to choose.</span></p><span class="column-link bilingual"><span class="zh-line">阅读《那不勒斯四部曲》四期专题</span><span class="en-line">Explore all four volumes</span></span></div></a>
-
-<a class="column-card column-live" href="../rethinking/index.html"><div class="column-image column-image-blank" aria-label="重新思考栏目封面暂留空白"><span class="status status-live bilingual"><span class="zh-line">第一篇已上线</span><span class="en-line">First reflection</span></span></div><div class="column-content"><span class="column-index">COLUMN 03 / RETHINK</span><h3 class="bilingual"><span class="zh-line">重新思考</span><span class="en-line">Rethink</span></h3><p class="bilingual"><span class="zh-line">从日常疑问出发，借助心理学、认知科学与社会学，重新看看情绪、关系和行为。</span><span class="en-line">Everyday questions explored through psychology and social science.</span></p><span class="column-link bilingual"><span class="zh-line">阅读第一篇：爱的五种语言</span><span class="en-line">Read the first reflection</span></span></div></a></div></section>
-
+<article class="home-editorial wrap">
+  <p>我关心女性如何生活，如何在亲密关系、家庭期待、工作与社会规则之间作出选择，也关心这些选择究竟有多少是真正属于她们自己的。我们很容易用几个词概括一个女人：勇敢、软弱、独立、依赖、成功或失败。但当我愿意多看一会儿，就会发现人物很少能被一个标签解释。一个人可以渴望爱，同时害怕失去自由；可以有能力，却仍然缺少资源；可以离开一段关系，也可能因为现实条件而暂时留下。**理解一个选择，应该先看见这个人所处的环境，而不是急着评价她够不够勇敢。**</p>
+  <p>电影让我先看见具体的人。镜头、表演和情节把抽象的问题变成可以感受的生活：谁拥有说话的机会，谁被要求保持体面，谁的痛苦会被认真对待，谁的劳动却被当成理所当然。我喜欢那些既有故事性、又愿意留下矛盾的作品。它们不必把每个问题都解释清楚，也不必把女性塑造成永远正确的榜样。人物可以犯错、嫉妒、犹豫、改变；她们的价值不应取决于是否符合某一种理想女性的标准。</p>
+  <p>阅读则让我有机会停下来，把最初的感受放进更长的脉络里。小说里的友谊、婚姻、母职、阶级和野心，不只是人物的私人遭遇，也与教育、经济条件、文化期待和权力关系相连。心理学与社会科学的讨论也提醒我，人的行为往往不只来自性格，还受到环境、经验与可选择空间的影响。**当我们想问“她为什么不离开”或“她为什么不反抗”时，也许应该先问：她拥有怎样的资源？拒绝会带来什么代价？她是否真的有安全、可行的其他选择？**</p>
+  <p>我并不想把电影和书籍变成一堂预先写好结论的课，也不希望每篇文章最后都变成一句响亮的口号。我更愿意从情节和细节出发，辨认作品说了什么、没有说什么，分清事实、解释与个人感受，再把它们带回现实生活里检视。我的理解会改变，写下的判断也可能需要修正；对我而言，这不是不够坚定，而是认真思考必须留下的位置。一个人的主体性，不是永远不受影响，也不是每次都做出最漂亮的决定，而是逐渐拥有理解处境、辨认欲望、评估代价，并参与决定自己生活的能力。</p>
+  <p>这也是我建立「草莓味口气」的原因。它是一个个人的观看与阅读记录，不是替所有女性发言，也不打算给别人规定人生答案。我想把那些让我停顿的故事、让我不安的细节和暂时没有答案的问题留下来。希望这里的文字能够做到的，不是替读者决定应该怎么想，而是让我们多看见一点，再多想一步。<span class="editorial-emphasis">Look closely. Read critically. Think for yourself.</span></p>
+</article>
+<section class="home-columns wrap" aria-labelledby="columns-title">
+  <div class="home-columns-heading"><span class="eyebrow">EXPLORE THE JOURNAL</span><h2 id="columns-title">从这里继续阅读 <span>Where to go next</span></h2><p>三个入口，三种观察世界的方式。每个栏目都从具体故事出发，慢慢走向更大的问题。</p></div>
+  <div class="column-grid">
+    <a class="column-card" href="../film/index.html"><span class="column-image"><img src="../assets/影视与她封面.jpeg" alt="影视与她栏目封面" loading="lazy" decoding="async"></span><div class="column-content"><span class="eyebrow">01 · FILM</span><h3>影视与她</h3><p>从电影中的女性角色、母女关系、友谊与成长出发，细读剧情，也追问镜头之外的社会规则。</p><span class="column-link">进入栏目 / Explore film →</span></div></a>
+    <a class="column-card" href="../books/index.html"><span class="column-image"><img src="../assets/书与她封面.jpeg" alt="书与她栏目封面" loading="lazy" decoding="async"></span><div class="column-content"><span class="eyebrow">02 · BOOKS</span><h3>书与她</h3><p>记录女性书写、文学人物与阅读经验，思考身份、阶级、亲密关系和女性如何讲述自己。</p><span class="column-link">进入栏目 / Explore books →</span></div></a>
+    <a class="column-card" href="../rethinking/index.html"><span class="column-image"><img src="../assets/重新思考封面.jpeg" alt="重新思考栏目封面" loading="lazy" decoding="async"></span><div class="column-content"><span class="eyebrow">03 · RETHINK</span><h3>重新思考</h3><p>从日常生活里的疑问出发，结合心理学、认知与社会视角，重新检视情绪、行为和习以为常的判断。</p><span class="column-link">进入栏目 / Explore ideas →</span></div></a>
+  </div>
+</section>
 </main>
 <footer class="site-footer" id="about-me"><div class="footer-main"><div class="contact-heading"><span class="eyebrow">KEEP IN TOUCH / CONTACT</span><h2 class="bilingual"><span class="zh-line">联系与关注</span><span class="en-line">Get in touch</span></h2></div><div class="contact-grid">
 <a class="contact-card" href="https://github.com/strawberrybreath/strawberrybreath.github.io" target="_blank" rel="noopener" aria-label="GitHub"><span class="contact-icon contact-image-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.1c-3.1.68-3.75-1.32-3.75-1.32-.5-1.3-1.24-1.65-1.24-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.06 1.15a10.6 10.6 0 0 1 5.57 0c2.12-1.44 3.06-1.15 3.06-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.62 5.23-5.11 5.51.4.35.75 1.03.75 2.08v3.1c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></span><span class="contact-label">GITHUB</span></a>
