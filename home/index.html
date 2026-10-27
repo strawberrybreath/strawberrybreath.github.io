@@ -140,13 +140,23 @@
  .home-columns .column-grid{grid-template-columns:minmax(0,1fr)!important;gap:14px!important}
  .home-columns .column-card .column-image{height:clamp(100px,32vw,145px)!important}
 }
-</style><link rel="stylesheet" href="../assets/editorial-reading.css?v=20261027-reading-system"></head>
+</style><link rel="stylesheet" href="../assets/editorial-reading.css?v=20261027-reading-system">
+<style id="home-intro-simple">
+/* Homepage opening: plain editorial text, no cover image or boxed hero layout. */
+.home-intro-simple{display:block!important;max-width:900px!important;padding:clamp(30px,5vw,58px) 24px 18px!important;margin:0 auto!important;background:transparent!important;border:0!important;min-height:0!important}
+.home-intro-simple .home-intro-copy{max-width:820px!important;margin:0!important;color:var(--ink,#302c2a)!important}
+.home-intro-simple .eyebrow{color:var(--muted,#766a63)!important}
+.home-intro-simple h1{font:500 clamp(30px,4.5vw,54px)/1.45 var(--serif)!important;color:var(--wine2,#713d42)!important;margin:16px 0 20px!important}
+.home-intro-simple .zh-line,.home-intro-simple .en-line{color:inherit!important}
+.home-intro-simple .home-intro-lead{max-width:760px!important;font-size:clamp(14px,1.3vw,16px)!important;line-height:2.05!important;color:var(--ink,#302c2a)!important}
+@media(max-width:767px){.home-intro-simple{padding:28px 20px 12px!important;margin:0 auto!important}.home-intro-simple h1{font-size:clamp(29px,8vw,40px)!important;line-height:1.4!important;margin:14px 0 16px!important}.home-intro-simple .home-intro-lead{font-size:13px!important;line-height:2!important}}
+</style>
+</head>
 <body>
 <a class="skip-link" href="#main-content"><span class="zh-line">跳到正文</span><span class="en-line">Skip to content</span></a>
 <header class="site-header"><a class="brand" href="../index.html" aria-label="返回欢迎页 Welcome"><img class="site-logo" src="../assets/头像-圆形.png" alt="" width="42" height="42"><span class="brand-copy"><span class="brand-en">STRAWBERRY BREATH</span><span class="brand-zh">草莓味口气</span><span class="brand-tagline">WOMEN · CINEMA · SELFHOOD</span></span></a><nav class="site-nav" id="site-nav" aria-label="主导航 Main navigation"><a aria-current="page" href="../home/index.html"><span class="zh-line">首页</span><span class="en-line">Home</span></a><a href="../film/index.html"><span class="zh-line">影视与她</span><span class="en-line">Film</span></a><a href="../books/index.html"><span class="zh-line">书与她</span><span class="en-line">Books</span></a><a href="../rethinking/index.html"><span class="zh-line">重新思考</span><span class="en-line">Rethink</span></a></nav><button class="mobile-menu" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="打开导航 Open navigation"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">菜单 MENU</span></button></header>
 <main id="main-content">
-<section class="home-intro wrap home-intro-overlay">
-  <div class="home-intro-art"><img src="../assets/欢迎页封面.jpg" alt="以女性群像为主题的编辑式拼贴图" fetchpriority="high" decoding="async"><span class="image-caption">WOMEN · STORIES · SELFHOOD</span></div>
+<section class="home-intro home-intro-simple wrap">
   <div class="home-intro-copy">
     <span class="eyebrow">STRAWBERRY BREATH / A PERSONAL JOURNAL</span>
     <h1 class="bilingual"><span class="zh-line">我想记录自己如何看待这个世界。</span><span class="en-line">A journal of how I see the world.</span></h1>
