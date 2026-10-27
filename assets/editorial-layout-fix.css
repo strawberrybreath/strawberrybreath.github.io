@@ -254,3 +254,7 @@ img{max-width:100%}
  .home-intro-overlay .eyebrow{letter-spacing:.08em!important}
 }
 /* Italian original title: use the proper apostrophe with no inserted spacing. */
+
+/* Keep the journal heading aligned with the centered one-column article list. */
+.column-landing .journal-head{width:100%!important;max-width:900px!important;margin-left:auto!important;margin-right:auto!important}
+@media(max-width:767px){.column-landing .journal-head{max-width:none!important;margin-left:0!important;margin-right:0!important}}
