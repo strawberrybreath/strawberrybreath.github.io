@@ -1,20 +1,22 @@
-/* Strawberry Breath — private journal typography system
-   Loaded last on every HTML page to unify the existing layered styles.
-   Chinese display text: LXGW WenKai; long-form body: Noto Sans SC/system sans;
-   English editorial accents and navigation keep the already-loaded Playfair Display / DM Sans. */
+/* Strawberry Breath — distinctive handwritten journal typography
+   Existing page styles load first; this shared file is intentionally loaded last.
+   Display: Yozai handwritten Chinese; reading text: LXGW WenKai; English: existing Playfair Display / DM Sans. */
 :root {
-  --sb-journal-hand: "LXGW WenKai", "Kaiti SC", "STKaiti", "KaiTi", serif;
-  --sb-journal-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --sb-journal-hand: "Yozai", "LXGW WenKai", "Kaiti SC", "STKaiti", "KaiTi", serif;
+  --sb-journal-body: "LXGW WenKai", "Kaiti SC", "STKaiti", "KaiTi", "PingFang SC", serif;
   --sb-journal-english: "Playfair Display", "Iowan Old Style", Baskerville, Georgia, serif;
 }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   font-family: var(--sb-journal-body) !important;
+  font-size: 16px;
+  line-height: 1.95;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 h1, h2, h3,
 .brand-zh,
+.brand,
 .home-intro h1,
 .home-intro-simple h1,
 .rethinking-hero h1,
@@ -22,25 +24,23 @@ h1, h2, h3,
 .featured-copy h1,
 .about-hero h1,
 .issue-hero h1,
+.book-hero h1,
 .section-head h2,
 .column-content h3,
 .issue-body h2,
-.issue-body h3 {
+.issue-body h3,
+.book-content h2,
+.book-content h3 {
   font-family: var(--sb-journal-hand) !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
   letter-spacing: 0 !important;
   text-wrap: pretty;
 }
-.brand-en,
-.eyebrow,
-.tag,
-.site-nav,
-.brand-tagline,
-.section-kicker,
-.feature-number,
-.column-index,
-.contact-label {
-  font-family: "DM Sans", var(--sb-journal-body) !important;
+.brand-en, .brand-tagline, .brand small,
+.eyebrow, .tag, .site-nav, .welcome-nav,
+.section-kicker, .feature-number, .column-index, .contact-label,
+.journal-card-meta, .article-meta, .lang-label {
+  font-family: "DM Sans", "Noto Sans SC", sans-serif !important;
 }
 blockquote,
 .home-intro-lead,
@@ -51,7 +51,10 @@ blockquote,
 .feature-deck,
 .issue-hero .lead,
 .rethinking-hero .lead,
-.column-landing-hero .lead {
+.column-landing-hero .lead,
+.home-intro-note,
+.journal-about-note,
+.reading-note {
   font-family: var(--sb-journal-hand) !important;
   font-weight: 400 !important;
 }
@@ -60,16 +63,14 @@ p, li, dd, figcaption, .issue-body, .article-body, .column-description {
   word-break: normal;
 }
 @media (max-width: 760px) {
-  body { font-size: 16px; line-height: 1.9; }
+  body { font-size: 16px; line-height: 1.95; }
   h1, .home-intro h1, .home-intro-simple h1,
   .featured-copy h1, .about-hero h1, .issue-hero h1,
   .rethinking-hero h1, .column-landing-hero h1 {
-    line-height: 1.48 !important;
+    line-height: 1.45 !important;
     letter-spacing: 0 !important;
   }
   h2, .section-head h2, .issue-body h2 { line-height: 1.55 !important; }
   h3, .issue-body h3 { line-height: 1.6 !important; }
-  p, li, .issue-body, .article-body {
-    line-height: 1.95;
-  }
+  p, li, .issue-body, .article-body { line-height: 2.0; }
 }
