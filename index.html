@@ -20,20 +20,20 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/style.css?v=20261024-welcome-redesign">
 <style>
-:root{--welcome-ink:#fffaf1;--welcome-muted:rgba(255,250,241,.78);--welcome-orange:#d87543;--welcome-bg:#625f60}
+:root{--welcome-ink:#302a27;--welcome-muted:rgba(48,42,39,.88);--welcome-orange:#d87543;--welcome-bg:#625f60}
 *{box-sizing:border-box}
 html{min-height:100%;scroll-behavior:smooth}
 body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome-ink);font-family:'Noto Sans SC',sans-serif}
 .welcome-page{position:relative;isolation:isolate;min-height:100svh;overflow:hidden;background:#4d3730}
 .welcome-page:before{content:"";position:absolute;inset:0;z-index:-2;background-image:url("./assets/欢迎页封面.jpg?v=20261026-desktop");background-position:center center;background-size:cover;background-repeat:no-repeat;transform:scale(1.005)}
-.welcome-page:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(20,16,15,.16),transparent 35%,transparent 65%,rgba(20,16,15,.16))}
+.welcome-page:after{content:none}
 .welcome-header{width:min(1440px,calc(100% - 64px));min-height:84px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px;position:relative;z-index:5}
 .welcome-brand{display:flex;align-items:center;gap:12px;color:var(--welcome-ink);text-decoration:none;flex-shrink:0}
 .welcome-brand img{width:38px;height:38px;object-fit:cover;border-radius:50%;background:rgba(255,255,255,.1)}
 .welcome-brand-name{font:600 11px/1.4 'DM Sans',sans-serif;letter-spacing:.22em}
-.welcome-brand-sub{margin-top:4px;font:9px/1.4 'DM Sans',sans-serif;letter-spacing:.13em;color:rgba(255,250,241,.65)}
+.welcome-brand-sub{margin-top:4px;font:9px/1.4 'DM Sans',sans-serif;letter-spacing:.13em;color:rgba(48,42,39,.68)}
 .welcome-nav{display:flex;align-items:center;gap:clamp(18px,3.4vw,48px)}
-.welcome-nav a{display:flex;flex-direction:column;align-items:center;gap:2px;color:rgba(255,250,241,.9);font:600 10px/1.5 'DM Sans','Noto Sans SC',sans-serif;letter-spacing:.12em;text-decoration:none;white-space:nowrap;transition:opacity .2s}
+.welcome-nav a{display:flex;flex-direction:column;align-items:center;gap:2px;color:#302a27;font:600 10px/1.5 'DM Sans','Noto Sans SC',sans-serif;letter-spacing:.12em;text-decoration:none;white-space:nowrap;transition:opacity .2s}
 .welcome-nav .nav-zh{font-family:'Noto Sans SC',sans-serif;font-size:10px;letter-spacing:.08em}
 .welcome-nav .nav-en{font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:capitalize;opacity:.8}
 .welcome-nav a:hover{opacity:.65}
@@ -44,14 +44,14 @@ body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome
 .welcome-title{margin:18px 0 12px;font:500 clamp(38px,6.5vw,78px)/1.2 'Noto Serif SC',serif;letter-spacing:.025em;color:#302a27;text-wrap:balance}
 .welcome-title .en-title{display:none;margin-top:7px;font:600 clamp(31px,5.4vw,66px)/1.05 'Playfair Display',serif;letter-spacing:-.025em}
 .welcome-subtitle{max-width:520px;margin:20px 0 0;color:var(--welcome-muted);font:400 clamp(13px,1.4vw,16px)/1.9 'Noto Sans SC',sans-serif;letter-spacing:.04em}
-.welcome-subtitle-en{display:block;margin-top:5px;font:400 clamp(11px,1.2vw,14px)/1.7 'DM Sans',sans-serif;letter-spacing:.035em;color:rgba(255,250,241,.68)}
+.welcome-subtitle-en{display:block;margin-top:5px;font:400 clamp(11px,1.2vw,14px)/1.7 'DM Sans',sans-serif;letter-spacing:.035em;color:rgba(48,42,39,.72)}
 .welcome-art{display:none}
 .welcome-art:after{display:none}
 .welcome-art img{display:none}
 .welcome-cta{position:relative;z-index:3;display:inline-flex;align-items:center;justify-content:center;gap:15px;min-width:205px;min-height:48px;margin:clamp(10px,2vh,22px) 0 0;padding:14px 27px;border-radius:999px;background:var(--welcome-orange);color:#fff;text-decoration:none;font:600 10px/1.4 'DM Sans','Noto Sans SC',sans-serif;letter-spacing:.18em;box-shadow:0 6px 16px rgba(26,16,13,.2);transition:transform .2s,background .2s}
 .welcome-cta:hover{background:#c96537;transform:translateY(-2px)}
 .welcome-cta-arrow{font-size:16px;line-height:1}
-.welcome-foot{margin-top:20px;color:rgba(255,250,241,.52);font:9px/1.6 'DM Sans',sans-serif;letter-spacing:.24em}
+.welcome-foot{margin-top:20px;color:rgba(48,42,39,.62);font:9px/1.6 'DM Sans',sans-serif;letter-spacing:.24em}
 @media(min-width:1500px){.welcome-main{padding-top:4vh}.welcome-art{height:42vh}}
 @media(max-width:700px){.welcome-page{min-height:100svh;min-height:100dvh;overflow:clip}.welcome-page:before{position:fixed;inset:0;background-position:center center;background-size:cover}.welcome-header{box-sizing:border-box;width:calc(100% - 24px);min-height:64px;height:auto;padding-top:env(safe-area-inset-top);gap:8px;align-items:center}.welcome-brand{flex:0 1 42%;min-width:0;gap:7px}.welcome-brand img{width:28px;height:28px;flex-shrink:0}.welcome-brand>span{min-width:0;overflow:hidden}.welcome-brand-name{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:8px;letter-spacing:.1em}.welcome-brand-sub{display:none}.welcome-nav{flex:1;min-width:0;justify-content:flex-end;gap:clamp(7px,2.4vw,13px)}.welcome-nav a{font-size:8px;letter-spacing:0}.welcome-nav .nav-zh{font-size:8px;letter-spacing:0}.welcome-nav .nav-en{display:none}.welcome-main{box-sizing:border-box;width:calc(100% - 28px);min-height:calc(100svh - 64px);min-height:calc(100dvh - 64px);padding:clamp(14px,3.2svh,28px) 0 max(18px,env(safe-area-inset-bottom));justify-content:center}.welcome-kicker{font-size:7px;letter-spacing:.13em}.welcome-title{font-size:clamp(28px,7.4vw,38px);line-height:1.27;margin:12px 0 8px}.welcome-title .en-title{font-size:clamp(26px,6.8vw,35px);line-height:1.06;margin-top:7px}.welcome-subtitle{font-size:11px;line-height:1.7;margin-top:12px}.welcome-subtitle-en{font-size:9px;line-height:1.5;margin-top:4px}.welcome-art{display:none}.welcome-art img{display:none}.welcome-art:after{display:none}.welcome-cta{margin-top:12px;min-width:170px;min-height:42px;padding:11px 20px}.welcome-foot{font-size:7px;letter-spacing:.12em;margin-top:12px}}
 @media(max-width:390px){.welcome-header{width:calc(100% - 18px);min-height:58px}.welcome-brand{flex-basis:39%;gap:5px}.welcome-brand img{width:25px;height:25px}.welcome-brand-name{font-size:7px;letter-spacing:.08em}.welcome-nav{gap:7px}.welcome-nav a,.welcome-nav .nav-zh{font-size:7px}.welcome-main{width:calc(100% - 22px);min-height:calc(100svh - 58px);min-height:calc(100dvh - 58px)}.welcome-title{font-size:clamp(27px,7.4vw,30px)}.welcome-title .en-title{font-size:clamp(24px,6.7vw,28px)}.welcome-subtitle{font-size:10px}.welcome-subtitle-en{font-size:8px}.welcome-foot{font-size:6px}}
@@ -75,6 +75,35 @@ body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome
  .welcome-main{width:calc(100% - 64px)}
  .welcome-copy{max-width:570px}
 }
+
+.welcome-menu{display:none}
+@media(max-width:700px){
+ .welcome-page:after{content:none}
+ .welcome-page:before{background-position:62% center}
+ .welcome-header{position:relative}
+ .welcome-nav{display:none;position:absolute;top:calc(100% - 1px);left:0;right:0;z-index:20;flex-direction:column;align-items:stretch;gap:0;padding:8px 14px;background:rgba(250,246,241,.97);border:1px solid rgba(112,67,75,.2);border-radius:0 0 12px 12px}
+ .welcome-nav.is-open{display:flex}
+ .welcome-nav a{align-items:flex-start;justify-content:center;min-height:44px;color:#302a27;border-bottom:1px solid rgba(112,67,75,.14);font-size:13px;padding:8px 2px}
+ .welcome-nav a:last-child{border-bottom:0}
+ .welcome-nav .nav-zh{font-size:13px}
+ .welcome-menu{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 12px;border:1px solid rgba(112,67,75,.3);border-radius:8px;background:rgba(250,246,241,.92);color:#302a27;font:500 12px/1.4 'Noto Sans SC',sans-serif;flex-shrink:0}
+ .welcome-main{align-items:flex-start;text-align:left;justify-content:center}
+ .welcome-copy{width:58%;max-width:360px;margin:0;align-self:flex-start}
+ .welcome-kicker{font-size:7px;letter-spacing:.08em;line-height:1.6}
+ .welcome-title{font-size:clamp(27px,7vw,34px);line-height:1.32;overflow-wrap:normal;word-break:normal}
+ .welcome-subtitle{font-size:11px;line-height:1.8;max-width:100%;color:#302a27}
+ .welcome-cta{align-self:flex-start;min-width:150px;min-height:44px}
+ .welcome-foot{display:none}
+}
+@media(max-width:390px){
+ .welcome-header{width:calc(100% - 20px)}
+ .welcome-brand{flex-basis:auto}
+ .welcome-brand-name{font-size:7px}
+ .welcome-main{width:calc(100% - 32px)}
+ .welcome-copy{width:58%}
+ .welcome-title{font-size:27px}
+ .welcome-subtitle{font-size:10px}
+}
 </style>
 </head>
 <body>
@@ -84,7 +113,7 @@ body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome
 <img src="./assets/头像-圆形.png" alt="" width="38" height="38">
 <span><span class="welcome-brand-name">STRAWBERRY BREATH</span><span class="welcome-brand-sub">草莓味口气 · WOMEN / STORIES / LIFE</span></span>
 </a>
-<nav class="welcome-nav" aria-label="主导航 Main navigation">
+<nav class="welcome-nav" id="welcome-nav" aria-label="主导航 Main navigation">
 <a href="./home/index.html"><span class="nav-zh">首页</span><span class="nav-en">Home</span></a>
 <a href="./film/index.html"><span class="nav-zh">影视与她</span><span class="nav-en">Film</span></a>
 <a href="./books/index.html"><span class="nav-zh">书与她</span><span class="nav-en">Books</span></a>
@@ -103,5 +132,5 @@ body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome
 <div class="welcome-foot">WOMEN · CINEMA · BOOKS · SELFHOOD</div>
 </main>
 </div>
-</body>
+<script>(function(){const nav=document.getElementById("welcome-nav");const button=document.querySelector(".welcome-menu");if(!nav||!button)return;function close(){nav.classList.remove("is-open");button.setAttribute("aria-expanded","false");button.setAttribute("aria-label","打开导航");}button.addEventListener("click",function(){const open=!nav.classList.contains("is-open");nav.classList.toggle("is-open",open);button.setAttribute("aria-expanded",String(open));button.setAttribute("aria-label",open?"收起导航":"打开导航");});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",close));document.addEventListener("keydown",e=>{if(e.key==="Escape")close();});document.addEventListener("click",e=>{if(!nav.contains(e.target)&&!button.contains(e.target))close();});window.addEventListener("resize",()=>{if(window.innerWidth>700)close();});})();</script></body>
 </html>
