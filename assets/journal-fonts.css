@@ -74,3 +74,17 @@ p, li, dd, figcaption, .issue-body, .article-body, .column-description {
   h3, .issue-body h3 { line-height: 1.6 !important; }
   p, li, .issue-body, .article-body { line-height: 2.0; }
 }
+
+
+/* Chinese-only editorial reading: remove English translations and English-only
+   category labels from visible article/column copy while keeping proper names,
+   source links and the site's English brand/navigation intact. */
+.en-line,
+.heading-en,
+.welcome-subtitle-en,
+.en-title,
+.journal-card-meta span:nth-child(2),
+.column-content > .eyebrow,
+.home-columns-heading > .eyebrow {
+  display: none !important;
+}
