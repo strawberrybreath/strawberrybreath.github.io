@@ -104,6 +104,53 @@ body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome
  .welcome-title{font-size:27px}
  .welcome-subtitle{font-size:10px}
 }
+
+/* Welcome layout: keep the cat reading at the center clear of all copy. */
+@media (min-width:701px){
+ .welcome-main.welcome-sides{
+   width:100%;min-height:calc(100svh - 84px);padding:28px clamp(26px,5vw,84px) 34px;
+   display:grid;grid-template-columns:minmax(110px,1fr) minmax(220px,34vw) minmax(110px,1fr);
+   align-items:center;justify-content:stretch;gap:clamp(18px,3vw,48px);text-align:center;
+ }
+ .welcome-left-copy{grid-column:1;grid-row:1;align-self:center;justify-self:center;width:auto;max-width:none;margin:0}
+ .welcome-left-copy .welcome-title{
+   writing-mode:vertical-rl;text-orientation:mixed;white-space:normal;
+   font-size:clamp(30px,3.1vw,48px);line-height:1.75;letter-spacing:.12em;
+   margin:0;max-height:calc(100svh - 180px);
+ }
+ .welcome-side-note{grid-column:3;grid-row:1;align-self:center;justify-self:center;max-width:none}
+ .welcome-side-note .welcome-subtitle{
+   writing-mode:vertical-rl;text-orientation:mixed;max-width:none;max-height:calc(100svh - 180px);
+   margin:0;font-size:clamp(15px,1.25vw,19px);line-height:2.15;letter-spacing:.12em;
+ }
+ .welcome-cta{grid-column:2;grid-row:1;justify-self:center;align-self:end;margin:0 0 10px;min-width:170px}
+ .welcome-foot{display:none}
+}
+@media (max-width:700px){
+ .welcome-main.welcome-sides{
+   min-height:calc(100svh - 64px);min-height:calc(100dvh - 64px);
+   width:100%;padding:clamp(18px,4svh,34px) 22px max(22px,env(safe-area-inset-bottom));
+   display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+   gap:16px;text-align:center;
+ }
+ .welcome-left-copy{width:100%;max-width:100%;margin:0;align-self:stretch}
+ .welcome-left-copy .welcome-title{
+   writing-mode:horizontal-tb;text-orientation:mixed;white-space:normal;
+   font-size:clamp(25px,7.2vw,34px);line-height:1.45;margin:0;letter-spacing:.03em;
+ }
+ .welcome-side-note{width:100%;max-width:340px;margin:0 auto}
+ .welcome-side-note .welcome-subtitle{
+   writing-mode:horizontal-tb;text-orientation:mixed;max-width:100%;
+   margin:0;font-size:clamp(12px,3.3vw,14px);line-height:1.9;letter-spacing:.04em;
+ }
+ .welcome-cta{align-self:center;margin:12px auto 0;min-height:42px}
+ .welcome-kicker,.welcome-foot{display:none}
+}
+@media(max-width:390px){
+ .welcome-main.welcome-sides{padding-left:18px;padding-right:18px;gap:12px}
+ .welcome-left-copy .welcome-title{font-size:25px}
+ .welcome-side-note .welcome-subtitle{font-size:12px}
+}
 </style>
 
 <!-- Unified journal typography: keep this last so it overrides older page-local font declarations. -->
@@ -127,15 +174,14 @@ body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome
 <a href="./rethinking/index.html"><span class="nav-zh">重新思考</span><span class="nav-en">Rethink</span></a>
 
 </nav><button class="welcome-menu" type="button" aria-controls="welcome-nav" aria-expanded="false" aria-label="打开导航">菜单 <span aria-hidden="true">☰</span></button></header>
-<main class="welcome-main">
-<div class="welcome-copy">
-<div class="welcome-kicker">A PERSONAL JOURNAL OF WOMEN, CINEMA & BOOKS</div>
-<h1 class="welcome-title">从女性的目光出发<span class="en-title">Stories That Help Us See Ourselves.</span></h1>
+<main class="welcome-main welcome-sides">
+<section class="welcome-copy welcome-left-copy" aria-label="欢迎标题">
+<h1 class="welcome-title">从女性的目光出发</h1>
+</section>
+<section class="welcome-side-note" aria-label="网站介绍">
 <p class="welcome-subtitle">重新观看电影、书籍与生活。记录女性角色、关系、成长，以及成为自己的种种可能。</p>
-</div>
-<div class="welcome-art"><img src="./assets/欢迎页封面.jpg?v=20261026-desktop" alt="女性群像：不同的女性面貌与生命经验，共同构成草莓味口气的视觉主题" fetchpriority="high" decoding="async"></div>
+</section>
 <a class="welcome-cta" href="./home/index.html">开始探索 <span class="welcome-cta-arrow" aria-hidden="true">→</span></a>
-<div class="welcome-foot">WOMEN · CINEMA · BOOKS · SELFHOOD</div>
 </main>
 </div>
 <script>(function(){const nav=document.getElementById("welcome-nav");const button=document.querySelector(".welcome-menu");if(!nav||!button)return;function close(){nav.classList.remove("is-open");button.setAttribute("aria-expanded","false");button.setAttribute("aria-label","打开导航");}button.addEventListener("click",function(){const open=!nav.classList.contains("is-open");nav.classList.toggle("is-open",open);button.setAttribute("aria-expanded",String(open));button.setAttribute("aria-label",open?"收起导航":"打开导航");});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",close));document.addEventListener("keydown",e=>{if(e.key==="Escape")close();});document.addEventListener("click",e=>{if(!nav.contains(e.target)&&!button.contains(e.target))close();});window.addEventListener("resize",()=>{if(window.innerWidth>700)close();});})();</script></body>
