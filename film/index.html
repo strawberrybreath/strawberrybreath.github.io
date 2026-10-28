@@ -85,6 +85,58 @@ body:before,body:after{content:none!important;display:none!important;background-
 .column-landing .column-landing-hero .column-hero-art,.column-landing-hero>.column-hero-art,.column-cover,.rethinking-hero .cover{display:none!important}
 @media(max-width:767px){.site-header,.site-nav,.mobile-menu,.column-landing-hero,.rethinking-hero,.journal-card,.journal-card-body{background:#f7f4ee!important;background-image:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
 </style>
+
+<style id="column-hero-image-left-text-right">
+/* Restore the original column cover as a small left-side image; keep heading and introduction together on the right. */
+.column-landing .column-landing-hero,
+.column-landing .rethinking-hero{
+ display:grid!important;grid-template-columns:minmax(140px,220px) minmax(0,1fr)!important;
+ align-items:center!important;gap:clamp(22px,4vw,44px)!important;
+ min-height:0!important;height:auto!important;padding:clamp(22px,4vw,42px)!important;
+ margin:0 0 32px!important;background:#fffaf4!important;border:1px solid #e2d8ce!important;
+}
+.column-landing .column-landing-hero .column-hero-art,
+.column-landing .column-landing-hero .column-cover,
+.column-landing .rethinking-hero .cover{
+ position:static!important;inset:auto!important;display:block!important;visibility:visible!important;
+ width:100%!important;max-width:220px!important;height:auto!important;max-height:none!important;
+ aspect-ratio:4/5!important;object-fit:cover!important;object-position:center!important;
+ justify-self:start!important;grid-column:1!important;grid-row:1!important;z-index:auto!important;
+}
+.column-landing .column-landing-hero>div,
+.column-landing .rethinking-hero>div{
+ position:static!important;grid-column:2!important;grid-row:1!important;width:100%!important;
+ max-width:650px!important;margin:0!important;text-align:left!important;color:#302c2a!important;
+}
+.column-landing .column-landing-hero:before,
+.column-landing .rethinking-hero:before{display:none!important;content:none!important}
+.column-landing .column-landing-hero .eyebrow,
+.column-landing .rethinking-hero .eyebrow{color:#986c5c!important}
+.column-landing .column-landing-hero h1,
+.column-landing .rethinking-hero h1{color:#713d42!important;font-size:clamp(32px,4.2vw,52px)!important;line-height:1.25!important;margin:8px 0 12px!important}
+.column-landing .column-landing-hero .heading-en,
+.column-landing .rethinking-hero .heading-en{color:#756b64!important}
+.column-landing .column-landing-hero .column-deck,
+.column-landing .rethinking-hero .column-deck{color:#713d42!important;font-size:clamp(16px,1.7vw,20px)!important;line-height:1.75!important;margin:0 0 10px!important}
+.column-landing .column-landing-hero .column-intro,
+.column-landing .rethinking-hero .column-intro{color:#756b64!important;font-size:14px!important;line-height:1.95!important;margin:0!important;max-width:42em!important}
+@media(max-width:650px){
+ .column-landing .column-landing-hero,.column-landing .rethinking-hero{
+  grid-template-columns:minmax(92px,116px) minmax(0,1fr)!important;gap:16px!important;
+  padding:18px 14px!important;margin-bottom:24px!important;align-items:start!important;
+ }
+ .column-landing .column-landing-hero .column-hero-art,
+ .column-landing .column-landing-hero .column-cover,
+ .column-landing .rethinking-hero .cover{width:100%!important;max-width:116px!important;aspect-ratio:3/4!important;align-self:start!important}
+ .column-landing .column-landing-hero>div,.column-landing .rethinking-hero>div{min-width:0!important}
+ .column-landing .column-landing-hero .eyebrow,.column-landing .rethinking-hero .eyebrow{font-size:9px!important;letter-spacing:.1em!important;line-height:1.5!important}
+ .column-landing .column-landing-hero h1,.column-landing .rethinking-hero h1{font-size:clamp(23px,6.4vw,31px)!important;line-height:1.3!important;margin:5px 0 8px!important;overflow-wrap:anywhere}
+ .column-landing .column-landing-hero .heading-en,.column-landing .rethinking-hero .heading-en{font-size:.42em!important;letter-spacing:.03em!important}
+ .column-landing .column-landing-hero .column-deck,.column-landing .rethinking-hero .column-deck{font-size:13px!important;line-height:1.7!important;margin-bottom:7px!important}
+ .column-landing .column-landing-hero .column-intro,.column-landing .rethinking-hero .column-intro{font-size:11px!important;line-height:1.8!important}
+}
+@media(max-width:360px){.column-landing .column-landing-hero,.column-landing .rethinking-hero{grid-template-columns:84px minmax(0,1fr)!important;gap:12px!important;padding:14px 11px!important}.column-landing .column-landing-hero h1,.column-landing .rethinking-hero h1{font-size:22px!important}}
+</style>
 </head><body><a class="skip-link" href="#main-content">跳到正文 / Skip to content</a><header class="site-header"><a class="brand" href="../index.html" aria-label="返回首页 Home"><span class="brand-copy"><span class="brand-en">STRAWBERRY BREATH</span><span class="brand-zh">草莓味口气</span><span class="brand-tagline">WOMEN · CINEMA · SELFHOOD</span></span></a><nav class="site-nav" id="site-nav" aria-label="主导航 Main navigation"><a href="../home/index.html"><span class="zh-line">首页</span><span class="en-line">Home</span></a><a aria-current="page" href="../film/index.html"><span class="zh-line">影视与她</span><span class="en-line">Film</span></a><a  href="../books/index.html"><span class="zh-line">书与她</span><span class="en-line">Books</span></a><a href="../rethinking/index.html"><span class="zh-line">重新思考</span><span class="en-line">Rethink</span></a></nav><button class="mobile-menu" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="打开导航 Open navigation"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">菜单 MENU</span></button></header><main id="main-content" class="column-landing"><section class="column-landing-hero"><img class="column-hero-art" src="../assets/影视与她封面.jpeg" alt="影视与她栏目封面" loading="eager" decoding="async"><div><span class="eyebrow">COLUMN 01 / FILM</span><h1>影视与她<span class="heading-en">HER FILM NOTES</span></h1><p class="column-deck">从女性的目光出发，重新观看电影。</p><p class="column-intro">回到作品本身：她经历了什么，做出了什么选择，哪些社会规则塑造了她的处境。每一期围绕一部作品或一个主题，细读人物关系、关键场景与叙事表达。</p></div></section><div class="journal-head"><div><span class="eyebrow">THE JOURNAL / LATEST FIRST</span><h2>期刊与专题</h2></div><p>按发布时间倒序排列 · 点击卡片阅读完整文章</p></div><section class="journal-grid" aria-label="影视与她文章列表">
 <a class="journal-card" href="../issue-003/index.html"><img src="../assets/Enola%20Holmes3.JPG" alt="Enola Holmes 3 专题封面" loading="lazy" decoding="async"><div class="journal-card-body"><div class="journal-card-meta"><span>ISSUE 03</span><span>FILM · LOVE & AMBITION</span></div><h3>Enola Holmes 3：爱情不是终点</h3><p>当事业、婚姻与个人理想摆在一起，一个女孩怎样为自己的未来谈条件。</p><span class="read-link">阅读本期专题 →</span></div></a>
 <a class="journal-card" href="../issue-002/index.html"><img src="../assets/Enola%20Holmes2.JPG" alt="Enola Holmes 2 专题封面" loading="lazy" decoding="async"><div class="journal-card-body"><div class="journal-card-meta"><span>ISSUE 02</span><span>FILM · WORK & VOICE</span></div><h3>Enola Holmes 2：女性不只要聪明，还要被听见</h3><p>从年轻女工的处境，谈谁的声音会被听见、谁的危险会被忽略。</p><span class="read-link">阅读本期专题 →</span></div></a>
