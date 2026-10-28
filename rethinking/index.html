@@ -73,7 +73,20 @@ body:before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
   background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important
  }
 }
-</style></head><body>
+</style>
+<style id="calm-no-background-image">
+/* Calm column pages: solid editorial paper, no full-page artwork, translucent panels, or blur. */
+html,body{background:#f7f4ee!important;background-image:none!important;color:#302c2a!important}
+body:before,body:after{content:none!important;display:none!important;background-image:none!important}
+.site-header{background:#f7f4ee!important;background-image:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border-bottom:1px solid #ddd4c9!important}
+.site-header .site-nav,.site-nav,.mobile-menu{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.column-landing-hero,.rethinking-hero,.journal-card,.journal-head,.journal-card-body,.column-back,.site-footer{background:#fffaf4!important;background-image:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}
+.column-landing-hero,.rethinking-hero{border:1px solid #e2d8ce!important}
+.journal-card{border:1px solid #e2d8ce!important}
+.column-landing .column-landing-hero .column-hero-art,.column-landing-hero>.column-hero-art,.column-cover,.rethinking-hero .cover{display:none!important}
+@media(max-width:767px){.site-header,.site-nav,.mobile-menu,.column-landing-hero,.rethinking-hero,.journal-card,.journal-card-body{background:#f7f4ee!important;background-image:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
+</style>
+</head><body>
 <header class="site-header"><a class="brand" href="../index.html" aria-label="返回欢迎页 Welcome"><img class="site-logo" src="../assets/头像-圆形.png" alt="" width="42" height="42"><span class="brand-copy"><span class="brand-en">STRAWBERRY BREATH</span><span class="brand-zh">草莓味口气</span><span class="brand-tagline">WOMEN · CINEMA · SELFHOOD</span></span></a><nav class="site-nav" id="site-nav" aria-label="主导航 Main navigation"><a href="../home/index.html"><span class="zh-line">首页</span><span class="en-line">Home</span></a><a href="../film/index.html"><span class="zh-line">影视与她</span><span class="en-line">Film</span></a><a href="../books/index.html"><span class="zh-line">书与她</span><span class="en-line">Books</span></a><a aria-current="page" href="../rethinking/index.html"><span class="zh-line">重新思考</span><span class="en-line">Rethink</span></a></nav><button class="mobile-menu" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="打开导航 Open navigation"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">菜单 MENU</span></button></header>
 <main class="rethinking-wrap column-landing" id="main-content">
 <section class="rethinking-hero column-landing-hero">
