@@ -158,6 +158,49 @@
 <link rel="stylesheet" href="https://fontsapi.zeoseven.com/192/main/result.css">
 <link rel="stylesheet" href="https://fontsapi.zeoseven.com/292/main/result.css">
 <link rel="stylesheet" href="../assets/journal-fonts.css?v=20261028-journal-fonts">
+
+<style id="homepage-floral-and-horizontal-columns">
+/* Flowers are woven into the essay in their original sequence; keep the English words legible. */
+.home-editorial .home-flower{
+  float:right; display:block; width:clamp(96px,12vw,138px); height:auto;
+  max-height:none; object-fit:contain; margin:3px 0 12px 22px;
+  border:0; border-radius:0; background:transparent;
+}
+.home-editorial .home-flower-2,.home-editorial .home-flower-4{float:left;margin:3px 22px 12px 0}
+.home-editorial p:after{content:"";display:block;clear:both}
+.home-columns .column-grid{display:flex!important;flex-direction:column!important;gap:16px!important}
+.home-columns .column-card{
+  display:grid!important;grid-template-columns:minmax(145px,24%) minmax(0,1fr)!important;
+  align-items:stretch;min-height:0!important;overflow:hidden;
+}
+.home-columns .column-card .column-image{
+  width:100%!important;height:100%!important;min-height:150px!important;
+  aspect-ratio:auto!important;align-self:stretch;
+}
+.home-columns .column-card .column-image img{
+  position:absolute;inset:0;width:100%!important;height:100%!important;min-height:0!important;
+  aspect-ratio:auto!important;object-fit:cover;object-position:center;
+}
+.home-columns .column-card .column-content{
+  min-width:0;padding:clamp(18px,2.5vw,28px)!important;
+  display:flex;flex-direction:column;justify-content:center;gap:8px;
+}
+.home-columns .column-card .column-content p{font-size:14px!important;line-height:1.95!important;max-width:62ch}
+.home-columns .column-card .column-content h3{font-size:clamp(21px,2.3vw,28px)!important}
+@media(max-width:600px){
+  .home-editorial .home-flower{width:84px;margin:3px 0 8px 14px}
+  .home-editorial .home-flower-2,.home-editorial .home-flower-4{margin:3px 14px 8px 0}
+  .home-columns .column-grid{gap:12px!important}
+  .home-columns .column-card{grid-template-columns:minmax(94px,32%) minmax(0,1fr)!important}
+  .home-columns .column-card .column-image{min-height:0!important;height:auto!important;aspect-ratio:3/4!important}
+  .home-columns .column-card .column-content{padding:12px!important;gap:6px}
+  .home-columns .column-card .column-content .eyebrow{font-size:9px}
+  .home-columns .column-card .column-content h3{font-size:18px!important;line-height:1.4}
+  .home-columns .column-card .column-content p{font-size:12px!important;line-height:1.8!important}
+  .home-columns .column-card .column-link{font-size:11px;padding-top:4px}
+}
+</style>
+
 </head>
 <body>
 <a class="skip-link" href="#main-content"><span class="zh-line">跳到正文</span><span class="en-line">Skip to content</span></a>
@@ -172,10 +215,10 @@
 </section>
 <article class="home-editorial wrap">
   <p>我关心女性如何生活，如何在亲密关系、家庭期待、工作与社会规则之间作出选择，也关心这些选择究竟有多少是真正属于她们自己的。我们很容易用几个词概括一个女人：勇敢、软弱、独立、依赖、成功或失败。但当我愿意多看一会儿，就会发现人物很少能被一个标签解释。一个人可以渴望爱，同时害怕失去自由；可以有能力，却仍然缺少资源；可以离开一段关系，也可能因为现实条件而暂时留下。<strong>理解一个选择，应该先看见这个人所处的环境，而不是急着评价她够不够勇敢。</strong></p>
-  <p>电影让我先看见具体的人。镜头、表演和情节把抽象的问题变成可以感受的生活：谁拥有说话的机会，谁被要求保持体面，谁的痛苦会被认真对待，谁的劳动却被当成理所当然。我喜欢那些既有故事性、又愿意留下矛盾的作品。它们不必把每个问题都解释清楚，也不必把女性塑造成永远正确的榜样。人物可以犯错、嫉妒、犹豫、改变；她们的价值不应取决于是否符合某一种理想女性的标准。</p>
-  <p>阅读则让我有机会停下来，把最初的感受放进更长的脉络里。小说里的友谊、婚姻、母职、阶级和野心，不只是人物的私人遭遇，也与教育、经济条件、文化期待和权力关系相连。心理学与社会科学的讨论也提醒我，人的行为往往不只来自性格，还受到环境、经验与可选择空间的影响。<strong>当我们想问“她为什么不离开”或“她为什么不反抗”时，也许应该先问：她拥有怎样的资源？拒绝会带来什么代价？她是否真的有安全、可行的其他选择？</strong></p>
-  <p>我并不想把电影和书籍变成一堂预先写好结论的课，也不希望每篇文章最后都变成一句响亮的口号。我更愿意从情节和细节出发，辨认作品说了什么、没有说什么，分清事实、解释与个人感受，再把它们带回现实生活里检视。我的理解会改变，写下的判断也可能需要修正；对我而言，这不是不够坚定，而是认真思考必须留下的位置。一个人的主体性，不是永远不受影响，也不是每次都做出最漂亮的决定，而是逐渐拥有理解处境、辨认欲望、评估代价，并参与决定自己生活的能力。</p>
-  <p>这也是我建立「草莓味口气」的原因。它是一个个人的观看与阅读记录，不是替所有女性发言，也不打算给别人规定人生答案。我想把那些让我停顿的故事、让我不安的细节和暂时没有答案的问题留下来。希望这里的文字能够做到的，不是替读者决定应该怎么想，而是让我们多看见一点，再多想一步。<span class="editorial-emphasis">Look closely. Read critically. Think for yourself.</span></p>
+  <p><img class="home-flower home-flower-1" src="../assets/插画-花卉.jpg" alt="花卉图片，保留图片上的英文单词" loading="lazy" decoding="async">电影让我先看见具体的人。镜头、表演和情节把抽象的问题变成可以感受的生活：谁拥有说话的机会，谁被要求保持体面，谁的痛苦会被认真对待，谁的劳动却被当成理所当然。我喜欢那些既有故事性、又愿意留下矛盾的作品。它们不必把每个问题都解释清楚，也不必把女性塑造成永远正确的榜样。人物可以犯错、嫉妒、犹豫、改变；她们的价值不应取决于是否符合某一种理想女性的标准。</p>
+  <p><img class="home-flower home-flower-2" src="../assets/插画-花卉1.jpg" alt="花卉图片，保留图片上的英文单词" loading="lazy" decoding="async">阅读则让我有机会停下来，把最初的感受放进更长的脉络里。小说里的友谊、婚姻、母职、阶级和野心，不只是人物的私人遭遇，也与教育、经济条件、文化期待和权力关系相连。心理学与社会科学的讨论也提醒我，人的行为往往不只来自性格，还受到环境、经验与可选择空间的影响。<strong>当我们想问“她为什么不离开”或“她为什么不反抗”时，也许应该先问：她拥有怎样的资源？拒绝会带来什么代价？她是否真的有安全、可行的其他选择？</strong></p>
+  <p><img class="home-flower home-flower-3" src="../assets/插画-花卉2.jpg" alt="花卉图片，保留图片上的英文单词" loading="lazy" decoding="async">我并不想把电影和书籍变成一堂预先写好结论的课，也不希望每篇文章最后都变成一句响亮的口号。我更愿意从情节和细节出发，辨认作品说了什么、没有说什么，分清事实、解释与个人感受，再把它们带回现实生活里检视。我的理解会改变，写下的判断也可能需要修正；对我而言，这不是不够坚定，而是认真思考必须留下的位置。一个人的主体性，不是永远不受影响，也不是每次都做出最漂亮的决定，而是逐渐拥有理解处境、辨认欲望、评估代价，并参与决定自己生活的能力。</p>
+  <p><img class="home-flower home-flower-4" src="../assets/插画-花卉4.jpg" alt="花卉图片，保留图片上的英文单词" loading="lazy" decoding="async">这也是我建立「草莓味口气」的原因。它是一个个人的观看与阅读记录，不是替所有女性发言，也不打算给别人规定人生答案。我想把那些让我停顿的故事、让我不安的细节和暂时没有答案的问题留下来。希望这里的文字能够做到的，不是替读者决定应该怎么想，而是让我们多看见一点，再多想一步。<span class="editorial-emphasis">Look closely. Read critically. Think for yourself.</span></p>
 </article>
 <section class="home-columns wrap" aria-labelledby="columns-title">
   <div class="home-columns-heading"><span class="eyebrow">EXPLORE THE JOURNAL</span><h2 id="columns-title">从这里继续阅读 <span>Where to go next</span></h2><p>三个入口，三种观察世界的方式。每个栏目都从具体故事出发，慢慢走向更大的问题。</p></div>
