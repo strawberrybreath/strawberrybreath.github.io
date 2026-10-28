@@ -151,6 +151,63 @@ body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome
  .welcome-left-copy .welcome-title{font-size:25px}
  .welcome-side-note .welcome-subtitle{font-size:12px}
 }
+
+/* Final welcome composition: use the cat-and-book cover as the page background,
+   and keep all copy out of the central cat/book image area. */
+@media (min-width:701px){
+ .welcome-page:before{background-image:url("./assets/欢迎页封面.jpg?v=20261028-layout");background-position:center center;background-size:cover}
+ .welcome-main.welcome-sides{
+   min-height:calc(100svh - 84px);padding:24px clamp(28px,5vw,84px) 32px;
+   display:grid;grid-template-columns:minmax(90px,1fr) minmax(240px,36vw) minmax(90px,1fr);
+   align-items:center;gap:clamp(18px,3vw,48px);text-align:center
+ }
+ .welcome-left-copy{grid-column:1;grid-row:1;align-self:center;justify-self:center}
+ .welcome-left-copy .welcome-title{writing-mode:vertical-rl;text-orientation:mixed;font-size:clamp(28px,2.8vw,42px);line-height:1.8;letter-spacing:.12em;margin:0}
+ .welcome-side-note{grid-column:3;grid-row:1;align-self:center;justify-self:center;max-width:none}
+ .welcome-side-note .welcome-subtitle{writing-mode:vertical-rl;text-orientation:mixed;max-width:none;max-height:65svh;margin:0;font-size:clamp(14px,1.2vw,18px);line-height:2.1;letter-spacing:.1em}
+ .welcome-cta{grid-column:2;grid-row:1;justify-self:center;align-self:end;margin:0 0 12px}
+ .welcome-foot{display:none}
+}
+@media (max-width:700px){
+ .welcome-page{min-height:100svh;min-height:100dvh;background:#fff}
+ .welcome-page:before{
+   position:absolute;inset:64px 0 0;
+   background-image:url("./assets/欢迎页封面.jpg?v=20261028-layout");
+   background-position:center center;background-size:100% auto;background-repeat:no-repeat;
+   transform:none
+ }
+ .welcome-main.welcome-sides{
+   position:relative;z-index:1;width:100%;
+   min-height:calc(100svh - 64px);min-height:calc(100dvh - 64px);
+   padding:clamp(26px,5svh,54px) 22px max(24px,env(safe-area-inset-bottom));
+   display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+   gap:14px;text-align:center
+ }
+ .welcome-left-copy{width:100%;max-width:100%;margin:0;align-self:stretch;flex:0 0 auto}
+ .welcome-left-copy .welcome-title{
+   writing-mode:horizontal-tb;text-orientation:mixed;white-space:normal;
+   font-size:clamp(25px,7vw,33px);line-height:1.45;margin:0;letter-spacing:.03em;
+   text-shadow:0 1px 8px rgba(255,255,255,.25)
+ }
+ .welcome-side-note{
+   width:100%;max-width:340px;margin:0 auto 4px;flex:0 0 auto;
+   padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.82);
+   backdrop-filter:blur(3px)
+ }
+ .welcome-side-note .welcome-subtitle{
+   writing-mode:horizontal-tb;text-orientation:mixed;max-width:100%;
+   margin:0;font-size:clamp(11px,3.2vw,13px);line-height:1.8;letter-spacing:.03em;color:#302a27
+ }
+ .welcome-cta{align-self:center;margin:0 auto 4px;min-height:42px}
+ .welcome-kicker,.welcome-foot{display:none}
+}
+@media(max-width:390px){
+ .welcome-main.welcome-sides{padding-left:16px;padding-right:16px;gap:10px}
+ .welcome-left-copy .welcome-title{font-size:24px}
+ .welcome-side-note{max-width:310px;padding:7px 9px}
+ .welcome-side-note .welcome-subtitle{font-size:11px}
+ .welcome-cta{min-width:155px}
+}
 </style>
 
 <!-- Unified journal typography: keep this last so it overrides older page-local font declarations. -->
