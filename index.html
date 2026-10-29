@@ -250,6 +250,34 @@ body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome
 <link rel="stylesheet" href="https://fontsapi.zeoseven.com/192/main/result.css">
 <link rel="stylesheet" href="https://fontsapi.zeoseven.com/292/main/result.css">
 <link rel="stylesheet" href="./assets/journal-fonts.css?v=20261028-journal-fonts">
+
+<style id="welcome-single-screen-final">
+html,body{height:100%;min-height:0!important;overflow:hidden!important;overscroll-behavior:none}
+body{height:100dvh;min-height:0!important}
+.welcome-page{height:100dvh;height:100svh;min-height:0!important;overflow:hidden!important;display:flex;flex-direction:column}
+.welcome-header{width:min(1440px,calc(100% - 48px));min-height:72px;height:72px;flex:0 0 72px}
+.welcome-main{width:min(1180px,calc(100% - 48px));height:calc(100% - 72px);min-height:0!important;flex:1;padding:clamp(12px,2.5vh,28px) 0!important;justify-content:center;overflow:hidden}
+.welcome-main.welcome-sides{height:calc(100% - 72px);min-height:0!important;padding-top:clamp(12px,2.5vh,28px)!important;padding-bottom:clamp(12px,2.5vh,28px)!important}
+.welcome-title{margin:8px 0!important;font-size:clamp(28px,5vw,64px)!important;line-height:1.22!important}
+.welcome-side-note{margin-top:clamp(10px,2vh,22px)}
+.welcome-cta{position:relative!important;left:auto!important;bottom:auto!important;transform:none!important;margin:clamp(12px,2.5vh,24px) 0 0!important;min-height:46px}
+@media(max-width:700px){
+ .welcome-header{width:calc(100% - 32px);height:64px;min-height:64px;flex-basis:64px}
+ .welcome-main,.welcome-main.welcome-sides{width:100%;height:calc(100% - 64px);padding:16px 20px!important}
+ .welcome-nav{max-height:calc(100dvh - 76px);overflow:auto}
+ .welcome-title{font-size:clamp(25px,7vw,36px)!important;line-height:1.35!important}
+ .welcome-side-note{width:100%;bottom:auto!important;margin-top:12px}
+ .welcome-side-note .welcome-subtitle{font-size:clamp(11px,3.2vw,13px)!important;line-height:1.75!important}
+ .welcome-cta{min-width:158px!important;min-height:44px;padding:11px 22px!important}
+}
+@media(max-height:650px){
+ .welcome-header{height:56px;min-height:56px;flex-basis:56px}
+ .welcome-main,.welcome-main.welcome-sides{height:calc(100% - 56px);padding-top:8px!important;padding-bottom:8px!important}
+ .welcome-title{font-size:clamp(23px,4.4vh,36px)!important}
+ .welcome-side-note{margin-top:6px}
+ .welcome-cta{margin-top:8px!important;min-height:40px}
+}
+</style>
 </head>
 <body>
 <div class="welcome-page">
