@@ -49,6 +49,15 @@ h1{font:500 clamp(32px,5vw,58px)/1.35 'Noto Serif SC',serif;letter-spacing:.02em
 .article-row:hover .read-more{color:var(--accent)}
 footer{width:min(1000px,calc(100% - 48px));margin:0 auto;padding:30px 0 44px;color:var(--muted);font-size:10px;line-height:1.8;letter-spacing:.04em}
 @media(max-width:640px){.site-header{width:calc(100% - 32px);min-height:68px}.brand img{width:32px;height:32px}.brand-name{font-size:9px;letter-spacing:.12em}.brand-sub{font-size:9px}main{width:calc(100% - 32px)}.intro{padding:36px 0 28px}h1{font-size:32px;margin:13px 0}.intro p{font-size:12px;line-height:2}.list-head h2{font-size:19px}.article-row{grid-template-columns:108px minmax(0,1fr);gap:17px;padding:22px 0;align-items:start}.poster-wrap{min-height:0;padding:5px}.poster{max-height:none}.article-meta{font-size:8px;letter-spacing:.08em;margin-bottom:8px}.article-title{font-size:19px;line-height:1.5;margin-bottom:7px}.article-subtitle{font-size:11px;line-height:1.8;margin-bottom:8px}.article-excerpt{font-size:11px;line-height:1.9}.read-more{font-size:9px;margin-top:13px}footer{width:calc(100% - 32px)}}
+
+.contact-section{margin:44px 0 0;padding:30px 0 34px;border-top:1px solid var(--line)}
+.contact-head h2{font:500 24px/1.5 'Noto Serif SC',serif;color:var(--wine);margin:8px 0}
+.contact-head p{font-size:13px;line-height:1.9;color:var(--muted);margin:0}
+.contact-links{display:flex;align-items:center;gap:24px;margin-top:22px}
+.contact-links a{display:flex;align-items:center;gap:9px;color:var(--wine);font:500 11px/1.5 'DM Sans','Noto Sans SC',sans-serif;text-decoration:none}
+.contact-icon{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:600 10px/1 'DM Sans',sans-serif;color:var(--wine)}
+.contact-links a:hover .contact-icon{background:#eee5dc}
+@media(max-width:640px){.contact-section{margin-top:32px;padding:24px 0}.contact-links{gap:18px}.contact-links a{gap:7px;font-size:10px}.contact-icon{width:34px;height:34px}}
 </style>
 </head>
 <body>
@@ -77,6 +86,14 @@ footer{width:min(1000px,calc(100% - 48px));margin:0 auto;padding:30px 0 44px;col
 <span class="read-more">阅读全文 <span aria-hidden="true">→</span></span>
 </span>
 </a>
+</section>
+<section class="contact-section" aria-labelledby="contact-title">
+<div class="contact-head"><div class="eyebrow">CONTACT</div><h2 id="contact-title">保持联系</h2><p>如果你也喜欢电影、阅读和认真思考生活，欢迎在这里找到我。</p></div>
+<div class="contact-links">
+<a href="https://github.com/strawberrybreath" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><span class="contact-icon">GH</span><span>GitHub</span></a>
+<a href="mailto:strawberrybreathhh@gmail.com" aria-label="Email"><span class="contact-icon">✉</span><span>Email</span></a>
+<a href="../assets/二维码-公众号.jpg" target="_blank" rel="noopener noreferrer" aria-label="微信二维码"><span class="contact-icon">We</span><span>WeChat</span></a>
+</div>
 </section>
 </main>
 <footer>草莓味口气 · Strawberry Breath<br>一个人的阅读、观影与生活记录。</footer>
