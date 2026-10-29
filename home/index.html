@@ -2,100 +2,11 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f7f4ee">
-<meta name="description" content="草莓味口气，一个记录电影、生活与个人思考的个人网站。">
-<link rel="canonical" href="https://strawberrybreath.github.io/home/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="STRAWBERRY BREATH">
-<meta property="og:title" content="草莓味口气 · 个人记录">
-<meta property="og:description" content="一些电影，一些想法，以及我在生活中慢慢形成的理解。">
-<meta property="og:url" content="https://strawberrybreath.github.io/home/">
-<meta property="og:image" content="https://strawberrybreath.github.io/assets/Enola%20Holmes1.JPG">
-<title>草莓味口气 · 个人记录</title>
-<link rel="icon" type="image/png" href="../assets/头像-圆形.png">
-<link rel="apple-touch-icon" href="../assets/头像-圆形.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--paper:#f7f4ee;--ink:#302a27;--muted:#766a63;--wine:#713d42;--line:#dfd5cc;--accent:#c96f49}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans SC',sans-serif}
-a{color:inherit}
-.site-header{width:min(1160px,calc(100% - 48px));margin:auto;min-height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:18px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{width:38px;height:38px;object-fit:cover;border-radius:50%}
-.brand-name{font:600 11px/1.5 'DM Sans',sans-serif;letter-spacing:.19em}
-.brand-sub{font-size:10px;color:var(--muted);margin-top:3px}
-.back-link{font-size:12px;text-decoration:none;color:var(--wine);border-bottom:1px solid #c9a6a0;padding-bottom:4px}
-main{width:min(1000px,calc(100% - 48px));margin:0 auto}
-.intro{padding:clamp(42px,7vw,82px) 0 36px;max-width:720px}
-.eyebrow{font:500 10px/1.6 'DM Sans',sans-serif;letter-spacing:.2em;color:var(--wine);text-transform:uppercase}
-h1{font:500 clamp(32px,5vw,58px)/1.35 'Noto Serif SC',serif;letter-spacing:.02em;color:var(--wine);margin:17px 0 20px}
-.intro p{font-size:14px;line-height:2.1;color:var(--muted);max-width:620px;margin:0}
-.list-head{display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:1px solid var(--line);padding:18px 0 14px;margin-bottom:0}
-.list-head h2{font:500 22px/1.5 'Noto Serif SC',serif;color:var(--ink);margin:0}
-.list-head span{font:10px/1.5 'DM Sans',sans-serif;letter-spacing:.13em;color:var(--muted)}
-.article-row{display:grid;grid-template-columns:minmax(180px,260px) minmax(0,1fr);gap:clamp(24px,5vw,58px);align-items:center;padding:clamp(26px,4.8vw,48px) 0;border-bottom:1px solid var(--line);text-decoration:none}
-.poster-wrap{background:#eee8df;display:flex;align-items:center;justify-content:center;min-height:260px;padding:10px}
-.poster{display:block;width:100%;height:auto;max-height:390px;object-fit:contain}
-.article-meta{font:10px/1.6 'DM Sans',sans-serif;letter-spacing:.14em;color:var(--muted);margin-bottom:14px}
-.article-title{font:500 clamp(24px,3.2vw,36px)/1.5 'Noto Serif SC',serif;color:var(--wine);margin:0 0 13px}
-.article-subtitle{font-size:13px;line-height:1.9;color:var(--muted);margin:0 0 17px}
-.article-excerpt{font-size:14px;line-height:2.05;margin:0;color:var(--ink)}
-.read-more{display:inline-flex;align-items:center;gap:12px;margin-top:24px;font:600 10px/1.5 'DM Sans','Noto Sans SC',sans-serif;letter-spacing:.15em;color:var(--wine);border-bottom:1px solid #c9a6a0;padding-bottom:7px}
-.article-row:hover .read-more{color:var(--accent)}
-footer{width:min(1000px,calc(100% - 48px));margin:0 auto;padding:30px 0 44px;color:var(--muted);font-size:10px;line-height:1.8;letter-spacing:.04em}
-@media(max-width:640px){.site-header{width:calc(100% - 32px);min-height:68px}.brand img{width:32px;height:32px}.brand-name{font-size:9px;letter-spacing:.12em}.brand-sub{font-size:9px}main{width:calc(100% - 32px)}.intro{padding:36px 0 28px}h1{font-size:32px;margin:13px 0}.intro p{font-size:12px;line-height:2}.list-head h2{font-size:19px}.article-row{grid-template-columns:108px minmax(0,1fr);gap:17px;padding:22px 0;align-items:start}.poster-wrap{min-height:0;padding:5px}.poster{max-height:none}.article-meta{font-size:8px;letter-spacing:.08em;margin-bottom:8px}.article-title{font-size:19px;line-height:1.5;margin-bottom:7px}.article-subtitle{font-size:11px;line-height:1.8;margin-bottom:8px}.article-excerpt{font-size:11px;line-height:1.9}.read-more{font-size:9px;margin-top:13px}footer{width:calc(100% - 32px)}}
-
-.contact-section{margin:44px 0 0;padding:30px 0 34px;border-top:1px solid var(--line)}
-.contact-head h2{font:500 24px/1.5 'Noto Serif SC',serif;color:var(--wine);margin:8px 0}
-.contact-head p{font-size:13px;line-height:1.9;color:var(--muted);margin:0}
-.contact-links{display:flex;align-items:center;gap:24px;margin-top:22px}
-.contact-links a{display:flex;align-items:center;gap:9px;color:var(--wine);font:500 11px/1.5 'DM Sans','Noto Sans SC',sans-serif;text-decoration:none}
-.contact-icon{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:600 10px/1 'DM Sans',sans-serif;color:var(--wine)}
-.contact-links a:hover .contact-icon{background:#eee5dc}
-@media(max-width:640px){.contact-section{margin-top:32px;padding:24px 0}.contact-links{gap:18px}.contact-links a{gap:7px;font-size:10px}.contact-icon{width:34px;height:34px}}
-</style>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="0; url=../">
+<link rel="canonical" href="https://strawberrybreath.github.io/">
+<title>正在返回首页 · 草莓味口气</title>
+<script>location.replace("../");</script>
 </head>
-<body>
-<header class="site-header">
-<a class="brand" href="../index.html" aria-label="返回欢迎页">
-<img src="../assets/头像-圆形.png" alt="" width="38" height="38">
-<span><span class="brand-name">STRAWBERRY BREATH</span><span class="brand-sub">草莓味口气 · 个人记录</span></span>
-</a>
-<a class="back-link" href="../index.html">欢迎页 ↗</a>
-</header>
-<main>
-<section class="intro">
-<div class="eyebrow">PERSONAL NOTES · 个人记录</div>
-<h1>我想记录自己如何看待这个世界。</h1>
-<p>这里没有固定栏目，也不打算把生活整理成一套完整的答案。我会写看过的电影、读过的书，以及那些让我停下来重新思考的时刻。文章按时间排列：新的在前，旧的在后。</p>
-</section>
-<section aria-labelledby="article-list-title">
-<div class="list-head"><h2 id="article-list-title">文章</h2><span>01 / FIRST NOTE</span></div>
-<a class="article-row" href="../issue-001/index.html">
-<span class="poster-wrap"><img class="poster" src="../assets/Enola%20Holmes1.JPG" alt="《Enola Holmes》电影海报" loading="eager"></span>
-<span>
-<div class="article-meta">电影随笔 · 第一篇</div>
-<h2 class="article-title">她不是谁的“小姐”，她只是她自己</h2>
-<p class="article-subtitle">从《Enola Holmes》看一场尚未结束的进步</p>
-<p class="article-excerpt">从 Enola 的名字、Eudoria 与 Enola 之间复杂的爱与距离，到女性如何在家庭期待和社会规则中寻找自己的道路。这是一篇关于独立、主体性与制度改变的观影记录。</p>
-<span class="read-more">阅读全文 <span aria-hidden="true">→</span></span>
-</span>
-</a>
-</section>
-<section class="contact-section" aria-labelledby="contact-title">
-<div class="contact-head"><div class="eyebrow">CONTACT</div><h2 id="contact-title">保持联系</h2><p>如果你也喜欢电影、阅读和认真思考生活，欢迎在这里找到我。</p></div>
-<div class="contact-links">
-<a href="https://github.com/strawberrybreath" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><span class="contact-icon">GH</span><span>GitHub</span></a>
-<a href="mailto:strawberrybreathhh@gmail.com" aria-label="Email"><span class="contact-icon">✉</span><span>Email</span></a>
-<a href="../assets/二维码-公众号.jpg" target="_blank" rel="noopener noreferrer" aria-label="微信二维码"><span class="contact-icon">We</span><span>WeChat</span></a>
-</div>
-</section>
-</main>
-<footer>草莓味口气 · Strawberry Breath<br>一个人的阅读、观影与生活记录。</footer>
-</body>
+<body><p>正在返回首页。如果没有自动跳转，请<a href="../">点击这里</a>。</p></body>
 </html>
