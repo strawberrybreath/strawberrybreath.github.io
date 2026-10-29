@@ -88,3 +88,32 @@ p, li, dd, figcaption, .issue-body, .article-body, .column-description {
 .home-columns-heading > .eyebrow {
   display: none !important;
 }
+
+
+/* 2026-10-29: strict KaiTi-only typography, readable mobile article sizing */
+:root {
+  --sb-journal-hand: "KaiTi", "楷体", "STKaiti", "Kaiti SC", serif;
+  --sb-journal-body: "KaiTi", "楷体", "STKaiti", "Kaiti SC", serif;
+  --sb-journal-english: "KaiTi", "楷体", "STKaiti", "Kaiti SC", serif;
+}
+html, body, body *, body *::before, body *::after {
+  font-family: "KaiTi", "楷体", "STKaiti", "Kaiti SC", serif !important;
+}
+@media (max-width: 760px) {
+  body { font-size: 16px !important; line-height: 1.9 !important; }
+  .essay-body p, article.article-layout p, .article p {
+    font-size: 16px !important;
+    line-height: 1.9 !important;
+    margin-bottom: 1.15em !important;
+    letter-spacing: 0 !important;
+  }
+  .essay-body p.key-thought {
+    color: #854b51 !important;
+    font-weight: 700 !important;
+    padding-left: 12px;
+    border-left: 2px solid #c9a5a0;
+  }
+  .issue-hero { padding: 26px 18px 14px !important; }
+  .issue-hero h1 { font-size: 29px !important; line-height: 1.45 !important; }
+  .issue-hero .issue-subtitle { font-size: 17px !important; line-height: 1.7 !important; }
+}
