@@ -257,6 +257,57 @@ body{background-image:none!important}
   .site-footer .footer-main{padding-top:24px!important}
 }
 </style>
+
+<style id="reference-layout-final">
+#main-content{width:100%;overflow:clip}
+.home-intro.home-intro-simple{position:relative;display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(250px,.8fr)!important;align-items:center;gap:clamp(24px,5vw,70px)!important;width:min(1200px,calc(100% - 64px))!important;max-width:1200px!important;min-height:0!important;height:auto!important;margin:0 auto!important;padding:clamp(42px,6vw,76px) 0 clamp(28px,4vw,48px)!important;box-sizing:border-box}
+.home-intro.home-intro-simple .home-intro-copy{min-width:0;max-width:650px;position:relative;z-index:1}
+.home-intro.home-intro-simple .eyebrow{color:#81746b;letter-spacing:.16em;font-size:11px}
+.home-intro.home-intro-simple h1{margin:18px 0 18px!important;font-family:'Noto Serif SC',serif!important;font-size:clamp(34px,4.5vw,58px)!important;line-height:1.42!important;font-weight:400!important;letter-spacing:.015em;color:#49363a!important}
+.home-intro.home-intro-simple h1 .en-line{display:none!important}
+.home-hero-deck{margin:0;color:#80756d;font-size:clamp(13px,1.15vw,15px);line-height:2.05;letter-spacing:.035em}
+.home-hero-art{display:flex;align-items:center;justify-content:center;min-width:0}
+.home-hero-art img{display:block;width:min(100%,390px);max-height:360px;object-fit:contain;object-position:center;mix-blend-mode:multiply}
+.home-hero-cta{display:inline-flex;align-items:center;gap:12px;margin-top:22px;padding:13px 25px;border-radius:999px;background:#d8794e;color:#fff!important;text-decoration:none!important;font-size:13px;letter-spacing:.08em;transition:transform .2s,background .2s}
+.home-hero-cta:hover{background:#c96537;transform:translateY(-2px)}
+.home-editorial.wrap{width:min(850px,calc(100% - 64px))!important;max-width:850px!important;margin:0 auto!important;padding:clamp(26px,4vw,46px) 0!important;font-size:clamp(14px,1.15vw,16px);line-height:2.05}
+.home-editorial p{margin:0 0 1.35em;line-height:2.05}
+.home-editorial .home-flower{width:clamp(78px,9vw,112px)!important;height:auto!important;max-height:none!important;object-fit:contain!important;border-radius:0!important;opacity:.96}
+.home-columns.wrap{width:min(1200px,calc(100% - 64px))!important;max-width:1200px!important;margin:0 auto!important;padding:clamp(30px,5vw,60px) 0!important}
+.home-columns-heading{max-width:720px;margin:0 auto 30px;text-align:center}
+.home-columns-heading h2{font-family:'Noto Serif SC',serif;font-weight:400}
+.column-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:clamp(22px,4vw,56px)!important;align-items:start}
+.column-card{display:flex!important;flex-direction:column!important;align-items:center!important;min-width:0;text-align:center!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible!important}
+.column-card .column-image{display:block!important;width:clamp(132px,16vw,190px)!important;height:auto!important;aspect-ratio:1/1!important;border-radius:50%!important;overflow:hidden!important;background:#e8ddd1!important;margin:0 auto 20px!important}
+.column-card .column-image img{display:block!important;position:static!important;width:100%!important;height:100%!important;aspect-ratio:1/1!important;object-fit:cover!important;border-radius:50%!important}
+.column-card .column-content{width:100%;padding:0!important;display:flex;flex-direction:column;align-items:center!important;gap:10px!important}
+.column-card .column-content .eyebrow{display:none}
+.column-card .column-content h3{margin:0!important;font-family:'Noto Serif SC',serif;font-size:clamp(20px,2vw,25px)!important;font-weight:400;line-height:1.5}
+.column-card .column-content p{max-width:30ch!important;margin:0 auto!important;font-size:13px!important;line-height:1.9!important;color:#81766e}
+.column-card .column-link{margin-top:2px!important;padding:0!important;font-size:12px!important}
+@media(max-width:760px){
+ .home-intro.home-intro-simple{width:calc(100% - 40px)!important;grid-template-columns:minmax(0,1fr)!important;gap:14px!important;padding:30px 0 22px!important}
+ .home-intro.home-intro-simple h1{font-size:clamp(30px,8vw,42px)!important;line-height:1.42!important;margin:14px 0!important}
+ .home-hero-deck{font-size:13px;line-height:1.9}
+ .home-hero-art{justify-content:flex-end;margin-top:2px}
+ .home-hero-art img{width:clamp(118px,38vw,175px);max-height:165px}
+ .home-hero-cta{margin-top:17px;padding:12px 22px}
+ .home-editorial.wrap{width:calc(100% - 40px)!important;padding:22px 0!important;font-size:14px;line-height:2}
+ .home-columns.wrap{width:calc(100% - 40px)!important;padding:32px 0!important}
+ .column-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}
+ .column-card .column-image{width:clamp(82px,25vw,112px)!important;margin-bottom:12px!important}
+ .column-card .column-content h3{font-size:clamp(15px,4vw,19px)!important}
+ .column-card .column-content p{font-size:11px!important;line-height:1.7!important}
+ .column-card .column-link{font-size:10px!important;line-height:1.6}
+}
+@media(max-width:390px){
+ .column-grid{grid-template-columns:1fr!important;gap:26px!important}
+ .column-card .column-image{width:126px!important}
+ .column-card .column-content h3{font-size:20px!important}
+ .column-card .column-content p{font-size:12px!important}
+ .column-card .column-link{font-size:11px!important}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content"><span class="zh-line">跳到正文</span><span class="en-line">Skip to content</span></a>
@@ -264,10 +315,12 @@ body{background-image:none!important}
 <main id="main-content">
 <section class="home-intro home-intro-simple wrap">
   <div class="home-intro-copy">
-    <span class="eyebrow">STRAWBERRY BREATH / A PERSONAL JOURNAL</span>
-    <h1 class="bilingual"><span class="zh-line">我想记录自己如何看待这个世界。</span><span class="en-line">A journal of how I see the world.</span></h1>
-    
+    <span class="eyebrow">STRAWBERRY BREATH / 个人阅读博客</span>
+    <h1 class="bilingual"><span class="zh-line">我想记录自己如何看待这个世界。</span></h1>
+    <p class="home-hero-deck">阅读，电影，思考，<br>还有生活中那些微小却真实的感受。<br>这是我的个人空间，也是我与世界对话的方式。</p>
+    <a class="home-hero-cta" href="#columns-title">开始探索 <span aria-hidden="true">→</span></a>
   </div>
+  <div class="home-hero-art" aria-hidden="true"><img src="../assets/插画-花卉.jpg" alt="" loading="eager" decoding="async"></div>
 </section>
 <article class="home-editorial wrap">
   <p>我开始写下这些文字，是因为有些电影看完之后并没有结束，有些书合上之后也没有真正读完。一个女性角色的选择、一段母女关系里没有说出口的话、一个人物在现实面前的犹豫，常常会把我带回自己的生活，让我重新思考那些曾经以为理所当然的事。我关心女性如何生活，如何在亲密关系、家庭期待、工作与社会规则之间作出选择，也关心这些选择究竟有多少是真正属于她们自己的。我们很容易用几个词概括一个女人：勇敢、软弱、独立、依赖、成功或失败。但当我愿意多看一会儿，就会发现人物很少能被一个标签解释。一个人可以渴望爱，同时害怕失去自由；可以有能力，却仍然缺少资源；可以离开一段关系，也可能因为现实条件而暂时留下。<strong>理解一个选择，应该先看见这个人所处的环境，而不是急着评价她够不够勇敢。</strong></p>
