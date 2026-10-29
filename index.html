@@ -278,7 +278,43 @@ body{height:100dvh;min-height:0!important}
  .welcome-cta{margin-top:8px!important;min-height:40px}
 }
 </style>
-<style id="welcome-nav-final">@media(max-width:700px){.welcome-nav{display:flex!important;position:static!important;flex:0 0 auto!important;flex-direction:row!important;align-items:center!important;gap:0!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important}.welcome-nav a{display:flex!important;min-height:36px!important;align-items:center!important;padding:6px 9px!important;border:0!important;background:transparent!important;color:#302a27!important;font-size:11px!important}.welcome-nav .nav-en{display:none!important}}</style></head>
+<style id="welcome-nav-final">@media(max-width:700px){.welcome-nav{display:flex!important;position:static!important;flex:0 0 auto!important;flex-direction:row!important;align-items:center!important;gap:0!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important}.welcome-nav a{display:flex!important;min-height:36px!important;align-items:center!important;padding:6px 9px!important;border:0!important;background:transparent!important;color:#302a27!important;font-size:11px!important}.welcome-nav .nav-en{display:none!important}}</style><style id="welcome-layout-contact-fix">
+/* Keep welcome copy in the quiet upper margin so the central cat artwork stays visible. */
+.welcome-page{position:relative}
+.welcome-main.welcome-sides{display:block!important;position:relative!important;width:min(1180px,calc(100% - 48px));height:calc(100% - 72px)!important;min-height:0!important;padding:0!important;overflow:visible!important}
+.welcome-left-copy{position:absolute!important;left:clamp(18px,5vw,76px);top:clamp(22px,5vh,58px);width:min(430px,48%)!important;max-width:430px!important;text-align:left!important;z-index:4}
+.welcome-left-copy .welcome-title{font-size:clamp(27px,3.5vw,44px)!important;line-height:1.45!important;margin:0!important;text-align:left!important;text-shadow:0 1px 10px rgba(255,255,255,.3)}
+.welcome-side-note{position:absolute!important;left:clamp(18px,5vw,76px)!important;top:clamp(92px,17vh,168px)!important;bottom:auto!important;transform:none!important;width:min(390px,43%)!important;max-width:390px!important;margin:0!important;padding:0!important;background:transparent!important;backdrop-filter:none!important;text-align:left!important;z-index:4}
+.welcome-side-note .welcome-subtitle{font-size:clamp(12px,1.15vw,15px)!important;line-height:1.9!important;color:#302a27!important;text-shadow:0 1px 8px rgba(255,255,255,.96),0 0 15px rgba(255,255,255,.8)}
+.welcome-cta{position:absolute!important;left:clamp(18px,5vw,76px)!important;top:clamp(185px,31vh,300px)!important;bottom:auto!important;transform:none!important;margin:0!important;z-index:5}
+.welcome-cta:hover{transform:translateY(-2px)!important}
+.welcome-contact{position:absolute;z-index:8;right:clamp(16px,3vw,42px);bottom:clamp(12px,2.5vh,24px);display:flex;align-items:center;gap:10px}
+.welcome-contact a{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(48,42,39,.45);border-radius:50%;color:#302a27;text-decoration:none;background:rgba(255,255,255,.24);font:600 9px/1 'DM Sans',sans-serif;letter-spacing:-.02em;transition:background .2s,transform .2s}
+.welcome-contact a:hover{background:rgba(255,255,255,.72);transform:translateY(-2px)}
+.welcome-contact-label{position:absolute;right:0;bottom:44px;white-space:nowrap;color:#302a27;font:9px/1.5 'DM Sans',sans-serif;letter-spacing:.12em;text-shadow:0 1px 6px rgba(255,255,255,.95)}
+@media(max-width:700px){
+ .welcome-header{width:calc(100% - 28px)!important;height:58px!important;min-height:58px!important;flex-basis:58px!important}
+ .welcome-brand{flex-basis:auto!important;max-width:70%}
+ .welcome-main.welcome-sides{width:100%!important;height:calc(100% - 58px)!important;min-height:0!important;padding:0!important;display:block!important}
+ .welcome-page:before{inset:58px 0 0!important;background-size:100% auto!important;background-position:center top!important}
+ .welcome-left-copy{top:clamp(12px,2.5vh,22px)!important;left:16px!important;right:16px!important;width:auto!important;max-width:100%!important;text-align:center!important}
+ .welcome-left-copy .welcome-title{font-size:clamp(22px,6.2vw,30px)!important;line-height:1.35!important;text-align:center!important}
+ .welcome-side-note{top:clamp(58px,10vh,86px)!important;left:18px!important;right:18px!important;width:auto!important;max-width:330px!important;margin:0 auto!important;text-align:center!important}
+ .welcome-side-note .welcome-subtitle{font-size:clamp(10px,2.9vw,12px)!important;line-height:1.7!important}
+ .welcome-cta{top:auto!important;left:50%!important;bottom:clamp(66px,10vh,90px)!important;transform:translateX(-50%)!important;min-width:154px!important;min-height:40px!important;margin:0!important;padding:10px 18px!important}
+ .welcome-cta:hover{transform:translateX(-50%) translateY(-2px)!important}
+ .welcome-contact{right:50%;bottom:max(10px,env(safe-area-inset-bottom))!important;transform:translateX(50%);gap:12px}
+ .welcome-contact a{width:32px;height:32px;font-size:8px}
+ .welcome-contact-label{display:none}
+}
+@media(max-width:390px){
+ .welcome-left-copy{top:10px!important}
+ .welcome-left-copy .welcome-title{font-size:22px!important}
+ .welcome-side-note{top:52px!important;left:14px!important;right:14px!important}
+ .welcome-side-note .welcome-subtitle{font-size:10px!important}
+ .welcome-cta{bottom:clamp(60px,9vh,78px)!important}
+}
+</style></head>
 <body>
 <div class="welcome-page">
 <header class="welcome-header">
@@ -296,6 +332,12 @@ body{height:100dvh;min-height:0!important}
 </section>
 <a class="welcome-cta" href="./home/index.html">开始探索 <span class="welcome-cta-arrow" aria-hidden="true">→</span></a>
 </main>
+<div class="welcome-contact" aria-label="联系方式">
+<span class="welcome-contact-label">CONTACT · 联系</span>
+<a href="https://github.com/strawberrybreath" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
+<a href="mailto:strawberrybreathhh@gmail.com" aria-label="Email">✉</a>
+<a href="./assets/二维码-公众号.jpg" target="_blank" rel="noopener noreferrer" aria-label="WeChat QR code">We</a>
+</div>
 </div>
 </body>
 </html>
