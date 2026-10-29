@@ -33,9 +33,9 @@ body{margin:0;min-height:100svh;background:var(--welcome-bg);color:var(--welcome
 .welcome-brand-name{font:600 11px/1.4 'DM Sans',sans-serif;letter-spacing:.22em}
 .welcome-brand-sub{margin-top:4px;font:9px/1.4 'DM Sans',sans-serif;letter-spacing:.13em;color:rgba(48,42,39,.68)}
 .welcome-nav{display:flex;align-items:center;gap:clamp(18px,3.4vw,48px)}
-.welcome-nav a{display:flex;flex-direction:column;align-items:center;gap:2px;color:#302a27;font:600 10px/1.5 'DM Sans','Noto Sans SC',sans-serif;letter-spacing:.12em;text-decoration:none;white-space:nowrap;transition:opacity .2s}
-.welcome-nav .nav-zh{font-family:'Noto Sans SC',sans-serif;font-size:10px;letter-spacing:.08em}
-.welcome-nav .nav-en{font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:capitalize;opacity:.8}
+.welcome-nav a{display:inline-flex;flex-direction:row;align-items:center;gap:0;color:#713d42;font:400 12px/1.5 'Noto Sans SC',sans-serif;letter-spacing:0;text-decoration:none;white-space:nowrap;border-bottom:1px solid #c9a6a0;padding:0 0 4px;transition:opacity .2s}
+.welcome-nav .nav-zh{font-family:'Noto Sans SC',sans-serif;font-size:12px;letter-spacing:0}
+.welcome-nav .nav-en{display:none}
 .welcome-nav a:hover{opacity:.65}
 .welcome-nav a:focus-visible,.welcome-cta:focus-visible,.welcome-brand:focus-visible{outline:2px solid #fff;outline-offset:5px}
 .welcome-main{width:min(1180px,calc(100% - 48px));min-height:calc(100svh - 84px);margin:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;padding:clamp(22px,4.2vh,48px) 0 clamp(22px,4vh,42px)}
@@ -322,7 +322,7 @@ body{height:100dvh;min-height:0!important}
 <img src="./assets/头像-圆形.png" alt="" width="38" height="38">
 <span><span class="welcome-brand-name">STRAWBERRY BREATH</span><span class="welcome-brand-sub">草莓味口气 · WOMEN / STORIES / LIFE</span></span>
 </a>
-<nav class="welcome-nav" id="welcome-nav" aria-label="主导航"><a href="./home/index.html"><span class="nav-zh">首页</span><span class="nav-en">Home</span></a></nav></header>
+<nav class="welcome-nav" id="welcome-nav" aria-label="主导航"><a href="./home/index.html"><span class="nav-zh">首页 ↗</span></a></nav></header>
 <main class="welcome-main welcome-sides">
 <section class="welcome-copy welcome-left-copy" aria-label="欢迎标题">
 <h1 class="welcome-title">从女性的目光出发</h1>
