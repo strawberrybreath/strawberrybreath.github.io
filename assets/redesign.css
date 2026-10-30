@@ -50,3 +50,85 @@ button,.cta,.read-more{border-radius:2px!important;box-shadow:none!important}
  .mobile-menu{display:none!important}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+
+/* 2026-10-30: user-requested typography, centered article, background and contact refinements */
+:root{
+ --paper:#f3eee7;
+ --paper-2:#faf7f1;
+ --ink:#352c29;
+ --ink-soft:#514641;
+ --muted:#796c64;
+ --wine:#78464d;
+ --wine-deep:#57383d;
+ --rose:#c7a19b;
+ --line:#dfd4ca;
+ --serif:"KaiTi","STKaiti","Kaiti SC","楷体",serif;
+ --sans:"KaiTi","STKaiti","Kaiti SC","楷体",serif;
+}
+html,body{font-family:"KaiTi","STKaiti","Kaiti SC","楷体",serif!important}
+body{
+ background:
+  radial-gradient(ellipse at 12% 8%,rgba(205,174,157,.18),transparent 34%),
+  radial-gradient(ellipse at 88% 28%,rgba(181,145,145,.12),transparent 32%),
+  linear-gradient(135deg,#f5f0e9 0%,#eee7df 48%,#f7f2eb 100%)!important;
+ background-attachment:fixed!important;
+}
+body, p, li, a, button, input, label, small, span, div, nav, footer, header{
+ font-family:"KaiTi","STKaiti","Kaiti SC","楷体",serif!important;
+}
+.site-header{background:rgba(245,240,233,.94)!important}
+.brand-en{font-family:"KaiTi","STKaiti","楷体",serif!important}
+.issue-hero,.article-layout,.article-meta,.article-section,.essay-body,.site-footer{
+ text-align:center;
+}
+.issue-hero-inner{margin-inline:auto!important}
+.article-layout{
+ width:min(760px,calc(100% - 48px))!important;
+ max-width:760px!important;
+ margin-left:auto!important;margin-right:auto!important;
+}
+.article-layout .article-section,
+.article-layout .essay-body,
+.article-layout .lang-block{width:100%;margin-left:auto!important;margin-right:auto!important}
+.article-layout p,.article-layout li,
+.essay-body p{
+ font-size:19px!important;
+ line-height:2.15!important;
+ letter-spacing:.025em!important;
+ text-align:justify!important;
+}
+.article-layout h1,.issue-hero h1{font-size:clamp(38px,5vw,58px)!important;line-height:1.5!important}
+.article-layout h2,.article-section h2{font-size:clamp(29px,3vw,36px)!important}
+.article-layout h3,.article-section h3{font-size:25px!important}
+.article-meta,.eyebrow,.article-layout .endnote{font-size:14px!important}
+.article-layout .article-nav{justify-content:center!important}
+.issue-hero .intro{font-size:18px!important;line-height:2.15!important}
+.site-footer{font-size:15px!important;line-height:2!important}
+@media(max-width:760px){
+ .article-layout{width:calc(100% - 36px)!important;padding:28px 0 100px!important}
+ .article-layout p,.article-layout li,.essay-body p{font-size:17px!important;line-height:2.1!important}
+ .article-layout h1,.issue-hero h1{font-size:34px!important}
+ .article-layout h2,.article-section h2{font-size:27px!important}
+ .article-layout h3,.article-section h3{font-size:22px!important}
+ .issue-hero .intro{font-size:16px!important}
+}
+.contact-section{
+ max-width:1000px;margin:0 auto;padding:12px 0 54px;
+ border-top:1px solid var(--line);text-align:center;
+}
+.contact-section h2{margin:28px 0 10px;color:var(--wine-deep);font-size:28px;font-weight:500}
+.contact-intro{max-width:620px;margin:0 auto 22px;color:var(--muted);font-size:17px;line-height:2}
+.contact-links{display:flex;justify-content:center;gap:32px;align-items:center}
+.contact-link{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--wine);font-size:16px;text-decoration:none}
+.contact-link svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.wechat-contact{cursor:default}
+.wechat-icon svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.wechat-qr{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:20px;color:var(--muted);font-size:14px}
+.wechat-qr img{display:block;width:112px;height:112px;object-fit:contain;border:1px solid var(--line);padding:5px;background:#fff;border-radius:8px}
+@media(max-width:640px){
+ .contact-section{padding:8px 0 38px}
+ .contact-section h2{font-size:25px}
+ .contact-intro{font-size:16px;padding:0 8px}
+ .wechat-qr img{width:104px;height:104px}
+}
