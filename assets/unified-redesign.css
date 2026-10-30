@@ -361,3 +361,75 @@ html{scroll-padding-top:68px}
   .reading-details strong{font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){.reading-ring{transition:none}}
+
+
+/* Shared three-part masthead: site title / centered reading meter / navigation */
+.unified-topbar.site-header{
+  width:100%!important;height:72px!important;min-height:72px!important;
+  margin:0!important;padding:8px max(24px,calc((100% - 1160px)/2))!important;
+  display:grid!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  align-items:center!important;column-gap:24px!important;
+  background:var(--sb-paper)!important;border-bottom:1px solid var(--sb-line)!important;
+}
+.unified-topbar .brand{justify-self:start;min-width:0}
+.unified-topbar .brand-copy{display:block}
+.unified-topbar .brand-en{
+  display:block!important;font:600 15px/1.25 "Playfair Display",Georgia,serif!important;
+  letter-spacing:.13em!important;white-space:nowrap;color:var(--sb-wine-deep)!important;
+}
+.unified-topbar .header-reading{
+  justify-self:center;display:flex;align-items:center;gap:10px;
+  position:static!important;z-index:auto!important;
+  padding:0!important;margin:0!important;border:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;
+  color:var(--sb-ink);
+}
+.unified-topbar .reading-ring{
+  width:42px;height:42px;flex:0 0 42px;
+  background:conic-gradient(var(--sb-wine) var(--reading-value),#e6ddd5 var(--reading-value));
+}
+.unified-topbar .reading-ring::before{inset:3px;background:var(--sb-paper)}
+.unified-topbar .reading-ring span{font:600 11px/1 var(--sb-kai)!important;color:var(--sb-wine)}
+.unified-topbar .reading-details{
+  min-width:74px;display:flex;flex-direction:column;gap:0;
+  font:11px/1.45 var(--sb-kai)!important;color:var(--sb-muted);
+}
+.unified-topbar .reading-detail-label{font:11px/1.4 var(--sb-kai)!important;letter-spacing:.04em;color:var(--sb-wine)}
+.unified-topbar .reading-details strong{font:600 12px/1.4 var(--sb-kai)!important;color:var(--sb-ink)}
+.unified-topbar .nav,.unified-topbar .site-nav{
+  justify-self:end;display:flex!important;align-items:center;justify-content:flex-end;
+  gap:clamp(16px,2.2vw,28px)!important;white-space:nowrap;
+}
+.unified-topbar .nav a,.unified-topbar .site-nav a{
+  font:16px/1.5 var(--sb-kai)!important;color:var(--sb-muted)!important;
+  padding:5px 0!important;border:0!important;text-decoration:none!important;
+}
+.unified-topbar .nav a:hover,.unified-topbar .nav a[aria-current=page],
+.unified-topbar .site-nav a:hover,.unified-topbar .site-nav a[aria-current=page]{
+  color:var(--sb-wine)!important;text-decoration:underline!important;
+  text-decoration-color:var(--sb-rose)!important;text-underline-offset:6px!important;
+}
+@media(max-width:760px){
+  .unified-topbar.site-header{
+    height:64px!important;min-height:64px!important;
+    padding:6px 14px!important;column-gap:8px!important;
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  }
+  .unified-topbar .brand-en{font-size:10px!important;letter-spacing:.07em!important}
+  .unified-topbar .header-reading{gap:5px}
+  .unified-topbar .reading-ring{width:34px;height:34px;flex-basis:34px}
+  .unified-topbar .reading-ring::before{inset:3px}
+  .unified-topbar .reading-ring span{font-size:9px!important}
+  .unified-topbar .reading-details{min-width:53px;font-size:9px!important;line-height:1.35!important}
+  .unified-topbar .reading-detail-label{font-size:9px!important}
+  .unified-topbar .reading-details strong{font-size:10px!important}
+  .unified-topbar .nav,.unified-topbar .site-nav{gap:10px!important}
+  .unified-topbar .nav a,.unified-topbar .site-nav a{font-size:12px!important;line-height:1.4!important}
+}
+@media(max-width:380px){
+  .unified-topbar.site-header{padding-inline:10px!important;column-gap:5px!important}
+  .unified-topbar .brand-en{font-size:9px!important;letter-spacing:.04em!important}
+  .unified-topbar .reading-details{min-width:47px}
+  .unified-topbar .nav,.unified-topbar .site-nav{gap:8px!important}
+  .unified-topbar .nav a,.unified-topbar .site-nav a{font-size:11px!important}
+}
