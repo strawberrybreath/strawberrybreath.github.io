@@ -14,7 +14,13 @@
 <link rel="icon" type="image/png" href="./assets/头像-圆形.png"><link rel="apple-touch-icon" href="./assets/头像-圆形.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./assets/strawberry-refresh.css?v=20261030-watercolor-home">
+<link rel="stylesheet" href="./assets/strawberry-refresh.css?v=20261030-original-colors">
+<style>
+/* Homepage hero: text-only layout after removing the large illustration. */
+.sb-home-hero{grid-template-columns:minmax(0,1fr)!important;}
+.sb-home-copy{width:100%;max-width:860px!important;}
+.sb-home-art{display:none!important;}
+</style>
 </head>
 <body>
 <header class="sb-header"><div class="sb-header-inner">
@@ -31,7 +37,7 @@
 <p class="sb-home-intro">这是我的小小世界，关于电影、书籍、思考和学习。也关于我自己，关于生活，关于那些让我感到温柔和力量的瞬间。</p>
 <span class="sb-home-rule"></span>
 </div>
-<div class="sb-home-art"><img src="./assets/插画-花卉4.jpg" alt="水彩花卉与绿叶插画"><span class="sb-art-note">Better Things Ahead</span><span class="sb-art-heart">♡</span></div>
+
 </section>
 <section class="sb-categories" aria-label="四个栏目">
 <a class="sb-category-card sb-cat-books" href="./books/"><span class="sb-category-art"><img src="./assets/插画-花卉1.jpg" alt="粉色花卉水彩插画"></span><span class="sb-category-wave"><span>书籍 <i>↗</i></span></span></a>
