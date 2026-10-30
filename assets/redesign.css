@@ -63,10 +63,10 @@ button,.cta,.read-more{border-radius:2px!important;box-shadow:none!important}
  --wine-deep:#57383d;
  --rose:#c7a19b;
  --line:#dfd4ca;
- --serif:"KaiTi","STKaiti","Kaiti SC","楷体",serif;
- --sans:"KaiTi","STKaiti","Kaiti SC","楷体",serif;
+ --serif:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","楷体",serif;
+ --sans:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","楷体",serif;
 }
-html,body{font-family:"KaiTi","STKaiti","Kaiti SC","楷体",serif!important}
+html,body{font-family:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","楷体",serif!important}
 body{
  background:
   radial-gradient(ellipse at 12% 8%,rgba(205,174,157,.18),transparent 34%),
@@ -75,10 +75,10 @@ body{
  background-attachment:fixed!important;
 }
 body, p, li, a, button, input, label, small, span, div, nav, footer, header{
- font-family:"KaiTi","STKaiti","Kaiti SC","楷体",serif!important;
+ font-family:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","楷体",serif!important;
 }
 .site-header{background:rgba(245,240,233,.94)!important}
-.brand-en{font-family:"KaiTi","STKaiti","楷体",serif!important}
+.brand-en{font-family:"LXGW WenKai","KaiTi","STKaiti","楷体",serif!important}
 .issue-hero,.article-layout,.article-meta,.article-section,.essay-body,.site-footer{
  text-align:center;
 }
