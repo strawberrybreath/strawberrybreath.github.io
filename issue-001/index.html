@@ -32,8 +32,19 @@ article.article-layout .meta,article.article .meta{margin-bottom:22px!important}
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/unified-redesign.css?v=20261030-1">
 
-</head><body><div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar" id="reading-progress-bar"></span></div>
-<header class="site-header home-header"><a class="brand" href="../index.html" aria-label="返回首页 Home"><img class="site-logo" src="https://avatars.githubusercontent.com/u/307921277?v=4" alt="" width="42" height="42" decoding="async"><span class="brand-copy"><span class="brand-en">STRAWBERRY BREATH</span><span class="brand-zh">草莓味口气</span><span class="brand-tagline">WOMEN · CINEMA · SELFHOOD</span></span></a><nav class="site-nav" aria-label="主导航"><a href="../">首页</a><a href="../#latest-title" aria-current="page">文章</a><a href="../#contact-title">联系</a></nav></header><main><section class="issue-hero"><div class="issue-hero-inner"><div><div class="eyebrow">个人观影记录 · 第一篇</div><h1>她不是谁的“小姐”，她只是她自己</h1><p class="issue-subtitle">——从《Enola Holmes》看一场尚未结束的进步</p><p class="intro">从 Enola 的名字、母女关系与女性所面对的社会规则出发，记录我对独立、主体性和未来选择的理解。</p></div><div><img class="hero-image" src="../assets/Enola%20Holmes1.JPG" alt="《Enola Holmes》官方电影海报" loading="eager"><div class="hero-caption">PERSONAL NOTES · CINEMA · 01</div></div></div></section><article class="article-layout">
+</head><body>
+<header class="site-header home-header"><a class="brand" href="../index.html" aria-label="返回首页 Home"><img class="site-logo" src="https://avatars.githubusercontent.com/u/307921277?v=4" alt="" width="42" height="42" decoding="async"><span class="brand-copy"><span class="brand-en">STRAWBERRY BREATH</span><span class="brand-zh">草莓味口气</span><span class="brand-tagline">WOMEN · CINEMA · SELFHOOD</span></span></a><nav class="site-nav" aria-label="主导航"><a href="../">首页</a><a href="../#latest-title" aria-current="page">文章</a><a href="../#contact-title">联系</a></nav></header>
+<aside class="reading-widget" id="reading-widget" aria-label="文章阅读信息">
+  <div class="reading-ring" id="reading-ring" role="img" aria-label="阅读进度 0%">
+    <span id="reading-percent">0%</span>
+  </div>
+  <div class="reading-details">
+    <span class="reading-detail-label">本文阅读</span>
+    <span><strong id="reading-words">—</strong> 字</span>
+    <span>约 <strong id="reading-time">—</strong> 分钟</span>
+  </div>
+</aside>
+<main><section class="issue-hero"><div class="issue-hero-inner"><div><div class="eyebrow">个人观影记录 · 第一篇</div><h1>她不是谁的“小姐”，她只是她自己</h1><p class="issue-subtitle">——从《Enola Holmes》看一场尚未结束的进步</p><p class="intro">从 Enola 的名字、母女关系与女性所面对的社会规则出发，记录我对独立、主体性和未来选择的理解。</p></div><div><img class="hero-image" src="../assets/Enola%20Holmes1.JPG" alt="《Enola Holmes》官方电影海报" loading="eager"><div class="hero-caption">PERSONAL NOTES · CINEMA · 01</div></div></div></section><article class="article-layout">
 <div class="article-meta"><span>STRAWBERRY BREATH · 个人记录</span><span>第一篇</span></div>
 <div class="essay-body"><p>第一次看到《Enola Holmes》这个名字时，我对它的中文译名《福尔摩斯小姐》产生了一点微妙的感受。</p>
 <p>“小姐”本身并没有什么问题，但当一个女性角色被放进一个已经广为人知的男性姓氏之下时，我会忍不住想：我们究竟是通过她自己的名字认识她，还是先通过她与某个男性的关系认识她？</p>
@@ -188,15 +199,30 @@ main > .issue-hero{
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/redesign.css?v=20261030c">
-<script>
+<script id="article-reading-widget">
 (function(){
-  var bar=document.getElementById('reading-progress-bar');
-  if(!bar)return;
+  var article=document.querySelector('.essay-body');
+  var ring=document.getElementById('reading-ring');
+  var percentText=document.getElementById('reading-percent');
+  var wordText=document.getElementById('reading-words');
+  var timeText=document.getElementById('reading-time');
+  if(!article||!ring||!percentText||!wordText||!timeText)return;
+  var text=(article.innerText||article.textContent||'').replace(/\\s+/g,' ').trim();
+  var han=(text.match(/\\p{Script=Han}/gu)||[]).length;
+  var latin=(text.match(/[A-Za-z0-9]+(?:['’.-][A-Za-z0-9]+)*/g)||[]).length;
+  var count=han+latin;
+  wordText.textContent=count.toLocaleString('zh-CN');
+  timeText.textContent=Math.max(1,Math.ceil(count/400));
   function update(){
-    var doc=document.documentElement;
-    var max=doc.scrollHeight-window.innerHeight;
-    var progress=max>0?(window.scrollY/max)*100:0;
-    bar.style.width=Math.min(100,Math.max(0,progress))+'%';
+    var rect=article.getBoundingClientRect();
+    var top=rect.top+window.scrollY;
+    var bottom=rect.bottom+window.scrollY;
+    var start=top-90;
+    var end=Math.max(start+1,bottom-window.innerHeight*0.68);
+    var value=Math.max(0,Math.min(100,Math.round((window.scrollY-start)/(end-start)*100)));
+    ring.style.setProperty('--reading-value',value+'%');
+    percentText.textContent=value+'%';
+    ring.setAttribute('aria-label','阅读进度 '+value+'%');
   }
   window.addEventListener('scroll',update,{passive:true});
   window.addEventListener('resize',update);
