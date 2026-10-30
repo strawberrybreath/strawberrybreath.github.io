@@ -3,106 +3,88 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f7f4ee">
-<meta name="description" content="草莓味口气，记录书籍、电影、剧集与生活观察，以女性主义视角思考故事、关系、选择与我们所处的世界。">
+<meta name="theme-color" content="#f6f3ed">
+<meta name="description" content="草莓味口气，记录书籍、电影与生活观察，从女性经验出发，思考故事、关系、选择与自由。">
 <link rel="canonical" href="https://strawberrybreath.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="STRAWBERRY BREATH">
 <meta property="og:title" content="草莓味口气 · 个人博客">
-<meta property="og:description" content="关于书籍、电影、剧集与生活的个人随笔，从女性经验出发，观察故事与现实。">
+<meta property="og:description" content="关于阅读、电影与生活的个人记录，从女性经验出发，观察故事与现实。">
 <meta property="og:url" content="https://strawberrybreath.github.io/">
 <meta property="og:image" content="https://strawberrybreath.github.io/assets/Enola%20Holmes1.JPG">
-<title>草莓味口气 · 个人博客</title>
+<title>草莓味口气 · Strawberry Breath</title>
 <link rel="icon" type="image/png" href="./assets/头像-圆形.png">
 <link rel="apple-touch-icon" href="./assets/头像-圆形.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/redesign.css?v=20261030">
 <style>
-:root{--paper:#f7f4ee;--ink:#302a27;--muted:#766a63;--wine:#713d42;--line:#dfd5cc;--accent:#c96f49}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans SC',sans-serif}
-a{color:inherit}
-.site-header{width:min(1160px,calc(100% - 48px));margin:auto;min-height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:18px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{width:38px;height:38px;object-fit:cover;border-radius:50%}
-.brand-name{font:600 11px/1.5 'DM Sans',sans-serif;letter-spacing:.19em}
-.brand-sub{font-size:10px;color:var(--muted);margin-top:3px}
-.back-link{font-size:12px;text-decoration:none;color:var(--wine);border-bottom:1px solid #c9a6a0;padding-bottom:4px}
-main{width:min(1000px,calc(100% - 48px));margin:0 auto}
-.intro{padding:clamp(48px,8vw,92px) 0 44px;max-width:780px}
-.intro h1{max-width:680px;font-size:clamp(34px,5vw,54px);line-height:1.42;letter-spacing:.015em;margin:18px 0 22px}
-.intro-copy{max-width:680px;padding-left:18px;border-left:1px solid #c9a6a0}
-.intro-copy p{font-size:14px;line-height:2.15;color:var(--muted);max-width:640px;margin:0}
-.intro-copy p+p{margin-top:8px}
-.eyebrow{font:500 10px/1.6 'DM Sans',sans-serif;letter-spacing:.2em;color:var(--wine);text-transform:uppercase}
-h1{font:500 clamp(32px,5vw,58px)/1.35 'Noto Serif SC',serif;letter-spacing:.02em;color:var(--wine);margin:17px 0 20px}
-.intro p{font-size:14px;line-height:2.1;color:var(--muted);max-width:620px;margin:0}
-.list-head{display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:1px solid var(--line);padding:18px 0 14px;margin-bottom:0}
-.list-head h2{font:500 22px/1.5 'Noto Serif SC',serif;color:var(--ink);margin:0}
-.list-head span{font:10px/1.5 'DM Sans',sans-serif;letter-spacing:.13em;color:var(--muted)}
-.article-row{display:grid;grid-template-columns:minmax(180px,260px) minmax(0,1fr);gap:clamp(24px,5vw,58px);align-items:center;padding:clamp(26px,4.8vw,48px) 0;border-bottom:1px solid var(--line);text-decoration:none}
-.poster-wrap{background:#eee8df;display:flex;align-items:center;justify-content:center;min-height:260px;padding:10px}
-.poster{display:block;width:100%;height:auto;max-height:390px;object-fit:contain}
-.article-meta{font:10px/1.6 'DM Sans',sans-serif;letter-spacing:.14em;color:var(--muted);margin-bottom:14px}
-.article-title{font:500 clamp(24px,3.2vw,36px)/1.5 'Noto Serif SC',serif;color:var(--wine);margin:0 0 13px}
-.article-subtitle{font-size:13px;line-height:1.9;color:var(--muted);margin:0 0 17px}
-.article-excerpt{font-size:14px;line-height:2.05;margin:0;color:var(--ink)}
-.read-more{display:inline-flex;align-items:center;gap:12px;margin-top:24px;font:600 10px/1.5 'DM Sans','Noto Sans SC',sans-serif;letter-spacing:.15em;color:var(--wine);border-bottom:1px solid #c9a6a0;padding-bottom:7px}
-.article-row:hover .read-more{color:var(--accent)}
-footer{width:min(1000px,calc(100% - 48px));margin:0 auto;padding:30px 0 44px;color:var(--muted);font-size:10px;line-height:1.8;letter-spacing:.04em}
-@media(max-width:640px){.site-header{width:calc(100% - 32px);min-height:68px}.brand img{width:32px;height:32px}.brand-name{font-size:9px;letter-spacing:.12em}.brand-sub{font-size:9px}main{width:calc(100% - 32px)}.intro{padding:38px 0 30px}h1{font-size:31px;line-height:1.5;margin:13px 0 17px}.intro-copy{padding-left:13px}.intro-copy p{font-size:13px;line-height:2.05}.intro-copy p+p{margin-top:7px}.list-head h2{font-size:19px}.article-row{grid-template-columns:108px minmax(0,1fr);gap:17px;padding:22px 0;align-items:start}.poster-wrap{min-height:0;padding:5px}.poster{max-height:none}.article-meta{font-size:8px;letter-spacing:.08em;margin-bottom:8px}.article-title{font-size:19px;line-height:1.5;margin-bottom:7px}.article-subtitle{font-size:11px;line-height:1.8;margin-bottom:8px}.article-excerpt{font-size:11px;line-height:1.9}.read-more{font-size:9px;margin-top:13px}footer{width:calc(100% - 32px)}}
-
-.contact-section{margin:44px 0 0;padding:30px 0 34px;border-top:1px solid var(--line)}
-.contact-head h2{font:500 24px/1.5 'Noto Serif SC',serif;color:var(--wine);margin:8px 0}
-.contact-head p{font-size:13px;line-height:1.9;color:var(--muted);margin:0}
-.contact-links{display:flex;align-items:center;gap:24px;margin-top:22px}
-.contact-links a{display:flex;align-items:center;gap:9px;color:var(--wine);font:500 11px/1.5 'DM Sans','Noto Sans SC',sans-serif;text-decoration:none}
-.contact-icon{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:600 10px/1 'DM Sans',sans-serif;color:var(--wine)}
-.contact-links a:hover .contact-icon{background:#eee5dc}
-@media(max-width:640px){.contact-section{margin-top:32px;padding:24px 0}.contact-links{gap:18px}.contact-links a{gap:7px;font-size:10px}.contact-icon{width:34px;height:34px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f6f3ed;color:#302b28;font-family:"Noto Sans SC",sans-serif}
+a{color:inherit;text-decoration:none}.site-header{width:min(1120px,calc(100% - 64px));height:82px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e4dcd3}
+.brand{display:flex;align-items:center;gap:12px}.brand img{width:42px;height:42px;border-radius:50%;object-fit:contain}
+.brand-copy{display:flex;flex-direction:column;gap:3px}.brand-en{font:600 14px "Playfair Display",serif;letter-spacing:.12em;color:#58363b}.brand-zh{font:11px "Noto Serif SC",serif;letter-spacing:.12em;color:#81766f}
+.nav{display:flex;gap:26px;font-size:12px;color:#81766f}.nav a:hover{color:#75464b}
+main{width:min(1000px,calc(100% - 64px));margin:auto}
+.hero{padding:clamp(76px,11vw,132px) 0 76px;max-width:820px}
+.kicker{font:500 10px/1.8 "DM Sans",sans-serif;letter-spacing:.22em;color:#75464b}
+h1{font:500 clamp(36px,5.5vw,64px)/1.48 "Noto Serif SC",serif;letter-spacing:.025em;color:#58363b;margin:22px 0 28px}
+.hero-copy{max-width:690px;border-left:1px solid #c8a7a1;padding-left:22px}
+.hero-copy p{font-size:15px;line-height:2.2;color:#655a54;margin:0}.hero-copy p+p{margin-top:12px}
+.hero-note{margin-top:28px;font:11px/1.8 "DM Sans","Noto Sans SC",sans-serif;letter-spacing:.08em;color:#9a8b82}
+.section{padding:34px 0 62px;border-top:1px solid #e4dcd3}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:18px;margin-bottom:28px}
+.section-head h2{font:500 25px/1.5 "Noto Serif SC",serif;color:#58363b;margin:0}
+.section-head span{font:10px "DM Sans",sans-serif;letter-spacing:.16em;color:#9a8b82}
+.feature{display:grid;grid-template-columns:minmax(220px,340px) minmax(0,1fr);gap:clamp(28px,6vw,72px);align-items:center;padding:8px 0 12px}
+.cover{background:#eee8df;padding:12px;display:flex;align-items:center;justify-content:center}
+.cover img{display:block;width:100%;height:auto;max-height:440px;object-fit:contain}
+.meta{font:10px/1.8 "DM Sans",sans-serif;letter-spacing:.15em;color:#9a8b82}
+.feature h3{font:500 clamp(24px,3.2vw,36px)/1.55 "Noto Serif SC",serif;color:#75464b;margin:12px 0}
+.feature p{font-size:14px;line-height:2.1;color:#655a54;margin:0}
+.more{display:inline-block;margin-top:26px;padding-bottom:7px;border-bottom:1px solid #c8a7a1;color:#75464b;font-size:12px;letter-spacing:.08em}
+.about{max-width:760px;padding:4px 0 60px}.about h2{font:500 23px "Noto Serif SC",serif;color:#58363b;margin:0 0 16px}
+.about p{font-size:14px;line-height:2.15;color:#655a54;margin:0}
+footer{border-top:1px solid #e4dcd3;padding:28px 0 42px;color:#9a8b82;font-size:10px;line-height:1.9;letter-spacing:.06em}
+@media(max-width:640px){
+ .site-header{width:calc(100% - 36px);height:70px}.brand img{width:35px;height:35px}.brand-en{font-size:11px}.brand-zh{font-size:9px}.nav{gap:13px;font-size:10px}
+ main{width:calc(100% - 36px)}.hero{padding:58px 0 52px}h1{font-size:32px;line-height:1.55;margin:16px 0 20px}
+ .hero-copy{padding-left:15px}.hero-copy p{font-size:13px;line-height:2.1}.hero-note{font-size:9px}
+ .section{padding:26px 0 42px}.section-head{margin-bottom:20px}.section-head h2{font-size:21px}
+ .feature{grid-template-columns:112px minmax(0,1fr);gap:17px;align-items:start}.cover{padding:5px}.cover img{max-height:none}
+ .feature h3{font-size:18px;line-height:1.55;margin:7px 0}.feature p{font-size:11px;line-height:1.9}.meta{font-size:8px}.more{font-size:10px;margin-top:13px}
+ .about{padding-bottom:42px}.about h2{font-size:20px}.about p{font-size:13px;line-height:2.05}
+}
+@media(max-width:390px){.nav{gap:9px}.nav a{font-size:9px}.feature{grid-template-columns:96px minmax(0,1fr);gap:13px}}
 </style>
 </head>
 <body>
 <header class="site-header">
-<a class="brand" href="./" aria-label="返回首页">
-<img src="./assets/头像-圆形.png" alt="" width="38" height="38">
-<span><span class="brand-name">STRAWBERRY BREATH</span><span class="brand-sub">草莓味口气 · 个人博客</span></span>
-</a>
-
+<a class="brand" href="./" aria-label="草莓味口气首页"><img src="./assets/头像-圆形.png" alt=""><span class="brand-copy"><span class="brand-en">STRAWBERRY BREATH</span><span class="brand-zh">草莓味口气</span></span></a>
+<nav class="nav" aria-label="主导航"><a href="./" aria-current="page">首页</a><a href="./issue-001/">文章</a></nav>
 </header>
 <main>
-<section class="intro">
-<div class="eyebrow">A LITTLE OF WHAT I LIKE · 一点随笔</div>
-<h1>在故事与日常之间，寻找自己的答案。</h1>
-<div class="intro-copy">
-<p>这里记录我读过的书、看过的电影与剧集，也记录那些让我停下来思考的人和事。一个故事、一段经历，或一个鲜活的人物，都可能成为重新认识世界的入口。</p>
-<p>我常常会从女性的处境、经验与选择出发，重新看待熟悉的故事，也思考自由、关系与独立究竟意味着什么。写下这些文字，是想留住喜欢，也留下一些值得继续追问的问题。</p>
+<section class="hero">
+<div class="kicker">A PERSONAL READING JOURNAL</div>
+<h1>在故事与日常之间，<br>保留独立思考的空间。</h1>
+<div class="hero-copy">
+<p>这里是一个关于阅读、电影与生活的个人记录。我把喜欢的故事、触动我的人物，以及日常中偶然生出的想法留在这里，也试着在熟悉的经验之外，多看见一些不同的处境。</p>
+<p>女性主义是我理解世界的一条重要线索。我常从女性的经验、处境与选择出发，重新观看故事，也继续思考自由、平等、亲密关系与个体独立。写作不急着给出结论，更希望让值得追问的问题留下来。</p>
 </div>
+<div class="hero-note">READ · WATCH · THINK &nbsp; / &nbsp; 阅读、观看，并继续思考</div>
 </section>
-<section aria-labelledby="article-list-title">
-<div class="list-head"><h2 id="article-list-title">最近写作</h2><span>最新文章在前</span></div>
-<a class="article-row" href="./issue-001/index.html">
-<span class="poster-wrap"><img class="poster" src="./assets/Enola%20Holmes1.JPG" alt="《Enola Holmes》电影海报" loading="eager"></span>
-<span>
-<div class="article-meta">电影随笔 · 第一篇</div>
-<h2 class="article-title">她不是谁的“小姐”，她只是她自己</h2>
-<p class="article-subtitle">从《Enola Holmes》看一场尚未结束的进步</p>
-<p class="article-excerpt">从 Enola 的名字、Eudoria 与 Enola 之间复杂的爱与距离，到女性如何在家庭期待和社会规则中寻找自己的道路。这是一篇关于独立、主体性与制度改变的观影记录。</p>
-<span class="read-more">阅读全文 <span aria-hidden="true">→</span></span>
-</span>
+<section class="section" aria-labelledby="latest-title">
+<div class="section-head"><h2 id="latest-title">最近写作</h2><span>THE LATEST NOTE</span></div>
+<a class="feature" href="./issue-001/">
+<span class="cover"><img src="./assets/Enola%20Holmes1.JPG" alt="《Enola Holmes》官方电影海报"></span>
+<span><span class="meta">电影随笔 &nbsp; / &nbsp; ISSUE 01</span><h3>她不是谁的“小姐”，她只是她自己</h3><p>从《Enola Holmes》出发，谈女性如何在家庭期待与社会规则之中认识自己、建立主体性，并寻找属于自己的道路。</p><span class="more">阅读这篇文章 &nbsp; →</span></span>
 </a>
 </section>
-<section class="contact-section" aria-labelledby="contact-title">
-<div class="contact-head"><div class="eyebrow">CONTACT</div><h2 id="contact-title">保持联系</h2><p>如果你也喜欢电影、阅读和认真思考生活，欢迎在这里找到我。</p></div>
-<div class="contact-links">
-<a href="https://github.com/strawberrybreath" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><span class="contact-icon">GH</span><span>GitHub</span></a>
-<a href="mailto:strawberrybreathhh@gmail.com" aria-label="Email"><span class="contact-icon">✉</span><span>Email</span></a>
-<a href="./assets/二维码-公众号.jpg" target="_blank" rel="noopener noreferrer" aria-label="微信二维码"><span class="contact-icon">We</span><span>WeChat</span></a>
-</div>
+<section class="about">
+<h2>关于这个空间</h2>
+<p>“草莓味口气”并不试图成为一本刊物，它更像一间持续整理中的私人书房。这里有认真读过的书、看过的电影，也有尚未想明白的生活问题。内容会随着阅读与经历慢慢生长，我希望它始终保留个人视角，也保留改变想法的余地。</p>
 </section>
 </main>
-<footer>草莓味口气 · Strawberry Breath<br>一个人的阅读、观影与生活记录。</footer>
+<footer><div>草莓味口气 · STRAWBERRY BREATH</div><div>一个人的阅读、观影与生活记录。</div></footer>
 </body>
 </html>
