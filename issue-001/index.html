@@ -34,10 +34,10 @@ article.article-layout .meta,article.article .meta{margin-bottom:22px!important}
 
 </head><body>
 <header class="site-header home-header unified-topbar">
-  <a class="brand" href="../index.html" aria-label="STRAWBERRY BREATH 首页"><span class="brand-copy"><span class="brand-en">STRAWBERRY BREATH</span></span></a>
+  <a class="brand" href="../index.html" aria-label="STRAWBERRY BREATH 首页"><img class="site-logo" src="../assets/头像-圆形.png" alt=""><span class="brand-copy"><span class="brand-en">STRAWBERRY BREATH</span></span></a>
   <aside class="header-reading" id="reading-widget" aria-label="页面阅读信息">
     <div class="reading-ring" id="reading-ring" role="img" aria-label="阅读进度 0%"><span id="reading-percent">0%</span></div>
-    <div class="reading-details"><span class="reading-detail-label">阅读进度</span><span><strong id="reading-words">—</strong> 字</span><span>约 <strong id="reading-time">—</strong> 分钟</span></div>
+    <div class="reading-details"><span class="reading-stat"><strong id="reading-words">—</strong> 字</span><span class="reading-separator" aria-hidden="true">·</span><span class="reading-stat">约 <strong id="reading-time">—</strong> 分钟</span><span class="reading-complete-message" id="reading-complete-message" aria-live="polite">完成啦！谢谢你认真读到这里</span></div>
   </aside>
   <nav class="nav" aria-label="主导航"><a href="../">首页</a><a href="../#latest-title" aria-current="page">文章</a><a href="../#contact-title">联系</a></nav>
 </header>
@@ -203,6 +203,7 @@ main > .issue-hero{
   var percentText=document.getElementById('reading-percent');
   var wordText=document.getElementById('reading-words');
   var timeText=document.getElementById('reading-time');
+  var widget=document.getElementById('reading-widget');
   if(!article||!ring||!percentText||!wordText||!timeText)return;
   var text=(article.innerText||article.textContent||'').replace(/\s+/g,' ').trim();
   var han=(text.match(/\p{Script=Han}/gu)||[]).length;
@@ -219,7 +220,8 @@ main > .issue-hero{
     var value=Math.max(0,Math.min(100,Math.round((window.scrollY-start)/(end-start)*100)));
     ring.style.setProperty('--reading-value',value+'%');
     percentText.textContent=value+'%';
-    ring.setAttribute('aria-label','阅读进度 '+value+'%');
+    ring.setAttribute('aria-label',value===100?'阅读完成':'阅读进度 '+value+'%');
+    if(widget)widget.classList.toggle('is-complete',value===100);
   }
   window.addEventListener('scroll',update,{passive:true});
   window.addEventListener('resize',update);
