@@ -132,3 +132,36 @@ body, p, li, a, button, input, label, small, span, div, nav, footer, header{
  .contact-intro{font-size:16px;padding:0 8px}
  .wechat-qr img{width:104px;height:104px}
 }
+
+
+/* Homepage scale adjustments */
+.site-header{min-height:90px!important}
+.brand-en{font-size:17px!important}.brand-zh{font-size:14px!important}
+.nav{font-size:15px!important;gap:30px!important}
+.kicker{font-size:14px!important}
+.hero-copy p{font-size:19px!important;line-height:2.2!important}
+.hero-note{font-size:14px!important}
+.section-head h2{font-size:30px!important}
+.section-head span,.meta{font-size:13px!important}
+.feature h3{font-size:34px!important}
+.feature p{font-size:18px!important;line-height:2.15!important}
+.more{font-size:16px!important}
+.about h2{font-size:29px!important}
+.about p{font-size:18px!important;line-height:2.2!important}
+footer{font-size:14px!important}
+@media(max-width:640px){
+ .site-header{min-height:76px!important}
+ .brand-en{font-size:14px!important}.brand-zh{font-size:12px!important}
+ .nav{font-size:13px!important;gap:15px!important}
+ .kicker{font-size:12px!important}
+ .hero-copy p{font-size:17px!important}
+ .hero-note{font-size:12px!important}
+ .section-head h2{font-size:25px!important}
+ .section-head span,.meta{font-size:11px!important}
+ .feature h3{font-size:22px!important}
+ .feature p{font-size:15px!important}
+ .more{font-size:14px!important}
+ .about h2{font-size:24px!important}
+ .about p{font-size:16px!important}
+ footer{font-size:13px!important}
+}
