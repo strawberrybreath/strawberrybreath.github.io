@@ -498,3 +498,15 @@ html{scroll-padding-top:68px}
   .unified-topbar .header-reading.is-complete .reading-ring::after,
   .unified-topbar .header-reading.is-complete .reading-complete-message{animation:none!important}
 }
+
+/* Mobile only: nudge the reading meter slightly to the right */
+@media(max-width:760px){
+  .unified-topbar .header-reading{
+    transform:translateX(7px)!important;
+  }
+}
+@media(max-width:380px){
+  .unified-topbar .header-reading{
+    transform:translateX(4px)!important;
+  }
+}
