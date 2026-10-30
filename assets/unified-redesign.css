@@ -502,11 +502,11 @@ html{scroll-padding-top:68px}
 /* Mobile only: nudge the reading meter slightly to the right */
 @media(max-width:760px){
   .unified-topbar .header-reading{
-    transform:translateX(7px)!important;
+    transform:translateX(20px)!important;
   }
 }
 @media(max-width:380px){
   .unified-topbar .header-reading{
-    transform:translateX(4px)!important;
+    transform:translateX(14px)!important;
   }
 }
