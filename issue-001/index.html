@@ -207,8 +207,8 @@ main > .issue-hero{
   var wordText=document.getElementById('reading-words');
   var timeText=document.getElementById('reading-time');
   if(!article||!ring||!percentText||!wordText||!timeText)return;
-  var text=(article.innerText||article.textContent||'').replace(/\\s+/g,' ').trim();
-  var han=(text.match(/\\p{Script=Han}/gu)||[]).length;
+  var text=(article.innerText||article.textContent||'').replace(/\s+/g,' ').trim();
+  var han=(text.match(/\p{Script=Han}/gu)||[]).length;
   var latin=(text.match(/[A-Za-z0-9]+(?:['’.-][A-Za-z0-9]+)*/g)||[]).length;
   var count=han+latin;
   wordText.textContent=count.toLocaleString('zh-CN');
