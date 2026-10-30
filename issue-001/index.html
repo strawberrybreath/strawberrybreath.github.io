@@ -30,7 +30,7 @@ article.article-layout .meta,article.article .meta{margin-bottom:22px!important}
 <link rel="stylesheet" href="../assets/journal-fonts.css?v=20261028-journal-fonts">
 <link rel="stylesheet" href="../assets/redesign.css?v=20261030">
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/unified-redesign.css?v=20261030-1">
+<link rel="stylesheet" href="../assets/unified-redesign.css?v=20261030-masthead">
 
 </head><body>
 <header class="site-header home-header unified-topbar">
@@ -214,8 +214,8 @@ main > .issue-hero{
     var rect=article.getBoundingClientRect();
     var top=rect.top+window.scrollY;
     var bottom=rect.bottom+window.scrollY;
-    var start=top-90;
-    var end=Math.max(start+1,bottom-window.innerHeight*0.68);
+    var start=top-70;
+    var end=Math.max(start+1,bottom-window.innerHeight*0.72);
     var value=Math.max(0,Math.min(100,Math.round((window.scrollY-start)/(end-start)*100)));
     ring.style.setProperty('--reading-value',value+'%');
     percentText.textContent=value+'%';
