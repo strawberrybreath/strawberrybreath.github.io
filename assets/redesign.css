@@ -1,8 +1,8 @@
 /* Strawberry Breath — unified quiet editorial system */
 :root{
- --paper:#FFEECB;--paper-2:#FFEECB;--ink:#B27E49;--ink-soft:#B27E49;
- --muted:#799E60;--wine:#799E60;--wine-deep:#B27E49;--rose:#FECBCB;
- --line:#FFEECB;--accent:#B27E49;--serif:"Noto Serif SC","Songti SC",Georgia,serif;
+ --paper:#f6f3ed;--paper-2:#fbf9f5;--ink:#302b28;--ink-soft:#514944;
+ --muted:#81766f;--wine:#75464b;--wine-deep:#58363b;--rose:#c8a7a1;
+ --line:#e4dcd3;--accent:#b66d50;--serif:"Noto Serif SC","Songti SC",Georgia,serif;
  --sans:"Noto Sans SC","PingFang SC",sans-serif;
  --measure:760px;--page:1120px;
 }
@@ -54,15 +54,15 @@ button,.cta,.read-more{border-radius:2px!important;box-shadow:none!important}
 
 /* 2026-10-30: user-requested typography, centered article, background and contact refinements */
 :root{
- --paper:#FFEECB;
- --paper-2:#FFEECB;
- --ink:#B27E49;
- --ink-soft:#B27E49;
- --muted:#799E60;
- --wine:#799E60;
- --wine-deep:#B27E49;
- --rose:#FECBCB;
- --line:#FECBCB;
+ --paper:#f3eee7;
+ --paper-2:#faf7f1;
+ --ink:#352c29;
+ --ink-soft:#514641;
+ --muted:#796c64;
+ --wine:#78464d;
+ --wine-deep:#57383d;
+ --rose:#c7a19b;
+ --line:#dfd4ca;
  --serif:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","楷体",serif;
  --sans:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","楷体",serif;
 }
@@ -71,7 +71,7 @@ body{
  background:
   radial-gradient(ellipse at 12% 8%,rgba(205,174,157,.18),transparent 34%),
   radial-gradient(ellipse at 88% 28%,rgba(181,145,145,.12),transparent 32%),
-  linear-gradient(135deg,#FFEECB 0%,#FFEECB 48%,#FFEECB 100%)!important;
+  linear-gradient(135deg,#f5f0e9 0%,#eee7df 48%,#f7f2eb 100%)!important;
  background-attachment:fixed!important;
 }
 body, p, li, a, button, input, label, small, span, div, nav, footer, header{
@@ -125,7 +125,7 @@ body, p, li, a, button, input, label, small, span, div, nav, footer, header{
 .wechat-contact{cursor:default}
 .wechat-icon svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .wechat-qr{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:20px;color:var(--muted);font-size:14px}
-.wechat-qr img{display:block;width:112px;height:112px;object-fit:contain;border:1px solid var(--line);padding:5px;background:#FFEECB;border-radius:8px}
+.wechat-qr img{display:block;width:112px;height:112px;object-fit:contain;border:1px solid var(--line);padding:5px;background:#fff;border-radius:8px}
 @media(max-width:640px){
  .contact-section{padding:8px 0 38px}
  .contact-section h2{font-size:25px}
