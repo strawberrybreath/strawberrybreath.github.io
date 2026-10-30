@@ -266,3 +266,51 @@ html{scroll-padding-top:68px}
     padding-right:12px!important;
   }
 }
+
+
+/* Article mobile navigation: match the homepage's always-visible three-link header */
+@media(max-width:760px){
+  .home-header.site-header{
+    display:flex!important;position:sticky!important;top:0!important;
+    width:100%!important;height:50px!important;min-height:50px!important;
+    padding:4px 18px!important;margin:0!important;
+    justify-content:space-between!important;align-items:center!important;
+    gap:10px!important;overflow:visible!important;
+    background:var(--sb-paper)!important;border-bottom:1px solid var(--sb-line)!important;
+    backdrop-filter:none!important;
+  }
+  .home-header .site-nav,
+  .home-header .nav{
+    display:flex!important;position:static!important;inset:auto!important;
+    width:auto!important;height:auto!important;max-height:none!important;
+    flex-direction:row!important;align-items:center!important;justify-content:flex-end!important;
+    gap:13px!important;padding:0!important;margin:0!important;
+    overflow:visible!important;visibility:visible!important;opacity:1!important;
+    transform:none!important;background:transparent!important;
+    border:0!important;box-shadow:none!important;
+  }
+  .home-header .site-nav a,
+  .home-header .nav a{
+    display:inline-block!important;white-space:nowrap!important;
+    font-family:var(--sb-kai)!important;font-size:12px!important;
+    line-height:1.4!important;padding:3px 0!important;
+    color:var(--sb-muted)!important;background:transparent!important;
+  }
+  .home-header .site-nav.is-open,
+  .home-header .nav.is-open{
+    display:flex!important;position:static!important;max-height:none!important;
+    transform:none!important;
+  }
+  .home-header .mobile-menu,
+  .home-header .menu-toggle,
+  .bottom-nav{display:none!important}
+  .home-header .brand-tagline{display:none!important}
+  .home-header .brand img,.home-header .site-logo{
+    width:29px!important;height:29px!important;flex-basis:29px!important;
+  }
+}
+@media(max-width:380px){
+  .home-header.site-header{padding-left:12px!important;padding-right:12px!important}
+  .home-header .site-nav,.home-header .nav{gap:9px!important}
+  .home-header .site-nav a,.home-header .nav a{font-size:11px!important}
+}
