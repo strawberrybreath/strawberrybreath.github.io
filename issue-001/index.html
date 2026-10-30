@@ -125,4 +125,58 @@ article.article-layout .meta,article.article .meta{margin-bottom:22px!important}
 .essay-body p.key-thought{color:#854b51;font-weight:600}
 .essay-body p:last-child{margin-top:1.2em;padding:0;border-top:0;font-size:inherit;line-height:inherit;text-align:left;color:#854b51;font-weight:600}
 @media(max-width:650px){.essay-body p{font-size:14px;line-height:2.05;text-align:left;margin-bottom:1.15em}.essay-body p:last-child{font-size:14px}}
-</style></main><footer class="site-footer">个人观影与阅读记录 · 慢慢更新<br> A personal journal · Updated at my own pace<br>© 2026 STRAWBERRY BREATH</footer><script>(function(){const header=document.querySelector('.site-header');const menu=document.querySelector('.mobile-menu');const nav=document.querySelector('#site-nav');if(!header||!menu||!nav)return;function closeMenu(){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','打开导航 Open navigation');const label=menu.querySelector('.menu-label');if(label)label.textContent='菜单 MENU';}function toggleMenu(){const open=!nav.classList.contains('is-open');nav.classList.toggle('is-open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'收起导航 Close navigation':'打开导航 Open navigation');const label=menu.querySelector('.menu-label');if(label)label.textContent=open?'收起 CLOSE':'菜单 MENU';}menu.addEventListener('click',toggleMenu);nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});document.addEventListener('click',e=>{if(!header.contains(e.target))closeMenu();});window.addEventListener('resize',()=>{if(window.innerWidth>760)closeMenu();});})();</script></body></html>
+</style></main><footer class="site-footer">个人观影与阅读记录 · 慢慢更新<br> A personal journal · Updated at my own pace<br>© 2026 STRAWBERRY BREATH</footer><script>(function(){const header=document.querySelector('.site-header');const menu=document.querySelector('.mobile-menu');const nav=document.querySelector('#site-nav');if(!header||!menu||!nav)return;function closeMenu(){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','打开导航 Open navigation');const label=menu.querySelector('.menu-label');if(label)label.textContent='菜单 MENU';}function toggleMenu(){const open=!nav.classList.contains('is-open');nav.classList.toggle('is-open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'收起导航 Close navigation':'打开导航 Open navigation');const label=menu.querySelector('.menu-label');if(label)label.textContent=open?'收起 CLOSE':'菜单 MENU';}menu.addEventListener('click',toggleMenu);nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});document.addEventListener('click',e=>{if(!header.contains(e.target))closeMenu();});window.addEventListener('resize',()=>{if(window.innerWidth>760)closeMenu();});})();</script>
+<style id="article-hero-mobile-refinement">
+/* Keep the article cover area on the same quiet paper background as the page. */
+.issue-hero,
+main > .issue-hero{
+  background:var(--paper)!important;
+  color:var(--ink)!important;
+  padding:clamp(28px,5vw,54px) 22px 30px!important;
+}
+.issue-hero .issue-hero-inner{max-width:980px;gap:clamp(28px,5vw,64px);align-items:center}
+.issue-hero .eyebrow{color:var(--muted)!important}
+.issue-hero h1{color:var(--ink)!important}
+.issue-hero .issue-subtitle{color:var(--wine)!important}
+.issue-hero .intro{color:var(--muted)!important}
+.issue-hero .hero-image{
+  display:block;width:100%;max-width:280px;max-height:none;aspect-ratio:2/3;
+  object-fit:contain;object-position:center;background:transparent;
+  border:0!important;box-shadow:none!important
+}
+.issue-hero .hero-caption{color:var(--muted)!important}
+@media(max-width:760px){
+  .issue-hero{padding:25px 20px 24px!important}
+  .issue-hero .issue-hero-inner{
+    display:grid!important;grid-template-columns:1fr!important;gap:0!important;
+    max-width:520px!important
+  }
+  .issue-hero .issue-hero-inner>div:first-child{grid-row:2}
+  .issue-hero .issue-hero-inner>div:last-child{
+    grid-row:1;display:flex;flex-direction:column;align-items:center;
+    margin:0 0 20px!important
+  }
+  .issue-hero .hero-image{
+    width:116px!important;max-width:116px!important;height:auto!important;
+    max-height:none!important;margin:0 auto!important;aspect-ratio:2/3!important;
+    object-fit:contain!important;border:0!important;box-shadow:none!important
+  }
+  .issue-hero .hero-caption{
+    margin-top:7px!important;text-align:center!important;font-size:8px!important;
+    letter-spacing:.12em!important
+  }
+  .issue-hero .eyebrow{font-size:9px!important;letter-spacing:.14em!important}
+  .issue-hero h1{
+    font-size:clamp(29px,7.5vw,36px)!important;line-height:1.5!important;
+    margin:10px 0 12px!important;letter-spacing:0!important
+  }
+  .issue-hero .issue-subtitle{
+    font-size:15px!important;line-height:1.8!important;margin:0 0 12px!important
+  }
+  .issue-hero .intro{
+    font-size:13px!important;line-height:2!important;margin:0!important;
+    max-width:none!important
+  }
+}
+</style>
+</body></html>
