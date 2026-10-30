@@ -216,3 +216,6 @@ article.article-layout .article-nav a{font-size:14px;color:var(--sage-deep);bord
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* Preserve full cover artwork; never crop editorial assets. */
+.sb-column-image img{object-fit:contain!important;padding:8px!important}
