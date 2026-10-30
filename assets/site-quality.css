@@ -8,7 +8,7 @@ img, picture, video, canvas, svg { max-width: 100%; }
 img { height: auto; }
 a, button, input, textarea, select, summary { -webkit-tap-highlight-color: transparent; }
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible {
-  outline: 3px solid #B27E49;
+  outline: 3px solid #9c6467;
   outline-offset: 4px;
   border-radius: 3px;
 }
