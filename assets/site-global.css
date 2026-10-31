@@ -192,3 +192,121 @@ body{
 
 /* WeChat QR is opened only after clicking the contact link */
 .wechat-contact img{display:none!important}
+
+
+/* Global layout refinements: floating return control, lighter navigation, full-width cards */
+.sb-return-top-wrap{
+  position:fixed!important;
+  right:22px!important;
+  bottom:22px!important;
+  z-index:2000!important;
+  display:block!important;
+  width:auto!important;
+  padding:0!important;
+  margin:0!important;
+  pointer-events:none!important;
+}
+.sb-return-top{
+  pointer-events:auto!important;
+  display:grid!important;
+  place-items:center!important;
+  width:46px!important;
+  height:46px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:inherit!important;
+  font-size:0!important;
+  line-height:1!important;
+  opacity:.78;
+}
+.sb-return-top::before{
+  content:"↑";
+  font-size:27px;
+  line-height:1;
+}
+.sb-return-top:hover{
+  background:transparent!important;
+  box-shadow:none!important;
+  opacity:1;
+  transform:translateY(-3px);
+}
+@media(max-width:680px){
+  .sb-return-top-wrap{right:14px!important;bottom:calc(14px + env(safe-area-inset-bottom))!important}
+  .sb-return-top{width:42px!important;height:42px!important}
+}
+
+/* Navigation: shorter height and 50% opaque cream surface */
+body>header,.shell>header,.site-header,
+.sb-header,.sb-article-header,.sb-welcome-top{
+  min-height:48px!important;
+  height:auto!important;
+  padding-top:3px!important;
+  padding-bottom:3px!important;
+  background:rgba(255,238,203,.5)!important;
+  border-bottom:1px solid rgba(178,126,73,.18)!important;
+  box-shadow:none!important;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.sb-header-inner,.sb-article-header .sb-header-inner{
+  min-height:46px!important;
+  padding-top:3px!important;
+  padding-bottom:3px!important;
+}
+.sb-brand img,.sb-brand-mark img{max-height:30px!important}
+body>header nav a,.shell>header nav a,.site-header nav a,.sb-nav a{
+  padding-top:3px!important;
+  padding-bottom:3px!important;
+}
+@media(max-width:680px){
+  body>header,.shell>header,.site-header,
+  .sb-header,.sb-article-header,.sb-welcome-top{
+    min-height:46px!important;
+    padding-top:2px!important;
+    padding-bottom:2px!important;
+  }
+  .sb-header-inner,.sb-article-header .sb-header-inner{
+    min-height:44px!important;
+    padding-top:2px!important;
+    padding-bottom:2px!important;
+  }
+}
+
+/* Let listing and content cards use the available page width */
+.shell,.sb-main,.sb-listing,.sb-book-list,.latest,
+.column-landing,.column-list,.article-list{
+  width:100%!important;
+  max-width:none!important;
+}
+.shell{
+  padding-left:clamp(16px,3vw,48px)!important;
+  padding-right:clamp(16px,3vw,48px)!important;
+}
+.sb-listing,.sb-book-list,.latest,.column-list,.article-list{
+  margin-left:0!important;
+  margin-right:0!important;
+}
+.sb-article-card,.sb-book-row,.column-card,.journal-card,.feature,
+.article-card,.book-card,.content-card{
+  width:100%!important;
+  max-width:none!important;
+  box-sizing:border-box!important;
+}
+.sb-article-hero,.sb-article-body,.sb-article-content,
+.article-page,.article-body,.article-intro,.issue-body,.book-content{
+  width:min(1240px,calc(100% - 48px))!important;
+  max-width:1240px!important;
+}
+@media(max-width:680px){
+  .shell{
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  .sb-article-hero,.sb-article-body,.sb-article-content,
+  .article-page,.article-body,.article-intro,.issue-body,.book-content{
+    width:calc(100% - 28px)!important;
+  }
+}
