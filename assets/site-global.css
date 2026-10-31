@@ -310,3 +310,31 @@ body>header nav a,.shell>header nav a,.site-header nav a,.sb-nav a{
     width:calc(100% - 28px)!important;
   }
 }
+
+
+/* Background redesign: quiet warm paper with restrained botanical color washes */
+html,body{
+  min-height:100%;
+  background-color:#fff9ef!important;
+  background-image:
+    radial-gradient(ellipse 58rem 38rem at 4% 2%, rgba(254,203,203,.30) 0%, rgba(254,203,203,0) 72%),
+    radial-gradient(ellipse 52rem 42rem at 100% 18%, rgba(255,203,93,.20) 0%, rgba(255,203,93,0) 72%),
+    radial-gradient(ellipse 48rem 40rem at 48% 100%, rgba(121,158,96,.13) 0%, rgba(121,158,96,0) 76%),
+    linear-gradient(180deg,#fffaf2 0%,#fff7ed 52%,#fffaf3 100%)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-attachment:fixed!important;
+}
+body{
+  background-color:transparent!important;
+  background-image:none!important;
+}
+/* Keep page surfaces light and translucent so the new background remains quiet */
+.sb-article-card,.sb-book-row,.column-card,.journal-card,.feature,
+.article-card,.book-card,.content-card,.sb-listing-panel{
+  background-color:rgba(255,252,246,.82);
+  border-color:rgba(178,126,73,.14);
+}
+@media(max-width:680px){
+  html,body{background-attachment:scroll!important}
+}
