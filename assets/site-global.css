@@ -1,7 +1,7 @@
 /* Shared site-wide background and fixed reading progress */
-html{scroll-padding-top:110px}
-body{position:relative!important;background:transparent!important}
-body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(255,250,239,.78),rgba(255,250,239,.78)),url("横版背景.jpg");background-size:cover;background-position:center center;background-repeat:no-repeat}
+html{scroll-padding-top:110px;min-height:100%;background-color:#fff9ec!important;background-image:linear-gradient(rgba(255,250,239,.24),rgba(255,250,239,.24)),url("/assets/横版背景.jpg")!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;background-attachment:fixed!important}
+body{position:relative!important;min-height:100vh;background:transparent!important;background-image:none!important}
+body:before{content:none!important;display:none!important}
 body>*{position:relative;z-index:1}
 .sb-header,.sb-article-header,.sb-welcome-top,body>header{position:sticky!important;top:0!important;z-index:1000!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .sb-header,.sb-article-header{background:rgba(255,250,239,.91)!important}
@@ -13,7 +13,7 @@ body>*{position:relative;z-index:1}
 .sb-global-reading-percent{min-width:29px;text-align:right;font-variant-numeric:tabular-nums}
 @media(max-width:900px){.sb-global-reading{min-width:118px;margin-left:5px;gap:6px}}
 @media(max-width:680px){
- body:before{background-image:linear-gradient(rgba(255,250,239,.8),rgba(255,250,239,.8)),url("竖版背景.jpg");background-position:center top;background-attachment:scroll}
+ html{background-image:linear-gradient(rgba(255,250,239,.28),rgba(255,250,239,.28)),url("/assets/竖版背景.jpg")!important;background-position:center top!important;background-attachment:scroll!important;background-size:cover!important}
  .sb-global-reading{width:100%;min-width:0;margin:2px 0 0;justify-content:flex-end;order:3;font-size:10px}
  .sb-global-reading-track{max-width:100px;flex:0 1 100px}
  .sb-header-inner{row-gap:6px!important}
