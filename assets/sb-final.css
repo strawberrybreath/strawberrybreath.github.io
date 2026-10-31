@@ -18,3 +18,31 @@ header .brand-mark{display:inline-flex!important;align-items:center!important;ju
 header .brand-mark img{display:block!important;position:static!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;border-radius:50%!important;background:transparent!important}
 header .brand-name{display:inline-block!important;position:static!important;background:transparent!important;white-space:nowrap!important}
 @media(max-width:720px){header .brand-mark{width:36px!important;height:36px!important;flex-basis:36px!important}header .brand{gap:8px!important}}
+
+
+/* Homepage layout correction — stable header, calm hero, balanced cat image */
+header{height:78px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;position:relative!important}
+header .brand{display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;flex-direction:row!important;white-space:nowrap!important;text-decoration:none!important;min-width:0!important}
+header .brand-mark{width:40px!important;height:40px!important;flex:0 0 40px!important;display:block!important;overflow:hidden!important;border-radius:50%!important}
+header .brand-mark img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;border-radius:50%!important}
+header .brand-name{display:inline!important;font:24px 'Ma Shan Zheng',cursive!important;color:var(--red)!important;line-height:1.2!important}
+header nav{display:flex!important;align-items:center!important;gap:28px!important;position:static!important;width:auto!important;height:auto!important}
+header nav a{display:inline-block!important;padding:8px 0!important;white-space:nowrap!important}
+.hero{display:grid!important;grid-template-columns:minmax(0,1.15fr) minmax(260px,.75fr)!important;align-items:center!important;gap:64px!important;padding:66px 0 72px!important;min-height:0!important;background:transparent!important;background-image:none!important;position:relative!important}
+.hero::before,.hero::after,.copy::before,.copy::after{content:none!important;display:none!important;background:none!important}
+.hero .copy{position:relative!important;z-index:1!important;min-width:0!important;background:transparent!important;background-image:none!important;padding:0!important}
+.hero .copy h1{margin:18px 0 24px!important;line-height:1.35!important}
+.hero .copy>p:not(.eyebrow){max-width:560px!important}
+.hero .cat-photo{width:100%!important;max-width:340px!important;margin:0 auto!important;justify-self:center!important;align-self:center!important;position:relative!important;transform:none!important;border-radius:22px!important;overflow:hidden!important;background:#fff!important;box-shadow:8px 8px 0 var(--yellow)!important}
+.hero .cat-photo img{display:block!important;width:100%!important;height:auto!important;max-height:320px!important;object-fit:contain!important;object-position:center!important}
+.hero .cat-photo span{font-size:11px!important;right:10px!important;bottom:10px!important}
+@media(max-width:720px){
+ header{height:68px!important}
+ header .brand-mark{width:34px!important;height:34px!important;flex-basis:34px!important}
+ header .brand-name{font-size:21px!important}
+ header nav{gap:16px!important;font-size:12px!important}
+ .hero{grid-template-columns:minmax(0,1fr)!important;gap:30px!important;padding:42px 0 48px!important}
+ .hero .copy h1{font-size:38px!important}
+ .hero .cat-photo{max-width:290px!important;width:82%!important}
+ .hero .cat-photo img{max-height:260px!important}
+}
