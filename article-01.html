@@ -181,8 +181,8 @@
 (function(){
   const body = document.getElementById('bodycopy');
   if (!body) return;
-  const text = (body.innerText || body.textContent || '').replace(/\\s+/g, ' ').trim();
-  const han = (text.match(/\\p{Script=Han}/gu) || []).length;
+  const text = (body.innerText || body.textContent || '').replace(/\s+/g, ' ').trim();
+  const han = (text.match(/\p{Script=Han}/gu) || []).length;
   const latin = (text.match(/[A-Za-z0-9]+(?:['’.-][A-Za-z0-9]+)*/g) || []).length;
   const count = han + latin;
   const words = document.getElementById('reading-words');
