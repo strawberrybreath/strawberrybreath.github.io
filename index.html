@@ -80,8 +80,53 @@ footer p{font-size:13px!important;color:#85796e!important}
  footer{grid-template-columns:1fr!important;padding-top:22px!important}
  .contacts{gap:18px!important}
 }
+</style>
+<style id="homepage-nav-refinement">
+/* Simple, balanced homepage navigation */
+.shell>header{
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ gap:28px!important;width:100%!important;min-height:76px!important;height:auto!important;
+ padding:0!important;margin:0 auto!important;border-bottom:1px solid #e7ded2!important;
+ background:rgba(251,248,242,.94)!important;box-shadow:none!important;
+}
+.shell>header .brand{display:inline-flex!important;align-items:center!important;gap:12px!important;min-width:0!important;text-decoration:none!important}
+.shell>header .brand-mark{display:flex!important;align-items:center!important;justify-content:center!important;width:38px!important;height:38px!important;flex:0 0 38px!important;overflow:hidden!important;border-radius:50%!important;background:transparent!important}
+.shell>header .brand-mark img{display:block!important;width:100%!important;height:100%!important;max-height:none!important;object-fit:cover!important}
+.shell>header .brand-name{font-size:21px!important;line-height:1.2!important;letter-spacing:.015em!important;font-weight:400!important;color:#51463e!important;white-space:nowrap!important}
+.shell>header nav{
+ display:flex!important;align-items:center!important;justify-content:flex-end!important;
+ gap:clamp(20px,3vw,34px)!important;margin:0!important;padding:0!important;
+ background:transparent!important;border:0!important;box-shadow:none!important;
+}
+.shell>header nav a{
+ position:relative!important;display:inline-flex!important;align-items:center!important;
+ min-height:42px!important;padding:0 1px!important;margin:0!important;
+ color:#75695f!important;font-size:15px!important;line-height:1!important;
+ font-weight:400!important;text-decoration:none!important;white-space:nowrap!important;
+ background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+}
+.shell>header nav a:hover{color:#b94f3a!important}
+.shell>header nav a.on,.shell>header nav a[aria-current="page"]{color:#b94f3a!important;font-weight:500!important}
+.shell>header nav a.on:after,.shell>header nav a[aria-current="page"]:after{
+ content:""!important;position:absolute!important;left:0!important;right:0!important;bottom:5px!important;
+ height:1px!important;background:#b94f3a!important;border-radius:0!important;
+}
+@media(max-width:720px){
+ .shell>header{min-height:66px!important;gap:12px!important}
+ .shell>header .brand{gap:8px!important}
+ .shell>header .brand-mark{width:32px!important;height:32px!important;flex-basis:32px!important}
+ .shell>header .brand-name{font-size:16px!important;letter-spacing:0!important}
+ .shell>header nav{gap:16px!important;flex:0 0 auto!important}
+ .shell>header nav a{font-size:13px!important;min-height:38px!important}
+ .shell>header nav a.on:after,.shell>header nav a[aria-current="page"]:after{bottom:3px!important}
+}
+@media(max-width:380px){
+ .shell>header .brand-name{font-size:14px!important}
+ .shell>header nav{gap:11px!important}
+ .shell>header nav a{font-size:12px!important}
+}
 </style></head>
-<body><div class="shell"><header><a class="brand" href="./"><span class="brand-mark"><img src="assets/头像.png" alt="Strawberry Breath 头像"></span><span class="brand-name">Strawberry Breath</span></a><nav><a class="on" href="./">首页 <span>Home</span></a><a href="article-01.html">文章 01 <span>Article 01</span></a></nav></header>
+<body><div class="shell"><header><a class="brand" href="./"><span class="brand-mark"><img src="assets/头像.png" alt="Strawberry Breath 头像"></span><span class="brand-name">Strawberry Breath</span></a><nav aria-label="主导航"><a class="on" href="./" aria-current="page">首页</a><a href="article-01.html">影视与她</a></nav></header>
 <main><section class="hero"><div class="copy"><p class="eyebrow">个人角落 · A LITTLE CORNER OF MY OWN</p><h1>你好，欢迎来到<br><em>Strawberry Breath.</em></h1><p class="lead">这是一个属于自己的小小角落，收集喜欢的作品，也记录那些让我停下来思考的时刻。</p><p>我对世界始终有不少好奇。电影、书籍、心理学、历史，以及日常生活中看似寻常的问题，都可能成为我继续探索的起点。我尤其关注女性主义与个体处境，喜欢从一部作品、一段关系或一个社会现象出发，试着看见表面之外的东西。</p><p>这里没有固定的主题边界，也不急着给每一种兴趣归类。我想认真分享那些真正触动过我的内容，也留下自己在阅读、观察和思考中的变化。观点可以继续生长，答案也可以不断修正。</p><a class="pill" href="article-01.html">去读第一篇文章　↗</a></div></section>
 <section class="note"><b>A NOTE TO MYSELF</b><p>保持好奇，也保留判断；认真理解世界，也认真对待自己的感受。不必急着成为谁期待的样子，人生可以有自己的节奏，想法也可以随着经历慢慢改变。</p></section>
 <section class="latest"><p class="eyebrow">最近分享 · RECENT NOTES</p><h2>最近想分享的 <span>✿</span></h2><a class="feature" href="article-01.html"><figure class="feature-cover"><img src="assets/Enola%20Holmes1.JPG" alt="电影《Enola Holmes》第一部官方海报" loading="lazy"><figcaption>ENOLA HOLMES · 2020</figcaption></figure><div class="feature-copy"><small>FILM · FEMINISM · PERSONAL AGENCY</small><h3>她不是谁的“小姐”，她只是她自己</h3><p>从《Enola Holmes》出发，聊女性如何挣脱社会期待，建立自己的判断，并争取选择人生的权利。</p><b>阅读全文　↗</b></div><strong class="feature-number">01</strong></a></section>
