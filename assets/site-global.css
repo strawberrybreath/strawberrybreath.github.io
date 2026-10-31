@@ -156,3 +156,32 @@ body>header nav a,.shell>header nav a,.site-header nav a,.sb-nav a{
     max-width:100%!important;
   }
 }
+
+
+/* Device-specific backgrounds: desktop, tablet and mobile */
+html{
+  background-image:linear-gradient(rgba(255,250,239,.24),rgba(255,250,239,.24)),url("/assets/电脑背景.png")!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  background-attachment:fixed!important;
+}
+@media (min-width:681px) and (max-width:1024px){
+  html{
+    background-image:linear-gradient(rgba(255,250,239,.24),rgba(255,250,239,.24)),url("/assets/平板背景.png")!important;
+    background-position:center center!important;
+    background-size:cover!important;
+    background-attachment:scroll!important;
+  }
+}
+@media (max-width:680px){
+  html{
+    background-image:linear-gradient(rgba(255,250,239,.28),rgba(255,250,239,.28)),url("/assets/手机背景.png")!important;
+    background-position:center top!important;
+    background-size:cover!important;
+    background-attachment:scroll!important;
+  }
+}
+
+/* WeChat QR is opened only after clicking the contact link */
+.wechat-contact img{display:none!important}
