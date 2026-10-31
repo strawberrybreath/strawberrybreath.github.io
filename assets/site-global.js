@@ -1,7 +1,9 @@
 (function(){
   function init(){
+    var article=document.querySelector('.article-page');
+    if(!article)return;
     var header=document.querySelector('.sb-header-inner')||document.querySelector('header');
-    var main=document.querySelector('main')||document.querySelector('article')||document.body;
+    var main=article;
     if(!header||!main||document.querySelector('.sb-global-reading'))return;
     var widget=document.createElement('div');
     widget.className='sb-global-reading';
