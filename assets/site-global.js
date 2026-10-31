@@ -28,7 +28,8 @@
     addReturnTop();
   }
   function addReturnTop(){
-    if(document.querySelector('.sb-return-top-wrap'))return;
+    var article=document.querySelector('.article-page');
+    if(!article||document.querySelector('.sb-return-top-wrap'))return;
     var wrap=document.createElement('div');
     wrap.className='sb-return-top-wrap';
     var button=document.createElement('button');
@@ -40,9 +41,7 @@
       window.scrollTo({top:0,behavior:'smooth'});
     });
     wrap.appendChild(button);
-    var footer=document.querySelector('body>footer,.shell>footer,footer');
-    if(footer)footer.insertBefore(wrap,footer.firstChild);
-    else document.body.appendChild(wrap);
+    article.appendChild(wrap);
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
