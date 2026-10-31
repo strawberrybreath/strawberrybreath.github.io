@@ -456,3 +456,28 @@ input,textarea,select{
     padding-right:0!important;
   }
 }
+
+
+/* Desktop homepage: center the full content column, not only the hero copy */
+@media (min-width:1025px){
+  body:has(.hero) main{
+    width:100%!important;
+    max-width:1160px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  body:has(.hero) main>.hero,
+  body:has(.hero) main>.note,
+  body:has(.hero) main>.latest,
+  body:has(.hero) main>.about{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:1100px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  body:has(.hero) main>.hero{padding-left:28px!important;padding-right:28px!important}
+  body:has(.hero) main>.note,
+  body:has(.hero) main>.latest,
+  body:has(.hero) main>.about{padding-left:0!important;padding-right:0!important}
+}
