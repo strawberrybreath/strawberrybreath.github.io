@@ -1,4 +1,4 @@
-/* Shared site-wide background and fixed reading progress */
+@import url("https://fonts.googleapis.com/css2?family=Long+Cang&family=LXGW+WenKai:wght@400;700&display=swap");\n/* Shared site-wide background and fixed reading progress */
 html{scroll-padding-top:110px;min-height:100%;background-color:#fff9ec!important;background-image:linear-gradient(rgba(255,250,239,.24),rgba(255,250,239,.24)),url("/assets/横版背景.jpg")!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;background-attachment:fixed!important}
 body{position:relative!important;min-height:100vh;background:transparent!important;background-image:none!important}
 body:before{content:none!important;display:none!important}
@@ -340,9 +340,21 @@ body{
 }
 
 
-/* C typography direction: gentle handwritten character with robust cross-platform fallbacks */
+/* Typography system: Long Cang for expressive headings, LXGW WenKai for readable Chinese text */
 html,body,body *{
-  font-family:"Ma Shan Zheng","KaiTi","STKaiti","Kaiti SC","华文楷体","楷体",serif!important;
+  font-family:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","华文楷体","楷体",serif!important;
+}
+h1,h2,h3,h4,h5,h6,
+.hero h1,.sb-home-copy h1,.sb-page-hero h1,
+.article-title h1,.feature-copy h3,
+.sb-section-head h2,.sb-book-title{
+  font-family:"Long Cang","LXGW WenKai","KaiTi","STKaiti",serif!important;
+  font-weight:400!important;
+  letter-spacing:.025em;
+}
+button,.button,.pill,.sb-nav,.site-nav,.bottom-nav,
+input,textarea,select{
+  font-family:"LXGW WenKai","KaiTi","STKaiti",serif!important;
 }
 /* Homepage: centered introduction and balanced feature cover */
 .hero .copy{
