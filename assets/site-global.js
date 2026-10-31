@@ -25,6 +25,24 @@
     window.addEventListener('scroll',update,{passive:true});
     window.addEventListener('resize',update);
     update();
+    addReturnTop();
+  }
+  function addReturnTop(){
+    if(document.querySelector('.sb-return-top-wrap'))return;
+    var wrap=document.createElement('div');
+    wrap.className='sb-return-top-wrap';
+    var button=document.createElement('button');
+    button.type='button';
+    button.className='sb-return-top';
+    button.textContent='↑ 返回顶部';
+    button.setAttribute('aria-label','返回页面顶部');
+    button.addEventListener('click',function(){
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+    wrap.appendChild(button);
+    var footer=document.querySelector('body>footer,.shell>footer,footer');
+    if(footer)footer.insertBefore(wrap,footer.firstChild);
+    else document.body.appendChild(wrap);
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
