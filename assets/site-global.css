@@ -340,7 +340,7 @@ body{
 }
 
 
-/* Typography system: Long Cang for expressive headings, LXGW WenKai for readable Chinese text */
+/* Unified typography: LXGW WenKai across body text and all headings */
 html,body,body *{
   font-family:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","华文楷体","楷体",serif!important;
 }
@@ -348,7 +348,7 @@ h1,h2,h3,h4,h5,h6,
 .hero h1,.sb-home-copy h1,.sb-page-hero h1,
 .article-title h1,.feature-copy h3,
 .sb-section-head h2,.sb-book-title{
-  font-family:"Long Cang","LXGW WenKai","KaiTi","STKaiti",serif!important;
+  font-family:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","华文楷体","楷体",serif!important;
   font-weight:400!important;
   letter-spacing:.025em;
 }
