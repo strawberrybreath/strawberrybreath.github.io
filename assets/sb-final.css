@@ -135,3 +135,21 @@ header nav a span { font-family:Georgia,serif; font-size:.72em; letter-spacing:.
   .article-intro { grid-template-columns:112px minmax(0,1fr); gap:18px; align-items:start; }
   .article-intro .film-poster img { max-height:190px; }
 }
+
+
+/* About section owns the personal cat photo; keep the welcome area focused */
+.hero .cat-photo{display:none!important}
+.about-cat-photo{margin:28px 0 0;max-width:380px}
+.about-cat-photo img{display:block;width:100%;height:auto;max-height:330px;object-fit:contain;border-radius:18px;box-shadow:8px 8px 0 var(--yellow)}
+.about-cat-photo figcaption{margin-top:10px;color:var(--muted);font-size:14px;line-height:1.6}
+.contacts{display:flex;align-items:flex-start;gap:26px}
+.contact-item{display:flex;flex-direction:column;align-items:center;gap:7px;color:var(--red);font-size:14px;text-decoration:none;min-width:54px}
+.contact-item svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.contact-item:hover{color:var(--brown)}
+.wechat-contact img{display:block;width:88px;height:88px;object-fit:contain;padding:4px;background:#fff;border:1px solid var(--line);border-radius:8px;margin-top:2px}
+@media(max-width:720px){
+ .about-cat-photo{max-width:320px;margin:20px auto 0}
+ .about-cat-photo img{max-height:280px}
+ .contacts{gap:22px;flex-wrap:wrap}
+ .wechat-contact img{width:96px;height:96px}
+}
