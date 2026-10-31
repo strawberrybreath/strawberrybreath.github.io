@@ -11,3 +11,10 @@
 .cat-photo{margin:0 auto;transform:none;border-radius:24px;overflow:hidden;box-shadow:10px 10px 0 var(--yellow)}
 .cat-photo img{width:100%;height:auto;max-height:430px;object-fit:contain;object-position:center center}
 @media(max-width:720px){.brand-avatar{width:34px;height:34px}.cat-photo{width:100%;max-width:420px;margin:0 auto;border-radius:20px;box-shadow:6px 6px 0 var(--yellow)}.cat-photo img{max-height:360px;object-fit:contain;object-position:center center}}
+
+/* Header identity: avatar and site title are separate inline elements */
+header .brand{display:inline-flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:11px!important;width:auto!important;height:auto!important;background:transparent!important;flex:none!important;white-space:nowrap}
+header .brand-mark{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:42px!important;height:42px!important;flex:0 0 42px!important;border-radius:50%!important;overflow:hidden!important;background:transparent!important}
+header .brand-mark img{display:block!important;position:static!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;border-radius:50%!important;background:transparent!important}
+header .brand-name{display:inline-block!important;position:static!important;background:transparent!important;white-space:nowrap!important}
+@media(max-width:720px){header .brand-mark{width:36px!important;height:36px!important;flex-basis:36px!important}header .brand{gap:8px!important}}
