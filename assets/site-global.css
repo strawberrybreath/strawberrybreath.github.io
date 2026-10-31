@@ -382,3 +382,65 @@ html,body,body *{
  .feature-copy p{font-size:15px;line-height:1.8}
  .feature-number{display:none}
 }
+
+
+/* Responsive page width: generous desktop gutters, near-full-width tablet/mobile */
+@media (min-width:1025px){
+  .shell,.sb-main,.sb-welcome,.sb-article-main,.article-shell{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:1440px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:clamp(48px,7vw,112px)!important;
+    padding-right:clamp(48px,7vw,112px)!important;
+  }
+  .sb-article-hero,.sb-article-body,.sb-article-content,
+  .article-page,.article-body,.article-intro,.issue-body,.book-content{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:1100px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+@media (min-width:681px) and (max-width:1024px){
+  .shell,.sb-main,.sb-welcome,.sb-article-main,.article-shell{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:none!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+  .sb-article-hero,.sb-article-body,.sb-article-content,
+  .article-page,.article-body,.article-intro,.issue-body,.book-content{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:none!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+}
+@media (max-width:680px){
+  .shell,.sb-main,.sb-welcome,.sb-article-main,.article-shell{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:none!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    padding-left:12px!important;
+    padding-right:12px!important;
+  }
+  .sb-article-hero,.sb-article-body,.sb-article-content,
+  .article-page,.article-body,.article-intro,.issue-body,.book-content{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:none!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+}
