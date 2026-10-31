@@ -268,3 +268,44 @@ img{display:block;max-width:100%;height:auto}
 .film-still-section img{display:block;width:100%;height:auto;object-fit:contain;background:var(--paper-deep)}
 .film-still-section figcaption{text-align:right;margin-top:9px;color:var(--soft);font:10px/1.7 var(--sans);letter-spacing:.04em}
 @media(max-width:760px){.film-still-section{padding:0;margin:35px auto 5px}.film-still-section figcaption{font-size:9px}}
+
+
+/* Simplified personal blog homepage */
+.simple-home{max-width:850px;margin:0 auto}
+.intro-section{padding:88px 0 72px;border-bottom:1px solid var(--line)}
+.intro-eyebrow{font:600 10px var(--sans);letter-spacing:.2em;color:var(--accent);margin:0 0 22px}
+.intro-section h1{font:500 clamp(43px,6vw,68px)/1.2 var(--serif);letter-spacing:-.04em;margin:0 0 17px;overflow-wrap:anywhere}
+.intro-section h1 span{color:var(--accent)}
+.intro-subtitle{font:500 20px/1.8 var(--serif);color:var(--accent-dark);margin:0 0 28px}
+.intro-description{max-width:760px}
+.intro-description p{font:16px/2.15 var(--body);color:var(--muted);margin:0 0 12px}
+.post-list-section{padding:62px 0 76px}
+.list-heading{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding:0 0 17px;margin-bottom:28px}
+.list-heading h2{font:500 27px/1.5 var(--serif);margin:0}
+.list-heading>span{font:10px var(--sans);letter-spacing:.18em;color:var(--soft)}
+.post-entry{display:grid;grid-template-columns:150px minmax(0,1fr);gap:30px;align-items:center;padding:0}
+.post-entry-image{margin:0;width:100%;background:var(--paper-deep)}
+.post-entry-image img{display:block;width:100%;height:auto;object-fit:contain}
+.post-entry-copy{min-width:0}
+.post-category{font:10px var(--sans);letter-spacing:.12em;color:var(--accent);margin:0 0 9px}
+.post-entry-copy h3{font:500 23px/1.65 var(--serif);margin:0 0 9px;color:var(--ink)}
+.post-entry-copy>p:last-child{font:14px/2 var(--body);color:var(--muted);margin:0;max-width:590px}
+.simple-footer{margin-top:0}
+@media(max-width:760px){
+ .intro-section{padding:55px 0 48px}
+ .intro-eyebrow{margin-bottom:17px}
+ .intro-section h1{font-size:clamp(38px,10vw,52px);margin-bottom:14px}
+ .intro-subtitle{font-size:17px;line-height:1.85;margin-bottom:20px}
+ .intro-description p{font-size:14px;line-height:2.05;margin-bottom:10px}
+ .post-list-section{padding:44px 0 54px}
+ .list-heading{margin-bottom:22px;padding-bottom:13px}
+ .list-heading h2{font-size:23px}
+ .post-entry{grid-template-columns:104px minmax(0,1fr);gap:17px;align-items:center}
+ .post-category{font-size:9px;margin-bottom:6px}
+ .post-entry-copy h3{font-size:17px;line-height:1.6;margin-bottom:6px}
+ .post-entry-copy>p:last-child{font-size:12px;line-height:1.85}
+}
+@media(max-width:390px){
+ .post-entry{grid-template-columns:92px minmax(0,1fr);gap:14px}
+ .post-entry-copy h3{font-size:16px}
+}
