@@ -481,3 +481,30 @@ input,textarea,select{
   body:has(.hero) main>.latest,
   body:has(.hero) main>.about{padding-left:0!important;padding-right:0!important}
 }
+
+
+/* Homepage desktop: center the single-column welcome text across the page */
+@media (min-width:1025px){
+  body:has(.hero) .hero{
+    display:block!important;
+    width:100%!important;
+    max-width:1100px!important;
+    min-height:0!important;
+    padding:78px 28px 82px!important;
+    margin:0 auto!important;
+  }
+  body:has(.hero) .hero .copy{
+    width:100%!important;
+    max-width:820px!important;
+    margin:0 auto!important;
+    text-align:center!important;
+  }
+  body:has(.hero) .hero .copy .eyebrow,
+  body:has(.hero) .hero .copy h1,
+  body:has(.hero) .hero .copy>p,
+  body:has(.hero) .hero .copy .pill{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  body:has(.hero) .hero .copy>p:not(.eyebrow){max-width:660px!important}
+}
