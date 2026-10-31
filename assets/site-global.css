@@ -23,3 +23,60 @@ body>*{position:relative;z-index:1}
 
 /* The navigation progress indicator replaces older page-specific progress widgets */
 .reading-progress,#reading-widget{display:none!important}
+
+
+/* Global typography: use the traditional Chinese Xingkai typeface throughout */
+html,body,body *{
+  font-family:"STXingkai","华文行楷","行楷","KaiTi","楷体",serif!important;
+}
+
+/* Remove every underline treatment, including hover and decorative link rules */
+a,a:link,a:visited,a:hover,a:focus,a:active,
+.sb-text-link,.sb-back,.sb-welcome-enter,
+nav a,footer a,button{
+  text-decoration:none!important;
+  text-decoration-line:none!important;
+  border-bottom:0!important;
+  box-shadow:none;
+}
+
+/* Keep every page header attached to the top edge while scrolling */
+body>header,.shell>header,.site-header,
+.sb-header,.sb-article-header,.sb-welcome-top{
+  position:sticky!important;
+  top:0!important;
+  z-index:10000!important;
+  align-self:start;
+}
+
+/* A consistent return-to-top control at the end of every page */
+.sb-return-top-wrap{
+  display:flex;
+  justify-content:center;
+  padding:26px 16px 18px;
+}
+.sb-return-top{
+  appearance:none;
+  border:1px solid rgba(178,126,73,.45)!important;
+  border-radius:999px;
+  background:rgba(255,238,203,.88);
+  color:#765238;
+  padding:10px 22px;
+  font:inherit!important;
+  font-size:16px;
+  line-height:1.4;
+  cursor:pointer;
+  transition:background .2s ease,transform .2s ease;
+}
+.sb-return-top:hover{
+  background:#ffcb5d;
+  transform:translateY(-2px);
+}
+.sb-return-top:focus-visible{
+  outline:2px solid #e63f25;
+  outline-offset:3px;
+}
+@media(max-width:680px){
+  .sb-return-top-wrap{padding:22px 12px 16px}
+  .sb-return-top{font-size:15px;padding:9px 20px}
+}
