@@ -80,3 +80,79 @@ body>header,.shell>header,.site-header,
   .sb-return-top-wrap{padding:22px 12px 16px}
   .sb-return-top{font-size:15px;padding:9px 20px}
 }
+
+
+/* Layout refinement: centered reading progress, compact solid navigation */
+body>header,.shell>header,.site-header,.sb-header,.sb-article-header,.sb-welcome-top{
+  background:rgba(255,238,203,.97)!important;
+  border-bottom:1px solid rgba(178,126,73,.22)!important;
+  box-shadow:0 3px 14px rgba(72,52,32,.06);
+}
+.sb-header-inner,.sb-article-header .sb-header-inner{
+  position:relative!important;
+  min-height:60px!important;
+  padding-top:6px!important;
+  padding-bottom:6px!important;
+}
+.sb-global-reading{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+  width:clamp(150px,22vw,250px)!important;
+  min-width:0!important;
+  margin:0!important;
+  justify-content:center!important;
+  z-index:2;
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.55);
+}
+.sb-global-reading-track{max-width:140px}
+.sb-brand,.sb-nav,.sb-header-tools{position:relative;z-index:3}
+.sb-nav{margin-inline:auto}
+body>header,.shell>header,.site-header{min-height:58px!important;padding-top:5px!important;padding-bottom:5px!important}
+body>header nav a,.shell>header nav a,.site-header nav a,.sb-nav a{
+  padding-top:5px!important;padding-bottom:5px!important;
+}
+.sb-brand img,.sb-brand-mark img{max-height:34px}
+
+/* Give long-form reading pages more breathing room on both sides */
+.sb-article-hero,.sb-article-body,.sb-article-content,
+.article-page,.article-body,.article-intro,.issue-body,.book-content{
+  width:min(1120px,calc(100% - 112px))!important;
+  max-width:1120px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+.article-page{padding-left:0!important;padding-right:0!important}
+.article-body,.sb-article-body,.issue-body,.book-content{
+  max-width:900px!important;
+}
+@media(max-width:900px){
+  .sb-global-reading{width:clamp(145px,24vw,205px)!important}
+  .sb-header-inner,.sb-article-header .sb-header-inner{min-height:56px!important}
+}
+@media(max-width:680px){
+  .sb-header-inner,.sb-article-header .sb-header-inner{
+    min-height:unset!important;
+    padding-top:8px!important;padding-bottom:8px!important;
+  }
+  .sb-global-reading{
+    position:static!important;
+    left:auto!important;top:auto!important;
+    transform:none!important;
+    order:3!important;
+    width:100%!important;
+    max-width:260px;
+    margin:3px auto 0!important;
+    justify-content:center!important;
+  }
+  .sb-global-reading-track{max-width:125px}
+  .sb-brand,.sb-nav,.sb-header-tools{z-index:1}
+  .sb-article-hero,.sb-article-body,.sb-article-content,
+  .article-page,.article-body,.article-intro,.issue-body,.book-content{
+    width:calc(100% - 36px)!important;
+    max-width:100%!important;
+  }
+}
