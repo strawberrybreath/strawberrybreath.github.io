@@ -149,6 +149,24 @@ img{display:block;max-width:100%;height:auto}
  .reading-track{margin-left:32px;margin-right:32px}
  .flower-section{margin-left:32px;margin-right:32px}
 }
+@media(min-width:761px) and (max-width:1050px){
+ .site-frame{width:calc(100% - 64px)}
+ .hero-grid{grid-template-columns:minmax(0,1fr) 190px;gap:38px;padding-top:30px}
+ .hero-copy h1{font-size:clamp(48px,6vw,62px)}
+ .hero-note{padding:22px 19px;min-height:226px}
+ .core-heading{grid-template-columns:1fr .85fr;gap:45px}
+ .principle{padding-right:18px}
+ .principle+.principle{padding-left:18px}
+ .featured-layout{grid-template-columns:210px minmax(0,1fr);gap:42px;padding:0 35px 0 15px}
+ .featured-image{max-width:210px}
+ .about-layout{grid-template-columns:minmax(0,1fr) 230px;gap:42px}
+ .article-hero{grid-template-columns:minmax(0,1fr) 220px;gap:42px;padding:38px 26px 55px}
+ .article-poster{max-width:220px}
+ .film-context{grid-template-columns:.85fr 1.15fr;gap:35px;padding-left:28px;padding-right:28px}
+ .reading-info{padding-left:28px;padding-right:28px}
+ .reading-track{margin-left:28px;margin-right:28px}
+ .flower-section{margin-left:28px;margin-right:28px}
+}
 @media(max-width:760px){
  body{font-size:16px}
  .site-frame{width:calc(100% - 36px)}
@@ -189,10 +207,10 @@ img{display:block;max-width:100%;height:auto}
  .featured-copy .text-link{font-size:12px}
  .featured-number{right:0;top:-22px;font-size:32px}
  .about-section{padding:53px 0 62px}
- .about-layout{grid-template-columns:minmax(0,1fr) 112px;gap:18px;align-items:start;margin-top:22px}
+ .about-layout{grid-template-columns:1fr;gap:18px;align-items:start;margin-top:22px}
  .about-copy h2{font-size:30px;margin-bottom:12px}
  .about-copy p:not(.eyebrow){font-size:13px;line-height:1.95;margin-bottom:10px}
- .about-photo{margin-top:35px}
+ .about-photo{margin-top:2px;width:min(100%,220px)}
  .about-photo figcaption{font-size:9px;line-height:1.5}
  .site-footer{grid-template-columns:1fr;gap:27px;padding:27px 0 34px}
  .footer-brand{font-size:18px}
@@ -237,7 +255,7 @@ img{display:block;max-width:100%;height:auto}
  .featured-layout{grid-template-columns:100px minmax(0,1fr);gap:15px}
  .featured-image{max-width:100px}
  .featured-copy h2{font-size:19px}
- .about-layout{grid-template-columns:minmax(0,1fr) 96px;gap:13px}
+
  .article-hero h1{font-size:35px}
  .reading-info{gap:8px}
 }
