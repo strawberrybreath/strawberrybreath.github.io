@@ -242,3 +242,11 @@ img{display:block;max-width:100%;height:auto}
  .reading-info{gap:8px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+
+/* Verified official Netflix still */
+.film-still-section{max-width:760px;margin:48px auto 8px;padding:0 20px}
+.film-still-section figure{margin:0}
+.film-still-section img{display:block;width:100%;height:auto;object-fit:contain;background:var(--paper-deep)}
+.film-still-section figcaption{text-align:right;margin-top:9px;color:var(--soft);font:10px/1.7 var(--sans);letter-spacing:.04em}
+@media(max-width:760px){.film-still-section{padding:0;margin:35px auto 5px}.film-still-section figcaption{font-size:9px}}
