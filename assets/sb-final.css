@@ -122,3 +122,16 @@ footer{font-size:16px!important}
  .article-body{font-size:18px!important;line-height:2!important}
  .reading-progress{font-size:13px!important}
 }
+
+
+/* Bilingual navigation and balanced article intro */
+header nav a { display:inline-flex; flex-direction:column; align-items:center; gap:2px; line-height:1.25; }
+header nav a span { font-family:Georgia,serif; font-size:.72em; letter-spacing:.04em; opacity:.72; }
+.article-intro { display:grid; grid-template-columns:180px minmax(0,1fr); gap:clamp(24px,5vw,64px); align-items:center; }
+.article-intro .film-poster { grid-column:1; grid-row:1; margin:0; width:100%; }
+.article-intro .article-title { grid-column:2; grid-row:1; }
+.article-intro .film-poster img { display:block; width:100%; height:auto; max-height:265px; object-fit:contain; object-position:left center; }
+@media (max-width:640px) {
+  .article-intro { grid-template-columns:112px minmax(0,1fr); gap:18px; align-items:start; }
+  .article-intro .film-poster img { max-height:190px; }
+}
