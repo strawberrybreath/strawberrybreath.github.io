@@ -20,3 +20,6 @@ body>*{position:relative;z-index:1}
  .sb-header,.sb-article-header{padding-bottom:5px}
  body>header{padding-bottom:5px}
 }
+
+/* The navigation progress indicator replaces older page-specific progress widgets */
+.reading-progress,#reading-widget{display:none!important}
