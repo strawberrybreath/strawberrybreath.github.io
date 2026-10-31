@@ -338,3 +338,47 @@ body{
 @media(max-width:680px){
   html,body{background-attachment:scroll!important}
 }
+
+
+/* C typography direction: gentle handwritten character with robust cross-platform fallbacks */
+html,body,body *{
+  font-family:"Ma Shan Zheng","KaiTi","STKaiti","Kaiti SC","华文楷体","楷体",serif!important;
+}
+/* Homepage: centered introduction and balanced feature cover */
+.hero .copy{
+  width:min(850px,100%);
+  max-width:850px;
+  margin-inline:auto;
+  text-align:center!important;
+}
+.hero .copy .eyebrow,.hero .copy h1,.hero .copy .lead,.hero .copy p,.hero .copy .pill{
+  text-align:center!important;
+}
+.hero .copy .pill{display:inline-flex;margin:22px auto 0}
+.latest>.eyebrow,.latest>h2{text-align:center}
+.feature{
+  display:grid!important;
+  grid-template-columns:minmax(150px,230px) minmax(0,1fr) auto!important;
+  align-items:center!important;
+  gap:clamp(20px,4vw,42px)!important;
+  padding:clamp(18px,3vw,32px)!important;
+  text-decoration:none;
+}
+.feature-cover{margin:0;width:100%;max-width:230px}
+.feature-cover img{display:block;width:100%;height:auto;max-height:320px;object-fit:contain;object-position:center;box-shadow:0 10px 28px rgba(65,45,30,.13);border-radius:3px}
+.feature-cover figcaption{margin-top:9px;text-align:center;font:11px/1.5 Georgia,serif;letter-spacing:.12em;color:#9b8069}
+.feature-copy{min-width:0}
+.feature-copy small{letter-spacing:.12em;color:#9b8069;font-size:11px}
+.feature-copy h3{margin:12px 0;font-size:clamp(23px,3vw,34px);line-height:1.5;color:#514239}
+.feature-copy p{font-size:17px;line-height:1.95;color:#65594e}
+.feature-copy>b{display:inline-block;margin-top:8px;color:#b27e49}
+.feature-number{align-self:start;font-size:30px;color:#d8a28f;font-weight:400}
+@media(max-width:680px){
+ .hero .copy{padding-inline:6px}
+ .feature{grid-template-columns:112px minmax(0,1fr)!important;gap:16px!important;padding:15px!important}
+ .feature-cover{grid-column:1;grid-row:1/3}
+ .feature-cover img{max-height:210px}
+ .feature-copy h3{font-size:21px;line-height:1.5}
+ .feature-copy p{font-size:15px;line-height:1.8}
+ .feature-number{display:none}
+}
