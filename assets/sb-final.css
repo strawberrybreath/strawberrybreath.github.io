@@ -89,3 +89,36 @@ footer{font-size:14px}
  .article-body{font-size:17px;line-height:2;padding:24px 0}
  .article-body p{margin-bottom:1.15em}
 }
+
+
+/* Refined poster-title balance and larger site typography */
+body{font-size:20px!important;line-height:2!important}
+nav{font-size:16px!important}
+.eyebrow{font-size:13px!important}
+.copy>p:not(.eyebrow),.feature p,.about p{font-size:18px!important;line-height:2!important}
+.pill{font-size:16px!important}
+.note{font-size:19px!important;line-height:1.9!important}
+footer{font-size:16px!important}
+.wechat-link{font-size:15px!important}
+.article-intro{grid-template-columns:minmax(0,1fr) 190px!important;gap:clamp(32px,6vw,76px)!important;align-items:center!important}
+.article-title h1{font-size:clamp(44px,5vw,66px)!important;line-height:1.38!important}
+.article-title .lead{font-size:21px!important;line-height:1.9!important}
+.film-poster{width:100%!important;max-width:180px!important;margin:0 auto!important}
+.film-poster img{width:100%!important;height:auto!important;max-height:265px!important;object-fit:contain!important}
+.film-poster figcaption{font-size:14px!important}
+.article-body{font-size:22px!important;line-height:2.1!important}
+.reading-progress{font-size:15px!important}
+@media(max-width:720px){
+ body{font-size:18px!important}
+ nav{font-size:14px!important}
+ .copy>p:not(.eyebrow),.feature p,.about p{font-size:17px!important}
+ .note{font-size:17px!important}
+ .article-intro{grid-template-columns:minmax(0,1fr) minmax(100px,30%)!important;gap:14px!important}
+ .article-title h1{font-size:clamp(28px,7vw,37px)!important}
+ .article-title .lead{font-size:15px!important}
+ .film-poster{max-width:100%!important}
+ .film-poster img{max-height:205px!important}
+ .film-poster figcaption{font-size:11px!important}
+ .article-body{font-size:18px!important;line-height:2!important}
+ .reading-progress{font-size:13px!important}
+}
