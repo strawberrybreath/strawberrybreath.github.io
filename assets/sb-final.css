@@ -153,3 +153,25 @@ header nav a span { font-family:Georgia,serif; font-size:.72em; letter-spacing:.
  .contacts{gap:22px;flex-wrap:wrap}
  .wechat-contact img{width:96px;height:96px}
 }
+
+
+/* Text wrapping: cat photo in About and film poster in article body */
+.about-cat-photo{float:right;width:min(42%,340px);margin:8px 0 22px 28px;max-width:340px;clear:none}
+.about-cat-photo img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:16px;box-shadow:8px 8px 0 var(--yellow)}
+.about-cat-photo figcaption{margin-top:8px;color:var(--muted);font-size:13px;line-height:1.6}
+.about>div:last-child:after,.article-body:after{content:"";display:block;clear:both}
+.article-intro{display:block!important;margin:0 0 28px!important}
+.article-title{max-width:850px;margin:0 auto 26px}
+.article-title h1{max-width:850px}
+.article-body .film-poster{float:left;width:clamp(150px,21%,220px);max-width:220px;margin:8px 28px 20px 0;text-align:center}
+.article-body .film-poster img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;box-shadow:0 8px 24px #44372f20;border-radius:3px}
+.article-body .film-poster figcaption{margin-top:8px;font-size:12px;line-height:1.6;color:var(--muted)}
+.article-body p{display:block}
+@media(max-width:720px){
+ .about-cat-photo{float:right;width:44%;max-width:190px;margin:6px 0 14px 16px}
+ .about-cat-photo img{max-height:none}
+ .article-intro{display:block!important}
+ .article-title{margin-bottom:22px}
+ .article-body .film-poster{float:left;width:38%;max-width:145px;margin:5px 16px 14px 0}
+ .article-body .film-poster img{max-height:none}
+}
