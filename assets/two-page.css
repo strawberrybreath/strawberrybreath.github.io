@@ -309,3 +309,54 @@ img{display:block;max-width:100%;height:auto}
  .post-entry{grid-template-columns:92px minmax(0,1fr);gap:14px}
  .post-entry-copy h3{font-size:16px}
 }
+
+
+/* Home page: a quiet three-part structure */
+.home-page .home-intro{padding:88px 0 76px;border-bottom:1px solid var(--line)}
+.home-page .home-subtitle{font-size:17px;letter-spacing:.08em;color:var(--muted);margin:0 0 13px}
+.home-page .home-intro h1{font:500 clamp(44px,6vw,72px)/1.2 var(--serif);letter-spacing:-.045em;margin:0 0 39px;overflow-wrap:anywhere}
+.home-page .home-intro h1 span{color:var(--accent)}
+.home-page .home-about{max-width:790px;padding-left:25px;border-left:1px solid var(--accent)}
+.home-page .home-about h2{font:500 23px/1.5 var(--serif);margin:0 0 14px;color:var(--accent-dark)}
+.home-page .home-about p{font-size:16px;line-height:2.15;color:var(--muted);margin:0 0 12px}
+.home-page .home-about p:last-child{margin-bottom:0}
+.home-page .home-articles{padding:62px 0 76px}
+.home-page .home-section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding-bottom:19px;border-bottom:1px solid var(--line)}
+.home-page .home-section-heading h2{font:500 29px/1.4 var(--serif);margin:0}
+.home-page .home-section-heading>span{font-size:12px;color:var(--soft)}
+.home-page .article-list-item{display:grid;grid-template-columns:148px minmax(0,1fr);gap:29px;align-items:center;padding:27px 0;border-bottom:1px solid var(--line)}
+.home-page .article-list-image{display:block;width:100%;max-width:148px;background:var(--paper-deep)}
+.home-page .article-list-image img{width:100%;height:auto;object-fit:contain}
+.home-page .article-list-copy{min-width:0}
+.home-page .article-list-category{font:10px var(--sans);letter-spacing:.12em;color:var(--accent);margin:0 0 8px}
+.home-page .article-list-copy h3{font:500 22px/1.55 var(--serif);margin:0 0 8px}
+.home-page .article-list-copy h3 a:hover{color:var(--accent-dark)}
+.home-page .article-list-copy>p:not(.article-list-category){font-size:14px;line-height:1.95;color:var(--muted);margin:0 0 12px}
+.home-page .article-list-link{display:inline-flex;align-items:center;gap:9px;color:var(--accent-dark);font-size:13px;border-bottom:1px solid rgba(166,80,61,.4);padding-bottom:4px}
+.home-page .article-list-link span{font-family:var(--sans)}
+.home-page .home-contact{scroll-margin-top:95px;padding-top:29px}
+.home-page .home-contact .footer-brand{font-size:18px}
+@media(max-width:760px){
+ .home-page .home-intro{padding:57px 0 48px}
+ .home-page .home-subtitle{font-size:14px;line-height:1.8;margin-bottom:9px}
+ .home-page .home-intro h1{font-size:clamp(37px,10vw,52px);margin-bottom:27px}
+ .home-page .home-about{padding-left:17px}
+ .home-page .home-about h2{font-size:20px;margin-bottom:9px}
+ .home-page .home-about p{font-size:14px;line-height:2.05;margin-bottom:10px}
+ .home-page .home-articles{padding:43px 0 53px}
+ .home-page .home-section-heading{padding-bottom:14px}
+ .home-page .home-section-heading h2{font-size:25px}
+ .home-page .home-section-heading>span{font-size:10px}
+ .home-page .article-list-item{grid-template-columns:96px minmax(0,1fr);gap:17px;padding:21px 0;align-items:center}
+ .home-page .article-list-image{max-width:96px}
+ .home-page .article-list-category{font-size:9px;margin-bottom:5px}
+ .home-page .article-list-copy h3{font-size:17px;line-height:1.55;margin-bottom:6px}
+ .home-page .article-list-copy>p:not(.article-list-category){font-size:12px;line-height:1.8;margin-bottom:8px}
+ .home-page .article-list-link{font-size:11px}
+ .home-page .home-contact{padding-top:25px}
+}
+@media(max-width:390px){
+ .home-page .article-list-item{grid-template-columns:86px minmax(0,1fr);gap:14px}
+ .home-page .article-list-image{max-width:86px}
+ .home-page .article-list-copy h3{font-size:16px}
+}
