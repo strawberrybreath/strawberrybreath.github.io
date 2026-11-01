@@ -13,3 +13,28 @@ body h1, body h2, body h3, body figcaption {
   .home-page .home-intro h1 { line-height: 1.48 !important; }
   .home-page .article-list-item { align-items: center !important; }
 }
+
+
+/* Homepage section order: site introduction → articles → about → contact */
+.home-page .home-profile{
+  padding:58px 15% 66px;
+  border-top:1px solid var(--line);
+  background:rgba(251,249,244,.42);
+}
+.home-page .home-profile-inner{max-width:700px;margin:0 auto}
+.home-page .home-profile h2{
+  margin:0 0 18px;
+  color:var(--ink);
+  font:500 25px/1.6 var(--serif);
+}
+.home-page .home-profile p{
+  margin:0 0 13px;
+  color:var(--muted);
+  font:15px/2.15 var(--body);
+}
+.home-page .home-profile p:last-child{margin-bottom:0}
+@media(max-width:760px){
+  .home-page .home-profile{padding:40px 3% 46px}
+  .home-page .home-profile h2{font-size:22px;margin-bottom:12px}
+  .home-page .home-profile p{font-size:14px;line-height:2.08}
+}
