@@ -1,0 +1,15 @@
+/* Final typography guard: avoid unavailable webfont glyphs and keep CJK readable. */
+html, body, body p, body li, body a, body button, body input, body label,
+body small, body span, body div, body nav, body footer, body header,
+body h1, body h2, body h3, body figcaption {
+  font-family: "Kaiti SC", "STKaiti", "KaiTi", "Songti SC", "STSong",
+    "Noto Serif SC", "SimSun", serif !important;
+}
+.brand-text strong, .footer-brand, .contact-links a {
+  font-family: "DM Sans", "PingFang SC", Arial, sans-serif !important;
+}
+.brand-text small { font-family: "Kaiti SC", "STKaiti", "KaiTi", "Songti SC", "STSong", "Noto Serif SC", "SimSun", serif !important; }
+@media (max-width: 760px) {
+  .home-page .home-intro h1 { line-height: 1.48 !important; }
+  .home-page .article-list-item { align-items: center !important; }
+}
