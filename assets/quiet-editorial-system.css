@@ -2455,3 +2455,36 @@ html::after{
 @media(max-width:760px){
   .site-header{top:3px!important}
 }
+
+
+/* Corrected glass-card direction: increase transparency (lower fill opacity)
+   across the navigation, article cards, contact cards and translucent quote panel. */
+.site-header{
+  background:linear-gradient(112deg,
+    rgba(255,255,255,.42) 0%,
+    rgba(255,250,248,.34) 48%,
+    rgba(255,247,246,.38) 100%)!important;
+}
+@media(max-width:760px){
+  .site-header{
+    background:rgba(255,250,248,.38)!important;
+  }
+}
+.home-page .article-list-item,
+.archive-page .article-list-item{
+  background:rgba(255,252,246,.30)!important;
+}
+.home-page .article-list-item:hover,
+.archive-page .article-list-item:hover{
+  background:rgba(255,253,249,.40)!important;
+}
+.home-page .contact-methods .contact-method{
+  background:rgba(255,252,246,.32)!important;
+}
+.home-page .contact-methods .contact-method:hover{
+  background:rgba(255,253,249,.44)!important;
+}
+.article-page blockquote,
+.article-page .essay-quote{
+  background:rgba(255,255,255,.20)!important;
+}
