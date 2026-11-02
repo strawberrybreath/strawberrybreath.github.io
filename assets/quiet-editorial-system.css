@@ -961,3 +961,49 @@ body.tobacco-article-page{
 }
 .home-page .contact-methods .contact-method-icon{color:var(--accent)!important}
 .home-page .contact-methods .contact-method-action{color:var(--accent)!important}
+
+/* Full-bleed paper stock: visible fine grain across the entire viewport and page. */
+html{
+  position:relative!important;
+  isolation:isolate!important;
+  min-height:100%!important;
+  background:transparent!important;
+}
+html::before{
+  content:""!important;
+  position:fixed!important;
+  inset:0!important;
+  z-index:-1!important;
+  pointer-events:none!important;
+  background-color:#F1EADF!important;
+  background-image:
+    radial-gradient(ellipse at 18% 12%,rgba(255,255,255,.42) 0,rgba(255,255,255,0) 48%),
+    radial-gradient(ellipse at 82% 78%,rgba(174,145,108,.10) 0,rgba(174,145,108,0) 55%),
+    repeating-linear-gradient(0deg,rgba(118,91,62,.025) 0,rgba(118,91,62,.025) 1px,transparent 1px,transparent 4px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Cfilter id='papergrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.68' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23papergrain)' opacity='.26'/%3E%3C/svg%3E")!important;
+  background-repeat:no-repeat,no-repeat,repeat,repeat!important;
+  background-size:cover,cover,100% 4px,220px 220px!important;
+}
+body,
+body.home-page,
+body.archive-page,
+body.article-page,
+body.enola-article-page,
+body.witch-article-page,
+body.poem-article-page,
+body.tobacco-article-page{
+  min-height:100vh!important;
+  background:transparent!important;
+}
+.site-frame,
+.home-page main,
+.archive-page main,
+.article-page main{
+  background:transparent!important;
+}
+.home-page .home-profile{
+  background:transparent!important;
+}
+.article-page .article-hero{
+  background:transparent!important;
+}
