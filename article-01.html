@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="assets/redesign.css?v=20261101">
 <link rel="stylesheet" href="assets/typography-fix.css?v=20261101">
 <link rel="stylesheet" href="assets/human-editorial.css?v=20261102">
+<link rel="stylesheet" href="assets/global-header.css?v=20261102">
 <link rel="stylesheet" href="assets/article-visuals.css?v=20261102">
 </head>
 <body class="article-page">
@@ -27,10 +28,21 @@
     <img class="brand-avatar" src="assets/avatar-circle-256.png" alt="Strawberry Breath 头像">
     <span class="brand-text"><strong>Strawberry Breath</strong><small>草莓味口气</small></span>
   </a>
+  <div class="header-reading" aria-label="页面阅读进度与阅读统计">
+    <div class="reading-ring" id="reading-ring" role="img" aria-label="阅读进度 0%">
+      <span id="reading-percent">0%</span>
+    </div>
+    <div class="reading-stats">
+      <span><strong id="reading-words">—</strong> 字</span>
+      <span>约 <strong id="reading-time">—</strong> 分钟读完</span>
+    </div>
+    <div class="reading-confetti" id="reading-confetti" aria-hidden="true"></div>
+  </div>
   <nav class="site-nav" aria-label="主导航">
-    <a href="./">首页</a>
-    <a href="article-01.html" class="is-current" aria-current="page">第一篇</a>
-    <a href="article-02.html">第二篇</a>
+    <a href="./" >主页</a>
+    <a href="./#articles">列表</a>
+    <a href="./#about">关于我</a>
+    <a href="./#contact">联系</a>
   </nav>
 </header>
 
@@ -118,13 +130,7 @@
     </div>
   </section>
 
-  <section class="reading-info" aria-label="文章阅读信息">
-    <div><span>阅读进度</span><strong id="reading-percent">0%</strong></div>
-    <div><strong id="reading-words">—</strong><span> 字</span><b class="reading-dot">·</b><span>约 </span><strong id="reading-time">—</strong><span> 分钟</span></div>
-  </section>
-  <div class="reading-track" aria-hidden="true"><span id="reading-bar"></span></div>
-
-  <article class="essay-content" id="bodycopy">
+<article class="essay-content" id="bodycopy">
     <p>最初看《Enola Holmes》，我记住的是那个总爱突然转过头来和观众说话的女孩。她穿着不太合身的裙子，骑马、解谜、翻墙，遇到麻烦时先想办法解决，偶尔还会露出一点得意的笑。她有些莽撞，也有不服输的劲儿。看她的时候，我很容易忘记她生活在维多利亚时代——那个女性连自己的生活都常常要由别人替她安排的时代。</p>
     <p>后来第二部、第三部陆续出现，我反而觉得，把这个系列拆成三篇文章没有太大必要。三部电影本来就在讲同一个女孩的成长：她先学着离开别人替她规划的生活，再走进真实的社会，最后继续追问，已经拥有的身份和关系，会不会又悄悄变成新的边界。案件换了，身边的人也变了，但 Enola 一直在做同一件事：把人生的决定权握回自己手里。</p>
     <p>所以这篇文章想把三部电影放在一起看。它们当然是轻快的悬疑冒险片，有追逐、有笑料，也有漂亮的服装和场景；但我更喜欢的，是故事里那些关于女性教育、劳动、友谊、公共参与和自我选择的部分。</p>
@@ -188,7 +194,6 @@
   </footer>
 </main>
 </div>
-<div class="reading-progress-top" id="reading-progress-top" aria-hidden="true"></div>
 <script src="progress.js" defer></script>
 </body>
 </html>
