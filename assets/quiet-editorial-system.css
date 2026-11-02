@@ -3261,3 +3261,33 @@ html::after{
     text-align:left!important;
   }
 }
+
+
+/* Mobile footer: stack slogan first, then site name and copyright beneath it. */
+@media screen and (max-width:760px){
+  html body .site-footer .footer-glass-card,
+  html body .article-page .article-ending.site-footer .footer-glass-card{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+    gap:10px!important;
+  }
+  html body .site-footer .footer-glass-card>.site-slogan,
+  html body .article-page .article-ending.site-footer .footer-glass-card>.site-slogan{
+    order:0!important;
+    align-self:stretch!important;
+    width:100%!important;
+    margin:0!important;
+    text-align:left!important;
+  }
+  html body .site-footer .footer-glass-card>.footer-identity,
+  html body .article-page .article-ending.site-footer .footer-glass-card>.footer-identity{
+    order:1!important;
+    align-self:flex-start!important;
+    align-items:flex-start!important;
+    width:100%!important;
+    margin:0!important;
+    text-align:left!important;
+  }
+}
