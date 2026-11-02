@@ -2427,3 +2427,31 @@ html::after{
     transform:translateX(26px)!important;
   }
 }
+
+
+/* Lift the floating navigation slightly and make all frosted-glass cards
+   a little less transparent for clearer separation from the background. */
+.site-header{
+  top:6px!important;
+  background:linear-gradient(112deg,
+    rgba(255,255,255,.72) 0%,
+    rgba(255,250,248,.64) 48%,
+    rgba(255,247,246,.68) 100%)!important;
+}
+.home-page .article-list-item,
+.archive-page .article-list-item{
+  background:rgba(255,252,246,.56)!important;
+}
+.home-page .article-list-item:hover,
+.archive-page .article-list-item:hover{
+  background:rgba(255,253,249,.68)!important;
+}
+.home-page .contact-methods .contact-method{
+  background:rgba(255,252,246,.58)!important;
+}
+.home-page .contact-methods .contact-method:hover{
+  background:rgba(255,253,249,.72)!important;
+}
+@media(max-width:760px){
+  .site-header{top:3px!important}
+}
