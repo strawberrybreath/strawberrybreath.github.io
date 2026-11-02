@@ -179,3 +179,50 @@
   .home-page .article-list-copy .article-list-meta,
   .archive-page .article-list-copy .article-list-meta{font-size:11px!important}
 }
+
+
+/* Issue marker: no enclosing circle; emphasize the numeral in the site's own typeface. */
+.home-page .article-list-copy .article-issue,
+.archive-page .article-list-copy .article-issue{
+  display:inline-flex!important;
+  align-items:baseline!important;
+  justify-content:center!important;
+  gap:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#a64f48!important;
+  font-family:var(--body)!important;
+  font-size:13px!important;
+  font-weight:400!important;
+  line-height:1.7!important;
+  text-align:center!important;
+}
+.home-page .article-list-copy .article-issue-number,
+.archive-page .article-list-copy .article-issue-number{
+  display:inline!important;
+  width:auto!important;
+  min-width:0!important;
+  padding:0 1px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:inherit!important;
+  font-family:var(--body)!important;
+  font-size:1.35em!important;
+  font-weight:400!important;
+  line-height:inherit!important;
+  text-align:center!important;
+  font-variant-numeric:normal!important;
+}
+.home-page .article-list-copy .article-issue-prefix,
+.home-page .article-list-copy .article-issue-suffix,
+.archive-page .article-list-copy .article-issue-prefix,
+.archive-page .article-list-copy .article-issue-suffix{
+  font-family:var(--body)!important;
+  font-size:inherit!important;
+  font-weight:400!important;
+}
