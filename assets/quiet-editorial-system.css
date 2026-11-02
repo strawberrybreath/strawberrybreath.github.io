@@ -2899,3 +2899,14 @@ html::after{
   .site-footer>.back-to-top,
   .article-page .article-ending>.back-to-top{grid-column:2!important;grid-row:1!important}
 }
+
+
+/* Keep both language lines of the footer slogan in the site's text font. */
+.site-footer .site-slogan,
+.article-page .article-ending .site-slogan,
+.site-footer .site-slogan span,
+.article-page .article-ending .site-slogan span,
+.site-footer .site-slogan span+span,
+.article-page .article-ending .site-slogan span+span{
+  font-family:var(--body)!important;
+}
