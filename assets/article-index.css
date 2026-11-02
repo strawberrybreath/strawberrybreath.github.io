@@ -288,3 +288,28 @@
     margin-right:2em!important;
   }
 }
+
+
+/* Remove stray decorative dots around the issue number and make the numeral clearer. */
+.home-page .article-list-copy .article-issue::before,
+.home-page .article-list-copy .article-issue::after,
+.archive-page .article-list-copy .article-issue::before,
+.archive-page .article-list-copy .article-issue::after,
+.home-page .article-list-copy .article-issue-number::before,
+.home-page .article-list-copy .article-issue-number::after,
+.archive-page .article-list-copy .article-issue-number::before,
+.archive-page .article-list-copy .article-issue-number::after{
+  content:none!important;
+  display:none!important;
+}
+.home-page .article-list-copy .article-issue-number,
+.archive-page .article-list-copy .article-issue-number{
+  font-size:1.55em!important;
+  font-weight:500!important;
+}
+@media(max-width:760px){
+  .home-page .article-list-copy .article-issue-number,
+  .archive-page .article-list-copy .article-issue-number{
+    font-size:1.45em!important;
+  }
+}
