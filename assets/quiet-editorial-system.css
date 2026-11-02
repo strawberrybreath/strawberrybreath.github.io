@@ -946,3 +946,18 @@ body.tobacco-article-page{
   background-size:auto,180px 180px!important;
   background-attachment:fixed!important;
 }
+
+
+/* Restore the original unified contact-card treatment: warm paper and red outlines. */
+.home-page .contact-methods .contact-method{
+  background:transparent!important;
+  border:1px solid color-mix(in srgb,var(--accent) 72%,transparent)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.home-page .contact-methods .contact-method:hover{
+  background:color-mix(in srgb,var(--accent) 5%,var(--paper))!important;
+  border-color:var(--accent)!important;
+}
+.home-page .contact-methods .contact-method-icon{color:var(--accent)!important}
+.home-page .contact-methods .contact-method-action{color:var(--accent)!important}
