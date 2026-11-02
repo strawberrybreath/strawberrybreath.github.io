@@ -1048,3 +1048,69 @@ html::before{
 body,main{
   background:transparent!important;
 }
+
+/* Victorian book-paper direction: antique parchment, walnut ink and oxblood accents. */
+:root{
+  --paper:#E5D5B5!important;
+  --paper-light:#F0E5CE!important;
+  --paper-soft:#D9C5A1!important;
+  --ink:#3B2B22!important;
+  --muted:#76624D!important;
+  --accent:#783D3F!important;
+  --sage:#68705A!important;
+  --blush:#B99B7A!important;
+  --line:rgba(76,53,37,.30)!important;
+}
+html,body{
+  background:transparent!important;
+  color:var(--ink)!important;
+}
+html::before{
+  background-color:#DFCCAA!important;
+  background-image:
+    radial-gradient(ellipse at 50% 42%,rgba(250,240,216,.76) 0%,rgba(239,222,188,.38) 43%,rgba(166,132,91,.20) 100%),
+    linear-gradient(112deg,#D2BC96 0%,#E8D9B9 22%,#F0E4C9 49%,#E2D0AD 75%,#CDB58D 100%),
+    repeating-linear-gradient(0deg,rgba(89,62,38,.055) 0,rgba(89,62,38,.055) 1px,transparent 1px,transparent 5px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.58' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)' opacity='.22'/%3E%3C/svg%3E")!important;
+  background-repeat:no-repeat,no-repeat,repeat,repeat!important;
+  background-size:cover,cover,100% 5px,240px 240px!important;
+  background-attachment:fixed,fixed,scroll,scroll!important;
+}
+.site-header{
+  background:transparent!important;
+  border-bottom:1px solid rgba(76,53,37,.32)!important;
+}
+.site-header::before{
+  background-image:
+    radial-gradient(ellipse at 50% 42%,rgba(250,240,216,.76),rgba(239,222,188,.38) 55%,rgba(166,132,91,.20)),
+    linear-gradient(112deg,#D2BC96 0%,#E8D9B9 22%,#F0E4C9 49%,#E2D0AD 75%,#CDB58D 100%)!important;
+  background-size:cover,cover!important;
+  background-position:center center!important;
+  background-attachment:fixed!important;
+  border-bottom:1px solid rgba(76,53,37,.20)!important;
+}
+.site-header .brand-text strong,
+.site-header .site-nav a{color:#4A3329!important}
+.site-header .site-nav a:hover,
+.site-header .site-nav a.is-current{color:#783D3F!important}
+.home-page .contact-methods .contact-method{
+  border-color:rgba(120,61,63,.72)!important;
+}
+.home-page .contact-methods .contact-method-icon,
+.home-page .contact-methods .contact-method-action{color:#783D3F!important}
+
+/* Latin lettering uses an elegant connected hand; Chinese falls back to the existing CJK serif. */
+body,body *{
+  font-family:"Italianno","Noto Serif SC","Songti SC","STSong","SimSun",serif!important;
+}
+.site-header .brand-text strong,
+.home-page .home-intro h1{
+  font-family:"Italianno","Noto Serif SC",serif!important;
+  font-weight:400!important;
+}
+.site-header .brand-text strong{font-size:25px!important;line-height:1!important}
+.home-page .home-intro h1{font-size:clamp(58px,8vw,88px)!important;letter-spacing:0!important}
+.site-header .site-nav a{font-size:21px!important}
+.eyebrow,.article-topline,.article-tags,.site-footer,.home-section-heading a{
+  letter-spacing:.025em!important;
+}
