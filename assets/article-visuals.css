@@ -40,3 +40,13 @@
  .witch-image-pair figcaption{font-size:9px}
  .witch-sources{margin-top:38px;padding-top:22px}
 }
+
+/* Second essay: give the title and deck the full editorial measure. */
+.witch-hero{display:block;padding:42px 50px 38px}
+.witch-hero .article-hero-copy{max-width:820px}
+.witch-hero h1{max-width:800px}
+.witch-hero-image{max-width:900px;padding:0 30px}
+@media(max-width:760px){
+ .witch-hero{padding:24px 0 25px}
+ .witch-hero-image{padding:0}
+}
