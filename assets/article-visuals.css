@@ -50,3 +50,21 @@
  .witch-hero{padding:24px 0 25px}
  .witch-hero-image{padding:0}
 }
+
+
+/* Creator and cast editorial galleries */
+.creator-feature,.millie-feature{margin:3.5rem auto;max-width:980px}
+.creator-profile{display:grid;grid-template-columns:minmax(180px,280px) 1fr;gap:2rem;align-items:start;margin:1.6rem 0 2rem}
+.creator-portrait,.millie-real-life figure,.millie-film-gallery figure{margin:0}
+.creator-portrait img,.millie-real-life img,.millie-film-gallery img{display:block;width:100%;height:auto;object-fit:contain}
+.creator-portrait figcaption,.millie-real-life figcaption,.millie-film-gallery figcaption{font-size:.78rem;line-height:1.6;color:var(--muted,#777);margin-top:.55rem}
+.creator-copy h3,.millie-real-life h3{font-family:inherit;font-size:1.35rem;line-height:1.5;margin:0 0 .8rem}
+.creator-copy p,.millie-intro,.millie-real-life p{line-height:2;margin:.5rem 0 1rem}
+.creator-copy a,.millie-real-life a,.creator-source a{color:inherit;text-underline-offset:3px}
+.creator-credits{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;border-top:1px solid rgba(80,70,55,.2);border-bottom:1px solid rgba(80,70,55,.2);padding:1.2rem 0}
+.creator-credits div{display:grid;grid-template-columns:1fr auto;gap:.35rem 1rem;align-content:start}
+.creator-credits strong{font-size:1.05rem}.creator-credits span{font-size:.78rem;color:var(--muted,#777)}.creator-credits p{grid-column:1/-1;margin:0;line-height:1.8}
+.creator-source{font-size:.78rem;color:var(--muted,#777);margin-top:1rem}
+.millie-film-gallery{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.4rem 0 2rem}
+.millie-real-life{display:grid;grid-template-columns:minmax(180px,280px) 1fr;gap:2rem;align-items:start;margin-top:2rem;padding-top:1.6rem;border-top:1px solid rgba(80,70,55,.2)}
+@media(max-width:680px){.creator-profile,.millie-real-life{grid-template-columns:1fr;gap:1rem}.creator-portrait,.millie-real-life figure{max-width:360px}.millie-film-gallery{grid-template-columns:1fr;gap:1.5rem}.creator-credits{grid-template-columns:1fr;gap:1rem}.creator-feature,.millie-feature{margin:2.5rem auto}}
