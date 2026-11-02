@@ -3212,3 +3212,52 @@ html::after{
   border:0!important;
   box-shadow:none!important;
 }
+
+
+/* The slogan leads the footer glass card; site identity follows it. */
+.site-footer .footer-glass-card,
+.article-page .article-ending .footer-glass-card{
+  flex-direction:row!important;
+}
+.site-footer .footer-glass-card>.site-slogan,
+.article-page .article-ending .footer-glass-card>.site-slogan{
+  order:1!important;
+  flex:1 1 auto!important;
+  text-align:left!important;
+}
+.site-footer .footer-glass-card>.footer-identity,
+.article-page .article-ending .footer-glass-card>.footer-identity{
+  order:2!important;
+  flex:0 0 auto!important;
+  align-items:flex-end!important;
+  text-align:right!important;
+}
+/* A restrained text arrow keeps the back-to-top control visually consistent. */
+.site-footer .footer-actions .back-to-top-arrow,
+.article-page .article-ending .footer-actions .back-to-top-arrow{
+  display:inline-block!important;
+  font-family:Arial,sans-serif!important;
+  font-size:15px!important;
+  font-weight:400!important;
+  line-height:1!important;
+  transform:none!important;
+  vertical-align:baseline!important;
+}
+@media(max-width:760px){
+  .site-footer .footer-glass-card,
+  .article-page .article-ending .footer-glass-card{
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+  .site-footer .footer-glass-card>.site-slogan,
+  .article-page .article-ending .footer-glass-card>.site-slogan{
+    order:1!important;
+    text-align:left!important;
+  }
+  .site-footer .footer-glass-card>.footer-identity,
+  .article-page .article-ending .footer-glass-card>.footer-identity{
+    order:2!important;
+    align-items:flex-start!important;
+    text-align:left!important;
+  }
+}
