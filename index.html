@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="assets/human-editorial.css?v=20261102">
 <link rel="stylesheet" href="assets/global-header.css?v=20261102">
 <link rel="stylesheet" href="assets/responsive-editorial.css?v=20261102"><link rel="stylesheet" href="assets/home-editorial-overhaul.css?v=20261102-clean">
-<link rel="stylesheet" href="assets/quiet-editorial-system.css?v=20261102-readingnav">
+<link rel="stylesheet" href="assets/quiet-editorial-system.css?v=20261102-unifiednav">
 </head>
 <body class="home-page">
 <div class="site-frame">
@@ -24,16 +24,20 @@
     <img class="brand-avatar" src="assets/avatar-circle-256.png" alt="Strawberry Breath 头像">
     <span class="brand-text"><strong>Strawberry Breath</strong><small>草莓味口气</small></span>
   </a>
-  <nav class="site-nav" aria-label="主导航">
-    <a href="./" class="is-current" aria-current="page">主页</a>
-    <a href="articles.html">文章</a>
-    <a href="./#about">关于我</a>
-  </nav>
-  <div class="header-reading" aria-label="阅读进度与文章信息">
-    <div class="reading-stats"><span><strong id="reading-words">0</strong> 字</span><span>约 <strong id="reading-time">1</strong> 分钟</span></div>
+  <div class="header-reading" aria-label="阅读进度与文章统计">
     <div class="reading-ring" id="reading-ring" role="img" aria-label="阅读进度 0%"><span id="reading-percent">0%</span></div>
+    <div class="reading-stats">
+      <span><strong id="reading-words">0</strong> 字</span>
+      <span>约 <strong id="reading-time">1</strong> 分钟读完</span>
+    </div>
     <span class="reading-confetti" id="reading-confetti" aria-hidden="true"></span>
   </div>
+  <nav class="site-nav" aria-label="主导航">
+    <a href="./">主页</a>
+    <a href="articles.html">列表</a>
+    <a href="./#about">关于我</a>
+    <a href="./#contact">联系</a>
+  </nav>
 </header>
 
 <main>
@@ -69,6 +73,15 @@
     </div>
   </section>
 </main>
+
+<section class="home-contact" id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title">联系</h2>
+  <div class="home-contact-links">
+    <a href="https://github.com/strawberrybreath" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="mailto:strawberrybreath@gmail.com">Email</a>
+    <span class="wechat-contact">微信公众号：草莓味口气</span>
+  </div>
+</section>
 
 <footer class="site-footer">
   <a href="./" class="footer-brand">Strawberry Breath</a>
