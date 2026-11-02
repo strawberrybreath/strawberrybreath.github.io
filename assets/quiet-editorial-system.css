@@ -2910,3 +2910,23 @@ html::after{
 .article-page .article-ending .site-slogan span+span{
   font-family:var(--body)!important;
 }
+
+
+/* Explicitly render the bilingual site slogan as two stacked lines on every page. */
+.site-footer .site-slogan,
+.article-page .article-ending .site-slogan{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-end!important;
+  justify-content:flex-start!important;
+  gap:2px!important;
+  white-space:normal!important;
+  line-height:1.7!important;
+}
+.site-footer .site-slogan>span,
+.article-page .article-ending .site-slogan>span{
+  display:block!important;
+  width:auto!important;
+  max-width:100%!important;
+  white-space:normal!important;
+}
