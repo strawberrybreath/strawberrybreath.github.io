@@ -1728,3 +1728,52 @@ body{padding-top:76px!important}
 @media(max-width:760px){
   .site-header .site-nav a .nav-en{font-size:9px!important;letter-spacing:.045em!important}
 }
+
+
+/* Compact circular portrait list for film creators. */
+.film-credits{
+  width:min(760px,calc(100% - 44px))!important;
+  max-width:760px!important;
+  margin:26px auto 34px!important;
+  padding:22px 0 8px!important;
+  border-top:1px solid var(--line)!important;
+  border-bottom:1px solid var(--line)!important;
+  background:transparent!important;
+}
+.film-credits-heading{margin:0 0 12px!important}
+.film-credits-heading h2{margin:0!important;font-size:19px!important;line-height:1.6!important}
+.film-credits-kicker{margin:0 0 4px!important;font-size:9px!important;letter-spacing:.16em!important}
+.film-credit-person{
+  display:grid!important;
+  grid-template-columns:62px minmax(0,1fr)!important;
+  gap:16px!important;
+  align-items:center!important;
+  padding:13px 0!important;
+  border-top:1px solid rgba(178,126,73,.2)!important;
+  background:transparent!important;
+}
+.film-credit-person>img{
+  display:block!important;
+  width:62px!important;height:62px!important;
+  aspect-ratio:1/1!important;
+  border-radius:50%!important;
+  object-fit:cover!important;
+  object-position:center 35%!important;
+  border:2px solid #FECBCB!important;
+  box-shadow:none!important;
+  background:#F7F4ED!important;
+}
+.film-credit-copy{min-width:0!important}
+.film-credit-role{margin:0 0 2px!important;font-size:9px!important;line-height:1.5!important;letter-spacing:.09em!important;color:#9A7665!important}
+.film-credit-copy h3{margin:0 0 3px!important;font-size:16px!important;line-height:1.5!important;font-weight:600!important;color:#302D29!important}
+.film-credit-copy>p:not(.film-credit-role){margin:0 0 4px!important;font-size:12px!important;line-height:1.75!important;color:#625B53!important}
+.film-credit-copy>a{font-size:10px!important;line-height:1.5!important;color:#B27E49!important;text-decoration:none!important}
+.film-credit-copy>a:hover{text-decoration:underline!important}
+@media(max-width:600px){
+ .film-credits{width:calc(100% - 36px)!important;margin:20px auto 28px!important;padding-top:18px!important}
+ .film-credit-person{grid-template-columns:52px minmax(0,1fr)!important;gap:12px!important;padding:11px 0!important}
+ .film-credit-person>img{width:52px!important;height:52px!important}
+ .film-credit-copy h3{font-size:14px!important}
+ .film-credit-copy>p:not(.film-credit-role){font-size:11px!important;line-height:1.7!important}
+ .film-credit-copy>a{font-size:9px!important}
+}
