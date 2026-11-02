@@ -1122,3 +1122,59 @@ body,body *{
   -webkit-text-stroke:.45px currentColor!important;
   text-shadow:0 0 .35px currentColor!important;
 }
+
+
+/* Deep strawberry-oxblood ink: restrained, dark and slightly berry-toned. */
+:root{
+  --accent:#682638!important;
+}
+.site-header .site-nav a:hover,
+.site-header .site-nav a.is-current{color:#682638!important}
+.home-page .contact-methods .contact-method{
+  border-color:rgba(104,38,56,.78)!important;
+}
+.home-page .contact-methods .contact-method-icon,
+.home-page .contact-methods .contact-method-action{color:#682638!important}
+.home-page .contact-methods .contact-method:hover{
+  background:rgba(104,38,56,.055)!important;
+  border-color:#682638!important;
+}
+
+/* One shared parchment stock for the homepage, every article and future articles. */
+html,
+html:has(body.enola-article-page),
+html:has(body.witch-article-page),
+html:has(body.poem-article-page),
+html:has(body.tobacco-article-page),
+body,
+body.home-page,
+body.article-page,
+body.enola-article-page,
+body.witch-article-page,
+body.poem-article-page,
+body.tobacco-article-page{
+  background:transparent!important;
+  background-color:transparent!important;
+  color:var(--ink)!important;
+}
+/* Keep the same antique-paper canvas and grain on every page. */
+html::before{
+  background-color:#DFCCAA!important;
+  background-image:
+    radial-gradient(ellipse at 50% 42%,rgba(250,240,216,.76) 0%,rgba(239,222,188,.38) 43%,rgba(166,132,91,.20) 100%),
+    linear-gradient(112deg,#D2BC96 0%,#E8D9B9 22%,#F0E4C9 49%,#E2D0AD 75%,#CDB58D 100%),
+    repeating-linear-gradient(0deg,rgba(89,62,38,.055) 0,rgba(89,62,38,.055) 1px,transparent 1px,transparent 5px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.58' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)' opacity='.22'/%3E%3C/svg%3E")!important;
+  background-repeat:no-repeat,no-repeat,repeat,repeat!important;
+  background-size:cover,cover,100% 5px,240px 240px!important;
+  background-attachment:fixed,fixed,scroll,scroll!important;
+}
+/* Article-specific accents live on reading panels/highlights, not on the page canvas. */
+.enola-article-page .essay-content p.article-highlight{background:#EAD9BD!important}
+.witch-article-page .essay-content p.article-highlight{background:#D9DDD1!important}
+.poem-article-page .essay-content p.article-highlight{background:#E8D8CE!important}
+.tobacco-article-page .essay-content p.article-highlight{background:#DDDFDB!important}
+.enola-article-page .article-hero{box-shadow:inset 0 4px 0 rgba(104,38,56,.14)!important}
+.witch-article-page .article-hero{box-shadow:inset 0 4px 0 rgba(104,38,56,.10)!important}
+.poem-article-page .article-hero{box-shadow:inset 0 4px 0 rgba(104,38,56,.12)!important}
+.tobacco-article-page .article-hero{box-shadow:inset 0 4px 0 rgba(104,38,56,.14)!important}
