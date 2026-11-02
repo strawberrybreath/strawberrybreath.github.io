@@ -255,3 +255,80 @@ body{margin:0;background:var(--paper)!important;color:var(--ink)!important;font-
   .home-page .article-list-image{width:68px!important;max-width:68px!important}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* Individual article atmospheres — shared editorial grid, distinct palettes. */
+.enola-article-page{
+  --paper:#F4EBDD;--paper-light:#F8F1E5;--paper-soft:#EAD9BD;
+  --ink:#382F28;--muted:#78695A;--accent:#A94E38;--sage:#B18B4B;
+  --blush:#DCC2A5;--line:rgba(74,55,39,.2);
+  background:#F4EBDD!important;color:#382F28!important
+}
+.enola-article-page .article-topline a,.enola-article-page .article-hero h1 em{color:#A94E38!important}
+.enola-article-page .article-subtitle{color:#A77D3E!important}
+.enola-article-page .article-hero:after{
+  content:"";display:block;grid-column:1/-1;width:100%;height:1px;
+  margin-top:8px;background:linear-gradient(90deg,#A94E38 0 13%,rgba(177,139,75,.45) 13% 100%)
+}
+.enola-article-page .article-poster img{border:1px solid rgba(169,78,56,.24);padding:5px;background:#F8F1E5}
+.enola-article-page .essay-section-title{color:#8E4936!important}
+.enola-article-page .essay-content p.article-highlight{
+  border-color:#B18B4B!important;color:#714B34!important
+}
+.witch-article-page{
+  --paper:#E9EAE2;--paper-light:#F0F0E9;--paper-soft:#D9DDD1;
+  --ink:#34372F;--muted:#707568;--accent:#68745E;--sage:#858D70;
+  --blush:#B9B6A4;--line:rgba(52,55,47,.22);
+  background:#E9EAE2!important;color:#34372F!important
+}
+.witch-article-page .article-topline a,.witch-article-page .article-hero h1 em{color:#68745E!important}
+.witch-article-page .article-subtitle{color:#727866!important}
+.witch-article-page .article-hero{border-bottom:1px solid rgba(52,55,47,.3)!important}
+.witch-article-page .witch-hero-image img,.witch-article-page .witch-figure img,
+.witch-article-page .witch-image-pair img{
+  filter:sepia(.08) saturate(.78) contrast(1.02);
+  border:1px solid rgba(52,55,47,.22);padding:4px;background:#F0F0E9
+}
+.witch-article-page .essay-section-title{color:#58634F!important}
+.witch-article-page .essay-content p.article-highlight{
+  border-color:#68745E!important;color:#485342!important
+}
+.poem-article-page{
+  --paper:#F2E8E0;--paper-light:#F8F1EB;--paper-soft:#E8D8CE;
+  --ink:#3A302D;--muted:#81716B;--accent:#A96863;--sage:#A58C7A;
+  --blush:#DCC8B9;--line:rgba(77,57,52,.2);
+  background:#F2E8E0!important;color:#3A302D!important
+}
+.poem-article-page .article-topline a,.poem-article-page .article-hero h1 em{color:#A96863!important}
+.poem-article-page .article-subtitle{color:#A17F77!important}
+.poem-article-page .article-hero{border-bottom:1px solid rgba(77,57,52,.22)!important}
+.poem-article-page .poem-hero-image img,.poem-article-page .poem-inline-image img{
+  border:1px solid rgba(169,104,99,.2);padding:4px;background:#F8F1EB
+}
+.poem-article-page .essay-section-title{color:#98645E!important}
+.poem-article-page .essay-content p.article-highlight{
+  border-color:#A96863!important;color:#76524E!important
+}
+.tobacco-article-page{
+  --paper:#ECEDEA;--paper-light:#F4F4F0;--paper-soft:#DDDFDB;
+  --ink:#292D2C;--muted:#69706D;--accent:#B74736;--sage:#7B8580;
+  --blush:#C8C9C3;--line:rgba(41,45,44,.22);
+  background:#ECEDEA!important;color:#292D2C!important
+}
+.tobacco-article-page .article-topline a,.tobacco-article-page .article-hero h1 em{color:#B74736!important}
+.tobacco-article-page .article-subtitle{color:#727A76!important}
+.tobacco-article-page .article-hero{border-bottom:1px solid rgba(41,45,44,.28)!important}
+.tobacco-article-page .tobacco-cover-image img,.tobacco-article-page .tobacco-inline-image img{
+  border:1px solid rgba(41,45,44,.18);padding:4px;background:#F4F4F0;
+  filter:grayscale(.12) contrast(1.04)
+}
+.tobacco-article-page .essay-section-title{color:#343B38!important}
+.tobacco-article-page .essay-content p.article-highlight{
+  border-color:#B74736!important;color:#713D35!important
+}
+/* Theme color follows each article's own reading surface on mobile as well. */
+@media(max-width:760px){
+  .enola-article-page .article-hero:after{margin-top:0}
+  .witch-article-page .witch-hero-image,.poem-article-page .poem-hero-image,
+  .tobacco-article-page .tobacco-cover-image{width:100%}
+}
