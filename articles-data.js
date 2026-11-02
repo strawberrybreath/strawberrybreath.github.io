@@ -51,7 +51,7 @@ function articleCard(article, index) {
   item.innerHTML = `
     ${image}
     <div class="article-list-copy">
-      <h3 data-index="${(article.href.match(/article-(\\d+)\\.html/) || [null, String(index + 1).padStart(2, "0")])[1]}"><a href="${article.href}">${article.title}</a></h3>
+      <h3 data-index="${(article.href.match(/article-(\d+)\.html/) || [null, String(index + 1).padStart(2, "0")])[1]}"><a href="${article.href}">${article.title}</a></h3>
       <p>${article.description || ""}</p>
       ${date}
     </div>`;
