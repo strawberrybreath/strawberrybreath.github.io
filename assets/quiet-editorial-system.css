@@ -2625,3 +2625,15 @@ html::after{
 .site-footer .back-to-top{margin:14px 0 0 auto!important}
 @media(max-width:760px){.back-to-top{font-size:14px!important;gap:7px!important}.back-to-top-arrow{font-size:25px!important}}
 @media(prefers-reduced-motion:reduce){.back-to-top{transition:none!important}}
+
+
+/* Align the end-of-page back-to-top control to the bottom-right edge. */
+.back-to-top,
+.article-ending .back-to-top,
+.site-footer .back-to-top{
+  margin-left:auto!important;
+  margin-right:0!important;
+  align-self:flex-end!important;
+  justify-content:flex-end!important;
+  text-align:right!important;
+}
