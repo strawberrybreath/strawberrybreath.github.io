@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="assets/global-header.css?v=20261102">
 <link rel="stylesheet" href="assets/responsive-editorial.css?v=20261102">
 <link rel="stylesheet" href="assets/quiet-editorial-system.css?v=20261103-sunlit-water-waves">
-<link rel="stylesheet" href="assets/article-index.css?v=20261102">
+<link rel="stylesheet" href="assets/article-index.css?v=20261103-article-search">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Italianno&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="home-page archive-page">
@@ -45,8 +45,17 @@
     <p>这里收录所有已经发表的文章，按发表时间由新到旧排列。首页只展示最新三篇，完整内容可以在这里继续浏览。</p>
   </div>
   <section class="archive-list" aria-label="全部文章">
+    <label class="article-search" for="article-search-input">
+      <span class="article-search-label">搜索文章</span>
+      <span class="article-search-field">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        <input id="article-search-input" type="search" data-article-search placeholder="输入标题或关键词…" autocomplete="off">
+        <span class="article-search-hint">⌕</span>
+      </span>
+    </label>
     <div data-all-articles></div>
-    <p class="archive-meta">目前共 <strong data-article-count>0</strong> 篇文章</p>
+    <p class="archive-empty" data-article-empty hidden>没有找到匹配的文章，试试其他关键词。</p>
+    <p class="archive-meta" aria-live="polite">找到 <strong data-article-count>0</strong> 篇文章</p>
   </section>
 </main>
 <footer class="site-footer">
@@ -57,6 +66,6 @@
 </div>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="progress.js" defer></script>
-<script src="articles-data.js" defer></script>
+<script src="articles-data.js?v=20261103-article-search" defer></script>
 </body>
 </html>
