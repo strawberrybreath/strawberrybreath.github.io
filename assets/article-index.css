@@ -313,3 +313,45 @@
     font-size:1.45em!important;
   }
 }
+
+
+/* Final reset for any decorative dots attached to the issue label or its child spans. */
+.home-page .article-list-copy .article-issue *,
+.archive-page .article-list-copy .article-issue *,
+.home-page .article-list-copy .article-issue,
+.archive-page .article-list-copy .article-issue{
+  list-style:none!important;
+  text-decoration:none!important;
+}
+.home-page .article-list-copy .article-issue::before,
+.home-page .article-list-copy .article-issue::after,
+.home-page .article-list-copy .article-issue *::before,
+.home-page .article-list-copy .article-issue *::after,
+.archive-page .article-list-copy .article-issue::before,
+.archive-page .article-list-copy .article-issue::after,
+.archive-page .article-list-copy .article-issue *::before,
+.archive-page .article-list-copy .article-issue *::after{
+  content:""!important;
+  display:none!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+/* Give issue numerals a more expressive editorial, high-contrast serif treatment. */
+.home-page .article-list-copy .article-issue-number,
+.archive-page .article-list-copy .article-issue-number{
+  font-family:"Bodoni 72","Didot","Bodoni MT","Times New Roman",serif!important;
+  font-size:1.75em!important;
+  font-style:italic!important;
+  font-weight:600!important;
+  letter-spacing:-.06em!important;
+  line-height:.95!important;
+  font-variant-numeric:oldstyle-nums!important;
+}
+@media(max-width:760px){
+  .home-page .article-list-copy .article-issue-number,
+  .archive-page .article-list-copy .article-issue-number{
+    font-size:1.6em!important;
+  }
+}
