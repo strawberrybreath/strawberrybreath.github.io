@@ -2930,3 +2930,25 @@ html::after{
   max-width:100%!important;
   white-space:normal!important;
 }
+
+
+/* Explicit line break is the source of truth for the bilingual footer slogan. */
+.site-footer .site-slogan,
+.article-page .article-ending .site-slogan{
+  display:block!important;
+  white-space:normal!important;
+  font-family:var(--body)!important;
+  line-height:1.8!important;
+}
+.site-footer .site-slogan br,
+.article-page .article-ending .site-slogan br{
+  display:block!important;
+  content:""!important;
+}
+.site-footer .site-slogan span,
+.article-page .article-ending .site-slogan span{
+  display:inline!important;
+  font:inherit!important;
+  font-family:var(--body)!important;
+  white-space:normal!important;
+}
