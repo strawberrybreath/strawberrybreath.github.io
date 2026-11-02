@@ -3324,3 +3324,32 @@ html::after{
     font-size:11px!important;
   }
 }
+
+
+/* Mobile article publication metadata: issue and date sit apart, on one baseline. */
+@media(max-width:760px){
+  .article-page .article-publication-meta{
+    display:flex!important;
+    align-items:baseline!important;
+    justify-content:space-between!important;
+    gap:18px!important;
+    width:calc(100% - 36px)!important;
+    padding:0 0 7px!important;
+    font-family:var(--body)!important;
+    font-size:12px!important;
+    line-height:1.7!important;
+    letter-spacing:0!important;
+  }
+  .article-page .article-publication-meta span,
+  .article-page .article-publication-meta time{
+    flex:0 0 auto!important;
+    font-family:var(--body)!important;
+    font-size:12px!important;
+    font-weight:400!important;
+    line-height:1.7!important;
+  }
+  .article-page .article-publication-meta time{
+    margin-left:auto!important;
+    text-align:right!important;
+  }
+}
