@@ -68,3 +68,51 @@
 .millie-film-gallery{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.4rem 0 2rem}
 .millie-real-life{display:grid;grid-template-columns:minmax(180px,280px) 1fr;gap:2rem;align-items:start;margin-top:2rem;padding-top:1.6rem;border-top:1px solid rgba(80,70,55,.2)}
 @media(max-width:680px){.creator-profile,.millie-real-life{grid-template-columns:1fr;gap:1rem}.creator-portrait,.millie-real-life figure{max-width:360px}.millie-film-gallery{grid-template-columns:1fr;gap:1.5rem}.creator-credits{grid-template-columns:1fr;gap:1rem}.creator-feature,.millie-feature{margin:2.5rem auto}}
+
+
+/* First article: compact circular portraits and a phone-friendly creator list. */
+.enola-article-page .film-credits{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:18px!important;
+  width:min(860px,calc(100% - 60px))!important;
+  margin:34px auto 42px!important;
+  padding:28px 0!important;
+  border-top:1px solid var(--line)!important;
+  border-bottom:1px solid var(--line)!important;
+}
+.enola-article-page .film-credits-heading{margin:0 0 4px!important;padding:0!important}
+.enola-article-page .film-credits-intro{max-width:760px;margin:12px 0 0!important;line-height:1.95;color:var(--muted)!important}
+.enola-article-page .film-credit-person{
+  display:grid!important;
+  grid-template-columns:112px minmax(0,1fr)!important;
+  align-items:center!important;
+  gap:22px!important;
+  min-width:0!important;
+  padding:16px 0!important;
+  border-top:1px solid rgba(100,80,70,.12)!important;
+}
+.enola-article-page .film-credit-person>img{
+  display:block!important;
+  width:104px!important;
+  height:104px!important;
+  aspect-ratio:1/1!important;
+  object-fit:cover!important;
+  object-position:center 35%!important;
+  border-radius:50%!important;
+  background:#eee7dc!important;
+}
+.enola-article-page .film-credit-copy{min-width:0!important}
+.enola-article-page .film-credit-copy h3{margin:2px 0 7px!important;font-size:1.2rem!important}
+.enola-article-page .film-credit-copy p{margin:0 0 8px!important;line-height:1.85!important;overflow-wrap:anywhere}
+.enola-article-page .film-credit-copy a{font-size:.78rem!important;overflow-wrap:anywhere}
+@media(max-width:760px){
+  .enola-article-page .film-credits{width:calc(100% - 36px)!important;margin:26px auto 32px!important;padding:22px 0!important;gap:12px!important}
+  .enola-article-page .film-credits-heading h2{font-size:21px!important}
+  .enola-article-page .film-credits-intro{font-size:13px!important;line-height:1.9!important}
+  .enola-article-page .film-credit-person{grid-template-columns:72px minmax(0,1fr)!important;gap:13px!important;padding:13px 0!important;align-items:start!important}
+  .enola-article-page .film-credit-person>img{width:68px!important;height:68px!important;object-position:center 32%!important}
+  .enola-article-page .film-credit-copy h3{font-size:16px!important;margin:1px 0 5px!important}
+  .enola-article-page .film-credit-copy p{font-size:12px!important;line-height:1.8!important}
+  .enola-article-page .film-credit-copy a{display:inline-block!important;font-size:10px!important;line-height:1.6!important}
+}
