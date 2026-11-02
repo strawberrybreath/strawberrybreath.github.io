@@ -2607,3 +2607,21 @@ html::after{
   .poem-article-page .poem-original-verses p{width:max-content;max-width:100%;margin:0 auto;padding-left:12px;font-size:14px;line-height:1.95}
 }
 @media(prefers-reduced-motion:reduce){.poem-article-page .poem-original{scroll-behavior:auto}}
+
+
+/* Consistent labeled back-to-top control at the bottom of every page. */
+.back-to-top{
+  display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:8px!important;
+  margin:18px 0 0 auto!important;padding:5px 0 5px 12px!important;
+  border:0!important;background:transparent!important;box-shadow:none!important;
+  color:var(--accent-dark,#a64f48)!important;cursor:pointer!important;
+  font:400 14px/1.4 var(--serif)!important;letter-spacing:.04em!important;
+  transition:transform .2s ease,color .2s ease!important;
+}
+.back-to-top-arrow{font:400 27px/1 var(--sans)!important;display:inline-block!important}
+.back-to-top-label{font-size:14px!important;white-space:nowrap!important}
+.back-to-top:hover{transform:translateY(-3px)!important;color:var(--ink)!important}
+.back-to-top:focus-visible{outline:2px solid currentColor!important;outline-offset:5px!important;border-radius:4px!important}
+.site-footer .back-to-top{margin:14px 0 0 auto!important}
+@media(max-width:760px){.back-to-top{font-size:14px!important;gap:7px!important}.back-to-top-arrow{font-size:25px!important}}
+@media(prefers-reduced-motion:reduce){.back-to-top{transition:none!important}}
