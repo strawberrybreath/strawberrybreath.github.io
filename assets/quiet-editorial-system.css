@@ -2287,3 +2287,17 @@ html::after{opacity:.76!important}
 /* Water-wave motion: at least 5x faster than the previous 14–16s cycle. */
 html::after{animation-duration:2.8s!important}
 @media(max-width:760px){html::after{animation-duration:3.2s!important}}
+
+
+/* Water background: 2x the original pace, moving horizontally only. */
+html::after{
+  animation-duration:12s!important;
+}
+@keyframes strawberry-water-light{
+  0%{transform:translate3d(-1.4%,0,0) scale(1.02);filter:brightness(1) saturate(1)}
+  50%{transform:translate3d(.5%,0,0) scale(1.045);filter:brightness(1.035) saturate(1.04)}
+  100%{transform:translate3d(1.2%,0,0) scale(1.025);filter:brightness(1.015) saturate(1.02)}
+}
+@media(max-width:760px){
+  html::after{animation-duration:13.5s!important}
+}
