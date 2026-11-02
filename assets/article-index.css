@@ -266,3 +266,12 @@
     line-height:1.7!important;
   }
 }
+
+
+/* Nudge mobile publication dates left by roughly two Chinese character widths. */
+@media(max-width:760px){
+  .home-page .article-list-copy .article-list-date,
+  .archive-page .article-list-copy .article-list-date{
+    margin-right:2em!important;
+  }
+}
