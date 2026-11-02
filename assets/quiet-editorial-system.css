@@ -332,3 +332,108 @@ body{margin:0;background:var(--paper)!important;color:var(--ink)!important;font-
   .witch-article-page .witch-hero-image,.poem-article-page .poem-hero-image,
   .tobacco-article-page .tobacco-cover-image{width:100%}
 }
+
+
+/* Stronger article palettes: carry each theme through the full reading surface. */
+html:has(body.enola-article-page){background:#F4EBDD!important}
+html:has(body.witch-article-page){background:#E9EAE2!important}
+html:has(body.poem-article-page){background:#F2E8E0!important}
+html:has(body.tobacco-article-page){background:#ECEDEA!important}
+
+.article-page.enola-article-page,
+.article-page.witch-article-page,
+.article-page.poem-article-page,
+.article-page.tobacco-article-page{
+  min-height:100vh!important;
+  background:var(--paper)!important;
+  color:var(--ink)!important;
+}
+.article-page.enola-article-page .site-header,
+.article-page.witch-article-page .site-header,
+.article-page.poem-article-page .site-header,
+.article-page.tobacco-article-page .site-header{
+  background:var(--paper)!important;
+  border-bottom-color:var(--line)!important;
+}
+.article-page.enola-article-page .article-hero,
+.article-page.witch-article-page .article-hero,
+.article-page.poem-article-page .article-hero,
+.article-page.tobacco-article-page .article-hero{
+  background:linear-gradient(112deg,var(--paper-soft) 0%,var(--paper) 74%)!important;
+  border-bottom:1px solid var(--line)!important;
+  position:relative;
+}
+.article-page.enola-article-page .essay-content p,
+.article-page.witch-article-page .essay-content p,
+.article-page.poem-article-page .essay-content p,
+.article-page.tobacco-article-page .essay-content p{
+  color:var(--ink)!important;
+}
+.article-page.enola-article-page .essay-section-title,
+.article-page.witch-article-page .essay-section-title,
+.article-page.poem-article-page .essay-section-title,
+.article-page.tobacco-article-page .essay-section-title{
+  display:flex!important;
+  align-items:baseline!important;
+  gap:11px!important;
+  color:var(--accent)!important;
+  padding-bottom:9px!important;
+  border-bottom:1px solid var(--line)!important;
+}
+.article-page.enola-article-page .essay-section-title:before,
+.article-page.witch-article-page .essay-section-title:before,
+.article-page.poem-article-page .essay-section-title:before,
+.article-page.tobacco-article-page .essay-section-title:before{
+  content:""!important;
+  display:inline-block!important;
+  flex:0 0 7px!important;
+  width:7px!important;height:7px!important;
+  border-radius:50%!important;
+  background:var(--accent)!important;
+  transform:translateY(-3px);
+}
+.article-page.enola-article-page .essay-content p.article-highlight,
+.article-page.witch-article-page .essay-content p.article-highlight,
+.article-page.poem-article-page .essay-content p.article-highlight,
+.article-page.tobacco-article-page .essay-content p.article-highlight{
+  padding:13px 17px!important;
+  background:var(--paper-soft)!important;
+  border-left:3px solid var(--accent)!important;
+  color:var(--ink)!important;
+  margin:28px 0 32px!important;
+}
+.article-page.enola-article-page .essay-content figure img,
+.article-page.witch-article-page .essay-content figure img,
+.article-page.poem-article-page .essay-content figure img,
+.article-page.tobacco-article-page .essay-content figure img{
+  background:var(--paper-light)!important;
+  padding:5px!important;
+  border:1px solid var(--line)!important;
+}
+.article-page.enola-article-page .article-ending,
+.article-page.witch-article-page .article-ending,
+.article-page.poem-article-page .article-ending,
+.article-page.tobacco-article-page .article-ending{
+  border-top:2px solid var(--accent)!important;
+}
+.article-page.enola-article-page .article-ending .site-slogan,
+.article-page.witch-article-page .article-ending .site-slogan,
+.article-page.poem-article-page .article-ending .site-slogan,
+.article-page.tobacco-article-page .article-ending .site-slogan{
+  color:var(--accent)!important;
+}
+
+/* Individual image and section details. */
+.enola-article-page .article-hero{box-shadow:inset 0 4px 0 rgba(169,78,56,.12)}
+.enola-article-page .essay-section-title{color:#91442F!important}
+.enola-article-page .essay-content p.article-highlight{background:#EAD9BD!important}
+.witch-article-page .article-hero{box-shadow:inset 0 4px 0 rgba(104,116,94,.18)}
+.witch-article-page .essay-section-title{color:#58634F!important}
+.witch-article-page .essay-content p.article-highlight{background:#D9DDD1!important}
+.witch-article-page .essay-content figure img{filter:sepia(.08) saturate(.78) contrast(1.02)}
+.poem-article-page .article-hero{box-shadow:inset 0 4px 0 rgba(169,104,99,.15)}
+.poem-article-page .essay-section-title{color:#98645E!important}
+.poem-article-page .essay-content p.article-highlight{background:#E8D8CE!important}
+.tobacco-article-page .article-hero{box-shadow:inset 0 4px 0 rgba(183,71,54,.16)}
+.tobacco-article-page .essay-section-title{color:#343B38!important}
+.tobacco-article-page .essay-content p.article-highlight{background:#DDDFDB!important}
