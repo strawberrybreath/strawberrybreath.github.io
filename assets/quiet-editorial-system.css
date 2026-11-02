@@ -926,3 +926,23 @@ body.contact-confirm-open{overflow:hidden}
   .home-page .contact-method-icon svg{width:31px;height:31px}
   .home-page .contact-icon-wechat svg{width:35px;height:31px}
 }
+
+
+/* A quiet paper surface across every page: warm stock, subtle grain, no card-like texture. */
+html{background-color:var(--paper)!important}
+body,
+body.home-page,
+body.archive-page,
+body.article-page,
+body.enola-article-page,
+body.witch-article-page,
+body.poem-article-page,
+body.tobacco-article-page{
+  background-color:var(--paper)!important;
+  background-image:
+    linear-gradient(135deg,rgba(255,255,255,.13),rgba(111,86,53,.025)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.13'/%3E%3C/svg%3E")!important;
+  background-repeat:repeat!important;
+  background-size:auto,180px 180px!important;
+  background-attachment:fixed!important;
+}
