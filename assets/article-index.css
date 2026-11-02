@@ -226,3 +226,43 @@
   font-size:inherit!important;
   font-weight:400!important;
 }
+
+
+/* Mobile publication row: separate issue and date across the available width. */
+@media(max-width:760px){
+  .home-page .article-list-copy .article-list-meta,
+  .archive-page .article-list-copy .article-list-meta{
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    align-items:baseline!important;
+    justify-content:space-between!important;
+    gap:18px!important;
+    width:100%!important;
+    font-family:var(--body)!important;
+    font-size:12px!important;
+    line-height:1.7!important;
+  }
+  .home-page .article-list-copy .article-issue,
+  .archive-page .article-list-copy .article-issue{
+    flex:0 0 auto!important;
+    align-items:baseline!important;
+    font-family:var(--body)!important;
+    font-size:12px!important;
+    line-height:1.7!important;
+  }
+  .home-page .article-list-copy .article-issue-number,
+  .archive-page .article-list-copy .article-issue-number{
+    font-size:1.2em!important;
+    line-height:1!important;
+    vertical-align:baseline!important;
+  }
+  .home-page .article-list-copy .article-list-date,
+  .archive-page .article-list-copy .article-list-date{
+    flex:0 0 auto!important;
+    margin-left:auto!important;
+    text-align:right!important;
+    font-family:var(--body)!important;
+    font-size:12px!important;
+    line-height:1.7!important;
+  }
+}
