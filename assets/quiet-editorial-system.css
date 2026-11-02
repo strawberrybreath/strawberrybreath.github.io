@@ -1508,3 +1508,32 @@ html::before{
   .site-header .site-nav a .nav-en{font-size:22px!important}
   .site-header .site-nav a .nav-zh{font-size:14px!important}
 }
+
+
+/* Compact opening film-credit note: readable, factual, and visually subordinate to the essay. */
+.article-page .film-credits{
+  width:min(900px,100%)!important;
+  max-width:900px!important;
+  margin:30px auto 42px!important;
+  padding:22px 26px!important;
+  background:rgba(255,255,255,.30)!important;
+  border-left:3px solid var(--accent)!important;
+  border-top:1px solid var(--line)!important;
+  border-bottom:1px solid var(--line)!important;
+}
+.article-page .film-credits h2{
+  font-size:clamp(24px,2.2vw,28px)!important;
+  line-height:1.6!important;
+  margin:0 0 12px!important;
+}
+.article-page .film-credits p{
+  font-size:clamp(17px,1.25vw,19px)!important;
+  line-height:1.9!important;
+  margin:0 0 8px!important;
+  color:var(--ink)!important;
+}
+.article-page .film-credits p:last-child{margin-bottom:0!important}
+@media(max-width:699px){
+  .article-page .film-credits{padding:18px 16px!important;margin:24px auto 32px!important}
+  .article-page .film-credits p{font-size:17px!important;line-height:1.9!important}
+}
