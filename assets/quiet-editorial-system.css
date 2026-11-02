@@ -3197,3 +3197,18 @@ html::after{
   .site-footer .footer-brand{font-size:14px!important}
   .site-footer .footer-copy{font-size:11px!important}
 }
+
+
+/* Remove the legacy separator above article footers; the glass card is the footer boundary. */
+.article-page .article-ending.site-footer,
+.article-page.enola-article-page .article-ending,
+.article-page.witch-article-page .article-ending,
+.article-page.poem-article-page .article-ending,
+.article-page.tobacco-article-page .article-ending{
+  border-top:0!important;
+}
+.article-page .article-ending.site-footer::before,
+.article-page .article-ending.site-footer::after{
+  border:0!important;
+  box-shadow:none!important;
+}
