@@ -2400,3 +2400,30 @@ html::after{
     transform:translateX(16px)!important;
   }
 }
+
+
+/* Header glass cleanup: remove the extra inset overlay that can read as a second,
+   offset glass pane; keep the glass effect on one continuous surface. */
+.site-header::before{
+  display:none!important;
+  content:none!important;
+}
+.site-header{
+  background:linear-gradient(112deg,
+    rgba(255,255,255,.58) 0%,
+    rgba(255,250,248,.44) 48%,
+    rgba(255,247,246,.50) 100%)!important;
+}
+
+/* Reading progress alignment: nudge the mobile ring further left and
+   the complete tablet progress group further right. */
+@media(max-width:760px){
+  .site-header .header-reading .reading-ring{
+    transform:translateX(-7px)!important;
+  }
+}
+@media(min-width:761px) and (max-width:1100px){
+  .site-header .header-reading{
+    transform:translateX(26px)!important;
+  }
+}
