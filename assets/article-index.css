@@ -48,3 +48,10 @@
 .archive-page .archive-empty{padding:26px 0;color:var(--muted);font-size:13px}
 .archive-page .archive-empty[hidden],.archive-page .article-list-item[hidden]{display:none!important}
 @media(max-width:760px){.archive-page .article-search{max-width:none;margin-bottom:18px}.archive-page .article-search-field{min-height:46px;border-radius:14px}}
+
+
+/* Archive spacing and full-width search alignment. */
+.archive-page .article-search{display:block;width:100%;max-width:none;box-sizing:border-box;margin:0 0 24px}
+.archive-page .article-search-field{width:100%;box-sizing:border-box}
+.archive-page .archive-heading{padding-top:30px!important}
+@media(max-width:760px){.archive-page .article-search{width:100%;max-width:none;margin-bottom:18px}.archive-page .archive-heading{padding-top:20px!important}}
