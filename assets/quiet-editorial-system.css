@@ -1938,3 +1938,96 @@ html::after{
   .home-page .home-profile .about-lead{font-size:22px!important}
   .home-page .article-list-meta{font-size:13px!important}
 }
+
+
+/* 2026-11-02: subtle Apple-inspired frosted-glass surfaces for header, article rows and contact links. */
+.site-header{
+  position:sticky!important;
+  top:8px!important;
+  z-index:1000!important;
+  margin:8px 0 0!important;
+  padding:12px 18px!important;
+  border:1px solid rgba(255,255,255,.66)!important;
+  border-bottom:1px solid rgba(255,255,255,.72)!important;
+  border-radius:26px!important;
+  background:rgba(255,252,246,.48)!important;
+  -webkit-backdrop-filter:blur(22px) saturate(165%)!important;
+  backdrop-filter:blur(22px) saturate(165%)!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.78),
+    inset 0 -1px 0 rgba(255,255,255,.22),
+    0 8px 26px rgba(75,54,42,.075)!important;
+}
+.home-page .article-list-item,
+.archive-page .article-list-item{
+  position:relative!important;
+  margin:12px 0!important;
+  padding:20px 20px!important;
+  border:1px solid rgba(255,255,255,.62)!important;
+  border-radius:24px!important;
+  background:rgba(255,252,246,.40)!important;
+  -webkit-backdrop-filter:blur(18px) saturate(155%)!important;
+  backdrop-filter:blur(18px) saturate(155%)!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.72),
+    0 7px 22px rgba(75,54,42,.055)!important;
+  transition:background .25s ease,border-color .25s ease,transform .25s ease,box-shadow .25s ease!important;
+}
+.home-page .article-list-item:last-child,
+.archive-page .article-list-item:last-child{
+  border-bottom:1px solid rgba(255,255,255,.62)!important;
+}
+.home-page .article-list-item:hover,
+.archive-page .article-list-item:hover{
+  background:rgba(255,253,249,.56)!important;
+  border-color:rgba(255,255,255,.86)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.86),0 10px 26px rgba(75,54,42,.075)!important;
+  transform:translateY(-2px);
+}
+.home-page .article-list-image img{border-radius:12px!important}
+.home-page .contact-methods .contact-method{
+  position:relative!important;
+  overflow:hidden!important;
+  border:1px solid rgba(255,255,255,.72)!important;
+  border-radius:26px!important;
+  background:rgba(255,252,246,.43)!important;
+  -webkit-backdrop-filter:blur(20px) saturate(160%)!important;
+  backdrop-filter:blur(20px) saturate(160%)!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.82),
+    inset 0 -1px 0 rgba(255,255,255,.25),
+    0 8px 24px rgba(75,54,42,.065)!important;
+  transition:background .25s ease,border-color .25s ease,transform .25s ease,box-shadow .25s ease!important;
+}
+.home-page .contact-methods .contact-method:hover{
+  background:rgba(255,253,249,.62)!important;
+  border-color:rgba(255,255,255,.92)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 11px 28px rgba(75,54,42,.09)!important;
+  transform:translateY(-2px);
+}
+.home-page .contact-methods .contact-method:focus-visible{
+  outline:2px solid rgba(230,63,37,.72)!important;
+  outline-offset:3px!important;
+}
+@media(max-width:760px){
+  .site-header{
+    top:5px!important;
+    margin:5px 0 0!important;
+    padding:9px 12px 8px!important;
+    border-radius:22px!important;
+  }
+  .home-page .article-list-item,
+  .archive-page .article-list-item{
+    margin:10px 0!important;
+    padding:15px 13px!important;
+    border-radius:20px!important;
+  }
+  .home-page .contact-methods .contact-method{
+    border-radius:23px!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .home-page .article-list-item,
+  .archive-page .article-list-item,
+  .home-page .contact-methods .contact-method{transition:none!important}
+}
