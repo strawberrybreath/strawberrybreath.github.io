@@ -437,3 +437,49 @@ html:has(body.tobacco-article-page){background:#ECEDEA!important}
 .tobacco-article-page .article-hero{box-shadow:inset 0 4px 0 rgba(183,71,54,.16)}
 .tobacco-article-page .essay-section-title{color:#343B38!important}
 .tobacco-article-page .essay-content p.article-highlight{background:#DDDFDB!important}
+
+
+/* Homepage: remove all panel/card surfaces and keep one continuous paper canvas. */
+html:has(body.home-page),body.home-page{background:var(--paper)!important}
+.home-page main,
+.home-page .home-intro,
+.home-page .home-about,
+.home-page .home-articles,
+.home-page .home-profile,
+.home-page .home-profile-inner,
+.home-page .home-section-heading,
+.home-page [data-latest-articles],
+.home-page .article-list-item,
+.home-page .article-list-image,
+.home-page .article-list-copy{
+  background:transparent!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+}
+.home-page .home-profile{
+  padding-top:58px!important;
+  padding-bottom:58px!important;
+  border:0!important;
+  border-top:1px solid var(--line)!important;
+}
+.home-page .home-profile:before,
+.home-page .home-profile:after,
+.home-page .home-intro:before,
+.home-page .home-intro:after,
+.home-page .home-articles:before,
+.home-page .home-articles:after{
+  content:none!important;display:none!important;
+}
+.home-page .home-about,
+.home-page .home-profile-inner{
+  outline:0!important;
+}
+.home-page .article-list-item{
+  border-left:0!important;border-right:0!important;
+}
+@media(max-width:760px){
+  .home-page .home-profile{
+    padding:38px 0 40px!important;
+    border-top:1px solid var(--line)!important;
+  }
+}
