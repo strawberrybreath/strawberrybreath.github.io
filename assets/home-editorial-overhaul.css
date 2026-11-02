@@ -180,3 +180,29 @@
  .home-page .article-list-copy{align-self:start}
  .home-page .article-list-copy h3{font-size:16px!important}
 }
+
+
+/* About section: original repository cat illustration, integrated into the profile text */
+.home-page .home-profile-inner{display:flow-root}
+.home-page .about-cats{
+  float:right;width:min(29%,230px);margin:4px 0 22px 34px;
+  text-align:center;
+}
+.home-page .about-cats img{
+  display:block;width:100%;height:auto;object-fit:contain;
+  mix-blend-mode:multiply;
+}
+.home-page .about-cats figcaption{
+  margin-top:7px;font-size:11px;letter-spacing:.08em;color:#987D70;
+}
+.home-page .home-profile .about-lead{
+  font-size:21px!important;line-height:1.8;color:#795A52!important;
+  margin:0 0 18px!important;
+}
+@media(max-width:760px){
+  .home-page .about-cats{
+    float:none;width:min(66%,230px);margin:0 auto 22px;
+  }
+  .home-page .about-cats figcaption{font-size:10px}
+  .home-page .home-profile .about-lead{font-size:17px!important}
+}
