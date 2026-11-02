@@ -2196,3 +2196,15 @@ html::after{animation-duration:14s!important}
 @media(prefers-reduced-motion:reduce){
   html::after{animation:none!important}
 }
+
+
+/* Slightly enlarge the English site name; available header space is sufficient. */
+@media(max-width:760px){
+  .site-header .brand-text strong{
+    font-size:17px!important;
+    letter-spacing:.1px!important;
+  }
+}
+@media(max-width:390px){
+  .site-header .brand-text strong{font-size:14px!important}
+}
