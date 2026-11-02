@@ -55,3 +55,27 @@
 .archive-page .article-search-field{width:100%;box-sizing:border-box}
 .archive-page .archive-heading{padding-top:30px!important}
 @media(max-width:760px){.archive-page .article-search{width:100%;max-width:none;margin-bottom:18px}.archive-page .archive-heading{padding-top:20px!important}}
+
+
+/* Keep issue number and publication date together on one metadata line. */
+.article-list-copy .article-list-meta{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  flex-wrap:wrap!important;
+  gap:7px!important;
+  margin:0 0 7px!important;
+  font:12px/1.6 var(--sans)!important;
+  color:var(--soft)!important;
+}
+.article-list-copy .article-list-date{
+  display:inline-block!important;
+  margin:0!important;
+  font:inherit!important;
+  color:var(--soft)!important;
+  white-space:nowrap!important;
+}
+.article-list-copy .article-issue{flex:0 0 auto!important}
+@media(max-width:760px){
+  .article-list-copy .article-list-meta{font-size:10px!important;gap:6px!important;margin-bottom:5px!important}
+}
