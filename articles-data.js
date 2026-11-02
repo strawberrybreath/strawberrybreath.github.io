@@ -46,17 +46,16 @@ function articleCard(article, index) {
       <img src="${article.image}" alt="${article.imageAlt || ""}" loading="lazy">
     </a>` : "";
   const date = article.date && article.dateLabel
-    ? `<p class="article-list-meta"><time datetime="${article.date}">${article.dateLabel}</time></p>`
+    ? `<time class="article-list-date" datetime="${article.date}">${article.dateLabel}</time>`
     : "";
   const issueNumber = Number((article.href.match(/article-(\d+)\.html/) || [null, String(index + 1)])[1]);
   const issue = `<span class="article-issue" aria-label="第${issueNumber}期"><span class="article-issue-prefix">第</span><span class="article-issue-number">${issueNumber}</span><span class="article-issue-suffix">期</span></span>`;
   item.innerHTML = `
     ${image}
     <div class="article-list-copy">
-      ${issue}
+      <div class="article-list-meta">${issue}${date}</div>
       <h3><a href="${article.href}">${article.title}</a></h3>
       <p>${article.description || ""}</p>
-      ${date}
     </div>`;
   return item;
 }
