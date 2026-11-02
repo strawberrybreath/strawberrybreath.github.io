@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="assets/redesign.css?v=20261101">
 <link rel="stylesheet" href="assets/typography-fix.css?v=20261101">
 <link rel="stylesheet" href="assets/human-editorial.css?v=20261102">
+<link rel="stylesheet" href="assets/global-header.css?v=20261102">
 </head>
 <body class="home-page">
 <div class="site-frame">
@@ -21,10 +22,21 @@
     <img class="brand-avatar" src="assets/avatar-circle-256.png" alt="Strawberry Breath 头像">
     <span class="brand-text"><strong>Strawberry Breath</strong><small>草莓味口气</small></span>
   </a>
-  <nav class="site-nav" aria-label="页面导航">
-    <a href="#articles">文章</a>
-    <a href="#about">关于我</a>
-    <a href="#contact">联系</a>
+  <div class="header-reading" aria-label="页面阅读进度与阅读统计">
+    <div class="reading-ring" id="reading-ring" role="img" aria-label="阅读进度 0%">
+      <span id="reading-percent">0%</span>
+    </div>
+    <div class="reading-stats">
+      <span><strong id="reading-words">—</strong> 字</span>
+      <span>约 <strong id="reading-time">—</strong> 分钟读完</span>
+    </div>
+    <div class="reading-confetti" id="reading-confetti" aria-hidden="true"></div>
+  </div>
+  <nav class="site-nav" aria-label="主导航">
+    <a href="./" class="is-current" aria-current="page">主页</a>
+    <a href="./#articles">列表</a>
+    <a href="./#about">关于我</a>
+    <a href="./#contact">联系</a>
   </nav>
 </header>
 
