@@ -129,3 +129,53 @@
   .home-page .article-list-copy .article-list-date,
   .archive-page .article-list-copy .article-list-date{font-size:11px!important}
 }
+
+
+/* Match publication metadata to the site's body typography and center the issue numeral. */
+.home-page .article-list-copy .article-list-meta,
+.archive-page .article-list-copy .article-list-meta{
+  font-family:var(--body)!important;
+  font-size:12px!important;
+  line-height:1.7!important;
+}
+.home-page .article-list-copy .article-issue,
+.archive-page .article-list-copy .article-issue{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+  font-family:var(--body)!important;
+  font-size:inherit!important;
+  font-weight:400!important;
+  line-height:inherit!important;
+  text-align:center!important;
+}
+.home-page .article-list-copy .article-issue-number,
+.archive-page .article-list-copy .article-issue-number{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:1.15em!important;
+  min-width:1.15em!important;
+  text-align:center!important;
+  font-family:var(--body)!important;
+  font-size:inherit!important;
+  font-weight:400!important;
+  line-height:inherit!important;
+  font-variant-numeric:tabular-nums!important;
+}
+.home-page .article-list-copy .article-issue-prefix,
+.home-page .article-list-copy .article-issue-suffix,
+.archive-page .article-list-copy .article-issue-prefix,
+.archive-page .article-list-copy .article-issue-suffix,
+.home-page .article-list-copy .article-list-date,
+.archive-page .article-list-copy .article-list-date{
+  font-family:var(--body)!important;
+  font-size:inherit!important;
+  font-weight:400!important;
+  line-height:inherit!important;
+}
+@media(max-width:760px){
+  .home-page .article-list-copy .article-list-meta,
+  .archive-page .article-list-copy .article-list-meta{font-size:11px!important}
+}
