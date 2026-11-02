@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="assets/redesign.css?v=20261101">
 <link rel="stylesheet" href="assets/typography-fix.css?v=20261101">
 <link rel="stylesheet" href="assets/human-editorial.css?v=20261102">
+<link rel="stylesheet" href="assets/global-header.css?v=20261102">
 <link rel="stylesheet" href="assets/article-visuals.css?v=20261102">
 </head>
 <body class="article-page witch-article-page">
@@ -27,10 +28,21 @@
     <img class="brand-avatar" src="assets/avatar-circle-256.png" alt="Strawberry Breath 头像">
     <span class="brand-text"><strong>Strawberry Breath</strong><small>草莓味口气</small></span>
   </a>
+  <div class="header-reading" aria-label="页面阅读进度与阅读统计">
+    <div class="reading-ring" id="reading-ring" role="img" aria-label="阅读进度 0%">
+      <span id="reading-percent">0%</span>
+    </div>
+    <div class="reading-stats">
+      <span><strong id="reading-words">—</strong> 字</span>
+      <span>约 <strong id="reading-time">—</strong> 分钟读完</span>
+    </div>
+    <div class="reading-confetti" id="reading-confetti" aria-hidden="true"></div>
+  </div>
   <nav class="site-nav" aria-label="主导航">
-    <a href="./">首页</a>
-    <a href="article-01.html">第一篇</a>
-    <a href="article-02.html" class="is-current" aria-current="page">第二篇</a>
+    <a href="./" >主页</a>
+    <a href="./#articles">列表</a>
+    <a href="./#about">关于我</a>
+    <a href="./#contact">联系</a>
   </nav>
 </header>
 <main>
@@ -50,13 +62,7 @@
     <figcaption>《Vinegar Tom》1976年原始演出剧照 · 图片来源：Monstrous Regiment 档案</figcaption>
   </figure>
 
-  <section class="reading-info" aria-label="文章阅读信息">
-    <div><span>阅读进度</span><strong id="reading-percent">0%</strong></div>
-    <div><strong id="reading-words">—</strong><span> 字</span><b class="reading-dot">·</b><span>约 </span><strong id="reading-time">—</strong><span> 分钟</span></div>
-  </section>
-  <div class="reading-track" aria-hidden="true"><span id="reading-bar"></span></div>
-
-  <article class="essay-content witch-essay" id="bodycopy">
+<article class="essay-content witch-essay" id="bodycopy">
     <p>每年十月底，女巫都会重新回到我们的生活里。</p>
     <p>尖尖的黑帽子、黑色长袍、扫帚、黑猫，还有南瓜灯。她们出现在商店橱窗、万圣节派对和社交媒体的照片里。有时是可爱的，有时是性感的，有时甚至成为一种代表独立、神秘和自由的时尚符号。</p>
     <p>今天的女巫似乎很受欢迎。人们愿意穿上女巫的衣服，画上夸张的眼妆，举着扫帚拍照，甚至把女巫当成一种女性力量的象征。</p>
@@ -155,7 +161,6 @@
   </footer>
 </main>
 </div>
-<div class="reading-progress-top" id="reading-progress-top" aria-hidden="true"></div>
 <script src="progress.js" defer></script>
 </body>
 </html>
