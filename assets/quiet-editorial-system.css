@@ -913,16 +913,16 @@ body.contact-confirm-open{overflow:hidden}
 .home-page .contact-method-index{display:none!important}
 .home-page .contact-method-icon{
   display:grid!important;place-items:center!important;
-  width:30px!important;height:30px!important;margin:0 0 15px!important;
-  color:var(--accent)!important;flex:0 0 30px!important;
+  width:40px!important;height:40px!important;margin:0 0 15px!important;
+  color:var(--accent)!important;flex:0 0 40px!important;
 }
-.home-page .contact-method-icon svg{display:block;width:27px;height:27px;overflow:visible}
-.home-page .contact-icon-github svg{width:27px;height:27px}
-.home-page .contact-icon-email svg{width:28px;height:28px}
-.home-page .contact-icon-wechat svg{width:31px;height:27px}
+.home-page .contact-method-icon svg{display:block;width:36px;height:36px;overflow:visible}
+.home-page .contact-icon-github svg{width:36px;height:36px}
+.home-page .contact-icon-email svg{width:37px;height:37px}
+.home-page .contact-icon-wechat svg{width:40px;height:35px}
 .home-page .contact-method-title{margin-bottom:5px!important}
 @media(max-width:760px){
-  .home-page .contact-method-icon{width:26px!important;height:26px!important;margin-bottom:11px!important;flex-basis:26px!important}
-  .home-page .contact-method-icon svg{width:24px;height:24px}
-  .home-page .contact-icon-wechat svg{width:27px;height:24px}
+  .home-page .contact-method-icon{width:34px!important;height:34px!important;margin-bottom:11px!important;flex-basis:34px!important}
+  .home-page .contact-method-icon svg{width:31px;height:31px}
+  .home-page .contact-icon-wechat svg{width:35px;height:31px}
 }
