@@ -100,3 +100,92 @@ body{background:var(--paper);color:var(--ink)}
  .essay-content p.article-highlight{font-size:15px}
  .essay-section-title{font-size:20px;margin:42px 0 17px}
 }
+
+/* Mobile alignment correction: keep the page frame and every main section centered. */
+@media (max-width: 760px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  .site-frame {
+    display: block;
+    width: calc(100% - 32px) !important;
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  main {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .site-header,
+  .site-footer,
+  .home-intro,
+  .home-articles,
+  .home-profile,
+  .article-topline,
+  .article-hero,
+  .film-context,
+  .reading-info,
+  .essay-content,
+  .film-still-section,
+  .flower-section,
+  .article-ending {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .home-intro,
+  .home-articles,
+  .home-profile,
+  .home-contact,
+  .article-topline,
+  .article-hero,
+  .film-context,
+  .reading-info,
+  .flower-section,
+  .article-ending {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .home-profile-inner,
+  .essay-content {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .article-page .essay-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .article-page .reading-track {
+    width: calc(100% - 6%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .home-page .home-intro,
+  .home-page .home-articles,
+  .home-page .home-profile,
+  .home-page .home-contact {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .home-page .article-list-item {
+    width: 100%;
+    min-width: 0;
+  }
+  .home-page .article-list-copy {
+    min-width: 0;
+  }
+}
+@media (max-width: 380px) {
+  .site-frame {
+    width: calc(100% - 28px) !important;
+  }
+}
