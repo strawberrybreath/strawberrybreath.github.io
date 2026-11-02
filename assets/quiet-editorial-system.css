@@ -1777,3 +1777,36 @@ body{padding-top:76px!important}
  .film-credit-copy>p:not(.film-credit-role){font-size:11px!important;line-height:1.7!important}
  .film-credit-copy>a{font-size:9px!important}
 }
+
+
+/* Slow, subtle strawberry-red ambient light — background only. */
+body{
+  isolation:isolate;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:-24%;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse 34% 30% at 18% 24%, rgba(230,63,37,.105) 0%, rgba(230,63,37,.045) 42%, transparent 76%),
+    radial-gradient(ellipse 30% 34% at 82% 68%, rgba(198,75,55,.085) 0%, rgba(198,75,55,.035) 44%, transparent 76%),
+    radial-gradient(ellipse 24% 24% at 54% 48%, rgba(230,63,37,.035) 0%, transparent 78%);
+  filter:blur(34px);
+  opacity:.9;
+  transform:translate3d(-2%, -1%, 0) scale(1);
+  animation:strawberry-ambient-drift 34s ease-in-out infinite alternate;
+  will-change:transform;
+}
+@keyframes strawberry-ambient-drift{
+  0%{transform:translate3d(-2.5%, -1.5%, 0) scale(1)}
+  50%{transform:translate3d(2%, 1.5%, 0) scale(1.045)}
+  100%{transform:translate3d(-1%, 2.5%, 0) scale(1.02)}
+}
+@media(max-width:760px){
+  body::before{filter:blur(26px);opacity:.62;animation-duration:42s}
+}
+@media(prefers-reduced-motion:reduce){
+  body::before{animation:none;transform:none}
+}
