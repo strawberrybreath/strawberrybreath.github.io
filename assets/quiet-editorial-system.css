@@ -3032,3 +3032,50 @@ html::after{
   .site-footer .footer-brand{font-size:14px!important}
   .site-footer .footer-copy{font-size:11px!important}
 }
+
+
+/* Keep the back-to-top action beside the contextual page link, outside the glass card. */
+.site-footer,
+.article-page .article-ending.site-footer{
+  display:flex!important;
+  flex-direction:row!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:12px 20px!important;
+}
+.site-footer>.footer-page-link,
+.article-page .article-ending>.footer-page-link{
+  display:inline-flex!important;
+  align-items:center!important;
+  align-self:center!important;
+  margin:0!important;
+}
+.site-footer>.back-to-top.footer-page-link,
+.article-page .article-ending>.back-to-top.footer-page-link{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:7px!important;
+  margin:0 0 0 auto!important;
+  padding:4px 0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:var(--accent-dark,#a64f48)!important;
+  font:400 13px/1.5 var(--body)!important;
+  cursor:pointer!important;
+}
+.site-footer>.back-to-top .back-to-top-arrow,
+.article-page .article-ending>.back-to-top .back-to-top-arrow{
+  display:inline-block!important;
+  font:inherit!important;
+}
+.site-footer .footer-glass-card{
+  flex:0 0 100%!important;
+  width:100%!important;
+}
+@media(max-width:760px){
+  .site-footer>.back-to-top.footer-page-link,
+  .article-page .article-ending>.back-to-top.footer-page-link{font-size:12px!important}
+}
