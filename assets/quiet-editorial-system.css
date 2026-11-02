@@ -2282,3 +2282,8 @@ html::after{opacity:.76!important}
   .site-header .brand-text small{font-size:18px!important;line-height:1.35!important}
   .site-header .brand-text strong{font-size:21px!important;line-height:1.3!important}
 }
+
+
+/* Water-wave motion: at least 5x faster than the previous 14–16s cycle. */
+html::after{animation-duration:2.8s!important}
+@media(max-width:760px){html::after{animation-duration:3.2s!important}}
