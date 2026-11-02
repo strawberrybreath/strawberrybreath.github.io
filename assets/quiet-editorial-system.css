@@ -907,3 +907,22 @@ body.contact-confirm-open{overflow:hidden}
   .contact-confirm-actions{justify-content:stretch}
   .contact-confirm-actions button{flex:1}
 }
+
+
+/* Replace contact-card numbering with recognizable service icons. */
+.home-page .contact-method-index{display:none!important}
+.home-page .contact-method-icon{
+  display:grid!important;place-items:center!important;
+  width:30px!important;height:30px!important;margin:0 0 15px!important;
+  color:var(--accent)!important;flex:0 0 30px!important;
+}
+.home-page .contact-method-icon svg{display:block;width:27px;height:27px;overflow:visible}
+.home-page .contact-icon-github svg{width:27px;height:27px}
+.home-page .contact-icon-email svg{width:28px;height:28px}
+.home-page .contact-icon-wechat svg{width:31px;height:27px}
+.home-page .contact-method-title{margin-bottom:5px!important}
+@media(max-width:760px){
+  .home-page .contact-method-icon{width:26px!important;height:26px!important;margin-bottom:11px!important;flex-basis:26px!important}
+  .home-page .contact-method-icon svg{width:24px;height:24px}
+  .home-page .contact-icon-wechat svg{width:27px;height:24px}
+}
