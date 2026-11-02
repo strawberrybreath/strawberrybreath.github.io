@@ -926,3 +926,51 @@ body.contact-confirm-open{overflow:hidden}
   .home-page .contact-method-icon svg{width:31px;height:31px}
   .home-page .contact-icon-wechat svg{width:35px;height:31px}
 }
+
+
+/* Contact cards: larger 60px service marks with coordinated soft tints. */
+.home-page .contact-method{
+  min-height:190px!important;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease!important;
+}
+.home-page .contact-method-icon{
+  display:grid!important;place-items:center!important;
+  width:60px!important;height:60px!important;margin:0 0 13px!important;
+  flex:0 0 60px!important;
+}
+.home-page .contact-method-icon svg{display:block;width:54px!important;height:54px!important;overflow:visible}
+.home-page .contact-icon-github{color:#343434!important}
+.home-page .contact-icon-github svg{width:54px!important;height:54px!important}
+.home-page .contact-icon-email{color:#71869a!important}
+.home-page .contact-icon-email svg{width:55px!important;height:55px!important}
+.home-page .contact-icon-wechat{color:#438b62!important}
+.home-page .contact-icon-wechat svg{width:60px!important;height:50px!important}
+.home-page .contact-method-confirm:has(.contact-icon-github){
+  background:#f0efec!important;border-color:#dedbd5!important;
+}
+.home-page .contact-method-confirm:has(.contact-icon-github):hover{
+  background:#e8e6e1!important;border-color:#c9c5bc!important;
+}
+.home-page .contact-method-confirm:has(.contact-icon-email){
+  background:#edf1f3!important;border-color:#d7e0e5!important;
+}
+.home-page .contact-method-confirm:has(.contact-icon-email):hover{
+  background:#e4ebef!important;border-color:#c3d0d8!important;
+}
+.home-page .contact-method-wechat{
+  background:#edf3ed!important;border-color:#d6e3d7!important;
+}
+.home-page .contact-method-wechat:hover{
+  background:#e3eee4!important;border-color:#bfd4c2!important;
+}
+.home-page .contact-method-confirm:has(.contact-icon-github) .contact-method-action{color:#45433f!important}
+.home-page .contact-method-confirm:has(.contact-icon-email) .contact-method-action{color:#617c91!important}
+.home-page .contact-method-wechat .contact-method-action{color:#438b62!important}
+@media(max-width:760px){
+  .home-page .contact-method{min-height:166px!important;padding:12px 9px 11px!important}
+  .home-page .contact-method-icon{
+    width:60px!important;height:60px!important;margin-bottom:10px!important;flex-basis:60px!important;
+  }
+  .home-page .contact-method-icon svg{width:54px!important;height:54px!important}
+  .home-page .contact-icon-wechat svg{width:60px!important;height:50px!important}
+}
