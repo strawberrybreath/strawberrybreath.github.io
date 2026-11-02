@@ -243,3 +243,44 @@
  .home-page .footer-bottom{align-items:flex-start;flex-wrap:wrap;gap:12px}
  .home-page .site-slogan{text-align:left;width:100%;padding-top:12px;border-top:1px solid rgba(133,105,91,.2)}
 }
+
+
+/* 2026-11-02: homepage cleanup — remove decorative icons and striped/texture fills */
+.home-page .home-intro:after,
+.home-page .home-kicker:before,
+.home-page .home-section-heading .heading-icon,
+.home-page .article-list-category:before,
+.home-page .contact-intro .home-kicker:before,
+.home-page .contact-icon,
+.home-page .contact-arrow,
+.home-page .section-mark {
+  display:none !important;
+  content:none !important;
+}
+.home-page .home-intro,
+.home-page .home-profile,
+.home-page .home-contact,
+.home-page .article-list-item,
+.home-page .contact-card,
+.home-page .article-list-image,
+.home-page .home-section-heading,
+.home-page .article-list-copy h3 a {
+  background-image:none !important;
+}
+.home-page .home-intro {
+  background-color:var(--home-panel,#EEE7DF) !important;
+}
+.home-page .home-profile {
+  background-color:var(--home-soft,#FAF8F3) !important;
+}
+.home-page .home-contact {
+  background-color:var(--home-contact,#EAE2DA) !important;
+}
+.home-page .article-list-item,
+.home-page .contact-card {
+  background-color:transparent !important;
+  box-shadow:none !important;
+}
+.home-page .article-list-copy h3 a {
+  background:transparent !important;
+}
