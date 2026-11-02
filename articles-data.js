@@ -63,7 +63,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const latest = document.querySelector("[data-latest-articles]");
   const archive = document.querySelector("[data-all-articles]");
   if (latest) ordered.slice(0, 3).forEach((article, index) => latest.appendChild(articleCard(article, index)));
-  if (archive) ordered.forEach((article, index) => archive.appendChild(articleCard(article, index)));
-  const count = document.querySelector("[data-article-count]");
-  if (count) count.textContent = String(ordered.length);
+  if (archive) {
+    ordered.forEach((article, index) => archive.appendChild(articleCard(article, index)));
+    const search = document.querySelector("[data-article-search]");
+    const count = document.querySelector("[data-article-count]");
+    const empty = document.querySelector("[data-article-empty]");
+    const updateResults = () => {
+      const query = (search?.value || "").trim().toLocaleLowerCase();
+      let visible = 0;
+      archive.querySelectorAll(".article-list-item").forEach((item, index) => {
+        const article = ordered[index];
+        const haystack = [article.title, article.description, article.dateLabel].join(" ").toLocaleLowerCase();
+        const match = !query || haystack.includes(query);
+        item.hidden = !match;
+        if (match) visible += 1;
+      });
+      if (count) count.textContent = String(visible);
+      if (empty) empty.hidden = visible !== 0;
+    };
+    if (search) search.addEventListener("input", updateResults);
+    updateResults();
+  }
 });
