@@ -853,3 +853,57 @@ body.wechat-modal-open{overflow:hidden}
   .home-page .contact-method-detail{font-size:9px!important}
   .home-page .contact-method-action{font-size:9px!important}
 }
+
+
+/* Confirm before leaving the homepage through GitHub or Email contact cards. */
+.home-page .contact-method-confirm{
+  appearance:none!important;-webkit-appearance:none!important;
+  width:100%!important;font:inherit!important;
+}
+.home-page .contact-method-confirm .contact-method-title,
+.home-page .contact-method-confirm .contact-method-detail,
+.home-page .contact-method-confirm .contact-method-action,
+.home-page .contact-method-confirm .contact-method-index{display:block!important}
+.contact-confirm-modal{
+  display:none;position:fixed;inset:0;z-index:3100;
+  align-items:center;justify-content:center;padding:22px;
+}
+.contact-confirm-modal.is-open{display:flex}
+.contact-confirm-backdrop{
+  position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;
+  background:rgba(35,31,27,.58);cursor:pointer;
+}
+.contact-confirm-panel{
+  position:relative;z-index:1;width:min(440px,100%);padding:34px 30px 27px;
+  background:var(--paper-light);border:1px solid var(--line);
+  box-shadow:0 22px 70px rgba(20,16,12,.24);text-align:left;
+}
+.contact-confirm-close{
+  position:absolute;top:8px;right:12px;width:36px;height:36px;
+  padding:0;border:0;background:transparent;color:var(--muted);
+  font:300 29px/1 "DM Sans",sans-serif;cursor:pointer;
+}
+.contact-confirm-panel .contact-eyebrow{margin:0 0 9px!important}
+.contact-confirm-panel h2{
+  margin:0 0 10px!important;color:var(--ink)!important;
+  font:500 22px/1.6 var(--body)!important;
+}
+.contact-confirm-detail{
+  margin:0!important;color:var(--muted)!important;font:13px/2 var(--body)!important;
+  overflow-wrap:anywhere;
+}
+.contact-confirm-actions{
+  display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px;margin-top:25px;
+}
+.contact-confirm-actions button{
+  min-height:40px;padding:8px 15px;border:1px solid var(--line);
+  font:13px/1.5 var(--body);cursor:pointer;
+}
+.contact-confirm-cancel{background:transparent;color:var(--muted)}
+.contact-confirm-continue{background:var(--accent);border-color:var(--accent)!important;color:#fff}
+body.contact-confirm-open{overflow:hidden}
+@media(max-width:760px){
+  .contact-confirm-panel{padding:31px 22px 22px}
+  .contact-confirm-actions{justify-content:stretch}
+  .contact-confirm-actions button{flex:1}
+}
