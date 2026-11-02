@@ -2208,3 +2208,33 @@ html::after{animation-duration:14s!important}
 @media(max-width:390px){
   .site-header .brand-text strong{font-size:14px!important}
 }
+
+
+/* Homepage masthead refinement: larger English title, tighter gap below fixed navigation, warm berry subtitle. */
+.home-page .home-intro{
+  padding-top:24px!important;
+}
+.home-page #site-title,
+.home-page .home-intro h1{
+  font-size:clamp(76px,10vw,116px)!important;
+  line-height:1.05!important;
+  margin-top:0!important;
+  margin-bottom:10px!important;
+}
+.home-page .home-subtitle{
+  color:#A64F48!important;
+}
+@media(max-width:760px){
+  .home-page .home-intro{padding-top:18px!important}
+  .home-page #site-title,
+  .home-page .home-intro h1{
+    font-size:clamp(58px,15vw,82px)!important;
+    line-height:1.08!important;
+    margin-bottom:8px!important;
+  }
+  .home-page .home-subtitle{
+    color:#A64F48!important;
+    font-size:16px!important;
+    margin-bottom:18px!important;
+  }
+}
