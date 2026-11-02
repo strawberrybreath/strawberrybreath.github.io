@@ -1558,10 +1558,7 @@ body{padding-top:76px!important}
   backdrop-filter:blur(14px)!important;
   -webkit-backdrop-filter:blur(14px)!important;
 }
-.site-header:after{
-  content:"";position:absolute;left:0;bottom:-1px;width:clamp(72px,12vw,150px);
-  height:2px;background:var(--accent);opacity:.8;
-}
+.site-header:after{content:none!important;display:none!important}
 .site-header .brand{gap:10px!important}
 .site-header .brand-avatar{width:34px!important;height:34px!important;flex-basis:34px!important}
 .site-header .brand-text strong{font-size:14px!important;letter-spacing:.035em!important}
