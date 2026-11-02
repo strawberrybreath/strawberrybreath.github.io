@@ -2538,3 +2538,21 @@ html::after{
   .article-issue{font-size:13px!important;margin-bottom:5px!important}
   .article-issue-number{width:27px!important;height:27px!important;flex-basis:27px!important;font-size:15px!important}
 }
+
+
+/* Minimal back-to-top control at the end of every article. */
+.article-ending .back-to-top{
+  display:block!important;
+  margin:18px 0 0 auto!important;
+  padding:4px 0 4px 12px!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:var(--accent-dark,#a64f48)!important;
+  font:400 30px/1 var(--sans)!important;
+  cursor:pointer!important;
+  transition:transform .2s ease,color .2s ease!important;
+}
+.article-ending .back-to-top:hover{transform:translateY(-4px)!important;color:var(--ink)!important}
+.article-ending .back-to-top:focus-visible{outline:2px solid currentColor!important;outline-offset:5px!important;border-radius:50%!important}
+@media(prefers-reduced-motion:reduce){.article-ending .back-to-top{transition:none!important}}
