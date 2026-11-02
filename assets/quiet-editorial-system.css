@@ -1422,3 +1422,89 @@ a:focus-visible,button:focus-visible{
 }
 .home-page .home-articles a:hover::before,
 .archive-page .article-list a:hover::before{transform:translate(3px,-2px)!important}
+
+
+/* Return to the original Strawberry Breath palette; retain the current type scale and script font. */
+:root{
+  --paper:#F7F4ED!important;
+  --paper-light:#FFFDF8!important;
+  --paper-soft:#E8E0D5!important;
+  --ink:#302D29!important;
+  --muted:#858078!important;
+  --accent:#E63F25!important;
+  --sage:#799E60!important;
+  --blush:#FECBCB!important;
+  --line:rgba(48,45,41,.18)!important;
+}
+html::before{
+  background-color:#F7F4ED!important;
+  background-image:
+    radial-gradient(ellipse at 18% 12%,rgba(255,255,255,.78) 0%,rgba(255,255,255,0) 48%),
+    linear-gradient(135deg,#FFFDF8 0%,#F7F4ED 48%,#E8E0D5 100%),
+    repeating-linear-gradient(0deg,rgba(48,45,41,.018) 0,rgba(48,45,41,.018) 1px,transparent 1px,transparent 5px)!important;
+  background-repeat:no-repeat,no-repeat,repeat!important;
+  background-size:cover,cover,100% 5px!important;
+  background-attachment:fixed,fixed,scroll!important;
+}
+.site-header::before{
+  background-image:
+    radial-gradient(ellipse at 18% 12%,rgba(255,255,255,.78),rgba(255,255,255,0) 48%),
+    linear-gradient(135deg,#FFFDF8 0%,#F7F4ED 48%,#E8E0D5 100%)!important;
+  background-size:cover,cover!important;
+  background-position:center!important;
+  background-attachment:fixed!important;
+  border-bottom:1px solid rgba(48,45,41,.14)!important;
+}
+.site-header .brand-text strong,
+.site-header .site-nav a{color:#302D29!important}
+.site-header .site-nav a:hover,
+.site-header .site-nav a.is-current{color:#E63F25!important}
+.home-page .contact-methods .contact-method{
+  border-color:rgba(230,63,37,.72)!important;
+}
+.home-page .contact-methods .contact-method-icon,
+.home-page .contact-methods .contact-method-action{color:#E63F25!important}
+.home-page .contact-methods .contact-method:hover{
+  background:rgba(230,63,37,.055)!important;
+  border-color:#E63F25!important;
+}
+.home-page .home-section-heading::before,
+.article-page .essay-section-title::before,
+.article-page .article-topline::before,
+.site-footer::before{color:#E63F25!important}
+.home-page .home-section-heading::after{background:linear-gradient(90deg,#E63F25,rgba(230,63,37,0))!important}
+.article-page .article-hero{border-bottom-color:rgba(230,63,37,.22)!important}
+.article-page .article-hero::after{color:#E63F25!important}
+
+/* Bilingual navigation: English script label above Chinese label. */
+.site-header .site-nav a{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+  line-height:1.12!important;
+  text-align:center!important;
+  padding:7px 2px 9px!important;
+}
+.site-header .site-nav a .nav-en{
+  display:block!important;
+  font-family:"Italianno",cursive!important;
+  font-size:25px!important;
+  line-height:1.05!important;
+  font-weight:400!important;
+  letter-spacing:.015em!important;
+}
+.site-header .site-nav a .nav-zh{
+  display:block!important;
+  font-family:"Noto Serif SC","Songti SC","STSong",serif!important;
+  font-size:16px!important;
+  line-height:1.4!important;
+  letter-spacing:.08em!important;
+}
+@media(max-width:699px){
+  .site-header .site-nav{gap:clamp(9px,2.2vw,16px)!important}
+  .site-header .site-nav a{padding:5px 0 7px!important}
+  .site-header .site-nav a .nav-en{font-size:22px!important}
+  .site-header .site-nav a .nav-zh{font-size:14px!important}
+}
