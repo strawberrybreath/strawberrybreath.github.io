@@ -81,18 +81,18 @@
     <p class="home-contact-intro">欢迎交流阅读、作品与生活中的观察。无论是分享一段有趣的文字，还是聊聊某个值得继续思考的话题，都很欢迎。</p>
   </div>
   <div class="contact-methods" aria-label="联系方式">
-    <a class="contact-method" href="https://github.com/strawberrybreath" target="_blank" rel="noopener noreferrer">
+    <button class="contact-method contact-method-confirm" type="button" data-confirm-url="https://github.com/strawberrybreath" data-confirm-title="即将前往 GitHub" data-confirm-detail="你将离开 Strawberry Breath，前往 GitHub 查看项目与网站记录。">
       <span class="contact-method-index">01</span>
       <span class="contact-method-title">GitHub</span>
       <span class="contact-method-detail">查看项目与网站记录</span>
       <span class="contact-method-action">访问主页 ↗</span>
-    </a>
-    <a class="contact-method" href="mailto:strawberrybreath@gmail.com">
+    </button>
+    <button class="contact-method contact-method-confirm" type="button" data-confirm-url="mailto:strawberrybreath@gmail.com" data-confirm-title="即将打开邮件应用" data-confirm-detail="确认后将调用设备上的默认邮件应用，向 strawberrybreath@gmail.com 发送邮件。">
       <span class="contact-method-index">02</span>
       <span class="contact-method-title">Email</span>
       <span class="contact-method-detail">发送邮件进行交流</span>
       <span class="contact-method-action">写一封邮件 ↗</span>
-    </a>
+    </button>
     <button class="contact-method contact-method-wechat" type="button" id="open-wechat-qr" aria-haspopup="dialog" aria-controls="wechat-qr-modal">
       <span class="contact-method-index">03</span>
       <span class="contact-method-title">微信公众号</span>
@@ -113,6 +113,61 @@
     <p class="wechat-modal-note">打开微信，扫描二维码关注公众号。</p>
   </div>
 </div>
+
+<div class="contact-confirm-modal" id="contact-confirm-modal" role="dialog" aria-modal="true" aria-labelledby="contact-confirm-title" aria-hidden="true">
+  <button class="contact-confirm-backdrop" type="button" data-close-confirm aria-label="取消跳转"></button>
+  <div class="contact-confirm-panel" role="document">
+    <button class="contact-confirm-close" type="button" data-close-confirm aria-label="关闭">×</button>
+    <p class="contact-eyebrow">LEAVING THIS SITE</p>
+    <h2 id="contact-confirm-title">即将前往外部网站</h2>
+    <p class="contact-confirm-detail" id="contact-confirm-detail">你将离开当前页面。</p>
+    <div class="contact-confirm-actions">
+      <button class="contact-confirm-cancel" type="button" data-close-confirm>暂不跳转</button>
+      <button class="contact-confirm-continue" type="button" id="contact-confirm-continue">确认，继续</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const confirmModal = document.getElementById('contact-confirm-modal');
+  const confirmTitle = document.getElementById('contact-confirm-title');
+  const confirmDetail = document.getElementById('contact-confirm-detail');
+  const continueButton = document.getElementById('contact-confirm-continue');
+  let pendingUrl = '';
+  let previousFocus = null;
+  const closeConfirm = () => {
+    confirmModal.classList.remove('is-open');
+    confirmModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('contact-confirm-open');
+    pendingUrl = '';
+    if (previousFocus) previousFocus.focus();
+  };
+  document.querySelectorAll('[data-confirm-url]').forEach(button => {
+    button.addEventListener('click', () => {
+      pendingUrl = button.dataset.confirmUrl;
+      confirmTitle.textContent = button.dataset.confirmTitle || '即将跳转';
+      confirmDetail.textContent = button.dataset.confirmDetail || '确认后将打开外部应用或网站。';
+      previousFocus = document.activeElement;
+      confirmModal.classList.add('is-open');
+      confirmModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('contact-confirm-open');
+      continueButton.focus();
+    });
+  });
+  confirmModal.querySelectorAll('[data-close-confirm]').forEach(button => button.addEventListener('click', closeConfirm));
+  continueButton.addEventListener('click', () => {
+    if (!pendingUrl) return;
+    const url = pendingUrl;
+    closeConfirm();
+    if (url.startsWith('mailto:')) window.location.href = url;
+    else window.open(url, '_blank', 'noopener,noreferrer');
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && confirmModal.classList.contains('is-open')) closeConfirm();
+  });
+})();
+</script>
 
 <script>
 (() => {
