@@ -1114,3 +1114,11 @@ body,body *{
 .eyebrow,.article-topline,.article-tags,.site-footer,.home-section-heading a{
   letter-spacing:.025em!important;
 }
+
+/* Homepage masthead: keep the Victorian script face, but give the English title more weight. */
+.home-page .home-intro h1{
+  font-family:"Italianno","Noto Serif SC",serif!important;
+  font-weight:700!important;
+  -webkit-text-stroke:.45px currentColor!important;
+  text-shadow:0 0 .35px currentColor!important;
+}
