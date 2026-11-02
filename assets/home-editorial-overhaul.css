@@ -155,3 +155,28 @@
  .home-page .contact-card{min-height:68px;padding:10px 0;gap:13px}
  .home-page .contact-icon{width:36px;flex-basis:36px}
 }
+
+/* Latest articles: magazine-like rows instead of individual cards */
+.home-page [data-latest-articles]{display:block}
+.home-page .article-list-item{
+ display:grid!important;grid-template-columns:148px minmax(0,1fr)!important;gap:28px!important;
+ padding:26px 0!important;margin:0!important;border:0!important;
+ border-bottom:1px solid rgba(133,105,91,.24)!important;border-radius:0!important;
+ background:transparent!important;box-shadow:none!important;
+}
+.home-page .article-list-item:first-child{border-top:1px solid rgba(133,105,91,.24)!important}
+.home-page .article-list-image{width:148px!important;max-width:148px!important;overflow:visible!important;background:transparent!important}
+.home-page .article-list-image img{display:block;width:100%;height:auto;object-fit:contain;filter:saturate(.9)}
+.home-page .article-list-copy{align-self:center}
+.home-page .article-list-category{display:flex;align-items:center;gap:8px}
+.home-page .article-list-category:before{content:"✳";font-size:12px;color:#A65D55}
+.home-page .article-list-copy h3{margin:2px 0 8px!important}
+.home-page .article-list-copy h3 a{background:linear-gradient(transparent 82%,rgba(205,157,135,.28) 82%);text-decoration:none!important}
+.home-page .article-list-copy>p:not(.article-list-category){max-width:650px}
+.home-page .article-list-meta{display:flex;gap:15px;color:#927D70}
+@media(max-width:760px){
+ .home-page .article-list-item{grid-template-columns:92px minmax(0,1fr)!important;gap:16px!important;padding:18px 0!important}
+ .home-page .article-list-image{width:92px!important;max-width:92px!important}
+ .home-page .article-list-copy{align-self:start}
+ .home-page .article-list-copy h3{font-size:16px!important}
+}
