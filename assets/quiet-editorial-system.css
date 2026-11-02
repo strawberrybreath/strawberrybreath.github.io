@@ -3353,3 +3353,13 @@ html::after{
     text-align:right!important;
   }
 }
+
+
+/* Keep the 100% reading label comfortably inside the progress ring. */
+.site-header .reading-ring span{
+  font-size:clamp(11px,.9vw,13px)!important;
+  letter-spacing:-.035em!important;
+}
+@media(max-width:760px){
+  .site-header .reading-ring span{font-size:11px!important}
+}
