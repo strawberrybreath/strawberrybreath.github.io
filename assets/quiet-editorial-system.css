@@ -2839,3 +2839,63 @@ html::after{
   .site-footer>.back-to-top.footer-page-link,
   .article-page .article-ending>.back-to-top.footer-page-link{font-size:12px!important;gap:7px!important}
 }
+
+
+/* Footer hierarchy: navigation first, site identity and slogan beneath it. */
+.site-footer,
+.article-page .article-ending.site-footer{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  grid-template-rows:auto auto!important;
+  align-items:center!important;
+  column-gap:24px!important;
+  row-gap:18px!important;
+}
+.site-footer>.footer-page-link,
+.article-page .article-ending>.footer-page-link{
+  grid-column:1!important;
+  grid-row:1!important;
+  justify-self:start!important;
+  align-self:center!important;
+}
+.site-footer>.back-to-top,
+.article-page .article-ending>.back-to-top{
+  grid-column:2!important;
+  grid-row:1!important;
+  justify-self:end!important;
+  align-self:center!important;
+}
+.site-footer>.footer-identity,
+.article-page .article-ending>.footer-identity{
+  grid-column:1!important;
+  grid-row:2!important;
+  justify-self:start!important;
+  align-self:start!important;
+}
+.site-footer .footer-brand{display:inline-block!important;margin:0!important}
+.site-footer .footer-copy{margin:5px 0 0!important}
+.site-footer>.site-slogan,
+.article-page .article-ending>.site-slogan{
+  grid-column:2!important;
+  grid-row:2!important;
+  justify-self:end!important;
+  align-self:start!important;
+  margin:0!important;
+  text-align:right!important;
+}
+@media(max-width:760px){
+  .site-footer,.article-page .article-ending.site-footer{
+    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-rows:auto auto!important;
+    column-gap:12px!important;
+    row-gap:15px!important;
+  }
+  .site-footer>.footer-identity,
+  .article-page .article-ending>.footer-identity{grid-column:1!important;grid-row:2!important}
+  .site-footer>.site-slogan,
+  .article-page .article-ending>.site-slogan{grid-column:2!important;grid-row:2!important}
+  .site-footer>.footer-page-link,
+  .article-page .article-ending>.footer-page-link{grid-column:1!important;grid-row:1!important}
+  .site-footer>.back-to-top,
+  .article-page .article-ending>.back-to-top{grid-column:2!important;grid-row:1!important}
+}
