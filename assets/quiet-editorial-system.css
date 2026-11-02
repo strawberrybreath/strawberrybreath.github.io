@@ -3079,3 +3079,121 @@ html::after{
   .site-footer>.back-to-top.footer-page-link,
   .article-page .article-ending>.back-to-top.footer-page-link{font-size:12px!important}
 }
+
+
+/* Footer is deliberately composed of exactly two rows:
+   navigation actions, then one glass card for identity and bilingual slogan. */
+.site-footer,
+.article-page .article-ending.site-footer{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-template-rows:auto auto!important;
+  align-items:stretch!important;
+  justify-items:stretch!important;
+  gap:14px!important;
+}
+.site-footer>.footer-actions,
+.article-page .article-ending>.footer-actions{
+  grid-column:1!important;
+  grid-row:1!important;
+  display:flex!important;
+  flex-direction:row!important;
+  flex-wrap:nowrap!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:16px!important;
+  width:100%!important;
+  min-width:0!important;
+}
+.site-footer .footer-actions>.footer-page-link,
+.article-page .article-ending .footer-actions>.footer-page-link{
+  display:inline-flex!important;
+  flex:0 0 auto!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  width:auto!important;
+  max-width:calc(50% - 8px)!important;
+  margin:0!important;
+  padding:5px 0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:var(--accent-dark,#a64f48)!important;
+  font:400 13px/1.5 var(--body)!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+}
+.site-footer .footer-actions>.back-to-top,
+.article-page .article-ending .footer-actions>.back-to-top{
+  margin-left:auto!important;
+  justify-content:flex-end!important;
+  cursor:pointer!important;
+}
+.site-footer .footer-glass-card,
+.article-page .article-ending .footer-glass-card{
+  grid-column:1!important;
+  grid-row:2!important;
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:24px!important;
+  width:100%!important;
+  min-width:0!important;
+  box-sizing:border-box!important;
+  padding:clamp(18px,2.8vw,28px) clamp(18px,3.2vw,34px)!important;
+  border:1px solid rgba(255,255,255,.62)!important;
+  border-radius:22px!important;
+  background:linear-gradient(135deg,rgba(255,255,255,.48),rgba(255,248,247,.28))!important;
+  box-shadow:0 12px 34px rgba(102,70,73,.07),inset 0 1px 0 rgba(255,255,255,.55)!important;
+  -webkit-backdrop-filter:blur(16px) saturate(125%)!important;
+  backdrop-filter:blur(16px) saturate(125%)!important;
+}
+.site-footer .footer-identity,
+.article-page .article-ending .footer-identity{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:5px!important;
+  margin:0!important;
+}
+.site-footer .footer-brand,
+.site-footer .footer-copy{margin:0!important;font-family:var(--body)!important}
+.site-footer .site-slogan,
+.article-page .article-ending .site-slogan{
+  display:block!important;
+  margin:0!important;
+  text-align:right!important;
+  white-space:normal!important;
+  font-family:var(--body)!important;
+  line-height:1.8!important;
+}
+.site-footer .site-slogan br,
+.article-page .article-ending .site-slogan br{display:block!important}
+.site-footer .site-slogan span,
+.article-page .article-ending .site-slogan span{display:inline!important;font:inherit!important;font-family:var(--body)!important}
+@media(max-width:760px){
+  .site-footer,.article-page .article-ending.site-footer{
+    width:calc(100% - 34px)!important;
+    margin:34px auto 0!important;
+    padding:18px 0 22px!important;
+    gap:12px!important;
+  }
+  .site-footer .footer-actions>.footer-page-link,
+  .article-page .article-ending .footer-actions>.footer-page-link{
+    font-size:12px!important;
+    max-width:calc(50% - 6px)!important;
+  }
+  .site-footer .footer-glass-card,
+  .article-page .article-ending .footer-glass-card{
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    gap:12px!important;
+    padding:18px 20px!important;
+    border-radius:18px!important;
+  }
+  .site-footer .site-slogan,
+  .article-page .article-ending .site-slogan{text-align:left!important;font-size:13px!important}
+  .site-footer .footer-brand{font-size:14px!important}
+  .site-footer .footer-copy{font-size:11px!important}
+}
