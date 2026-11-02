@@ -2495,3 +2495,46 @@ html::after{
   animation-direction:normal!important;
   animation-timing-function:linear!important;
 }
+
+
+/* Make numeric information easier to notice and read throughout the site. */
+.site-header .reading-ring span{
+  font-size:clamp(13px,1.15vw,16px)!important;
+  font-weight:600!important;
+  font-variant-numeric:lining-nums tabular-nums!important;
+}
+.site-header .reading-stats,
+.site-header .reading-stats strong{
+  font-size:clamp(12px,.95vw,14px)!important;
+  font-variant-numeric:lining-nums tabular-nums!important;
+}
+.article-list-meta,
+.article-list-meta time,
+.archive-page .archive-meta,
+.archive-page .archive-meta strong,
+.footer-copy #year{
+  font-size:clamp(13px,1vw,15px)!important;
+  font-variant-numeric:lining-nums tabular-nums!important;
+}
+.article-issue{
+  display:inline-flex!important;align-items:center!important;gap:4px!important;
+  margin:0 0 8px!important;color:var(--accent-dark,#a64f48)!important;
+  font:500 14px/1.2 var(--sans)!important;letter-spacing:.04em!important;
+  vertical-align:middle!important;
+}
+.article-issue-number{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  width:30px!important;height:30px!important;flex:0 0 30px!important;
+  border:1px solid rgba(166,79,72,.34)!important;border-radius:50%!important;
+  background:rgba(255,250,248,.48)!important;color:var(--accent-dark,#a64f48)!important;
+  font:600 16px/1 var(--sans)!important;
+  font-variant-numeric:lining-nums tabular-nums!important;
+}
+@media(max-width:760px){
+  .site-header .reading-ring span{font-size:13px!important}
+  .site-header .reading-stats,.site-header .reading-stats strong{font-size:11px!important}
+  .article-list-meta,.article-list-meta time,.archive-page .archive-meta,
+  .archive-page .archive-meta strong,.footer-copy #year{font-size:12px!important}
+  .article-issue{font-size:13px!important;margin-bottom:5px!important}
+  .article-issue-number{width:27px!important;height:27px!important;flex-basis:27px!important;font-size:15px!important}
+}
