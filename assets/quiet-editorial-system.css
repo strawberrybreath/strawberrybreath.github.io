@@ -1370,3 +1370,55 @@ a:focus-visible,button:focus-visible{
   .site-nav a{transition:color .2s ease,border-color .2s ease,background .2s ease,transform .2s ease!important}
   .home-page .contact-methods .contact-method:hover{transform:translateY(-3px)!important}
 }
+
+
+/* Final accessibility and ornamental pass: prioritize easy reading on small screens. */
+@media (max-width:699px){
+  body{font-size:19px!important}
+  .home-page .home-intro p,.home-page .home-profile p{font-size:19px!important}
+  .article-page .essay-content p,.article-page .essay-content li{
+    font-size:19px!important;line-height:2.08!important;
+  }
+  .article-page .article-subtitle{font-size:19px!important}
+  .site-header .site-nav a{font-size:18px!important}
+}
+@media (min-width:700px){
+  body{font-size:20px!important}
+  .article-page .essay-content p,.article-page .essay-content li{font-size:22px!important}
+}
+.site-header .site-nav a{
+  position:relative!important;
+}
+.site-header .site-nav a::after{
+  display:block!important;
+  content:""!important;
+  position:absolute!important;
+  left:0!important;right:0!important;bottom:2px!important;
+  height:2px!important;
+  background:var(--accent)!important;
+  transform:scaleX(0)!important;
+  transform-origin:left center!important;
+  transition:transform .2s ease!important;
+}
+.site-header .site-nav a:hover::after,
+.site-header .site-nav a.is-current::after{transform:scaleX(1)!important}
+.article-page .article-topline::before{
+  content:"✦"!important;
+  color:var(--accent)!important;
+  margin-right:9px!important;
+}
+.site-footer::before{
+  content:"✿  "!important;
+  color:var(--accent)!important;
+}
+.home-page .home-articles a::before,
+.archive-page .article-list a::before{
+  content:"↗"!important;
+  display:inline-block!important;
+  color:var(--accent)!important;
+  font-size:.9em!important;
+  margin-right:10px!important;
+  transition:transform .2s ease!important;
+}
+.home-page .home-articles a:hover::before,
+.archive-page .article-list a:hover::before{transform:translate(3px,-2px)!important}
