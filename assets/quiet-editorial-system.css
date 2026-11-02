@@ -2238,3 +2238,32 @@ html::after{animation-duration:14s!important}
     margin-bottom:18px!important;
   }
 }
+
+
+/* Full-page pearlescent water: broad alternating rose and ivory waves with a sunlit edge. */
+html::after{
+  content:""!important;
+  position:fixed!important;
+  inset:-5% -4%!important;
+  z-index:-1!important;
+  pointer-events:none!important;
+  display:block!important;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%201100%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%20%3ClinearGradient%20id%3D%22base%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fffaf8%22%2F%3E%3Cstop%20offset%3D%22.48%22%20stop-color%3D%22%23f9dce1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff8f5%22%2F%3E%3C%2FlinearGradient%3E%0A%20%3ClinearGradient%20id%3D%22rose%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22.9%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23e97891%22%20stop-opacity%3D%22.46%22%2F%3E%3Cstop%20offset%3D%22.48%22%20stop-color%3D%22%23f4aebc%22%20stop-opacity%3D%22.58%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23e86f89%22%20stop-opacity%3D%22.36%22%2F%3E%3C%2FlinearGradient%3E%0A%20%3ClinearGradient%20id%3D%22pearl%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.92%22%2F%3E%3Cstop%20offset%3D%22.52%22%20stop-color%3D%22%23fff7f5%22%20stop-opacity%3D%22.8%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.46%22%2F%3E%3C%2FlinearGradient%3E%0A%20%3CradialGradient%20id%3D%22sun%22%20cx%3D%22.78%22%20cy%3D%22.22%22%20r%3D%22.55%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.98%22%2F%3E%3Cstop%20offset%3D%22.2%22%20stop-color%3D%22%23fff9e9%22%20stop-opacity%3D%22.78%22%2F%3E%3Cstop%20offset%3D%22.48%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.2%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%0A%20%3ClinearGradient%20id%3D%22glint%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%220%22%3E%3Cstop%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3Cstop%20offset%3D%22.48%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.9%22%2F%3E%3Cstop%20offset%3D%22.7%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%22.22%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%0A%20%3Cfilter%20id%3D%22soft%22%3E%3CfeGaussianBlur%20stdDeviation%3D%2228%22%2F%3E%3C%2Ffilter%3E%0A%3C%2Fdefs%3E%0A%3Crect%20width%3D%221440%22%20height%3D%221100%22%20fill%3D%22url(%23base)%22%2F%3E%0A%3Cpath%20d%3D%22M-100%20160%20C160%2030%20360%2060%20560%20190%20S930%20330%201150%20185%20S1450%2070%201560%20150%20L1560%20390%20C1320%20300%201260%20440%201050%20475%20S650%20390%20470%20430%20S120%20500%20-100%20410Z%22%20fill%3D%22url(%23rose)%22%2F%3E%0A%3Cpath%20d%3D%22M-100%20360%20C120%20250%20330%20285%20520%20410%20S900%20555%201110%20405%20S1400%20300%201560%20370%20L1560%20565%20C1370%20500%201250%20650%201050%20665%20S650%20575%20470%20645%20S120%20700%20-100%20615Z%22%20fill%3D%22url(%23pearl)%22%2F%3E%0A%3Cpath%20d%3D%22M-100%20560%20C130%20455%20340%20480%20540%20600%20S900%20755%201120%20605%20S1400%20505%201560%20570%20L1560%20790%20C1350%20720%201250%20860%201040%20885%20S650%20795%20470%20860%20S120%20930%20-100%20825Z%22%20fill%3D%22url(%23rose)%22%20opacity%3D%22.72%22%2F%3E%0A%3Cpath%20d%3D%22M-100%20760%20C120%20650%20340%20690%20540%20805%20S900%20955%201120%20810%20S1400%20700%201560%20770%20L1560%201100%20L-100%201100Z%22%20fill%3D%22url(%23pearl)%22%2F%3E%0A%3Cellipse%20cx%3D%221120%22%20cy%3D%22190%22%20rx%3D%22470%22%20ry%3D%22340%22%20fill%3D%22url(%23sun)%22%2F%3E%0A%3Cellipse%20cx%3D%221080%22%20cy%3D%22215%22%20rx%3D%22360%22%20ry%3D%22100%22%20fill%3D%22%23fff%22%20opacity%3D%22.28%22%20filter%3D%22url(%23soft)%22%2F%3E%0A%3Cpath%20d%3D%22M-80%20325%20C180%20220%20360%20255%20560%20365%20S930%20510%201160%20360%20S1430%20260%201530%20320%22%20fill%3D%22none%22%20stroke%3D%22url(%23glint)%22%20stroke-width%3D%2218%22%20opacity%3D%22.78%22%2F%3E%0A%3Cpath%20d%3D%22M-80%20720%20C180%20615%20360%20650%20560%20760%20S930%20905%201160%20755%20S1430%20655%201530%20715%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%228%22%20opacity%3D%22.35%22%2F%3E%0A%3C%2Fsvg%3E")!important;
+  background-size:112% 112%!important;
+  background-position:50% 50%!important;
+  background-repeat:no-repeat!important;
+  opacity:.94!important;
+  transform:translate3d(-1%,0,0) scale(1.02);
+  transform-origin:center;
+  animation:strawberry-water-light 24s ease-in-out infinite alternate!important;
+  will-change:transform,filter,background-position;
+}
+@keyframes strawberry-water-light{
+  0%{transform:translate3d(-1.4%,-.5%,0) scale(1.02);filter:brightness(1) saturate(1)}
+  50%{transform:translate3d(.5%,.7%,0) scale(1.045);filter:brightness(1.035) saturate(1.04)}
+  100%{transform:translate3d(1.2%,-.4%,0) scale(1.025);filter:brightness(1.015) saturate(1.02)}
+}
+@media(max-width:760px){
+ html::after{inset:-6% -18%!important;background-size:145% 112%!important;opacity:.88!important;animation-duration:27s!important}
+}
+@media(prefers-reduced-motion:reduce){html::after{animation:none!important;transform:none!important}}
