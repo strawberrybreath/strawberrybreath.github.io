@@ -2808,3 +2808,34 @@ html::after{
   .site-footer>.footer-page-link,
   .article-page .article-ending>.footer-page-link{font-size:12px!important}
 }
+
+
+/* Make the back-to-top control visually identical to the adjacent footer link. */
+.site-footer>.back-to-top.footer-page-link,
+.article-page .article-ending>.back-to-top.footer-page-link{
+  display:inline-flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:7px!important;
+  padding:5px 0!important;
+  color:var(--accent-dark,#a64f48)!important;
+  font:400 13px/1.5 var(--serif)!important;
+  letter-spacing:0!important;
+  transform:none!important;
+}
+.site-footer>.back-to-top.footer-page-link .back-to-top-arrow,
+.article-page .article-ending>.back-to-top.footer-page-link .back-to-top-arrow{
+  display:inline!important;
+  font:inherit!important;
+  line-height:1.5!important;
+}
+.site-footer>.back-to-top.footer-page-link:hover,
+.article-page .article-ending>.back-to-top.footer-page-link:hover{
+  transform:translateX(3px)!important;
+  color:var(--ink)!important;
+}
+@media(max-width:760px){
+  .site-footer>.back-to-top.footer-page-link,
+  .article-page .article-ending>.back-to-top.footer-page-link{font-size:12px!important;gap:7px!important}
+}
