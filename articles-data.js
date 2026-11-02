@@ -48,10 +48,13 @@ function articleCard(article, index) {
   const date = article.date && article.dateLabel
     ? `<p class="article-list-meta"><time datetime="${article.date}">${article.dateLabel}</time></p>`
     : "";
+  const issueNumber = Number((article.href.match(/article-(\d+)\.html/) || [null, String(index + 1)])[1]);
+  const issue = `<span class="article-issue" aria-label="第${issueNumber}期"><span class="article-issue-prefix">第</span><span class="article-issue-number">${issueNumber}</span><span class="article-issue-suffix">期</span></span>`;
   item.innerHTML = `
     ${image}
     <div class="article-list-copy">
-      <h3 data-index="${(article.href.match(/article-(\d+)\.html/) || [null, String(index + 1).padStart(2, "0")])[1]}"><a href="${article.href}">${article.title}</a></h3>
+      ${issue}
+      <h3><a href="${article.href}">${article.title}</a></h3>
       <p>${article.description || ""}</p>
       ${date}
     </div>`;
