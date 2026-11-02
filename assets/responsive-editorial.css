@@ -1,0 +1,107 @@
+/* Responsive editorial layout: desktop, tablet and mobile */
+:root{--reading-measure:720px;--visual-measure:900px}
+.site-frame{width:min(1120px,calc(100% - 80px))}
+main{min-width:0}
+.article-topline{max-width:var(--visual-measure);margin-inline:auto}
+.article-hero{max-width:var(--visual-measure);margin-inline:auto;grid-template-columns:minmax(0,1fr) minmax(190px,260px);gap:clamp(36px,6vw,78px);padding:48px 30px 56px}
+.article-hero-copy{min-width:0}
+.article-hero h1{max-width:760px;text-wrap:pretty}
+.article-hero .article-deck{max-width:650px}
+.article-hero:not(:has(.article-poster)){display:block}
+.article-hero:not(:has(.article-poster)) .article-hero-copy{max-width:820px}
+.article-poster{width:100%;max-width:260px;justify-self:end}
+.article-poster img{width:100%;height:auto;object-fit:contain!important}
+.essay-content{width:min(var(--reading-measure),calc(100% - 48px));max-width:var(--reading-measure);margin-inline:auto;padding:34px 0 0}
+.essay-content p{font-size:17px;line-height:2.05;letter-spacing:.01em;margin:0 0 1.45em;text-align:left;text-wrap:pretty}
+.essay-section-title{margin:58px 0 24px;line-height:1.55;text-wrap:pretty}
+.essay-content figure,.poem-hero-image,.poem-inline-image,.witch-hero-image,.witch-figure{min-width:0}
+.essay-content figure img,.poem-hero-image img,.poem-inline-image img,.witch-hero-image img,.witch-figure img,
+.creator-feature img,.millie-feature img,.film-poster-grid img,.millie-film-gallery img{
+  display:block;width:100%;height:auto;max-height:none;object-fit:contain!important
+}
+.poem-hero-image,.witch-hero-image{width:min(var(--visual-measure),calc(100% - 60px));margin:28px auto 42px;padding:0}
+.poem-hero-image img,.witch-hero-image img{max-height:none}
+.poem-inline-image,.witch-figure{width:min(760px,100%);margin:38px auto}
+.poem-inline-image figcaption,.poem-hero-image figcaption,.witch-figure figcaption,.witch-hero-image figcaption,
+.essay-content figure figcaption{font-size:11px;line-height:1.7;margin-top:9px;color:var(--muted);text-align:right}
+.tobacco-cover-image{width:min(900px,calc(100% - 60px))}
+.tobacco-cover-image img{max-height:440px}
+.tobacco-inline-image{width:min(680px,100%)}
+.film-poster-gallery,.creator-feature,.millie-feature{width:min(980px,100%);margin-inline:auto}
+.film-poster-grid{gap:clamp(14px,2.5vw,26px)}
+.creator-profile,.millie-real-life{gap:clamp(24px,4vw,42px)}
+.archive-page .archive-heading,.archive-page .archive-list{max-width:900px;margin-inline:auto}
+.home-page .home-intro,.home-page .home-articles,.home-page .home-profile{max-width:900px;margin-inline:auto}
+.home-page .home-intro{padding-top:82px;padding-bottom:58px}
+.home-page .home-intro h1{max-width:820px;font-size:clamp(42px,5.4vw,66px);line-height:1.38;text-wrap:pretty}
+.home-page .home-about{max-width:740px}
+.home-page .article-list-item{grid-template-columns:148px minmax(0,1fr);gap:30px}
+.home-page .article-list-image{max-width:148px}
+.home-page .article-list-image img{width:100%;height:auto;object-fit:contain}
+.home-page .article-list-copy h3{line-height:1.55}
+.site-footer{max-width:900px;margin-inline:auto}
+
+/* Tablet: retain editorial measure; avoid cramped side-by-side content. */
+@media (min-width:761px) and (max-width:1050px){
+  .site-frame{width:calc(100% - 64px)}
+  .article-hero{grid-template-columns:minmax(0,1fr) minmax(170px,220px);gap:32px;padding:38px 18px 44px}
+  .article-poster{max-width:220px}
+  .essay-content{width:min(720px,calc(100% - 72px))}
+  .poem-hero-image,.witch-hero-image{width:calc(100% - 48px)}
+  .home-page .home-intro{padding-top:68px}
+  .home-page .article-list-item{grid-template-columns:130px minmax(0,1fr);gap:24px}
+  .home-page .article-list-image{max-width:130px}
+  .film-context{gap:32px}
+}
+
+/* Mobile: one reading column, full natural image proportions, clear paragraph rhythm. */
+@media (max-width:760px){
+  .site-frame{width:calc(100% - 36px)!important;max-width:560px!important}
+  .article-topline{padding:18px 0 12px}
+  .article-hero{display:block;padding:25px 0 28px}
+  .article-hero:not(:has(.article-poster)){display:block}
+  .article-hero h1{font-size:clamp(34px,8.7vw,44px);line-height:1.42;margin-bottom:12px}
+  .article-subtitle{font-size:15px;line-height:1.8}
+  .article-deck{font-size:14px;line-height:1.95}
+  .article-poster{width:min(54%,190px);max-width:190px;margin:24px 0 0;justify-self:start}
+  .article-poster img{width:100%;height:auto}
+  .essay-content{width:100%;max-width:100%;padding:26px 0 0}
+  .essay-content p{font-size:17px;line-height:1.98;letter-spacing:0;margin:0 0 1.35em;text-align:left}
+  .essay-section-title{font-size:21px;line-height:1.55;margin:43px 0 18px}
+  .essay-content p.article-highlight{font-size:17px;line-height:1.9;margin:1.8em 0;padding:5px 0 5px 15px}
+  .poem-hero-image,.witch-hero-image,.tobacco-cover-image{width:100%;margin:20px auto 28px;padding:0}
+  .poem-hero-image img,.witch-hero-image img,.tobacco-cover-image img{width:100%;height:auto;max-height:none}
+  .poem-inline-image,.witch-figure,.tobacco-inline-image{width:100%;margin:26px auto}
+  .poem-inline-image figcaption,.poem-hero-image figcaption,.witch-figure figcaption,.witch-hero-image figcaption,
+  .essay-content figure figcaption{font-size:10px;line-height:1.65;text-align:left}
+  .film-poster-gallery,.creator-feature,.millie-feature{width:100%;margin:34px auto}
+  .film-poster-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+  .film-poster-grid figcaption{font-size:8px;line-height:1.5;text-align:left}
+  .creator-profile,.millie-real-life{grid-template-columns:minmax(0,1fr);gap:18px}
+  .creator-portrait,.millie-real-life figure{width:min(100%,320px)}
+  .millie-film-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .millie-film-gallery figcaption{font-size:10px}
+  .witch-image-pair{grid-template-columns:1fr;gap:22px}
+  .witch-image-pair img{width:100%;height:auto;object-fit:contain!important}
+  .poem-context,.witch-sources{width:100%;max-width:100%}
+  .home-page .home-intro{padding:54px 0 38px}
+  .home-page .home-intro h1{font-size:clamp(35px,9vw,47px);line-height:1.42}
+  .home-page .home-about p{font-size:15px;line-height:2}
+  .home-page .home-articles{padding:34px 0 42px}
+  .home-page .article-list-item{grid-template-columns:100px minmax(0,1fr);gap:16px;padding:18px 0}
+  .home-page .article-list-image{max-width:100px}
+  .home-page .article-list-copy h3{font-size:16px;line-height:1.55}
+  .home-page .article-list-copy>p:not(.article-list-category){font-size:13px;line-height:1.85}
+  .archive-page .archive-heading{padding:34px 0 20px}
+  .archive-page .article-list-item{grid-template-columns:100px minmax(0,1fr);gap:16px}
+  .archive-page .article-list-image{max-width:100px}
+  .site-footer{width:100%}
+}
+@media(max-width:390px){
+  .site-frame{width:calc(100% - 30px)!important}
+  .home-page .article-list-item,.archive-page .article-list-item{grid-template-columns:86px minmax(0,1fr);gap:13px}
+  .home-page .article-list-image,.archive-page .article-list-image{max-width:86px}
+  .film-poster-grid{gap:7px}
+  .film-poster-grid figcaption{font-size:7px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
