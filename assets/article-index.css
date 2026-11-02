@@ -275,3 +275,16 @@
     margin-right:2em!important;
   }
 }
+
+
+/* Bring the mobile issue label and date inward toward each other by two character widths. */
+@media(max-width:760px){
+  .home-page .article-list-copy .article-issue,
+  .archive-page .article-list-copy .article-issue{
+    margin-left:2em!important;
+  }
+  .home-page .article-list-copy .article-list-date,
+  .archive-page .article-list-copy .article-list-date{
+    margin-right:2em!important;
+  }
+}
