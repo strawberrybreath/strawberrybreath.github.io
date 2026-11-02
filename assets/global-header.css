@@ -105,7 +105,7 @@
   0%{transform:translate(-50%,-50%) scale(.3) rotate(0);opacity:0}
   12%{opacity:1}
   75%{opacity:.9}
-  100%{transform:translate(calc(-50% + (var(--i) - 5)*13px),calc(-50% - 30px - (var(--i)%3)*13px)) scale(1.15) rotate(150deg);opacity:0}
+  100%{transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) scale(1.15) rotate(150deg);opacity:0}
 }
 .reading-complete .reading-ring{transform:scale(1.07)}
 @media(max-width:900px) and (min-width:761px){
