@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ordered = [...articles].sort((a, b) => b.date.localeCompare(a.date));
   const latest = document.querySelector("[data-latest-articles]");
   const archive = document.querySelector("[data-all-articles]");
-  if (latest) ordered.forEach((article, index) => latest.appendChild(articleCard(article, index)));
+  if (latest) ordered.slice(0, 3).forEach((article, index) => latest.appendChild(articleCard(article, index)));
   if (archive) ordered.forEach((article, index) => archive.appendChild(articleCard(article, index)));
   const count = document.querySelector("[data-article-count]");
   if (count) count.textContent = String(ordered.length);
