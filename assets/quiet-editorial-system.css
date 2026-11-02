@@ -1776,31 +1776,31 @@ body{padding-top:76px!important}
 }
 
 
-/* Full-page flowing ribbon field: visible crossing silk-like bands, never a panel/card. */
+/* One continuous strawberry-red wave across the page; no crossing ribbons or card panels. */
 body{isolation:auto!important;background:transparent!important}
 body::before,body::after{content:none!important;display:none!important}
 html::after{
   content:"";
   position:fixed;
-  inset:-12%;
+  inset:-8% -12%;
   z-index:-1;
   display:block;
   pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201440%201000'%20preserveAspectRatio%3D'none'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'r'%20x1%3D'0'%20y1%3D'0'%20x2%3D'1'%20y2%3D'1'%3E%3Cstop%20stop-color%3D'%23E63F25'%20stop-opacity%3D'.04'%2F%3E%3Cstop%20offset%3D'.38'%20stop-color%3D'%23E63F25'%20stop-opacity%3D'.25'%2F%3E%3Cstop%20offset%3D'.58'%20stop-color%3D'%23F2A08B'%20stop-opacity%3D'.20'%2F%3E%3Cstop%20offset%3D'1'%20stop-color%3D'%23E63F25'%20stop-opacity%3D'.04'%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D'none'%20stroke-linecap%3D'round'%3E%3Cpath%20d%3D'M-120%20250%20C150%2020%20340%20510%20620%20300%20S1050%2040%201560%20280'%20stroke%3D'url(%23r)'%20stroke-width%3D'76'%2F%3E%3Cpath%20d%3D'M-120%20250%20C150%2020%20340%20510%20620%20300%20S1050%2040%201560%20280'%20stroke%3D'%23FFF4EC'%20stroke-opacity%3D'.30'%20stroke-width%3D'2'%2F%3E%3Cpath%20d%3D'M-150%20510%20C140%20270%20390%20760%20700%20520%20S1120%20270%201590%20500'%20stroke%3D'url(%23r)'%20stroke-width%3D'58'%2F%3E%3Cpath%20d%3D'M-150%20510%20C140%20270%20390%20760%20700%20520%20S1120%20270%201590%20500'%20stroke%3D'%23E63F25'%20stroke-opacity%3D'.13'%20stroke-width%3D'2'%2F%3E%3Cpath%20d%3D'M-100%20780%20C180%20560%20420%20950%20760%20740%20S1190%20540%201560%20760'%20stroke%3D'url(%23r)'%20stroke-width%3D'68'%2F%3E%3Cpath%20d%3D'M-100%20780%20C180%20560%20420%20950%20760%20740%20S1190%20540%201560%20760'%20stroke%3D'%23FFF4EC'%20stroke-opacity%3D'.26'%20stroke-width%3D'2'%2F%3E%3Cpath%20d%3D'M220%20-100%20C470%20160%20210%20400%20490%20620%20S800%20920%201040%201120'%20stroke%3D'%23D94C37'%20stroke-opacity%3D'.12'%20stroke-width%3D'42'%2F%3E%3Cpath%20d%3D'M220%20-100%20C470%20160%20210%20400%20490%20620%20S800%20920%201040%201120'%20stroke%3D'%23FFF4EC'%20stroke-opacity%3D'.25'%20stroke-width%3D'2'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201440%201000'%20preserveAspectRatio%3D'none'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'p'%20x1%3D'0'%20y1%3D'1'%20x2%3D'1'%20y2%3D'0'%3E%3Cstop%20stop-color%3D'%23F6B9A6'%20stop-opacity%3D'.02'%2F%3E%3Cstop%20offset%3D'.48'%20stop-color%3D'%23C94B43'%20stop-opacity%3D'.17'%2F%3E%3Cstop%20offset%3D'1'%20stop-color%3D'%23F6B9A6'%20stop-opacity%3D'.02'%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D'none'%20stroke-linecap%3D'round'%3E%3Cpath%20d%3D'M-100%20400%20C180%20650%20400%20120%20700%20390%20S1150%20680%201550%20360'%20stroke%3D'url(%23p)'%20stroke-width%3D'92'%2F%3E%3Cpath%20d%3D'M-100%20400%20C180%20650%20400%20120%20700%20390%20S1150%20680%201550%20360'%20stroke%3D'%23FFF8F0'%20stroke-opacity%3D'.24'%20stroke-width%3D'2'%2F%3E%3Cpath%20d%3D'M-100%20900%20C180%20650%20480%201040%20780%20800%20S1190%20560%201550%20820'%20stroke%3D'url(%23p)'%20stroke-width%3D'48'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-  background-repeat:no-repeat,no-repeat;
-  background-size:115% 112%,118% 116%;
-  background-position:0% 0%,100% 100%;
-  opacity:.78;
-  transform:translate3d(-2%,0,0) scale(1.02);
-  animation:strawberry-ribbon-flow 24s ease-in-out infinite alternate;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-position:center;
+  opacity:.62;
+  transform:translate3d(-1%,0,0) scale(1.02);
+  animation:strawberry-single-wave 32s ease-in-out infinite alternate;
   will-change:transform,background-position;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201440%201100'%20preserveAspectRatio%3D'none'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'wave'%20x1%3D'0'%20y1%3D'0'%20x2%3D'0.9'%20y2%3D'1'%3E%3Cstop%20stop-color%3D'%23E63F25'%20stop-opacity%3D'.17'%2F%3E%3Cstop%20offset%3D'.48'%20stop-color%3D'%23E97862'%20stop-opacity%3D'.23'%2F%3E%3Cstop%20offset%3D'1'%20stop-color%3D'%23E63F25'%20stop-opacity%3D'.13'%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D'M-80%20410%20C160%20300%20280%20300%20470%20430%20C680%20575%20790%20650%20980%20560%20C1160%20475%201290%20330%201520%20390%20L1520%20650%20C1290%20590%201160%20735%20980%20820%20C790%20910%20680%20835%20470%20690%20C280%20560%20160%20560%20-80%20670%20Z'%20fill%3D'url(%23wave)'%2F%3E%3Cpath%20d%3D'M-80%20410%20C160%20300%20280%20300%20470%20430%20C680%20575%20790%20650%20980%20560%20C1160%20475%201290%20330%201520%20390'%20fill%3D'none'%20stroke%3D'%23E63F25'%20stroke-opacity%3D'.16'%20stroke-width%3D'3'%2F%3E%3Cpath%20d%3D'M-80%20670%20C160%20560%20280%20560%20470%20690%20C680%20835%20790%20910%20980%20820%20C1160%20735%201290%20590%201520%20650'%20fill%3D'none'%20stroke%3D'%23FFF8F0'%20stroke-opacity%3D'.48'%20stroke-width%3D'3'%2F%3E%3C%2Fsvg%3E");
 }
-@keyframes strawberry-ribbon-flow{
-  0%{transform:translate3d(-3%,-1%,0) rotate(-1.2deg) scale(1.02);background-position:0% 0%,100% 100%}
-  50%{transform:translate3d(1%,2%,0) rotate(1deg) scale(1.06);background-position:55% 35%,35% 65%}
-  100%{transform:translate3d(3%,-2%,0) rotate(-.8deg) scale(1.03);background-position:100% 70%,0% 20%}
+@keyframes strawberry-single-wave{
+  0%{transform:translate3d(-2%,-1%,0) scale(1.02);background-position:46% 48%}
+  50%{transform:translate3d(1%,1%,0) scale(1.06);background-position:54% 52%}
+  100%{transform:translate3d(2%,-1%,0) scale(1.03);background-position:50% 46%}
 }
-/* Keep the effect on the page canvas rather than turning content sections into cards. */
+/* The canvas stays behind all page content; content sections remain transparent. */
 .home-page main,.home-page .home-intro,.home-page .home-articles,
 .home-page .home-profile,.home-page .home-profile-inner,
 .site-frame,.archive-page main,.article-page main{
@@ -1808,10 +1808,39 @@ html::after{
   background-image:none!important;
 }
 @media(max-width:760px){
-  html::after{opacity:.62;inset:-18%;animation-duration:30s;background-size:145% 120%,150% 125%}
+  html::after{opacity:.48;inset:-12% -20%;animation-duration:38s;background-size:115% 110%}
 }
 @media(prefers-reduced-motion:reduce){
-  html::after{animation:none;transform:none;background-position:50% 50%,50% 50%}
+  html::after{animation:none;transform:none;background-position:50% 50%}
+}
+
+/* Mobile brand: English and Chinese names on one line, separate from the navigation row. */
+@media(max-width:760px){
+  .site-header .brand-text{
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:baseline!important;
+    gap:8px!important;
+    white-space:nowrap!important;
+    min-width:0!important;
+  }
+  .site-header .brand-text strong{
+    font-size:14px!important;
+    line-height:1.2!important;
+    letter-spacing:0!important;
+  }
+  .site-header .brand-text small{
+    display:block!important;
+    margin:0!important;
+    font-size:13px!important;
+    line-height:1.2!important;
+    white-space:nowrap!important;
+  }
+}
+@media(max-width:380px){
+  .site-header .brand-text{gap:6px!important}
+  .site-header .brand-text strong{font-size:12px!important}
+  .site-header .brand-text small{font-size:11px!important}
 }
 
 /* 2026-11-02: mobile header layout and homepage reading hierarchy. */
