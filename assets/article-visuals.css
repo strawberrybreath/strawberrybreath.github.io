@@ -1,0 +1,42 @@
+/* Editorial image treatment for the two long-form essays. */
+.film-poster-gallery,.witch-visual-block{margin:42px auto 34px;max-width:900px;padding:0 30px}
+.visual-section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:11px;margin-bottom:18px}
+.visual-section-heading span{font:10px var(--sans);letter-spacing:.16em;color:var(--soft)}
+.visual-section-heading p{font:15px var(--serif);color:var(--muted);margin:0}
+.film-poster-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+.film-poster-grid figure{margin:0;min-width:0}
+.film-poster-grid img{display:block;width:100%;height:auto;object-fit:contain;background:#e9e2d7}
+.film-poster-grid figcaption,.witch-figure figcaption{font:10px/1.7 var(--sans);letter-spacing:.04em;color:var(--soft);margin-top:8px;text-align:center}
+.witch-hero-image{max-width:100%;margin:0 auto 36px}
+.witch-hero-image img{display:block;width:100%;height:auto;max-height:490px;object-fit:cover;object-position:center 42%}
+.witch-hero-image figcaption{text-align:right;font:10px/1.7 var(--sans);color:var(--soft);margin-top:8px}
+.witch-figure{margin:32px auto;max-width:720px}
+.witch-figure img{display:block;width:100%;height:auto;max-height:540px;object-fit:contain;background:#eee8dd}
+.witch-figure.portrait{max-width:260px;float:right;margin:8px 0 22px 28px}
+.witch-figure.portrait img{max-height:none}
+.witch-figure figcaption{text-align:right}
+.witch-image-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;margin:36px 0}
+.witch-image-pair figure{margin:0;min-width:0}
+.witch-image-pair img{display:block;width:100%;height:230px;object-fit:cover;background:#eee8dd}
+.witch-image-pair figcaption{font:10px/1.7 var(--sans);color:var(--soft);margin-top:8px}
+.witch-essay .essay-section-title{clear:both}
+.witch-sources{border-top:1px solid var(--line);margin:55px auto 0;padding:28px 0 0;max-width:720px}
+.witch-sources h2{font:500 19px var(--serif);margin:0 0 13px}
+.witch-sources ul{padding-left:18px;margin:0}
+.witch-sources li{font-size:12px;line-height:1.9;color:var(--muted);margin:6px 0}
+.witch-sources a{color:var(--accent-dark);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:760px){
+ .film-poster-gallery,.witch-visual-block{padding:0;margin:30px auto 26px}
+ .visual-section-heading{display:block}
+ .visual-section-heading span{display:block;margin-bottom:5px}
+ .film-poster-grid{gap:10px}
+ .film-poster-grid figcaption{font-size:8px;line-height:1.5}
+ .witch-hero-image{margin-bottom:25px}
+ .witch-hero-image img{max-height:300px;object-fit:cover}
+ .witch-figure{margin:25px auto}
+ .witch-figure.portrait{float:none;max-width:190px;margin:25px auto}
+ .witch-image-pair{gap:10px;margin:25px 0}
+ .witch-image-pair img{height:150px}
+ .witch-image-pair figcaption{font-size:9px}
+ .witch-sources{margin-top:38px;padding-top:22px}
+}
