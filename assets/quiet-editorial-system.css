@@ -2488,3 +2488,10 @@ html::after{
 .article-page .essay-quote{
   background:rgba(255,255,255,.20)!important;
 }
+
+
+/* Water waves: move consistently from left to right instead of reversing. */
+html::after{
+  animation-direction:normal!important;
+  animation-timing-function:linear!important;
+}
