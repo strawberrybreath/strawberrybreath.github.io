@@ -1678,3 +1678,53 @@ body{padding-top:76px!important}
   .article-page .film-credit-copy .film-credit-role{font-size:10px!important}
   .article-page .film-credit-copy a{font-size:10px!important}
 }
+
+
+/* Final navigation and homepage title refinements requested by the author. */
+.home-page #site-title,
+.home-page .home-intro h1{
+  color:#E63F25!important;
+  border:0!important;
+  text-decoration:none!important;
+  box-shadow:none!important;
+}
+.home-page #site-title::before,
+.home-page #site-title::after,
+.home-page .home-intro h1::before,
+.home-page .home-intro h1::after{content:none!important;display:none!important}
+.site-header .site-nav a .nav-en{
+  font-family:"DM Sans","Arial",sans-serif!important;
+  font-weight:500!important;
+  letter-spacing:.075em!important;
+  font-size:11px!important;
+  line-height:1.25!important;
+}
+.site-header .site-nav a .nav-zh{
+  font-family:"Noto Serif SC","Songti SC","STSong",serif!important;
+  font-weight:500!important;
+}
+.site-header .site-nav a:before,
+.site-header .site-nav a:after,
+.site-header .site-nav a:hover:before,
+.site-header .site-nav a.is-current:before,
+.site-header .site-nav a:hover:after,
+.site-header .site-nav a.is-current:after,
+.site-header .site-nav a.is-current::after{
+  content:none!important;display:none!important;width:0!important;height:0!important;
+  border:0!important;background:none!important;transform:none!important;
+}
+.site-header .site-nav a{border-bottom:0!important;text-decoration:none!important}
+.home-page .home-section-heading::before,
+.home-page .home-section-heading::after,
+.home-page .home-profile::before,
+.home-page .home-profile::after,
+.article-page .essay-section-title::before,
+.article-page .article-topline::before,
+.article-page .article-hero::after,
+.site-footer::before,
+.site-footer::after{
+  content:none!important;display:none!important;background:none!important;
+}
+@media(max-width:760px){
+  .site-header .site-nav a .nav-en{font-size:9px!important;letter-spacing:.045em!important}
+}
