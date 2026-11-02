@@ -3291,3 +3291,36 @@ html::after{
     text-align:left!important;
   }
 }
+
+
+/* Publication metadata sits directly above each article's title/hero. */
+.article-page .article-publication-meta{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:12px!important;
+  width:min(900px,calc(100% - 48px))!important;
+  margin:0 auto!important;
+  padding:0 24px 4px!important;
+  color:var(--muted,#766b68)!important;
+  font:12px/1.7 var(--sans)!important;
+  letter-spacing:.02em!important;
+}
+.article-page .article-publication-meta span{
+  display:inline-block!important;
+  color:var(--accent-dark,#a64f48)!important;
+  font-weight:600!important;
+}
+.article-page .article-publication-meta time{
+  display:inline-block!important;
+  color:var(--soft,#968985)!important;
+  font:inherit!important;
+}
+@media(max-width:760px){
+  .article-page .article-publication-meta{
+    width:calc(100% - 36px)!important;
+    padding:0 0 2px!important;
+    gap:9px!important;
+    font-size:11px!important;
+  }
+}
