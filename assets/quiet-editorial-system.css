@@ -4321,3 +4321,27 @@ html body .site-footer .footer-glass-card > .site-slogan > span{
   display:inline!important;
   white-space:nowrap!important;
 }
+
+
+/* Keep enlarged desktop gallery controls outside the clipped photo viewport. */
+@media screen and (min-width:761px){
+  html body.home-page .home-profile .about-cats-gallery{
+    overflow:visible!important;
+    isolation:isolate!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow{
+    display:grid!important;
+    visibility:visible!important;
+    opacity:1!important;
+    position:relative!important;
+    z-index:50!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow:disabled{
+    display:grid!important;
+    visibility:visible!important;
+    opacity:.48!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track{
+    min-width:0!important;
+  }
+}
