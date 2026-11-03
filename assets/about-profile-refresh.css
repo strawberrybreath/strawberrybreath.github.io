@@ -35,3 +35,27 @@
   .home-page .home-profile p strong{font-size:1.05em}
   .home-page .home-profile .about-signoff{font-size:17px!important;margin:22px 0 25px!important}
 }
+
+/* 2026-11-03: larger, eye-comfortable About typography and cat-family introduction. */
+.home-page .home-profile p:not(.home-kicker){
+  font-size:18px!important;line-height:2.2!important;letter-spacing:.015em;
+  margin-bottom:20px!important;color:#49443E!important;
+}
+.home-page .home-profile .about-lead{
+  font-size:clamp(23px,2.6vw,28px)!important;line-height:1.9!important;margin-bottom:27px!important;
+}
+.home-page .home-profile p strong{font-size:1.08em!important}
+.home-page .home-profile .about-signoff{
+  font-size:clamp(20px,2.2vw,23px)!important;line-height:2!important;margin:30px 0 27px!important;
+}
+.home-page .home-profile .about-cats-intro{
+  margin:0 0 18px!important;color:#A94E38!important;
+  font-size:clamp(19px,2.1vw,22px)!important;line-height:1.9!important;font-weight:600!important;
+}
+@media(max-width:760px){
+  .home-page .home-profile p:not(.home-kicker){font-size:16px!important;line-height:2.15!important;margin-bottom:17px!important}
+  .home-page .home-profile .about-lead{font-size:21px!important;line-height:1.9!important;margin-bottom:21px!important}
+  .home-page .home-profile p strong{font-size:1.06em!important}
+  .home-page .home-profile .about-signoff{font-size:18px!important;line-height:1.95!important;margin:24px 0 22px!important}
+  .home-page .home-profile .about-cats-intro{font-size:17px!important;line-height:1.9!important;margin-bottom:15px!important}
+}
