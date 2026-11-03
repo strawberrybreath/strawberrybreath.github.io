@@ -59,3 +59,25 @@
   .home-page .home-profile .about-signoff{font-size:18px!important;line-height:1.95!important;margin:24px 0 22px!important}
   .home-page .home-profile .about-cats-intro{font-size:17px!important;line-height:1.9!important;margin-bottom:15px!important}
 }
+
+
+/* 2026-11-03: second typography increase for stronger readability. */
+.home-page .home-profile p:not(.home-kicker){
+  font-size:20px!important;line-height:2.12!important;letter-spacing:.018em;
+  margin-bottom:22px!important;
+}
+.home-page .home-profile .about-lead{
+  font-size:clamp(26px,3vw,31px)!important;line-height:1.8!important;margin-bottom:29px!important;
+}
+.home-page .home-profile .about-signoff{
+  font-size:clamp(22px,2.4vw,25px)!important;line-height:1.9!important;
+}
+.home-page .home-profile .about-cats-intro{
+  font-size:clamp(21px,2.3vw,24px)!important;line-height:1.85!important;
+}
+@media(max-width:760px){
+  .home-page .home-profile p:not(.home-kicker){font-size:18px!important;line-height:2.08!important;margin-bottom:19px!important}
+  .home-page .home-profile .about-lead{font-size:23px!important;line-height:1.85!important;margin-bottom:23px!important}
+  .home-page .home-profile .about-signoff{font-size:20px!important;line-height:1.9!important;margin:26px 0 23px!important}
+  .home-page .home-profile .about-cats-intro{font-size:19px!important;line-height:1.85!important;margin-bottom:17px!important}
+}
