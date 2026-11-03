@@ -4448,3 +4448,76 @@ html body .site-footer .footer-glass-card > .site-slogan > span{
     transform:translateX(-12px)!important;
   }
 }
+
+
+/* Mobile cat gallery: the track itself must be viewport-width so it has real overflow to swipe. */
+@media screen and (max-width:760px){
+  html body.home-page .home-profile .about-cats-gallery{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    overflow:visible!important;
+    position:static!important;
+    transform:none!important;
+    margin:22px 0 0!important;
+    padding:0!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track{
+    display:flex!important;
+    flex-flow:row nowrap!important;
+    align-items:stretch!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    gap:10px!important;
+    padding:0 1px 8px!important;
+    -webkit-overflow-scrolling:touch!important;
+    overscroll-behavior-x:contain!important;
+    touch-action:auto!important;
+    scroll-snap-type:x proximity!important;
+    scrollbar-width:none!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track::-webkit-scrollbar{
+    display:none!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track > img{
+    display:block!important;
+    flex:0 0 clamp(108px,30vw,132px)!important;
+    width:clamp(108px,30vw,132px)!important;
+    min-width:clamp(108px,30vw,132px)!important;
+    max-width:clamp(108px,30vw,132px)!important;
+    height:clamp(108px,30vw,132px)!important;
+    object-fit:cover!important;
+    scroll-snap-align:start!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow{
+    display:none!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+}
+/* Mobile footer slogan: Chinese and English on two separate lines. */
+@media screen and (max-width:760px){
+  html body .site-footer .footer-glass-card > .site-slogan,
+  html body .article-page .article-ending.site-footer .footer-glass-card > .site-slogan{
+    display:block!important;
+    flex-direction:initial!important;
+    white-space:normal!important;
+    text-align:left!important;
+    line-height:1.8!important;
+    margin:0!important;
+  }
+  html body .site-footer .footer-glass-card > .site-slogan > br,
+  html body .article-page .article-ending.site-footer .footer-glass-card > .site-slogan > br{
+    display:block!important;
+    content:""!important;
+  }
+  html body .site-footer .footer-glass-card > .site-slogan > span,
+  html body .article-page .article-ending.site-footer .footer-glass-card > .site-slogan > span{
+    display:block!important;
+    white-space:normal!important;
+  }
+}
