@@ -3730,3 +3730,24 @@ body.article-page.enola-article-page .film-credits .film-credit-person>img{
     aspect-ratio:1/1!important;
   }
 }
+
+
+/* Desktop trial: retain six visible photos while enlarging the strip beyond the text column. */
+@media(min-width:761px){
+  .home-page .home-profile .about-cats-gallery{
+    width:min(1800px,calc(100vw - 80px))!important;
+    max-width:none!important;
+    margin-left:calc((900px - min(1800px,calc(100vw - 80px)))/2)!important;
+    margin-right:0!important;
+    gap:16px!important;
+  }
+  .home-page .home-profile .about-cats-track{
+    gap:14px!important;
+  }
+  .home-page .home-profile .about-cats-track>img{
+    flex:0 0 calc((100% - 70px)/6)!important;
+    width:calc((100% - 70px)/6)!important;
+    height:auto!important;
+    aspect-ratio:1/1!important;
+  }
+}
