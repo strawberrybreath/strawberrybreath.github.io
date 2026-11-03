@@ -81,3 +81,22 @@
   .home-page .home-profile .about-signoff{font-size:20px!important;line-height:1.9!important;margin:26px 0 23px!important}
   .home-page .home-profile .about-cats-intro{font-size:19px!important;line-height:1.85!important;margin-bottom:17px!important}
 }
+
+
+/* Match About body typography to the homepage website-introduction text. */
+.home-page .home-profile p:not(.home-kicker),
+.home-page .home-profile .about-lead,
+.home-page .home-profile .about-signoff,
+.home-page .home-profile .about-cats-intro{
+  font-size:15px!important;
+  line-height:2.2!important;
+}
+@media(max-width:760px){
+  .home-page .home-profile p:not(.home-kicker),
+  .home-page .home-profile .about-lead,
+  .home-page .home-profile .about-signoff,
+  .home-page .home-profile .about-cats-intro{
+    font-size:13px!important;
+    line-height:2.08!important;
+  }
+}
