@@ -3465,3 +3465,33 @@ body.article-page.enola-article-page .film-credits .film-credit-person>img{
     text-align:left!important;
   }
 }
+
+
+/* Desktop publication metadata: distribute issue and date to opposite ends. */
+@media screen and (min-width:761px){
+  body.article-page .article-publication-meta{
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    flex-wrap:nowrap!important;
+    gap:0!important;
+  }
+  body.article-page .article-publication-meta > span{
+    display:block!important;
+    flex:0 0 auto!important;
+    margin:0!important;
+    white-space:nowrap!important;
+    line-height:1.7!important;
+    transform:none!important;
+  }
+  body.article-page .article-publication-meta > time{
+    display:block!important;
+    flex:0 0 auto!important;
+    margin:0!important;
+    white-space:nowrap!important;
+    line-height:1.7!important;
+    text-align:right!important;
+    transform:none!important;
+  }
+}
