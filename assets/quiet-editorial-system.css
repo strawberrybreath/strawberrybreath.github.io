@@ -3401,3 +3401,14 @@ body.article-page.enola-article-page .film-credits .film-credit-person>img{
     clip-path:circle(50% at 50% 50%)!important;
   }
 }
+
+
+/* Desktop article metadata alignment: move issue and date independently to the right. */
+@media(min-width:761px){
+  .article-page .article-publication-meta > span{
+    margin-left:2em!important;
+  }
+  .article-page .article-publication-meta > time{
+    margin-left:5em!important;
+  }
+}
