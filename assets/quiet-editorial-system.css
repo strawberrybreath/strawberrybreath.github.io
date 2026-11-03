@@ -3949,3 +3949,198 @@ body.article-page.enola-article-page .film-credits .film-credit-person>img{
     aspect-ratio:1/1!important;
   }
 }
+
+
+/* Final desktop header sizing: stronger overrides for the Mac/desktop layout. */
+@media screen and (min-width:761px){
+  html body .site-header{
+    min-height:96px!important;
+    padding:12px 0!important;
+    grid-template-columns:minmax(280px,1.15fr) auto minmax(310px,1fr)!important;
+  }
+  html body .site-header .brand{
+    display:flex!important;
+    align-items:center!important;
+    gap:16px!important;
+    min-width:0!important;
+  }
+  html body .site-header .brand-avatar{
+    display:block!important;
+    width:66px!important;
+    height:66px!important;
+    min-width:66px!important;
+    min-height:66px!important;
+    flex:0 0 66px!important;
+  }
+  html body .site-header .brand-text strong{
+    display:block!important;
+    font-size:23px!important;
+    line-height:1.2!important;
+    font-weight:700!important;
+  }
+  html body .site-header .brand-text small{
+    display:block!important;
+    margin-top:4px!important;
+    font-size:15px!important;
+    line-height:1.35!important;
+  }
+}
+
+/* Bilingual footer slogan: keep both lines visible and comfortably readable. */
+html body .site-footer .footer-glass-card > .site-slogan{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:3px!important;
+  font-size:17px!important;
+  line-height:1.55!important;
+}
+html body .site-footer .footer-glass-card > .site-slogan span{
+  display:block!important;
+  font-size:14px!important;
+  line-height:1.5!important;
+  letter-spacing:.015em!important;
+}
+html body .site-footer .footer-glass-card > .footer-identity .footer-brand{
+  font-size:16px!important;
+}
+html body .site-footer .footer-glass-card > .footer-identity .footer-copy{
+  font-size:13px!important;
+}
+@media screen and (min-width:761px){
+  html body .site-footer .footer-glass-card{
+    gap:24px!important;
+  }
+  html body .site-footer .footer-glass-card > .site-slogan{
+    white-space:normal!important;
+    flex:0 1 auto!important;
+  }
+  html body .site-footer .footer-glass-card > .footer-identity{
+    padding-left:24px!important;
+    gap:16px!important;
+  }
+}
+
+/* Cat gallery: place the navigation arrows directly over the first/last photos. */
+html body.home-page .home-profile .about-cats-gallery{
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:30px 0 0!important;
+  padding:0!important;
+  overflow:hidden!important;
+}
+html body.home-page .home-profile .about-cats-gallery > .about-cats-track{
+  display:flex!important;
+  flex-flow:row nowrap!important;
+  align-items:stretch!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:100%!important;
+  gap:14px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  scrollbar-width:none!important;
+  -webkit-overflow-scrolling:touch!important;
+  scroll-snap-type:x mandatory!important;
+}
+html body.home-page .home-profile .about-cats-gallery > .about-cats-track::-webkit-scrollbar{
+  display:none!important;
+}
+html body.home-page .home-profile .about-cats-gallery > .about-cats-track > img{
+  flex:0 0 calc((100% - 28px)/3)!important;
+  width:calc((100% - 28px)/3)!important;
+  height:auto!important;
+  aspect-ratio:1/1!important;
+  scroll-snap-align:start!important;
+}
+html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  display:grid!important;
+  place-items:center!important;
+  position:absolute!important;
+  top:50%!important;
+  z-index:30!important;
+  transform:translateY(-50%)!important;
+  width:44px!important;
+  min-width:44px!important;
+  height:44px!important;
+  min-height:44px!important;
+  margin:0!important;
+  padding:0!important;
+  border:1px solid rgba(255,255,255,.72)!important;
+  border-radius:50%!important;
+  background:rgba(105,43,38,.78)!important;
+  color:#fffaf4!important;
+  box-shadow:0 2px 12px rgba(35,20,15,.22)!important;
+  font-size:0!important;
+  line-height:1!important;
+  opacity:1!important;
+  visibility:visible!important;
+  cursor:pointer!important;
+}
+html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-prev{
+  left:12px!important;
+}
+html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-next{
+  right:12px!important;
+}
+html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow::before{
+  content:""!important;
+  display:block!important;
+  width:11px!important;
+  height:11px!important;
+  border-top:2.5px solid currentColor!important;
+  border-right:2.5px solid currentColor!important;
+}
+html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-prev::before{
+  transform:rotate(-135deg)!important;
+  margin-left:5px!important;
+}
+html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-next::before{
+  transform:rotate(45deg)!important;
+  margin-right:5px!important;
+}
+html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow > span{
+  display:none!important;
+}
+html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow:disabled{
+  opacity:.5!important;
+  cursor:default!important;
+}
+@media screen and (max-width:760px){
+  html body.home-page .home-profile .about-cats-gallery{
+    width:100%!important;
+    margin-top:22px!important;
+    overflow:hidden!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track{
+    width:max-content!important;
+    min-width:100%!important;
+    max-width:none!important;
+    gap:10px!important;
+    overflow-x:auto!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track > img{
+    flex:0 0 clamp(108px,30vw,132px)!important;
+    width:clamp(108px,30vw,132px)!important;
+    height:clamp(108px,30vw,132px)!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow{
+    width:36px!important;
+    min-width:36px!important;
+    height:36px!important;
+    min-height:36px!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-prev{left:7px!important}
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-next{right:7px!important}
+  html body.home-page .home-profile .about-cats-hint{
+    display:block!important;
+    margin:7px 0 0!important;
+    font-size:10px!important;
+    text-align:right!important;
+  }
+  html body.home-page .home-profile .cats-hint-desktop{display:none!important}
+  html body.home-page .home-profile .cats-hint-mobile{display:inline!important}
+}
