@@ -3586,3 +3586,70 @@ body.article-page.enola-article-page .film-credits .film-credit-person>img{
     border-radius:10px!important;
   }
 }
+
+
+/* Gallery controls: four photographs per desktop view, touch hint on mobile. */
+.home-page .home-profile .about-cats-gallery{
+  position:relative!important;
+  padding:0 0 8px!important;
+}
+.home-page .home-profile .about-cats-track{
+  width:100%!important;
+  min-width:100%!important;
+  gap:14px!important;
+}
+.home-page .home-profile .about-cats-track>img{
+  flex:0 0 calc((100% - 42px)/4)!important;
+  width:calc((100% - 42px)/4)!important;
+  height:auto!important;
+  aspect-ratio:1/1!important;
+}
+.home-page .home-profile .about-cats-arrow{
+  position:absolute!important;
+  z-index:2!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:38px!important;
+  height:38px!important;
+  padding:0!important;
+  border:1px solid rgba(90,55,45,.16)!important;
+  border-radius:50%!important;
+  background:rgba(255,250,244,.94)!important;
+  color:var(--accent)!important;
+  box-shadow:0 2px 10px rgba(50,30,20,.10)!important;
+  cursor:pointer!important;
+  transition:opacity .2s ease,background .2s ease!important;
+}
+.home-page .home-profile .about-cats-arrow span{
+  display:block!important;
+  font:32px/1 Georgia,serif!important;
+  transform:translateY(-2px);
+}
+.home-page .home-profile .about-cats-arrow-prev{left:10px!important}
+.home-page .home-profile .about-cats-arrow-next{right:10px!important}
+.home-page .home-profile .about-cats-arrow:disabled{
+  opacity:.35!important;
+  cursor:default!important;
+}
+.home-page .home-profile .about-cats-hint{display:none!important}
+@media(max-width:760px){
+  .home-page .home-profile .about-cats-track{width:max-content!important;min-width:100%!important;gap:10px!important}
+  .home-page .home-profile .about-cats-track>img{
+    flex:0 0 clamp(108px,30vw,132px)!important;
+    width:clamp(108px,30vw,132px)!important;
+    height:clamp(108px,30vw,132px)!important;
+  }
+  .home-page .home-profile .about-cats-arrow{display:none!important}
+  .home-page .home-profile .about-cats-hint{
+    display:block!important;
+    margin:7px 0 0!important;
+    color:var(--muted)!important;
+    font:11px/1.6 var(--body)!important;
+    letter-spacing:.04em!important;
+    text-align:right!important;
+  }
+  .home-page .home-profile .about-cats-hint span{color:var(--accent)!important;font-size:14px!important}
+}
