@@ -3868,3 +3868,84 @@ body.article-page.enola-article-page .film-credits .film-credit-person>img{
     font-size:10px!important;
   }
 }
+
+
+/* Definitive desktop gallery layout: reserve dedicated grid columns for both arrows. */
+@media screen and (min-width:761px){
+  html body.home-page .home-profile .about-cats-gallery{
+    display:grid!important;
+    grid-template-columns:44px minmax(0,1fr) 44px!important;
+    grid-template-rows:auto!important;
+    align-items:center!important;
+    column-gap:12px!important;
+    width:min(1800px,calc(100vw - 80px))!important;
+    max-width:none!important;
+    margin:30px 0 0 calc((900px - min(1800px,calc(100vw - 80px)))/2)!important;
+    padding:0!important;
+    overflow:visible!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow{
+    display:flex!important;
+    grid-row:1!important;
+    position:static!important;
+    inset:auto!important;
+    transform:none!important;
+    visibility:visible!important;
+    opacity:1!important;
+    width:44px!important;
+    min-width:44px!important;
+    max-width:44px!important;
+    height:44px!important;
+    min-height:44px!important;
+    margin:0!important;
+    padding:0!important;
+    align-items:center!important;
+    justify-content:center!important;
+    border:1px solid #b66b56!important;
+    border-radius:50%!important;
+    background:#fffaf4!important;
+    color:#9f4634!important;
+    box-shadow:0 2px 9px rgba(60,38,28,.16)!important;
+    font-size:0!important;
+    line-height:1!important;
+    cursor:pointer!important;
+    z-index:3!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-prev{grid-column:1!important}
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-next{grid-column:3!important}
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow::before{
+    display:block!important;
+    content:""!important;
+    width:10px!important;
+    height:10px!important;
+    border-top:2px solid currentColor!important;
+    border-right:2px solid currentColor!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-prev::before{transform:rotate(-135deg)!important;margin-left:4px!important}
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-next::before{transform:rotate(45deg)!important;margin-right:4px!important}
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow > span{display:none!important}
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow:disabled{
+    display:flex!important;
+    visibility:visible!important;
+    opacity:.58!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track{
+    grid-column:2!important;
+    grid-row:1!important;
+    display:flex!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    gap:14px!important;
+    scrollbar-width:none!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track::-webkit-scrollbar{display:none!important}
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track > img{
+    flex:0 0 calc((100% - 70px)/6)!important;
+    width:calc((100% - 70px)/6)!important;
+    height:auto!important;
+    aspect-ratio:1/1!important;
+  }
+}
