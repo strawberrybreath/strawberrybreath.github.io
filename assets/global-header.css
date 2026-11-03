@@ -165,3 +165,83 @@
   .confetti-bit{animation:none!important;display:none}
   .reading-ring{transition:none}
 }
+
+
+/* Desktop identity scale: make the site mark and bilingual name easier to read. */
+@media screen and (min-width:761px){
+  .site-header .brand{gap:14px!important}
+  .site-header .brand-avatar{
+    width:54px!important;
+    height:54px!important;
+    flex:0 0 54px!important;
+  }
+  .site-header .brand-text strong{
+    display:block!important;
+    font-size:19px!important;
+    line-height:1.25!important;
+    letter-spacing:.005em!important;
+  }
+  .site-header .brand-text small{
+    display:block!important;
+    margin-top:3px!important;
+    font-size:13px!important;
+    line-height:1.35!important;
+  }
+}
+
+/* Desktop footer: Chinese slogan, separator, then site identity on one line. */
+@media screen and (min-width:761px){
+  .site-footer .footer-glass-card,
+  .article-page .article-ending.site-footer .footer-glass-card{
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:22px!important;
+    min-height:64px!important;
+  }
+  .site-footer .footer-glass-card > .site-slogan,
+  .article-page .article-ending.site-footer .footer-glass-card > .site-slogan{
+    order:0!important;
+    flex:0 0 auto!important;
+    width:auto!important;
+    margin:0!important;
+    text-align:left!important;
+    white-space:nowrap!important;
+    font-size:14px!important;
+    line-height:1.6!important;
+  }
+  .site-footer .footer-glass-card > .site-slogan span,
+  .article-page .article-ending.site-footer .footer-glass-card > .site-slogan span{
+    display:none!important;
+  }
+  .site-footer .footer-glass-card > .footer-identity,
+  .article-page .article-ending.site-footer .footer-glass-card > .footer-identity{
+    order:1!important;
+    position:relative!important;
+    display:flex!important;
+    flex:0 1 auto!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:14px!important;
+    width:auto!important;
+    margin:0!important;
+    padding-left:22px!important;
+    border-left:1px solid var(--line,rgba(48,45,41,.18))!important;
+    text-align:left!important;
+  }
+  .site-footer .footer-glass-card > .footer-identity .footer-brand,
+  .article-page .article-ending.site-footer .footer-glass-card > .footer-identity .footer-brand{
+    font-size:14px!important;
+    line-height:1.5!important;
+    white-space:nowrap!important;
+  }
+  .site-footer .footer-glass-card > .footer-identity .footer-copy,
+  .article-page .article-ending.site-footer .footer-glass-card > .footer-identity .footer-copy{
+    margin:0!important;
+    font-size:11px!important;
+    line-height:1.5!important;
+    white-space:nowrap!important;
+  }
+}
