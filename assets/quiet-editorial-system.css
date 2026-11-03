@@ -3412,3 +3412,26 @@ body.article-page.enola-article-page .film-credits .film-credit-person>img{
     margin-left:5em!important;
   }
 }
+
+
+/* Desktop: keep issue and publication date on the same horizontal line; move date 5em farther right. */
+@media(min-width:761px){
+  .article-page .article-publication-meta{
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    flex-wrap:nowrap!important;
+  }
+  .article-page .article-publication-meta > span,
+  .article-page .article-publication-meta > time{
+    display:inline-block!important;
+    white-space:nowrap!important;
+    vertical-align:middle!important;
+  }
+  .article-page .article-publication-meta > span{
+    margin-left:2em!important;
+  }
+  .article-page .article-publication-meta > time{
+    margin-left:10em!important;
+  }
+}
