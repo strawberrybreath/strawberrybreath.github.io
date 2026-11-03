@@ -3527,3 +3527,62 @@ body.article-page.enola-article-page .film-credits .film-credit-person>img{
     text-align:right!important;
   }
 }
+
+
+/* Home: a single-row, touch-friendly gallery for the twelve cat photographs. */
+.home-page .home-profile .about-cats-gallery{
+  width:100%!important;
+  max-width:100%!important;
+  margin:30px 0 0!important;
+  padding:0 0 8px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  scroll-snap-type:x mandatory;
+}
+.home-page .home-profile .about-cats-gallery::-webkit-scrollbar{display:none!important}
+.home-page .home-profile .about-cats-track{
+  display:flex!important;
+  flex-flow:row nowrap!important;
+  align-items:stretch!important;
+  gap:14px!important;
+  width:max-content!important;
+  min-width:100%!important;
+}
+.home-page .home-profile .about-cats-track>img{
+  display:block!important;
+  flex:0 0 clamp(148px,17vw,184px)!important;
+  width:clamp(148px,17vw,184px)!important;
+  height:clamp(148px,17vw,184px)!important;
+  aspect-ratio:1/1!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:12px!important;
+  object-fit:cover!important;
+  object-position:center center;
+  box-shadow:none!important;
+  scroll-snap-align:start;
+  background:#e9e1d7;
+}
+@media(min-width:761px){
+  .home-page .home-profile .about-cats-gallery{cursor:grab}
+  .home-page .home-profile .about-cats-gallery:active{cursor:grabbing}
+}
+@media(max-width:760px){
+  .home-page .home-profile .about-cats-gallery{
+    width:calc(100% + 17px)!important;
+    max-width:none!important;
+    margin:22px 0 0!important;
+    padding:0 17px 7px 0!important;
+  }
+  .home-page .home-profile .about-cats-track{gap:10px!important}
+  .home-page .home-profile .about-cats-track>img{
+    flex-basis:clamp(108px,30vw,132px)!important;
+    width:clamp(108px,30vw,132px)!important;
+    height:clamp(108px,30vw,132px)!important;
+    border-radius:10px!important;
+  }
+}
