@@ -69,6 +69,9 @@
       <p>我喜欢阅读，也喜欢把想法慢慢写清楚。比起急于表达一个结论，我更珍惜理解问题的过程。这里留下的文字，既有个人感受，也有对作品、历史、社会与生活的观察。它们不必组成某种固定的答案，只是我持续认识世界的一部分。</p>
       <p>生活当然不只有思考。我很爱家里的两只猫，它们是重要的家人，也是日常里具体而柔软的陪伴。</p>
       <div class="about-cats-gallery" aria-label="家里的两只猫照片，可左右滑动">
+        <button class="about-cats-arrow about-cats-arrow-prev" type="button" aria-label="向左查看更多猫咪照片" disabled>
+          <span aria-hidden="true">‹</span>
+        </button>
         <div class="about-cats-track">
         <img src="assets/猫咪1.jpeg" alt="家里的猫咪照片 1" loading="eager" decoding="async">
         <img src="assets/猫咪2.jpeg" alt="家里的猫咪照片 2" loading="eager" decoding="async">
@@ -83,7 +86,11 @@
         <img src="assets/猫咪11.jpeg" alt="家里的猫咪照片 11" loading="lazy" decoding="async">
         <img src="assets/猫咪12.jpeg" alt="家里的猫咪照片 12" loading="lazy" decoding="async">
         </div>
+        <button class="about-cats-arrow about-cats-arrow-next" type="button" aria-label="向右查看更多猫咪照片">
+          <span aria-hidden="true">›</span>
+        </button>
       </div>
+      <p class="about-cats-hint">向右滑动，查看更多照片 <span aria-hidden="true">→</span></p>
     </div>
   </section>
 </main>
@@ -225,5 +232,31 @@
 </div>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="progress.js" defer></script>
-<script src="articles-data.js?v=20261103-issue-date-inline" defer></script></body>
+<script src="articles-data.js?v=20261103-issue-date-inline" defer></script>
+<script>
+(() => {
+  const gallery = document.querySelector('.about-cats-gallery');
+  if (!gallery) return;
+  const track = gallery.querySelector('.about-cats-track');
+  const prev = gallery.querySelector('.about-cats-arrow-prev');
+  const next = gallery.querySelector('.about-cats-arrow-next');
+  const update = () => {
+    const max = gallery.scrollWidth - gallery.clientWidth;
+    prev.disabled = gallery.scrollLeft <= 2;
+    next.disabled = gallery.scrollLeft >= max - 2;
+  };
+  const step = () => {
+    const item = track.querySelector('img');
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    return item ? (item.getBoundingClientRect().width + gap) * 4 : gallery.clientWidth * .85;
+  };
+  prev.addEventListener('click', () => gallery.scrollBy({left: -step(), behavior: 'smooth'}));
+  next.addEventListener('click', () => gallery.scrollBy({left: step(), behavior: 'smooth'}));
+  gallery.addEventListener('scroll', update, {passive: true});
+  window.addEventListener('resize', update);
+  update();
+})();
+</script>
+
+</body>
 </html>
