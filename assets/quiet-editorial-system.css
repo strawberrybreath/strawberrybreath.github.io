@@ -4248,3 +4248,36 @@ html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow:
     display:none!important;
   }
 }
+
+/* Final interaction and footer rules: desktop arrows only; bilingual slogan on two single-line rows. */
+@media screen and (min-width:761px){
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow{
+    display:grid!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track > img{
+    flex:0 0 calc((100% - 56px)/5)!important;
+    width:calc((100% - 56px)/5)!important;
+  }
+}
+@media screen and (max-width:760px){
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow{
+    display:none!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track{
+    touch-action:pan-x!important;
+    scroll-snap-type:x mandatory!important;
+  }
+}
+html body .site-footer .footer-glass-card > .site-slogan{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:3px!important;
+  white-space:nowrap!important;
+}
+html body .site-footer .footer-glass-card > .site-slogan > span{
+  display:block!important;
+  white-space:nowrap!important;
+}
