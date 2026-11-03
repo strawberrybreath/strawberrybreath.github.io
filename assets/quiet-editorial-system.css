@@ -3718,3 +3718,15 @@ body.article-page.enola-article-page .film-credits .film-credit-person>img{
     -webkit-overflow-scrolling:touch;
   }
 }
+
+
+/* Desktop: double the displayed cat-photo size (three visible at once). */
+@media(min-width:761px){
+  .home-page .home-profile .about-cats-track{gap:10px!important}
+  .home-page .home-profile .about-cats-track>img{
+    flex:0 0 calc((100% - 20px)/3)!important;
+    width:calc((100% - 20px)/3)!important;
+    height:auto!important;
+    aspect-ratio:1/1!important;
+  }
+}
