@@ -4538,3 +4538,28 @@ html::after{
 @media(prefers-reduced-motion:reduce){
   html::after{animation:none!important;transform:none!important}
 }
+
+/* 2026-11-03: continuous, visible ribbon drift without scroll-linked motion or brightness flicker. */
+html::after{
+  animation:strawberry-ribbon-drift 36s ease-in-out infinite!important;
+  animation-direction:normal!important;
+  animation-timing-function:ease-in-out!important;
+  background-position:50% 50%!important;
+  will-change:transform!important;
+  backface-visibility:hidden;
+}
+@keyframes strawberry-ribbon-drift{
+  0%,100%{transform:translate3d(-1.8%, -.7%, 0) scale(1.035,1.045)}
+  25%{transform:translate3d(-.4%, .15%, 0) scale(1.035,1.045)}
+  50%{transform:translate3d(1.8%, .7%, 0) scale(1.035,1.045)}
+  75%{transform:translate3d(.4%, -.15%, 0) scale(1.035,1.045)}
+}
+@media(max-width:760px){
+  html::after{
+    animation-duration:42s!important;
+    transform-origin:center center;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  html::after{animation:none!important;will-change:auto!important;transform:none!important}
+}
