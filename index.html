@@ -241,21 +241,20 @@
   const prev = gallery.querySelector('.about-cats-arrow-prev');
   const next = gallery.querySelector('.about-cats-arrow-next');
   const update = () => {
-    const max = gallery.scrollWidth - gallery.clientWidth;
-    prev.disabled = gallery.scrollLeft <= 2;
-    next.disabled = gallery.scrollLeft >= max - 2;
+    const max = track.scrollWidth - track.clientWidth;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max - 2;
   };
   const step = () => {
     const item = track.querySelector('img');
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    return item ? (item.getBoundingClientRect().width + gap) * 4 : gallery.clientWidth * .85;
+    return item ? (item.getBoundingClientRect().width + gap) * 6 : track.clientWidth * .85;
   };
-  prev.addEventListener('click', () => gallery.scrollBy({left: -step(), behavior: 'smooth'}));
-  next.addEventListener('click', () => gallery.scrollBy({left: step(), behavior: 'smooth'}));
-  gallery.addEventListener('scroll', update, {passive: true});
+  prev.addEventListener('click', () => track.scrollBy({left: -step(), behavior: 'smooth'}));
+  next.addEventListener('click', () => track.scrollBy({left: step(), behavior: 'smooth'}));
+  track.addEventListener('scroll', update, {passive: true});
   window.addEventListener('resize', update);
-  update();
-})();
+  update();})();
 </script>
 
 </body>
