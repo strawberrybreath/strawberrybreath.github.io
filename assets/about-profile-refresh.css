@@ -100,3 +100,13 @@
     line-height:2.08!important;
   }
 }
+
+
+/* 2026-11-03: readable, consistent body size for About and website introduction. */
+.home-page .home-profile p:not(.home-kicker),
+.home-page .home-profile .about-lead,
+.home-page .home-profile .about-signoff,
+.home-page .home-profile .about-cats-intro{
+  font-size:16px!important;
+  line-height:2.12!important;
+}
