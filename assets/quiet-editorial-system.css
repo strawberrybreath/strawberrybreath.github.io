@@ -3792,3 +3792,79 @@ body.article-page.enola-article-page .film-credits .film-credit-person>img{
     cursor:default!important;
   }
 }
+
+
+/* Final cat gallery controls: make desktop arrows unmistakably visible and keep hints understated. */
+@media screen and (min-width:761px){
+  body.home-page .home-profile .about-cats-gallery{
+    display:flex!important;
+    align-items:center!important;
+    overflow:visible!important;
+    gap:14px!important;
+  }
+  body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow{
+    appearance:none!important;
+    -webkit-appearance:none!important;
+    display:grid!important;
+    place-items:center!important;
+    visibility:visible!important;
+    opacity:1!important;
+    position:relative!important;
+    inset:auto!important;
+    z-index:20!important;
+    flex:0 0 42px!important;
+    width:42px!important;
+    min-width:42px!important;
+    max-width:42px!important;
+    height:42px!important;
+    min-height:42px!important;
+    margin:0!important;
+    padding:0!important;
+    border:1px solid rgba(166,79,56,.48)!important;
+    border-radius:50%!important;
+    background:#fffaf4!important;
+    color:#a94735!important;
+    box-shadow:0 2px 8px rgba(60,38,28,.14)!important;
+    font-size:28px!important;
+    line-height:1!important;
+    cursor:pointer!important;
+  }
+  body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow:disabled{
+    display:grid!important;
+    visibility:visible!important;
+    opacity:.62!important;
+  }
+  body.home-page .home-profile .about-cats-hint{
+    display:block!important;
+    margin:9px 56px 0!important;
+    color:var(--muted)!important;
+    font-family:var(--body)!important;
+    font-size:11px!important;
+    font-weight:400!important;
+    line-height:1.5!important;
+    letter-spacing:.02em!important;
+    text-align:center!important;
+  }
+  body.home-page .home-profile .cats-hint-desktop{display:inline!important}
+  body.home-page .home-profile .cats-hint-mobile{display:none!important}
+}
+@media screen and (max-width:760px){
+  body.home-page .home-profile .about-cats-arrow{display:none!important}
+  body.home-page .home-profile .about-cats-hint{
+    display:block!important;
+    margin:6px 0 0!important;
+    color:var(--muted)!important;
+    font-family:var(--body)!important;
+    font-size:10px!important;
+    font-weight:400!important;
+    line-height:1.5!important;
+    letter-spacing:0!important;
+    text-align:right!important;
+  }
+  body.home-page .home-profile .cats-hint-desktop{display:none!important}
+  body.home-page .home-profile .cats-hint-mobile{display:inline!important}
+  body.home-page .home-profile .cats-hint-mobile > span{
+    color:var(--muted)!important;
+    font-size:10px!important;
+  }
+}
