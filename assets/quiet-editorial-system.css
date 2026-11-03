@@ -3363,3 +3363,41 @@ html::after{
 @media(max-width:760px){
   .site-header .reading-ring span{font-size:11px!important}
 }
+
+/* FINAL OVERRIDE — Enola article creator portraits must stay circular.
+   This stylesheet is loaded after legacy article rules; keep this block last. */
+body.article-page.enola-article-page .film-credits .film-credit-person{
+  grid-template-columns:104px minmax(0,1fr)!important;
+  align-items:center!important;
+  gap:20px!important;
+}
+body.article-page.enola-article-page .film-credits .film-credit-person>img{
+  display:block!important;
+  width:96px!important;
+  height:96px!important;
+  min-width:96px!important;
+  max-width:96px!important;
+  aspect-ratio:1/1!important;
+  object-fit:cover!important;
+  object-position:center 30%!important;
+  border-radius:50%!important;
+  overflow:hidden!important;
+  clip-path:circle(50% at 50% 50%)!important;
+  box-shadow:none!important;
+}
+@media(max-width:699px){
+  body.article-page.enola-article-page .film-credits .film-credit-person{
+    grid-template-columns:68px minmax(0,1fr)!important;
+    gap:13px!important;
+    align-items:start!important;
+  }
+  body.article-page.enola-article-page .film-credits .film-credit-person>img{
+    width:64px!important;
+    height:64px!important;
+    min-width:64px!important;
+    max-width:64px!important;
+    aspect-ratio:1/1!important;
+    border-radius:50%!important;
+    clip-path:circle(50% at 50% 50%)!important;
+  }
+}
