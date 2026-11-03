@@ -1,0 +1,37 @@
+/* About profile refresh — emphasis only; existing cat gallery and image sizing remain untouched. */
+.home-page .home-profile .about-lead{
+  color:#A94E38!important;
+  font-size:clamp(21px,2.5vw,26px)!important;
+  line-height:1.85!important;
+  font-weight:600!important;
+  margin-bottom:25px!important;
+}
+.home-page .home-profile p:not(.home-kicker){
+  max-width:760px;
+  font-size:16px!important;
+  line-height:2.18!important;
+  margin-bottom:17px!important;
+  color:#514B44!important;
+}
+.home-page .home-profile p strong{
+  color:#A94E38!important;
+  font-size:1.08em;
+  font-weight:700!important;
+  background:linear-gradient(transparent 68%,rgba(196,75,55,.16) 68%);
+  padding:0 .04em;
+}
+.home-page .home-profile .about-signoff{
+  margin:27px 0 30px!important;
+  padding-left:16px;
+  border-left:3px solid #A94E38;
+  color:#7D4B40!important;
+  font-size:clamp(18px,2vw,21px)!important;
+  font-weight:600;
+  line-height:1.95!important;
+}
+@media(max-width:760px){
+  .home-page .home-profile .about-lead{font-size:19px!important;margin-bottom:19px!important}
+  .home-page .home-profile p:not(.home-kicker){font-size:14px!important;line-height:2.12!important;margin-bottom:14px!important}
+  .home-page .home-profile p strong{font-size:1.05em}
+  .home-page .home-profile .about-signoff{font-size:17px!important;margin:22px 0 25px!important}
+}
