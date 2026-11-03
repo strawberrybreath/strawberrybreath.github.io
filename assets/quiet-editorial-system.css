@@ -4521,3 +4521,20 @@ html body .site-footer .footer-glass-card > .site-slogan > span{
     white-space:normal!important;
   }
 }
+
+
+/* 2026-11-03: seamless, slow vertical breathing motion for the strawberry ribbon. */
+html::after{
+  animation:strawberry-ribbon-breathe 48s cubic-bezier(.45,0,.55,1) infinite!important;
+  background-position:50% 50%!important;
+}
+@keyframes strawberry-ribbon-breathe{
+  0%,100%{transform:translate3d(0,-1.2%,0) scale(1.025,.94)}
+  50%{transform:translate3d(0,1.2%,0) scale(1.025,1.07)}
+}
+@media(max-width:760px){
+  html::after{animation-duration:56s!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html::after{animation:none!important;transform:none!important}
+}
