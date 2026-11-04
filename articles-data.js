@@ -6,8 +6,8 @@ const articles = [
     date: "2026-11-04",
     dateLabel: "2026年11月4日",
     description: "重新读《红楼梦》，从大观园里的女性情谊、才情与志向，看见她们被家族和时代限制的人生。",
-    image: "https://www.chinawriter.com.cn/NMediaFile/2022/1210/MAIN202212100927000039255913118.jpg",
-    imageAlt: "刘旦宅绘《红楼梦》插图：黛玉葬花"
+    image: "https://static.bjd.com.cn/dams-res/editing/image/202312/30/658f8ee1d5de9bf28166ae9f.jpeg",
+    imageAlt: "人民文学出版社《红楼梦》四十周年纪念版书籍封面"
   },
   {
     title: "谁把山河装进了烟盒？二手烟世界里的女性处境",
