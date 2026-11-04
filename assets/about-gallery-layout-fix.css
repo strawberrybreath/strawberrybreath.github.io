@@ -1,0 +1,143 @@
+/* 2026-11-04: About section width + desktop cat carousel controls repair */
+@media (min-width: 761px) {
+  html body.home-page .home-profile {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  html body.home-page .home-profile .home-profile-inner {
+    width: min(1500px, calc(100% - 96px)) !important;
+    max-width: 1500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  html body.home-page .home-profile .home-profile-inner > p:not(.home-kicker) {
+    max-width: 1280px !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery {
+    display: grid !important;
+    grid-template-columns: 52px minmax(0, 1fr) 52px !important;
+    align-items: center !important;
+    column-gap: 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 26px 0 0 !important;
+    overflow: visible !important;
+    position: relative !important;
+    isolation: isolate !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    gap: 18px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track::-webkit-scrollbar {
+    display: none !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track > img {
+    display: block !important;
+    flex: 0 0 calc((100% - 72px) / 5) !important;
+    width: calc((100% - 72px) / 5) !important;
+    min-width: 0 !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    border-radius: 18px !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow {
+    grid-row: 1 !important;
+    display: grid !important;
+    place-items: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+    width: 46px !important;
+    min-width: 46px !important;
+    max-width: 46px !important;
+    height: 46px !important;
+    min-height: 46px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 1px solid #a94e38 !important;
+    border-radius: 50% !important;
+    background: #fffaf4 !important;
+    color: #873d35 !important;
+    box-shadow: 0 3px 12px rgba(70, 35, 35, .16) !important;
+    cursor: pointer !important;
+    z-index: 20 !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-prev {
+    grid-column: 1 !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-next {
+    grid-column: 3 !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow::before {
+    content: "" !important;
+    display: block !important;
+    width: 11px !important;
+    height: 11px !important;
+    border-top: 2px solid currentColor !important;
+    border-right: 2px solid currentColor !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-prev::before {
+    transform: rotate(-135deg) !important;
+    margin-left: 5px !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-arrow-next::before {
+    transform: rotate(45deg) !important;
+    margin-right: 5px !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow > span {
+    display: none !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > button.about-cats-arrow:disabled {
+    opacity: .42 !important;
+    cursor: default !important;
+  }
+  html body.home-page .home-profile .about-cats-hint {
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  html body.home-page .home-profile .home-profile-inner {
+    width: calc(100% - 64px) !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery {
+    grid-template-columns: 44px minmax(0, 1fr) 44px !important;
+    column-gap: 12px !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track {
+    gap: 12px !important;
+  }
+}
+@media (max-width: 760px) {
+  html body.home-page .home-profile .home-profile-inner {
+    width: calc(100% - 36px) !important;
+    max-width: none !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+  html body.home-page .home-profile .about-cats-gallery > .about-cats-track {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    touch-action: pan-x !important;
+  }
+}
