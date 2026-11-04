@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="assets/quiet-editorial-system.css?v=20261103-continuous-ribbon">
 <link rel="stylesheet" href="assets/article-index.css?v=20261103-restore-issue-labels">
 <link rel="stylesheet" href="assets/about-profile-refresh.css?v=20261103-readable-17">
+<link rel="stylesheet" href="assets/about-gallery-layout-fix.css?v=20261104-1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Italianno&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="home-page">
@@ -245,20 +246,22 @@
   const prev = gallery.querySelector('.about-cats-arrow-prev');
   const next = gallery.querySelector('.about-cats-arrow-next');
   const update = () => {
-    const max = track.scrollWidth - track.clientWidth;
-    prev.disabled = track.scrollLeft <= 2;
-    next.disabled = track.scrollLeft >= max - 2;
+    const max = Math.max(0, track.scrollWidth - track.clientWidth);
+    const hasOverflow = max > 4;
+    prev.disabled = !hasOverflow || track.scrollLeft <= 2;
+    next.disabled = !hasOverflow || track.scrollLeft >= max - 2;
+    prev.setAttribute('aria-disabled', String(prev.disabled));
+    next.setAttribute('aria-disabled', String(next.disabled));
   };
-  const step = () => {
-    const item = track.querySelector('img');
-    const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    return item ? (item.getBoundingClientRect().width + gap) * 6 : track.clientWidth * .85;
-  };
+  const step = () => Math.max(track.clientWidth * .82, 280);
   prev.addEventListener('click', () => track.scrollBy({left: -step(), behavior: 'smooth'}));
   next.addEventListener('click', () => track.scrollBy({left: step(), behavior: 'smooth'}));
   track.addEventListener('scroll', update, {passive: true});
   window.addEventListener('resize', update);
-  update();})();
+  update();
+  requestAnimationFrame(update);
+  window.addEventListener('load', update, {once:true});
+})();
 </script>
 
 </body>
