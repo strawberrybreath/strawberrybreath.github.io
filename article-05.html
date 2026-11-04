@@ -87,6 +87,49 @@
 .redchamber-page .poem-context{border-top:1px solid #DCC1B9}
 .redchamber-page .article-ending .site-slogan{color:#75464A}
 @media(max-width:640px){.redchamber-page .redchamber-image-pair{grid-template-columns:1fr;gap:18px}.redchamber-page .redchamber-image-pair img{height:auto;max-height:460px;width:100%}.redchamber-page .redchamber-quote{padding:1.1rem 1.15rem}}
+
+/* Red Chamber issue: make the title area a clear theme-colored editorial card. */
+.redchamber-page .article-hero{
+  background:linear-gradient(128deg,#E9D5CE 0%,#F7F1E9 58%,#E6CFC8 100%)!important;
+  border:1px solid rgba(140,69,75,.28)!important;
+  border-radius:24px!important;
+  box-shadow:inset 0 4px 0 rgba(140,69,75,.24),0 12px 30px rgba(91,52,48,.07)!important;
+  margin:30px auto 42px!important;
+  overflow:hidden!important;
+}
+.redchamber-page .article-hero-copy{position:relative;z-index:1}
+.redchamber-page .article-hero h1{color:#63363A!important}
+.redchamber-page .article-hero h1 em{color:#8C454B!important}
+.redchamber-page .article-subtitle{color:#76534F!important}
+.redchamber-page .article-deck{color:#806C62!important}
+.redchamber-page .article-tags span{
+  background:rgba(255,250,248,.62)!important;
+  border:1px solid rgba(140,69,75,.28)!important;
+  color:#75464A!important;
+}
+.redchamber-page .essay-content p.article-highlight{
+  display:block!important;
+  box-sizing:border-box!important;
+  margin:2.1em 0 2.3em!important;
+  padding:1.15em 1.35em!important;
+  background:#E9D5CE!important;
+  border:1px solid rgba(140,69,75,.18)!important;
+  border-left:4px solid #8C454B!important;
+  border-radius:0 14px 14px 0!important;
+  color:#63363A!important;
+  box-shadow:0 5px 16px rgba(91,52,48,.045)!important;
+}
+@media(max-width:640px){
+  .redchamber-page .article-hero{
+    border-radius:18px!important;
+    margin:18px 14px 30px!important;
+    width:auto!important;
+  }
+  .redchamber-page .essay-content p.article-highlight{
+    padding:1em 1.05em!important;
+    margin:1.7em 0 2em!important;
+  }
+}
 </style>
 </head>
 <body class="article-page redchamber-page">
