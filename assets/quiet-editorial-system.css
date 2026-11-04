@@ -4565,15 +4565,18 @@ html::after{
 }
 
 
-/* Mobile article title panels: full-bleed themed backgrounds across all five issues. */
+
+
+
+/* Enforce full-bleed article title panels on phones, including pages with inline theme rules. */
 @media(max-width:760px){
-  .article-page .article-hero{
+  body.article-page .article-hero{
     width:100vw!important;
     max-width:100vw!important;
     margin-left:calc(50% - 50vw)!important;
     margin-right:calc(50% - 50vw)!important;
-    box-sizing:border-box!important;
     border-radius:0!important;
+    box-sizing:border-box!important;
     padding-left:24px!important;
     padding-right:24px!important;
   }
