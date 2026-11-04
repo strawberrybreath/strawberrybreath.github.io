@@ -31,7 +31,34 @@
 <link rel="stylesheet" href="assets/responsive-editorial.css?v=20261102">
 <link rel="stylesheet" href="assets/quiet-editorial-system.css?v=20261103-gallery-double-inline-slogan">
 <style>
-.redchamber-page{--article-accent:#8C454B;--article-accent-soft:#C58D87;--article-wash:#F1E5DF;--article-ink:#39332F}
+.redchamber-page{
+  --article-accent:#8C454B;--article-accent-soft:#C58D87;--article-wash:#F1E5DF;--article-ink:#39332F;
+  --paper:#F1E5DF;--paper-light:#F7F1E9;--paper-soft:#E9D5CE;
+  --ink:#39332F;--muted:#806C62;--accent:#8C454B;--sage:#858D70;
+  --blush:#DCC8B9;--line:rgba(140,69,75,.22);
+  background:#F1E5DF!important;color:#39332F!important
+}
+.redchamber-page .site-header{
+  background:linear-gradient(112deg,rgba(255,250,248,.76),rgba(241,229,223,.70))!important;
+  border-color:rgba(140,69,75,.22)!important;
+}
+.redchamber-page .site-header .brand-text strong{color:#63363A!important}
+.redchamber-page .site-header .brand-text small{color:#806C62!important}
+.redchamber-page .site-header .site-nav a{color:#806C62!important;transition:color .2s ease}
+.redchamber-page .site-header .site-nav a:hover,
+.redchamber-page .site-header .site-nav a.is-current{color:#8C454B!important}
+.redchamber-page .header-reading .reading-ring{
+  background:conic-gradient(#8C454B var(--read-progress,0%),rgba(140,69,75,.18) 0)!important
+}
+.redchamber-page .article-topline a,
+.redchamber-page .article-topline span,
+.redchamber-page .article-publication-meta,
+.redchamber-page .eyebrow{color:#8C454B}
+.redchamber-page .article-hero{
+  background:linear-gradient(135deg,#F1E5DF 0%,#F7F1E9 55%,#E9D5CE 100%);
+  border-top:1px solid #DCC1B9;border-bottom:1px solid #DCC1B9;
+  box-shadow:inset 0 4px 0 rgba(140,69,75,.15)
+}
 .redchamber-page .article-topline span,.redchamber-page .article-publication-meta,.redchamber-page .eyebrow{color:var(--article-accent)}
 .redchamber-page .article-hero{background:linear-gradient(135deg,#F1E5DF 0%,#F7F1E9 55%,#E9D5CE 100%);border-top:1px solid #DCC1B9;border-bottom:1px solid #DCC1B9;position:relative;overflow:hidden}
 .redchamber-page .article-hero:after{content:"";position:absolute;width:310px;height:310px;border:1px solid rgba(140,69,75,.18);border-radius:50%;right:-90px;top:-120px;box-shadow:0 0 0 24px rgba(140,69,75,.035),0 0 0 52px rgba(140,69,75,.025);pointer-events:none}
