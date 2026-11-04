@@ -4563,3 +4563,18 @@ html::after{
 @media(prefers-reduced-motion:reduce){
   html::after{animation:none!important;will-change:auto!important;transform:none!important}
 }
+
+
+/* Mobile article title panels: full-bleed themed backgrounds across all five issues. */
+@media(max-width:760px){
+  .article-page .article-hero{
+    width:100vw!important;
+    max-width:100vw!important;
+    margin-left:calc(50% - 50vw)!important;
+    margin-right:calc(50% - 50vw)!important;
+    box-sizing:border-box!important;
+    border-radius:0!important;
+    padding-left:24px!important;
+    padding-right:24px!important;
+  }
+}
