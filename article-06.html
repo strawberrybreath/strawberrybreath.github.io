@@ -26,10 +26,10 @@
 .article06-page .u87-cover{margin:0;justify-self:center;max-width:220px}
 .article06-page .u87-cover img{display:block;width:100%;height:auto;box-shadow:0 14px 32px #30201f30}
 .article06-page .u87-cover figcaption{text-align:center;color:#81736A;font-size:11px;margin-top:9px}
-.article06-page .music-panel{max-width:780px;margin:0 auto 54px;padding:18px 22px;border:1px solid #9D7771;border-radius:16px;background:linear-gradient(120deg,#F1E5DF,#FAF6EF);display:flex;align-items:center;justify-content:space-between;gap:18px}
-.article06-page .music-meta strong{display:block;color:var(--wine);font-size:17px}
-.article06-page .music-meta span{font-size:12px;color:#806C62}
-.article06-page .music-link{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border-radius:999px;background:var(--wine);color:#fff!important;text-decoration:none!important;font-size:13px;white-space:nowrap}
+.article06-page .lyric-ending .music-panel{max-width:560px;margin:0 auto 34px;padding:15px 18px;border:1px solid #ffffff35;border-radius:14px;background:#ffffff0c;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.article06-page .music-meta strong{display:block;color:#FBF4EC;font-size:15px}
+.article06-page .music-meta span{font-size:11px;color:#C6AAA0}
+.article06-page .music-link{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border-radius:999px;background:#E9D2C4;color:#542D32!important;text-decoration:none!important;font-size:13px;font-weight:600;white-space:nowrap}
 .article06-page .essay-content{max-width:740px}
 .article06-page .essay-content h2{margin:2.8em 0 1em;padding-left:14px;border-left:3px solid #9A5D5F;color:var(--wine);font-size:23px;line-height:1.6}
 .article06-page .essay-content p{line-height:2.15}
@@ -44,11 +44,13 @@
 .article06-page .lyric-heading h2{margin:8px 0;color:#FBF4EC;font-size:clamp(26px,4vw,36px)}
 .article06-page .lyric-heading p{color:#D9C6BC;font-size:12px}
 .article06-page .lyric-line{padding:14px 0;border-bottom:1px solid #ffffff18;animation:lyricRise .8s ease both;animation-delay:calc(var(--i)*.045s)}
-.article06-page .lyric-line{opacity:0;transform:translateY(12px);transition:opacity .8s ease,transform .8s ease}\n.article06-page .lyric-line.is-visible{opacity:1;transform:translateY(0)}\n.article06-page .lyric-cn{margin:0;color:#FBF4EC;font-size:clamp(15px,2vw,18px);line-height:1.9;letter-spacing:.035em}
+.article06-page .lyric-line{opacity:0;transform:translateY(12px);transition:opacity .8s ease,transform .8s ease}
+.article06-page .lyric-line.is-visible{opacity:1;transform:translateY(0)}
+.article06-page .lyric-cn{margin:0;color:#FBF4EC;font-size:clamp(15px,2vw,18px);line-height:1.9;letter-spacing:.035em}
 .article06-page .lyric-rom{margin:2px 0 0;color:#C6AAA0;font:11px/1.8 "DM Sans",sans-serif;letter-spacing:.025em;overflow-wrap:anywhere}
 @keyframes lyricRise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .article06-page .lyric-note{text-align:center;color:#C6AAA0;font-size:11px;margin:28px 0 0}
-@media(max-width:700px){.article06-page .article-hero{grid-template-columns:1fr;padding:25px 16px 30px;gap:22px}.article06-page .u87-cover{max-width:190px}.article06-page .music-panel{margin:0 0 40px;padding:15px;align-items:flex-start;flex-direction:column}.article06-page .music-link{align-self:flex-start}.article06-page .lyric-ending{border-radius:0;width:100vw;max-width:100vw;box-sizing:border-box;margin:60px calc(50% - 50vw) 24px;padding:38px 22px}.article06-page .lyric-rom{font-size:10px}}
+@media(max-width:700px){.article06-page .article-hero{grid-template-columns:1fr;padding:25px 16px 30px;gap:22px}.article06-page .u87-cover{max-width:190px}.article06-page .lyric-ending .music-panel{margin:0 auto 28px;padding:13px;align-items:flex-start;flex-direction:column}.article06-page .music-link{align-self:flex-start}.article06-page .lyric-ending{border-radius:0;width:100vw;max-width:100vw;box-sizing:border-box;margin:60px calc(50% - 50vw) 24px;padding:38px 22px}.article06-page .lyric-rom{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.article06-page .lyric-ending:before,.article06-page .lyric-ending:after,.article06-page .lyric-line{animation:none!important}}
 </style>
 </head>
@@ -66,7 +68,7 @@
 <div class="article-hero-copy"><p class="eyebrow">音乐 · 成长与人生</p><h1>葡萄成熟时：<br><em>关于等待、遗憾，以及人生的另一种答案</em></h1><p class="article-subtitle">有些事情不能催熟。人生也不必按照别人的时间表抵达。</p><p class="article-deck">从一首歌出发，聊聊等待、失去、选择，以及那些暂时没有结果、却仍在塑造我们的经历。</p><div class="article-tags"><span>陈奕迅</span><span>成长</span><span>人生选择</span><span>时间</span></div></div>
 <figure class="u87-cover"><img src="https://coverartarchive.org/release/f7e0d166-2328-409c-9d2f-b5ebe2a4f468/front-500" alt="陈奕迅《U 87》专辑封面" fetchpriority="high"><figcaption>陈奕迅《U 87》· 2005</figcaption></figure>
 </section>
-<section class="music-panel" aria-label="Apple Music 播放入口"><div class="music-meta"><strong>葡萄成熟时</strong><span>陈奕迅 · U 87 · Apple Music</span></div><a class="music-link" href="https://music.apple.com/cn/album/%E8%91%A1%E8%90%84%E6%88%90%E7%86%9F%E6%97%B6/1443374875?i=1443375474" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> 点击播放</a></section>
+
 <article class="essay-content" id="bodycopy">
 <p>有些歌，年轻时听见的是旋律，过了几年再听，才发现它唱的其实是自己。</p>
 <p>《葡萄成熟时》就是这样一首歌。第一次听，也许会把它理解成一段感情里的等待：认真付出，耐心经营，却迟迟等不到想要的回应。可当生活经历多了一些，再听它，就会发现这首歌并不只是在讲爱情。它也像是在谈工作、选择、成长，谈一个人如何面对暂时没有结果的人生。</p>
@@ -126,6 +128,7 @@
 </article>
 <section class="lyric-ending" aria-label="《葡萄成熟时》歌词与粤语罗马音">
 <div class="lyric-heading"><p class="eyebrow">LYRICS · CANTONESE ROMANIZATION</p><h2>葡萄成熟时</h2><p>陈奕迅 · U 87 · 歌词与粤语罗马音</p></div>
+<div class="music-panel" aria-label="Apple Music 音频"><div class="music-meta"><strong>先听一遍，再慢慢读</strong><span>陈奕迅 · U 87 · Apple Music</span></div><a class="music-link" href="https://music.apple.com/cn/album/%E8%91%A1%E8%90%84%E6%88%90%E7%86%9F%E6%97%B6/1443374875?i=1443375474" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> 播放歌曲</a></div>
 <div class="lyric-line" style="--i:0"><p class="lyric-cn">差不多冬至 一早一晚还是有雨</p><p class="lyric-rom">caa1 bat1 do1 dung1 zi3, jat1 zou2 jat1 maan5 waan4 si6 jau5 jyu5</p></div>
 <div class="lyric-line" style="--i:1"><p class="lyric-cn">当初的坚持 现已令你很怀疑</p><p class="lyric-rom">dong1 co1 dik1 gin1 ci4, jin6 ji5 ling6 nei5 han2 waai4 ji4</p></div>
 <div class="lyric-line" style="--i:2"><p class="lyric-cn">很怀疑 你最尾等到 只有这枯枝</p><p class="lyric-rom">han2 waai4 ji4, nei5 zeoi3 mei5 dang2 dou3, zi2 jau5 ze5 fu1 zi1</p></div>
