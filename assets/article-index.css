@@ -355,3 +355,37 @@
     font-size:1.6em!important;
   }
 }
+
+/* 2026-11-05: make article-cover thumbnails explicit and resilient on home + archive. */
+.home-page .article-list-item .article-list-image,
+.archive-page .article-list-item .article-list-image{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  width:132px!important;
+  max-width:132px!important;
+  min-width:0!important;
+  aspect-ratio:3/4!important;
+  overflow:hidden!important;
+  background:#e9e1d7!important;
+  align-self:center!important;
+}
+.home-page .article-list-item .article-list-image img,
+.archive-page .article-list-item .article-list-image img{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+@media(max-width:760px){
+  .home-page .article-list-item .article-list-image,
+  .archive-page .article-list-item .article-list-image{
+    width:88px!important;
+    max-width:88px!important;
+    aspect-ratio:3/4!important;
+  }
+}
