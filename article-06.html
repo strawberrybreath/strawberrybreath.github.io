@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="assets/article-index.css?v=20261102"><link rel="stylesheet" href="assets/responsive-editorial.css?v=20261102">
 <link rel="stylesheet" href="assets/quiet-editorial-system.css?v=20261105-article06">
 <style>
-.article06-page{--wine:#542D32;--wine2:#713E43;--paper:#F4F0E8;--ink:#302D29}
+.article06-page{--wine:#51364F;--wine2:#76566F;--paper:#F4F0E8;--ink:#302D29;--grape:#684A63;--grape-soft:#E9DFE7;--vine:#78836A;--vine-soft:#E4E7DC;--harvest:#B58B68}
 .article06-page .article-listen-invitation{max-width:740px;margin:3em auto 1.2em;color:#75615B;line-height:2;text-align:center}
 .article06-page .article-hero{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:clamp(24px,5vw,60px);align-items:center;max-width:900px;margin:24px auto 38px;padding:36px 24px 48px;border-bottom:1px solid var(--line)}
 .article06-page .article-hero h1{font-size:clamp(32px,4.5vw,49px);line-height:1.5;color:var(--wine);margin:0 0 16px}
@@ -51,6 +51,69 @@
 .article06-page .lyric-note{text-align:center;color:#C6AAA0;font-size:11px;margin:28px 0 0}
 @media(max-width:700px){.article06-page .article-hero{grid-template-columns:1fr;padding:25px 16px 30px;gap:22px}.article06-page .u87-cover{max-width:190px}.article06-page .lyric-ending .music-panel{margin:0 auto 28px;padding:13px;align-items:flex-start;flex-direction:column}.article06-page .music-link{align-self:flex-start}.article06-page .lyric-ending{border-radius:0;width:100vw;max-width:100vw;box-sizing:border-box;margin:60px calc(50% - 50vw) 24px;padding:38px 22px}}
 @media(prefers-reduced-motion:reduce){.article06-page .lyric-ending:before,.article06-page .lyric-ending:after,.article06-page .lyric-line{animation:none!important}}
+
+/* 2026-11-05 · Grape harvest visual identity for issue 06. */
+.article06-page .article-publication-meta{color:#7B6B79!important}
+.article06-page .article-publication-meta span{color:var(--grape)!important}
+.article06-page .article-hero{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  box-sizing:border-box!important;
+  padding:clamp(28px,4.5vw,48px)!important;
+  border:1px solid rgba(104,74,99,.24)!important;
+  border-radius:22px!important;
+  border-bottom:1px solid rgba(104,74,99,.24)!important;
+  background:linear-gradient(132deg,rgba(249,245,239,.98) 0%,rgba(238,229,237,.96) 58%,rgba(231,234,222,.94) 100%)!important;
+  box-shadow:0 16px 42px rgba(69,48,66,.09),inset 0 1px 0 rgba(255,255,255,.85)!important;
+}
+.article06-page .article-hero:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:300px;height:300px;
+  right:-110px;top:-170px;
+  border:1px solid rgba(104,74,99,.13);
+  border-radius:50%;
+  box-shadow:0 0 0 22px rgba(104,74,99,.025),0 0 0 48px rgba(104,74,99,.02);
+  pointer-events:none;
+}
+.article06-page .article-hero-copy{position:relative;z-index:1}
+.article06-page .article-hero-copy>.eyebrow{color:var(--vine)!important;letter-spacing:.13em}
+.article06-page .article-hero h1{color:var(--grape)!important}
+.article06-page .article-hero h1 em{color:#80617A!important}
+.article06-page .article-subtitle{color:#68745F!important}
+.article06-page .article-deck{color:#6F6570!important}
+.article06-page .article-tags span{
+  display:inline-flex!important;
+  align-items:center!important;
+  padding:5px 11px!important;
+  border:1px solid rgba(120,131,106,.28)!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.38)!important;
+  color:#66715D!important;
+}
+.article06-page .u87-cover img{border:1px solid rgba(81,54,79,.14);border-radius:4px;box-shadow:0 16px 34px rgba(55,38,53,.2)!important}
+.article06-page .essay-content h2{border-left-color:var(--vine)!important;color:var(--grape)!important}
+.article06-page .article-highlight{background:var(--grape-soft)!important;border-left-color:var(--grape)!important;color:#594458!important}
+.article06-page .article-listen-invitation{color:#75647A!important}
+.article06-page .music-jump-note{display:block!important;margin-top:7px!important;max-width:310px!important;color:#D7C8D5!important;font-size:11px!important;line-height:1.8!important}
+.article06-page .music-link{background:#E7DCE8!important;color:#50384F!important;transition:transform .2s ease,background .2s ease}
+.article06-page .music-link:hover{background:#F2E9F1!important;transform:translateY(-1px)}
+.article06-page .article-topline a{color:var(--grape)!important}
+@media(max-width:700px){
+ .article06-page .article-hero{
+   width:calc(100% - 28px)!important;
+   max-width:calc(100% - 28px)!important;
+   margin:18px auto 30px!important;
+   padding:26px 20px 28px!important;
+   border-radius:18px!important;
+   gap:20px!important;
+ }
+ .article06-page .article-hero:before{width:220px;height:220px;right:-100px;top:-125px}
+ .article06-page .music-jump-note{max-width:100%!important}
+}
+
 </style>
 </head>
 <body class="article-page article06-page">
@@ -128,7 +191,7 @@
 <p class="article-listen-invitation">文章读到这里，如果你愿意，可以听一听陈奕迅的《葡萄成熟时》。 </p>
 <section class="lyric-ending" aria-label="《葡萄成熟时》音频与歌词">
 <div class="lyric-heading"><p class="eyebrow">MUSIC · LYRICS</p><h2>葡萄成熟时</h2><p>陈奕迅 · U 87</p></div>
-<div class="music-panel" aria-label="Apple Music 音频"><div class="music-meta"><strong>先听一遍，再慢慢读</strong><span>陈奕迅 · U 87 · Apple Music</span></div><a class="music-link" href="https://music.apple.com/cn/album/%E8%91%A1%E8%90%84%E6%88%90%E7%86%9F%E6%97%B6/1443374875?i=1443375474" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> 播放歌曲</a></div>
+<div class="music-panel" aria-label="Apple Music 音频"><div class="music-meta"><strong>先听一遍，再慢慢读</strong><span>陈奕迅 · U 87 · Apple Music</span><small class="music-jump-note">点击播放后会尝试跳转至 iPhone 的 Apple Music；继续前会出现确认提示。</small></div><a class="music-link" href="https://music.apple.com/cn/album/%E8%91%A1%E8%90%84%E6%88%90%E7%86%9F%E6%97%B6/1443374875?i=1443375474" target="_blank" rel="noopener" onclick="return window.confirm('即将跳转到 iPhone 上的 Apple Music App 播放《葡萄成熟时》。如果未能打开 App，可能会在浏览器中打开 Apple Music。是否继续？')" aria-label="确认后跳转到 Apple Music 播放《葡萄成熟时》"><span aria-hidden="true">▶</span> 前往 Apple Music</a></div>
 <div class="lyric-line" style="--i:0"><p class="lyric-cn">差不多冬至 一早一晚还是有雨</p><p class="lyric-pronunciation">caa bat do dung zi jat zou jat maan waan si jau jyu</p></div>
 <div class="lyric-line" style="--i:1"><p class="lyric-cn">当初的坚持 现已令你很怀疑</p><p class="lyric-pronunciation">dong co dik gin ci jin ji ling nei han waai ji</p></div>
 <div class="lyric-line" style="--i:2"><p class="lyric-cn">很怀疑 你最尾等到 只有这枯枝</p><p class="lyric-pronunciation">han waai ji nei zeoi mei dang dou zi jau ze fu zi</p></div>
