@@ -1,13 +1,13 @@
 /* One source of truth for all published articles, ordered by their real publication dates. */
 const articles = [
-  { title: "葡萄成熟时：关于等待、遗憾，以及人生的另一种答案", href: "article-06.html", date: "2026-11-05", dateLabel: "2026年11月5日", description: "从陈奕迅《葡萄成熟时》出发，聊聊等待、付出、遗憾、爱情的成熟，以及不必按照别人的时间表生活。", image: "https://coverartarchive.org/release/f7e0d166-2328-409c-9d2f-b5ebe2a4f468/front-500", imageAlt: "陈奕迅2005年专辑《U 87》封面" },
+  { title: "葡萄成熟时：关于等待、遗憾，以及人生的另一种答案", href: "article-06.html", date: "2026-11-05", dateLabel: "2026年11月5日", description: "从陈奕迅《葡萄成熟时》出发，聊聊等待、付出、遗憾、爱情的成熟，以及不必按照别人的时间表生活。", image: "https://img.yec.tw/zp/images/8170DCC60B5F2FA0CD306522B5F289F536180D21", imageAlt: "陈奕迅2005年专辑《U 87》封面" },
   {
     title: "大观园的梦醒了，女性的故事却留下了",
     href: "article-05.html",
     date: "2026-11-04",
     dateLabel: "2026年11月4日",
     description: "重新读《红楼梦》，从大观园里的女性情谊、才情与志向，看见她们被家族和时代限制的人生。",
-    image: "https://static.bjd.com.cn/dams-res/editing/image/202312/30/658f8ee1d5de9bf28166ae9f.jpeg",
+    image: "https://p6.itc.cn/q_70/images03/20221210/23da415d67ef4e3192a17e590dc6f20c.jpeg",
     imageAlt: "人民文学出版社《红楼梦》四十周年纪念版书籍封面"
   },
   {
@@ -53,7 +53,7 @@ function articleCard(article, index) {
   item.className = "article-list-item";
   const image = article.image ? `
     <a class="article-list-image" href="${article.href}" tabindex="-1" aria-hidden="true">
-      <img src="${article.image}" alt="${article.imageAlt || ""}" loading="lazy">
+      <img src="${article.image}" alt="${article.imageAlt || ""}" loading="lazy" decoding="async">
     </a>` : "";
   const date = article.date && article.dateLabel
     ? `<time class="article-list-date" datetime="${article.date}">${article.dateLabel}</time>`
