@@ -114,6 +114,66 @@
  .article06-page .music-jump-note{max-width:100%!important}
 }
 
+
+/* 2026-11-05 · Light lyric-first layout */
+.article06-page .lyric-ending{
+  max-width:820px!important;
+  margin:66px auto 28px!important;
+  padding:clamp(30px,5vw,58px) clamp(20px,6vw,64px)!important;
+  border:1px solid rgba(104,74,99,.17)!important;
+  border-radius:20px!important;
+  background:linear-gradient(150deg,#FBF8F2 0%,#F4EFE8 58%,#F0EBF1 100%)!important;
+  color:#302D29!important;
+  box-shadow:0 12px 34px rgba(69,48,66,.055)!important;
+}
+.article06-page .lyric-ending:before{
+  width:360px!important;height:360px!important;right:-190px!important;top:-220px!important;
+  background:radial-gradient(circle,rgba(188,164,187,.18),transparent 70%)!important;
+  animation:none!important;
+}
+.article06-page .lyric-ending:after{
+  width:300px!important;height:300px!important;left:-190px!important;bottom:-200px!important;
+  background:radial-gradient(circle,rgba(190,177,148,.15),transparent 70%)!important;
+  animation:none!important;
+}
+.article06-page .lyric-heading{margin-bottom:24px!important}
+.article06-page .lyric-heading .eyebrow{color:#8A7588!important}
+.article06-page .lyric-heading h2{color:#684A63!important}
+.article06-page .lyric-heading p{color:#81777D!important}
+.article06-page .music-intro{
+  margin:0 auto 30px!important;
+  text-align:center!important;
+  color:#756D68!important;
+  font-size:13px!important;
+  line-height:1.9!important;
+}
+.article06-page .music-link{
+  display:inline!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:none!important;
+  color:#76566F!important;
+  font-size:13px!important;
+  font-weight:600!important;
+  text-decoration:underline!important;
+  text-decoration-color:rgba(118,86,111,.4)!important;
+  text-underline-offset:4px!important;
+  white-space:normal!important;
+}
+.article06-page .music-link:hover{background:none!important;color:#51364F!important;transform:none!important}
+.article06-page .lyric-line{border-bottom:1px solid rgba(104,74,99,.13)!important}
+.article06-page .lyric-cn{color:#302D29!important}
+.article06-page .lyric-pronunciation{color:#887687!important}
+.article06-page .lyric-note{color:#8A7B82!important}
+@media(max-width:700px){
+ .article06-page .lyric-ending{
+   width:100%!important;max-width:100%!important;box-sizing:border-box!important;
+   margin:48px auto 20px!important;padding:34px 22px!important;border-radius:16px!important;
+ }
+ .article06-page .music-intro{margin-bottom:25px!important}
+}
+
 </style>
 </head>
 <body class="article-page article06-page">
@@ -191,7 +251,7 @@
 <p class="article-listen-invitation">文章读到这里，如果你愿意，可以听一听陈奕迅的《葡萄成熟时》。 </p>
 <section class="lyric-ending" aria-label="《葡萄成熟时》音频与歌词">
 <div class="lyric-heading"><p class="eyebrow">MUSIC · LYRICS</p><h2>葡萄成熟时</h2><p>陈奕迅 · U 87</p></div>
-<div class="music-panel" aria-label="Apple Music 音频"><div class="music-meta"><strong>先听一遍，再慢慢读</strong><span>陈奕迅 · U 87 · Apple Music</span><small class="music-jump-note">点击播放后会尝试跳转至 iPhone 的 Apple Music；继续前会出现确认提示。</small></div><a class="music-link" href="https://music.apple.com/cn/album/%E8%91%A1%E8%90%84%E6%88%90%E7%86%9F%E6%97%B6/1443374875?i=1443375474" target="_blank" rel="noopener" onclick="return window.confirm('即将跳转到 iPhone 上的 Apple Music App 播放《葡萄成熟时》。如果未能打开 App，可能会在浏览器中打开 Apple Music。是否继续？')" aria-label="确认后跳转到 Apple Music 播放《葡萄成熟时》"><span aria-hidden="true">▶</span> 前往 Apple Music</a></div>
+<p class="music-intro">想听这首歌的话，可以 <a class="music-link" href="https://music.apple.com/cn/album/%E8%91%A1%E8%90%84%E6%88%90%E7%86%9F%E6%97%B6/1443374875?i=1443375474" target="_blank" rel="noopener" aria-label="跳转到 Apple Music 收听《葡萄成熟时》">点击这里前往 Apple Music <span aria-hidden="true">↗</span></a> 收听。</p>
 <div class="lyric-line" style="--i:0"><p class="lyric-cn">差不多冬至 一早一晚还是有雨</p><p class="lyric-pronunciation">caa bat do dung zi jat zou jat maan waan si jau jyu</p></div>
 <div class="lyric-line" style="--i:1"><p class="lyric-cn">当初的坚持 现已令你很怀疑</p><p class="lyric-pronunciation">dong co dik gin ci jin ji ling nei han waai ji</p></div>
 <div class="lyric-line" style="--i:2"><p class="lyric-cn">很怀疑 你最尾等到 只有这枯枝</p><p class="lyric-pronunciation">han waai ji nei zeoi mei dang dou zi jau ze fu zi</p></div>
