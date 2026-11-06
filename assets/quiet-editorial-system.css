@@ -4602,3 +4602,75 @@ html body.article08-page .essay-content li{
     margin-inline:auto!important;
   }
 }
+
+
+/* Unified reading progress: use Issue 07 geometry and motion across every page. */
+html body .site-header .header-reading{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:10px!important;
+  min-width:160px!important;
+  padding:2px 8px!important;
+}
+html body .site-header .header-reading .reading-ring{
+  --read-progress:0%;
+  position:relative!important;
+  display:grid!important;
+  place-items:center!important;
+  flex:0 0 46px!important;
+  width:46px!important;
+  height:46px!important;
+  border-radius:50%!important;
+  isolation:isolate!important;
+  transition:background .18s linear,transform .25s ease!important;
+}
+html body .site-header .header-reading .reading-ring::before{
+  content:""!important;
+  position:absolute!important;
+  inset:4px!important;
+  z-index:-1!important;
+  border-radius:50%!important;
+}
+html body .site-header .header-reading .reading-ring span{
+  position:relative!important;
+  z-index:1!important;
+  font:600 11px/1 var(--sans,Arial,sans-serif)!important;
+  font-variant-numeric:tabular-nums!important;
+}
+html body .site-header .header-reading .reading-stats{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:3px!important;
+  white-space:nowrap!important;
+  font:11px/1.45 var(--body,serif)!important;
+}
+html body .site-header .header-reading .reading-stats strong{font-weight:600!important}
+html body .site-header .header-reading .reading-confetti{
+  position:absolute!important;
+  inset:-9px -12px!important;
+  overflow:visible!important;
+  pointer-events:none!important;
+}
+@media(max-width:900px) and (min-width:761px){
+  html body .site-header .header-reading{min-width:145px!important;gap:7px!important}
+  html body .site-header .header-reading .reading-ring{
+    width:42px!important;height:42px!important;flex-basis:42px!important;
+  }
+  html body .site-header .header-reading .reading-ring::before{inset:4px!important}
+  html body .site-header .header-reading .reading-stats{font-size:10px!important}
+}
+@media(max-width:760px){
+  html body .site-header .header-reading{min-width:0!important;gap:7px!important;padding:0 2px!important}
+  html body .site-header .header-reading .reading-ring{
+    width:39px!important;height:39px!important;flex-basis:39px!important;
+  }
+  html body .site-header .header-reading .reading-ring::before{inset:3px!important}
+  html body .site-header .header-reading .reading-ring span{font-size:10px!important}
+  html body .site-header .header-reading .reading-stats{
+    gap:1px!important;font-size:9px!important;line-height:1.35!important;
+  }
+}
+@media(max-width:360px){
+  html body .site-header .header-reading .reading-stats{font-size:8px!important}
+}
