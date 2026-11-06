@@ -4677,11 +4677,11 @@ html body .site-header .header-reading .reading-confetti{
 
 /* 2026-11-06: use the homepage strawberry-red progress ring on every page. */
 html body .site-header .header-reading .reading-ring{
-  background:conic-gradient(#A6503D var(--read-progress,0%),#ded7cc 0)!important;
+  background:conic-gradient(#E63F25 var(--read-progress,0%),#ded7cc 0)!important;
 }
 html body .site-header .header-reading .reading-ring span{
   color:#7E3D31!important;
 }
 html body.reading-complete .site-header .header-reading .reading-ring{
-  box-shadow:0 0 0 4px rgba(166,80,61,.14)!important;
+  box-shadow:0 0 0 4px rgba(230,63,37,.14)!important;
 }
