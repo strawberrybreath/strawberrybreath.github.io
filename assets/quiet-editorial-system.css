@@ -4591,3 +4591,10 @@ html body.article-page .essay-content li{
   -webkit-text-align-last:start!important;
   text-justify:inter-character!important;
 }
+
+/* Trial: keep this short paragraph in article 08 naturally left-aligned. */
+html body.article-page .essay-content p.natural-spacing{
+  text-align:left!important;
+  text-align-last:left!important;
+  -webkit-text-align-last:left!important;
+}
