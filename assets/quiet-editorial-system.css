@@ -4698,3 +4698,49 @@ html body .site-header .header-reading .confetti-bit{
 html body.reading-complete .site-header .header-reading .reading-ring{
   box-shadow:0 0 0 4px rgba(230,63,37,.14)!important;
 }
+
+
+/* 2026-11-06: tablet footer reflow — keep every footer element inside the glass panel. */
+@media screen and (min-width:761px) and (max-width:1050px){
+  html body .site-footer{
+    display:flex!important;flex-direction:column!important;align-items:stretch!important;
+    justify-content:flex-start!important;gap:14px!important;width:100%!important;
+    max-width:100%!important;min-width:0!important;box-sizing:border-box!important;
+    padding:20px 0 26px!important;
+  }
+  html body .site-footer .footer-actions{
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    flex-wrap:wrap!important;gap:10px 18px!important;width:100%!important;
+    max-width:100%!important;min-width:0!important;box-sizing:border-box!important;
+  }
+  html body .site-footer .footer-glass-card{
+    display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+    justify-content:center!important;gap:12px!important;width:100%!important;
+    min-width:0!important;max-width:100%!important;box-sizing:border-box!important;
+    padding:20px 22px!important;
+  }
+  html body .site-footer .footer-glass-card > .site-slogan{
+    display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+    justify-content:flex-start!important;flex:0 1 auto!important;width:100%!important;
+    min-width:0!important;max-width:100%!important;margin:0!important;gap:3px!important;
+    text-align:left!important;white-space:normal!important;overflow-wrap:anywhere!important;
+  }
+  html body .site-footer .footer-glass-card > .site-slogan > br{display:block!important}
+  html body .site-footer .footer-glass-card > .site-slogan > span{
+    display:block!important;max-width:100%!important;white-space:normal!important;
+    overflow-wrap:anywhere!important;
+  }
+  html body .site-footer .footer-glass-card > .footer-identity{
+    display:flex!important;flex-direction:row!important;align-items:center!important;
+    justify-content:flex-start!important;flex-wrap:wrap!important;gap:8px 16px!important;
+    width:100%!important;min-width:0!important;max-width:100%!important;margin:0!important;
+    padding:12px 0 0!important;border-left:0!important;
+    border-top:1px solid var(--line,rgba(48,45,41,.18))!important;
+    box-sizing:border-box!important;text-align:left!important;
+  }
+  html body .site-footer .footer-glass-card > .footer-identity .footer-brand,
+  html body .site-footer .footer-glass-card > .footer-identity .footer-copy{
+    min-width:0!important;max-width:100%!important;margin:0!important;
+    white-space:normal!important;overflow-wrap:anywhere!important;
+  }
+}
