@@ -4583,11 +4583,11 @@ html::after{
 }
 
 
-/* Article prose: keep paragraph final lines evenly distributed on iOS Safari too. */
+/* Article prose: justify paragraph body lines, but keep final lines at natural spacing. */
 html body.article-page .essay-content p,
 html body.article-page .essay-content li{
   text-align:justify!important;
-  text-align-last:justify!important;
-  -webkit-text-align-last:justify!important;
+  text-align-last:start!important;
+  -webkit-text-align-last:start!important;
   text-justify:inter-character!important;
 }
