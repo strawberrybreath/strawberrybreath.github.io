@@ -389,3 +389,16 @@
     aspect-ratio:3/4!important;
   }
 }
+
+
+/* 2026-11-06: slightly smaller article covers on home and archive lists */
+.home-page:not(.archive-page) .article-list-item{grid-template-columns:104px minmax(0,1fr)!important;gap:22px!important}
+.home-page:not(.archive-page) .article-list-image{width:104px!important;max-width:104px!important}
+.archive-page .article-list-item{grid-template-columns:108px minmax(0,1fr)!important;gap:20px!important}
+.archive-page .article-list-image{width:108px!important;max-width:108px!important}
+@media(max-width:700px){
+  .home-page:not(.archive-page) .article-list-item{grid-template-columns:74px minmax(0,1fr)!important;gap:14px!important}
+  .home-page:not(.archive-page) .article-list-image{width:74px!important;max-width:74px!important}
+  .archive-page .article-list-item{grid-template-columns:80px minmax(0,1fr)!important;gap:14px!important}
+  .archive-page .article-list-image{width:80px!important;max-width:80px!important}
+}
