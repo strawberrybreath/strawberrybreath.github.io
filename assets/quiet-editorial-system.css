@@ -4744,3 +4744,19 @@ html body.reading-complete .site-header .header-reading .reading-ring{
     white-space:normal!important;overflow-wrap:anywhere!important;
   }
 }
+
+
+/* 2026-11-06: tablet footer slogan — keep Chinese and English on one shared line. */
+@media screen and (min-width:761px) and (max-width:1050px){
+  html body .site-footer .footer-glass-card > .site-slogan{
+    display:flex!important;flex-direction:row!important;align-items:baseline!important;
+    justify-content:flex-start!important;flex-wrap:nowrap!important;gap:14px!important;
+    width:100%!important;white-space:nowrap!important;text-align:left!important;
+  }
+  html body .site-footer .footer-glass-card > .site-slogan > br{
+    display:none!important;
+  }
+  html body .site-footer .footer-glass-card > .site-slogan > span{
+    display:inline!important;flex:0 1 auto!important;white-space:nowrap!important;
+  }
+}
