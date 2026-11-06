@@ -497,3 +497,12 @@ body.home-page.archive-page .archive-list .article-list-item>.article-list-image
   background:transparent!important;
   box-shadow:none!important;
 }
+
+
+/* Prevent iOS Safari from zooming the archive search field on focus. */
+@media(max-width:760px){
+  .archive-page .article-search-field input{
+    font-size:16px!important;
+    line-height:1.5!important;
+  }
+}
