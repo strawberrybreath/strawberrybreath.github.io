@@ -4581,3 +4581,13 @@ html::after{
     padding-right:24px!important;
   }
 }
+
+
+/* 2026-11-06: prevent justified paragraph spacing from stretching CJK lines. */
+/* Keep every line of article prose at its natural character spacing, including paragraph endings. */
+html body.article-page .essay-content p,
+html body.article-page .essay-content li{
+  text-align:left!important;
+  text-align-last:left!important;
+  text-justify:auto!important;
+}
