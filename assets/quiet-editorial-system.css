@@ -4675,17 +4675,24 @@ html body .site-header .header-reading .reading-confetti{
   html body .site-header .header-reading .reading-stats{font-size:8px!important}
 }
 
-/* 2026-11-06: use the homepage strawberry-red progress ring on every page. */
+/* 2026-11-06: force the progress arc and completion burst to homepage strawberry red. */
 html body .site-header .header-reading .reading-ring{
   --accent:#E63F25!important;
-  background:#ded7cc!important;
+  background:conic-gradient(#E63F25 var(--read-progress,0%),#ded7cc 0)!important;
+  background-color:#ded7cc!important;
   background-image:conic-gradient(#E63F25 var(--read-progress,0%),#ded7cc 0)!important;
+}
+html body .site-header .header-reading .reading-ring::before{
+  background:var(--paper,#F4F0E8)!important;
 }
 html body .site-header .header-reading .reading-ring span{
   color:#7E3D31!important;
 }
+html body .site-header .header-reading .reading-confetti .confetti-bit,
 html body .site-header .header-reading .confetti-bit{
   color:#E63F25!important;
+  -webkit-text-fill-color:#E63F25!important;
+  text-shadow:0 0 1px rgba(230,63,37,.18)!important;
 }
 
 html body.reading-complete .site-header .header-reading .reading-ring{
