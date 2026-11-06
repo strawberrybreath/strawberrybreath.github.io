@@ -310,3 +310,42 @@
   color:#E8D8F0!important;text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
 }
 .article-page.article06-page .site-header .site-nav a.is-current::after{background:#E8D8F0!important}
+
+
+/* 2026-11-06 · Theme-specific reading progress foregrounds (override generic high-contrast white rule). */
+.article-page.enola-article-page .site-header .header-reading .reading-ring span,
+.article-page.enola-article-page .site-header .header-reading .reading-stats,
+.article-page.enola-article-page .site-header .header-reading .reading-stats strong{
+  color:#F6D9D2!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
+}
+.article-page.witch-article-page .site-header .header-reading .reading-ring span,
+.article-page.witch-article-page .site-header .header-reading .reading-stats,
+.article-page.witch-article-page .site-header .header-reading .reading-stats strong{
+  color:#E8D5A8!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
+}
+.article-page.poem-article-page .site-header .header-reading .reading-ring span,
+.article-page.poem-article-page .site-header .header-reading .reading-stats,
+.article-page.poem-article-page .site-header .header-reading .reading-stats strong{
+  color:#D7E9DF!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
+}
+.article-page.tobacco-article-page .site-header .header-reading .reading-ring span,
+.article-page.tobacco-article-page .site-header .header-reading .reading-stats,
+.article-page.tobacco-article-page .site-header .header-reading .reading-stats strong{
+  color:#F0D9A8!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
+}
+.article-page.redchamber-page .site-header .header-reading .reading-ring span,
+.article-page.redchamber-page .site-header .header-reading .reading-stats,
+.article-page.redchamber-page .site-header .header-reading .reading-stats strong{
+  color:#F2D6D2!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
+}
+.article-page.article06-page .site-header .header-reading .reading-ring span,
+.article-page.article06-page .site-header .header-reading .reading-stats,
+.article-page.article06-page .site-header .header-reading .reading-stats strong{
+  color:#E8D8F0!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
+}
