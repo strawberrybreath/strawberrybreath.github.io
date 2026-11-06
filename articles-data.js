@@ -85,8 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const ordered = [...articles].sort((a, b) => b.date.localeCompare(a.date));
   const latest = document.querySelector("[data-latest-articles]");
   const archive = document.querySelector("[data-all-articles]");
-  if (latest) ordered.slice(0, 3).forEach((article, index) => latest.appendChild(articleCard(article, index)));
+  if (latest) { latest.replaceChildren(); ordered.slice(0, 3).forEach((article, index) => latest.appendChild(articleCard(article, index))); }
   if (archive) {
+    archive.replaceChildren();
     ordered.forEach((article, index) => archive.appendChild(articleCard(article, index)));
     const search = document.querySelector("[data-article-search]");
     const count = document.querySelector("[data-article-count]");
