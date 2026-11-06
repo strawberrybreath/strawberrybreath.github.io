@@ -228,3 +228,15 @@
     border-radius:0!important;margin-left:0!important;margin-right:0!important;
   }
 }
+
+
+/* 2026-11-06 · High-contrast reading progress figures on themed navigation. */
+.article-page .site-header .header-reading .reading-ring span,
+.article-page .site-header .header-reading .reading-stats,
+.article-page .site-header .header-reading .reading-stats strong{
+  color:#FFF9F2!important;
+  text-shadow:0 1px 3px rgba(25,18,20,.38)!important;
+}
+.article-page .site-header .header-reading .reading-ring:before{
+  background:var(--paper-light,#FFF9F2)!important;
+}
