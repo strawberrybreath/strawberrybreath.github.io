@@ -244,65 +244,69 @@
 .article06-page .site-header .header-reading .reading-ring:before{background:#51364F!important}
 
 
-/* 2026-11-06 · Ensure issue 01–04 navigation text remains legible on its solid dark theme. */
-.article-page.enola-article-page .site-header,
-.article-page.witch-article-page .site-header,
-.article-page.poem-article-page .site-header,
-.article-page.tobacco-article-page .site-header{
-  background:var(--article-accent-strong)!important;
-  background-image:none!important;
-  border-bottom-color:var(--article-accent-strong)!important;
-}
-.article-page.enola-article-page .site-header .brand-text strong,
-.article-page.enola-article-page .site-header .brand-text small,
-.article-page.enola-article-page .site-header .site-nav a,
-.article-page.enola-article-page .site-header .site-nav a:hover,
-.article-page.enola-article-page .site-header .site-nav a.is-current,
-.article-page.witch-article-page .site-header .brand-text strong,
-.article-page.witch-article-page .site-header .brand-text small,
-.article-page.witch-article-page .site-header .site-nav a,
-.article-page.witch-article-page .site-header .site-nav a:hover,
-.article-page.witch-article-page .site-header .site-nav a.is-current,
-.article-page.poem-article-page .site-header .brand-text strong,
-.article-page.poem-article-page .site-header .brand-text small,
-.article-page.poem-article-page .site-header .site-nav a,
-.article-page.poem-article-page .site-header .site-nav a:hover,
-.article-page.poem-article-page .site-header .site-nav a.is-current,
-.article-page.tobacco-article-page .site-header .brand-text strong,
-.article-page.tobacco-article-page .site-header .brand-text small,
-.article-page.tobacco-article-page .site-header .site-nav a,
-.article-page.tobacco-article-page .site-header .site-nav a:hover,
-.article-page.tobacco-article-page .site-header .site-nav a.is-current{
-  color:#FFF9F2!important;
-}
-.article-page.enola-article-page .site-header .site-nav a.is-current::after,
-.article-page.witch-article-page .site-header .site-nav a.is-current::after,
-.article-page.poem-article-page .site-header .site-nav a.is-current::after,
-.article-page.tobacco-article-page .site-header .site-nav a.is-current::after{background:#FFF9F2!important}
-.article-page.enola-article-page .site-header .brand-avatar,
-.article-page.witch-article-page .site-header .brand-avatar,
-.article-page.poem-article-page .site-header .brand-avatar,
-.article-page.tobacco-article-page .site-header .brand-avatar{border:1px solid rgba(255,255,255,.45)!important}
-
-
-/* 2026-11-06 · Force readable foreground colors on every navigation text node. */
+/* 2026-11-06 · Give each article navigation its own palette-matched foreground color. */
+/* Issue 01 · Enola Holmes: soft porcelain blush against brick red. */
 .article-page.enola-article-page .site-header .brand-text,
 .article-page.enola-article-page .site-header .brand-text *,
 .article-page.enola-article-page .site-header .site-nav a,
 .article-page.enola-article-page .site-header .site-nav a *,
+.article-page.enola-article-page .site-header .header-reading,
+.article-page.enola-article-page .site-header .header-reading *{
+  color:#F6D9D2!important;text-shadow:0 1px 2px rgba(0,0,0,.2)!important;
+}
+.article-page.enola-article-page .site-header .site-nav a.is-current::after{background:#F6D9D2!important}
+
+/* Issue 02 · Witch-hunt: muted parchment gold against dark olive-brown. */
 .article-page.witch-article-page .site-header .brand-text,
 .article-page.witch-article-page .site-header .brand-text *,
 .article-page.witch-article-page .site-header .site-nav a,
 .article-page.witch-article-page .site-header .site-nav a *,
+.article-page.witch-article-page .site-header .header-reading,
+.article-page.witch-article-page .site-header .header-reading *{
+  color:#E8D5A8!important;text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
+}
+.article-page.witch-article-page .site-header .site-nav a.is-current::after{background:#E8D5A8!important}
+
+/* Issue 03 · The Book of Songs: pale celadon against deep grey-green. */
 .article-page.poem-article-page .site-header .brand-text,
 .article-page.poem-article-page .site-header .brand-text *,
 .article-page.poem-article-page .site-header .site-nav a,
 .article-page.poem-article-page .site-header .site-nav a *,
+.article-page.poem-article-page .site-header .header-reading,
+.article-page.poem-article-page .site-header .header-reading *{
+  color:#D7E9DF!important;text-shadow:0 1px 2px rgba(0,0,0,.2)!important;
+}
+.article-page.poem-article-page .site-header .site-nav a.is-current::after{background:#D7E9DF!important}
+
+/* Issue 04 · Second-hand smoke: warm oat-gold against tobacco brown. */
 .article-page.tobacco-article-page .site-header .brand-text,
 .article-page.tobacco-article-page .site-header .brand-text *,
 .article-page.tobacco-article-page .site-header .site-nav a,
-.article-page.tobacco-article-page .site-header .site-nav a *{
-  color:#FFFFFF!important;
-  opacity:1!important;
-  text-shadow:0 1px 2px rgba(0,0,0,.18)!important;
+.article-page.tobacco-article-page .site-header .site-nav a *,
+.article-page.tobacco-article-page .site-header .header-reading,
+.article-page.tobacco-article-page .site-header .header-reading *{
+  color:#F0D9A8!important;text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
 }
+.article-page.tobacco-article-page .site-header .site-nav a.is-current::after{background:#F0D9A8!important}
+
+/* Issue 05 · Dream of the Red Chamber: powder-rose against rouge red. */
+.article-page.redchamber-page .site-header .brand-text,
+.article-page.redchamber-page .site-header .brand-text *,
+.article-page.redchamber-page .site-header .site-nav a,
+.article-page.redchamber-page .site-header .site-nav a *,
+.article-page.redchamber-page .site-header .header-reading,
+.article-page.redchamber-page .site-header .header-reading *{
+  color:#F2D6D2!important;text-shadow:0 1px 2px rgba(0,0,0,.2)!important;
+}
+.article-page.redchamber-page .site-header .site-nav a.is-current::after{background:#F2D6D2!important}
+
+/* Issue 06 · When Grapes Are Ripe: soft lavender against grape purple. */
+.article-page.article06-page .site-header .brand-text,
+.article-page.article06-page .site-header .brand-text *,
+.article-page.article06-page .site-header .site-nav a,
+.article-page.article06-page .site-header .site-nav a *,
+.article-page.article06-page .site-header .header-reading,
+.article-page.article06-page .site-header .header-reading *{
+  color:#E8D8F0!important;text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
+}
+.article-page.article06-page .site-header .site-nav a.is-current::after{background:#E8D8F0!important}
