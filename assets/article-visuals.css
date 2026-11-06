@@ -377,3 +377,22 @@
 .article-page.witch-article-page .site-header .header-reading .reading-ring:before{background:#EAE4D8!important}
 .article-page.poem-article-page .site-header .header-reading .reading-ring:before{background:#E5ECE7!important}
 .article-page.tobacco-article-page .site-header .header-reading .reading-ring:before{background:#EEE8D9!important}
+
+
+/* 2026-11-06 · Explicitly override ID-level progress counters on Issues 01–04. */
+.article-page.enola-article-page .site-header #reading-percent,
+.article-page.enola-article-page .site-header #reading-words,
+.article-page.enola-article-page .site-header #reading-time,
+.article-page.witch-article-page .site-header #reading-percent,
+.article-page.witch-article-page .site-header #reading-words,
+.article-page.witch-article-page .site-header #reading-time,
+.article-page.poem-article-page .site-header #reading-percent,
+.article-page.poem-article-page .site-header #reading-words,
+.article-page.poem-article-page .site-header #reading-time,
+.article-page.tobacco-article-page .site-header #reading-percent,
+.article-page.tobacco-article-page .site-header #reading-words,
+.article-page.tobacco-article-page .site-header #reading-time{
+  color:#000000!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
