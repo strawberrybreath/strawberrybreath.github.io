@@ -4677,7 +4677,9 @@ html body .site-header .header-reading .reading-confetti{
 
 /* 2026-11-06: use the homepage strawberry-red progress ring on every page. */
 html body .site-header .header-reading .reading-ring{
-  background:conic-gradient(#E63F25 var(--read-progress,0%),#ded7cc 0)!important;
+  --accent:#E63F25!important;
+  background:#ded7cc!important;
+  background-image:conic-gradient(#E63F25 var(--read-progress,0%),#ded7cc 0)!important;
 }
 html body .site-header .header-reading .reading-ring span{
   color:#7E3D31!important;
