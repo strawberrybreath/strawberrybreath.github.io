@@ -116,3 +116,115 @@
   .enola-article-page .film-credit-copy p{font-size:12px!important;line-height:1.8!important}
   .enola-article-page .film-credit-copy a{display:inline-block!important;font-size:10px!important;line-height:1.6!important}
 }
+
+
+/* 2026-11-06 · Consistent issue palettes across hero, emphasis, quotation panels and navigation. */
+.enola-article-page{
+  --article-accent:#A6534E;--article-accent-strong:#783B3C;
+  --article-wash:#F2E4DE;--article-wash-deep:#E8D0C8;--article-line:rgba(166,83,78,.25);
+}
+.witch-article-page{
+  --article-accent:#756047;--article-accent-strong:#4F3D35;
+  --article-wash:#EAE4D8;--article-wash-deep:#DCD1BD;--article-line:rgba(117,96,71,.28);
+}
+.poem-article-page{
+  --article-accent:#617C78;--article-accent-strong:#3F5E5B;
+  --article-wash:#E5ECE7;--article-wash-deep:#D3E1DB;--article-line:rgba(97,124,120,.27);
+}
+.tobacco-article-page{
+  --article-accent:#8A7047;--article-accent-strong:#5F4B31;
+  --article-wash:#EEE8D9;--article-wash-deep:#E1D5BC;--article-line:rgba(138,112,71,.28);
+}
+
+/* Article navigation is a solid, theme-colored bar rather than a glass/transparent layer. */
+.article-page .site-header{
+  background:var(--article-accent-strong)!important;
+  background-image:none!important;
+  border-bottom:1px solid var(--article-accent-strong)!important;
+  box-shadow:0 3px 12px rgba(40,30,25,.10)!important;
+  backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+}
+.article-page .site-header .brand-text strong,
+.article-page .site-header .brand-text small,
+.article-page .site-header .site-nav a,
+.article-page .site-header .site-nav a:hover,
+.article-page .site-header .site-nav a.is-current{
+  color:#FFF9F2!important;
+}
+.article-page .site-header .brand-avatar{border:1px solid rgba(255,255,255,.45)!important}
+.article-page .site-header .site-nav a.is-current::after{background:#FFF9F2!important}
+
+/* Use each issue's own palette for its title panel, highlighted sentences and quotation/poem blocks. */
+.enola-article-page .article-hero,
+.witch-article-page .article-hero,
+.poem-article-page .article-hero,
+.tobacco-article-page .article-hero{
+  background:linear-gradient(132deg,var(--article-wash) 0%,#FBF8F1 56%,var(--article-wash-deep) 100%)!important;
+  border:1px solid var(--article-line)!important;
+  border-bottom:1px solid var(--article-line)!important;
+  border-radius:20px!important;
+  box-shadow:inset 0 3px 0 var(--article-line),0 12px 30px rgba(48,40,34,.045)!important;
+}
+.enola-article-page .article-hero h1,
+.witch-article-page .article-hero h1,
+.poem-article-page .article-hero h1,
+.tobacco-article-page .article-hero h1{color:var(--article-accent-strong)!important}
+.enola-article-page .article-hero h1 em,
+.witch-article-page .article-hero h1 em,
+.poem-article-page .article-hero h1 em,
+.tobacco-article-page .article-hero h1 em,
+.enola-article-page .article-topline a,
+.witch-article-page .article-topline a,
+.poem-article-page .article-topline a,
+.tobacco-article-page .article-topline a{color:var(--article-accent)!important}
+.enola-article-page .article-subtitle,.witch-article-page .article-subtitle,
+.poem-article-page .article-subtitle,.tobacco-article-page .article-subtitle{color:var(--article-accent-strong)!important}
+.enola-article-page .article-tags span,.witch-article-page .article-tags span,
+.poem-article-page .article-tags span,.tobacco-article-page .article-tags span{
+  background:rgba(255,252,247,.62)!important;border:1px solid var(--article-line)!important;color:var(--article-accent-strong)!important;
+}
+.enola-article-page .essay-content p.article-highlight,
+.witch-article-page .essay-content p.article-highlight,
+.poem-article-page .essay-content p.article-highlight,
+.tobacco-article-page .essay-content p.article-highlight{
+  padding:1em 1.25em!important;
+  border:1px solid var(--article-line)!important;
+  border-left:4px solid var(--article-accent)!important;
+  border-radius:0 12px 12px 0!important;
+  background:var(--article-wash)!important;
+  color:var(--article-accent-strong)!important;
+}
+.enola-article-page .essay-section-title,.witch-article-page .essay-section-title,
+.poem-article-page .essay-section-title,.tobacco-article-page .essay-section-title{
+  color:var(--article-accent-strong)!important;border-left-color:var(--article-accent)!important;
+}
+.enola-article-page .poem-original,.enola-article-page blockquote,
+.witch-article-page blockquote,.poem-article-page .poem-original,
+.poem-article-page .poem-context,.poem-article-page blockquote,
+.tobacco-article-page blockquote{
+  background:var(--article-wash)!important;
+  border-color:var(--article-line)!important;
+  color:var(--article-accent-strong)!important;
+}
+.poem-article-page .poem-original{
+  border:1px solid var(--article-line)!important;border-radius:18px!important;
+  padding:clamp(22px,4vw,38px)!important;
+}
+.poem-article-page .poem-original-heading h2,
+.poem-article-page .poem-original-kicker{color:var(--article-accent-strong)!important}
+.poem-article-page .poem-original-verses p{
+  background:rgba(255,255,255,.42)!important;
+  border-left:2px solid var(--article-accent)!important;
+  color:var(--article-accent-strong)!important;
+}
+.witch-article-page .witch-sources{border-color:var(--article-line)!important}
+.witch-article-page .witch-sources h2,.witch-article-page .witch-sources a,
+.tobacco-article-page .essay-content a,.poem-article-page .essay-content a{color:var(--article-accent)!important}
+
+/* Preserve full-bleed mobile hero treatment while retaining the themed panel. */
+@media(max-width:760px){
+  .enola-article-page .article-hero,.witch-article-page .article-hero,
+  .poem-article-page .article-hero,.tobacco-article-page .article-hero{
+    border-radius:0!important;margin-left:0!important;margin-right:0!important;
+  }
+}
