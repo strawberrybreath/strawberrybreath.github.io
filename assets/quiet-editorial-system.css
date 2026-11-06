@@ -4583,18 +4583,11 @@ html::after{
 }
 
 
-/* Article prose: justify paragraph body lines, but keep final lines at natural spacing. */
-html body.article-page .essay-content p,
-html body.article-page .essay-content li{
+/* Article 08 typography trial: justify non-final lines; keep each paragraph's last line natural. */
+html body.article08-page .essay-content p,
+html body.article08-page .essay-content li{
   text-align:justify!important;
-  text-align-last:start!important;
-  -webkit-text-align-last:start!important;
-  text-justify:inter-character!important;
-}
-
-/* Trial: keep this short paragraph in article 08 naturally left-aligned. */
-html body.article-page .essay-content p.natural-spacing{
-  text-align:left!important;
   text-align-last:left!important;
   -webkit-text-align-last:left!important;
+  text-justify:auto!important;
 }
