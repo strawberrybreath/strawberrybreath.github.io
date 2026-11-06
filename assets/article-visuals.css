@@ -238,5 +238,7 @@
   text-shadow:0 1px 3px rgba(25,18,20,.38)!important;
 }
 .article-page .site-header .header-reading .reading-ring:before{
-  background:var(--paper-light,#FFF9F2)!important;
+  background:var(--article-accent-strong)!important;
 }
+.redchamber-page .site-header .header-reading .reading-ring:before{background:#63363A!important}
+.article06-page .site-header .header-reading .reading-ring:before{background:#51364F!important}
