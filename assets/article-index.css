@@ -402,3 +402,63 @@
   .archive-page .article-list-item{grid-template-columns:80px minmax(0,1fr)!important;gap:14px!important}
   .archive-page .article-list-image{width:80px!important;max-width:80px!important}
 }
+
+
+/* 2026-11-06: make desktop archive rows follow the homepage two-column layout without overlap */
+body.home-page.archive-page .archive-list .article-list-item{
+  display:grid!important;
+  grid-template-columns:104px minmax(0,1fr)!important;
+  grid-auto-flow:row!important;
+  align-items:center!important;
+  column-gap:22px!important;
+  row-gap:0!important;
+  box-sizing:border-box!important;
+  position:relative!important;
+}
+body.home-page.archive-page .archive-list .article-list-item>.article-list-image{
+  display:block!important;
+  grid-column:1!important;
+  grid-row:1!important;
+  position:static!important;
+  float:none!important;
+  width:104px!important;
+  min-width:104px!important;
+  max-width:104px!important;
+  margin:0!important;
+  transform:none!important;
+  box-sizing:border-box!important;
+}
+body.home-page.archive-page .archive-list .article-list-item>.article-list-image img{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  object-fit:contain!important;
+}
+body.home-page.archive-page .archive-list .article-list-item>.article-list-copy{
+  grid-column:2!important;
+  grid-row:1!important;
+  min-width:0!important;
+  width:100%!important;
+  max-width:100%!important;
+  position:static!important;
+  float:none!important;
+  margin:0!important;
+  transform:none!important;
+  box-sizing:border-box!important;
+  overflow-wrap:anywhere;
+}
+body.home-page.archive-page .archive-list .article-list-item>.article-list-copy h3,
+body.home-page.archive-page .archive-list .article-list-item>.article-list-copy>p{
+  max-width:100%!important;
+}
+@media(max-width:760px){
+  body.home-page.archive-page .archive-list .article-list-item{
+    grid-template-columns:80px minmax(0,1fr)!important;
+    column-gap:14px!important;
+  }
+  body.home-page.archive-page .archive-list .article-list-item>.article-list-image{
+    width:80px!important;min-width:80px!important;max-width:80px!important;
+  }
+}
