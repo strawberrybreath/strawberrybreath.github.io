@@ -4583,11 +4583,10 @@ html::after{
 }
 
 
-/* 2026-11-06: prevent justified paragraph spacing from stretching CJK lines. */
-/* Keep every line of article prose at its natural character spacing, including paragraph endings. */
+/* Article prose: restore clean two-edge alignment on mobile and desktop. */
 html body.article-page .essay-content p,
 html body.article-page .essay-content li{
-  text-align:left!important;
-  text-align-last:left!important;
-  text-justify:auto!important;
+  text-align:justify!important;
+  text-align-last:justify!important;
+  text-justify:inter-character!important;
 }
