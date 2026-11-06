@@ -1,5 +1,15 @@
 /* One source of truth for all published articles, ordered by their real publication dates. */
 const articles = [
+  {
+    title: "语言的通货膨胀：当「爱你」沦为一句谢谢",
+    href: "article-08.html",
+    date: "2026-11-06",
+    dateLabel: "2026年11月6日",
+    description: "从日常表达的泛化出发，思考语言如何影响情绪识别、阅读、教育与社会文化生活。",
+    image: "https://images.pexels.com/photos/19561464/pexels-photo-19561464/free-photo-of-open-book-on-desk.jpeg?auto=compress&cs=tinysrgb&w=900",
+    imageAlt: "阳光下摊开的书本，摄影：Jessika Arraes / Pexels"
+  },
+
   { title: "自律即自由：当我终于不再为别人而行动", href: "article-07.html", date: "2026-11-06", dateLabel: "2026年11月6日", description: "从一句善意的夸奖、青春期的叛逆，到康德关于自律与自由的思想，重新思考我们为什么行动，以及如何拿回选择生活的主动权。", image: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Immanuel_Kant_portrait_c1790.jpg", imageAlt: "德国哲学家伊曼努尔·康德约1790年的肖像" },
   { title: "葡萄成熟时：关于等待、遗憾，以及人生的另一种答案", href: "article-06.html", date: "2026-11-05", dateLabel: "2026年11月5日", description: "从陈奕迅《葡萄成熟时》出发，聊聊等待、付出、遗憾、爱情的成熟，以及不必按照别人的时间表生活。", image: "https://img.yec.tw/zp/images/8170DCC60B5F2FA0CD306522B5F289F536180D21", imageAlt: "陈奕迅2005年专辑《U 87》封面" },
   {
