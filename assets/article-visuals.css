@@ -349,3 +349,31 @@
   color:#E8D8F0!important;
   text-shadow:0 1px 2px rgba(0,0,0,.22)!important;
 }
+
+
+/* 2026-11-06 · Issues 01–04: pure black navigation text on light theme-tinted navigation backgrounds. */
+.article-page.enola-article-page .site-header{background:#F2E4DE!important;background-image:none!important;border-bottom:1px solid rgba(166,83,78,.28)!important}
+.article-page.witch-article-page .site-header{background:#EAE4D8!important;background-image:none!important;border-bottom:1px solid rgba(117,96,71,.30)!important}
+.article-page.poem-article-page .site-header{background:#E5ECE7!important;background-image:none!important;border-bottom:1px solid rgba(97,124,120,.30)!important}
+.article-page.tobacco-article-page .site-header{background:#EEE8D9!important;background-image:none!important;border-bottom:1px solid rgba(138,112,71,.30)!important}
+.article-page.enola-article-page .site-header .brand-text,.article-page.enola-article-page .site-header .brand-text *,
+.article-page.enola-article-page .site-header .site-nav a,.article-page.enola-article-page .site-header .site-nav a *,
+.article-page.enola-article-page .site-header .header-reading,.article-page.enola-article-page .site-header .header-reading *,
+.article-page.witch-article-page .site-header .brand-text,.article-page.witch-article-page .site-header .brand-text *,
+.article-page.witch-article-page .site-header .site-nav a,.article-page.witch-article-page .site-header .site-nav a *,
+.article-page.witch-article-page .site-header .header-reading,.article-page.witch-article-page .site-header .header-reading *,
+.article-page.poem-article-page .site-header .brand-text,.article-page.poem-article-page .site-header .brand-text *,
+.article-page.poem-article-page .site-header .site-nav a,.article-page.poem-article-page .site-header .site-nav a *,
+.article-page.poem-article-page .site-header .header-reading,.article-page.poem-article-page .site-header .header-reading *,
+.article-page.tobacco-article-page .site-header .brand-text,.article-page.tobacco-article-page .site-header .brand-text *,
+.article-page.tobacco-article-page .site-header .site-nav a,.article-page.tobacco-article-page .site-header .site-nav a *,
+.article-page.tobacco-article-page .site-header .header-reading,.article-page.tobacco-article-page .site-header .header-reading *{
+ color:#000000!important;opacity:1!important;text-shadow:none!important}
+.article-page.enola-article-page .site-header .site-nav a.is-current::after{background:#000!important}
+.article-page.witch-article-page .site-header .site-nav a.is-current::after{background:#000!important}
+.article-page.poem-article-page .site-header .site-nav a.is-current::after{background:#000!important}
+.article-page.tobacco-article-page .site-header .site-nav a.is-current::after{background:#000!important}
+.article-page.enola-article-page .site-header .header-reading .reading-ring:before{background:#F2E4DE!important}
+.article-page.witch-article-page .site-header .header-reading .reading-ring:before{background:#EAE4D8!important}
+.article-page.poem-article-page .site-header .header-reading .reading-ring:before{background:#E5ECE7!important}
+.article-page.tobacco-article-page .site-header .header-reading .reading-ring:before{background:#EEE8D9!important}
