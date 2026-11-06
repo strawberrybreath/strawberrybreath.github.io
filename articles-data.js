@@ -7,7 +7,7 @@ const articles = [
     date: "2026-11-04",
     dateLabel: "2026年11月4日",
     description: "重新读《红楼梦》，从大观园里的女性情谊、才情与志向，看见她们被家族和时代限制的人生。",
-    image: "https://p6.itc.cn/q_70/images03/20221210/23da415d67ef4e3192a17e590dc6f20c.jpeg",
+    image: "https://static.bjd.com.cn/dams-res/editing/image/202312/30/658f8ee1d5de9bf28166ae9f.jpeg",
     imageAlt: "人民文学出版社《红楼梦》四十周年纪念版书籍封面"
   },
   {
