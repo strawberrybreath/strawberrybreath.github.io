@@ -4682,6 +4682,10 @@ html body .site-header .header-reading .reading-ring{
 html body .site-header .header-reading .reading-ring span{
   color:#7E3D31!important;
 }
+html body .site-header .header-reading .confetti-bit{
+  color:#E63F25!important;
+}
+
 html body.reading-complete .site-header .header-reading .reading-ring{
   box-shadow:0 0 0 4px rgba(230,63,37,.14)!important;
 }
