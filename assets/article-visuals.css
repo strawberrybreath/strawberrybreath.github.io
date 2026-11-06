@@ -396,3 +396,73 @@
   opacity:1!important;
   text-shadow:none!important;
 }
+
+
+/* Issue 08 · Language and culture: muted rose-brown, with a clearly visible paper-blush title panel. */
+.article-page.article08-page{
+  --article-accent:#A27672;
+  --article-accent-strong:#633F42;
+  --article-wash:#F0E2DC;
+  --article-wash-deep:#E2CBC5;
+  --article-line:rgba(118,84,90,.28);
+}
+.article-page.article08-page .site-header{
+  background:#633F42!important;
+  background-image:none!important;
+  border-bottom:1px solid #633F42!important;
+}
+.article-page.article08-page .site-header .brand-text,
+.article-page.article08-page .site-header .brand-text *,
+.article-page.article08-page .site-header .site-nav a,
+.article-page.article08-page .site-header .site-nav a *,
+.article-page.article08-page .site-header .header-reading,
+.article-page.article08-page .site-header .header-reading *,
+.article-page.article08-page .site-header #reading-percent,
+.article-page.article08-page .site-header #reading-words,
+.article-page.article08-page .site-header #reading-time{
+  color:#F6E6E2!important;
+  opacity:1!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.24)!important;
+}
+.article-page.article08-page .site-header .brand-avatar{
+  border:1px solid rgba(246,230,226,.55)!important;
+}
+.article-page.article08-page .site-header .site-nav a.is-current::after{
+  background:#F6E6E2!important;
+}
+.article-page.article08-page .site-header .header-reading .reading-ring:before{
+  background:#633F42!important;
+}
+.article-page.article08-page .article-hero{
+  background:linear-gradient(132deg,#F0E2DC 0%,#FBF6F0 52%,#E2CBC5 100%)!important;
+  border:1px solid rgba(118,84,90,.28)!important;
+  border-radius:22px!important;
+  box-shadow:inset 0 3px 0 rgba(118,84,90,.12),0 16px 42px rgba(69,48,50,.10)!important;
+}
+.article-page.article08-page .article-hero h1,
+.article-page.article08-page .article-hero h1 em,
+.article-page.article08-page .article-hero-copy>.eyebrow,
+.article-page.article08-page .article-subtitle,
+.article-page.article08-page .article-deck,
+.article-page.article08-page .article-tags span,
+.article-page.article08-page .article-publication-meta span,
+.article-page.article08-page .article-topline a,
+.article-page.article08-page .article08-ending .quote{
+  color:#633F42!important;
+}
+.article-page.article08-page .article-tags span{
+  background:rgba(255,252,247,.72)!important;
+  border:1px solid rgba(118,84,90,.28)!important;
+}
+.article-page.article08-page .essay-content p.article-highlight{
+  background:#F0E2DC!important;
+  border:1px solid rgba(118,84,90,.28)!important;
+  border-left:4px solid #A27672!important;
+  color:#633F42!important;
+  border-radius:0 12px 12px 0!important;
+}
+.article-page.article08-page .article08-ending{
+  background:linear-gradient(145deg,#F0E2DC,#FBF6F0 65%,#E2CBC5)!important;
+  border-color:rgba(118,84,90,.28)!important;
+}
+.article-page.article08-page .essay-content a{color:#8B5C5D!important}
