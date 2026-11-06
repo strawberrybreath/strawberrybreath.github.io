@@ -242,3 +242,44 @@
 }
 .redchamber-page .site-header .header-reading .reading-ring:before{background:#63363A!important}
 .article06-page .site-header .header-reading .reading-ring:before{background:#51364F!important}
+
+
+/* 2026-11-06 · Ensure issue 01–04 navigation text remains legible on its solid dark theme. */
+.article-page.enola-article-page .site-header,
+.article-page.witch-article-page .site-header,
+.article-page.poem-article-page .site-header,
+.article-page.tobacco-article-page .site-header{
+  background:var(--article-accent-strong)!important;
+  background-image:none!important;
+  border-bottom-color:var(--article-accent-strong)!important;
+}
+.article-page.enola-article-page .site-header .brand-text strong,
+.article-page.enola-article-page .site-header .brand-text small,
+.article-page.enola-article-page .site-header .site-nav a,
+.article-page.enola-article-page .site-header .site-nav a:hover,
+.article-page.enola-article-page .site-header .site-nav a.is-current,
+.article-page.witch-article-page .site-header .brand-text strong,
+.article-page.witch-article-page .site-header .brand-text small,
+.article-page.witch-article-page .site-header .site-nav a,
+.article-page.witch-article-page .site-header .site-nav a:hover,
+.article-page.witch-article-page .site-header .site-nav a.is-current,
+.article-page.poem-article-page .site-header .brand-text strong,
+.article-page.poem-article-page .site-header .brand-text small,
+.article-page.poem-article-page .site-header .site-nav a,
+.article-page.poem-article-page .site-header .site-nav a:hover,
+.article-page.poem-article-page .site-header .site-nav a.is-current,
+.article-page.tobacco-article-page .site-header .brand-text strong,
+.article-page.tobacco-article-page .site-header .brand-text small,
+.article-page.tobacco-article-page .site-header .site-nav a,
+.article-page.tobacco-article-page .site-header .site-nav a:hover,
+.article-page.tobacco-article-page .site-header .site-nav a.is-current{
+  color:#FFF9F2!important;
+}
+.article-page.enola-article-page .site-header .site-nav a.is-current::after,
+.article-page.witch-article-page .site-header .site-nav a.is-current::after,
+.article-page.poem-article-page .site-header .site-nav a.is-current::after,
+.article-page.tobacco-article-page .site-header .site-nav a.is-current::after{background:#FFF9F2!important}
+.article-page.enola-article-page .site-header .brand-avatar,
+.article-page.witch-article-page .site-header .brand-avatar,
+.article-page.poem-article-page .site-header .brand-avatar,
+.article-page.tobacco-article-page .site-header .brand-avatar{border:1px solid rgba(255,255,255,.45)!important}
