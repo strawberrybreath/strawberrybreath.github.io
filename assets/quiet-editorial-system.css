@@ -4583,10 +4583,11 @@ html::after{
 }
 
 
-/* Article prose: restore clean two-edge alignment on mobile and desktop. */
+/* Article prose: keep paragraph final lines evenly distributed on iOS Safari too. */
 html body.article-page .essay-content p,
 html body.article-page .essay-content li{
   text-align:justify!important;
   text-align-last:justify!important;
+  -webkit-text-align-last:justify!important;
   text-justify:inter-character!important;
 }
