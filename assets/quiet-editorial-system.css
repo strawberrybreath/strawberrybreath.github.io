@@ -4583,11 +4583,22 @@ html::after{
 }
 
 
-/* Article 08 typography trial: justify non-final lines; keep each paragraph's last line natural. */
+/* Article 08 typography trial v2: slightly narrower measure and consistent base tracking. */
+html body.article08-page .essay-content{
+  max-width:680px!important;
+}
 html body.article08-page .essay-content p,
 html body.article08-page .essay-content li{
+  letter-spacing:.02em!important;
   text-align:justify!important;
   text-align-last:left!important;
   -webkit-text-align-last:left!important;
   text-justify:auto!important;
+}
+@media(max-width:700px){
+  html body.article08-page .essay-content{
+    max-width:calc(100% - 12px)!important;
+    box-sizing:border-box!important;
+    margin-inline:auto!important;
+  }
 }
