@@ -1,6 +1,7 @@
-/* Feminist statement section — placed after About/cat gallery and before Contact. */
+/* Feminist section and resource cards */
 .home-page .feminist-section{
-  width:min(100% - 40px, 1080px);
+  width:min(calc(100% - 40px),1080px);
+  box-sizing:border-box;
   margin:clamp(48px,7vw,88px) auto clamp(52px,7vw,92px);
   padding:clamp(28px,5vw,54px) clamp(20px,4vw,46px);
   border-top:1px solid rgba(132,116,98,.28);
@@ -39,8 +40,8 @@
 .home-page .feminist-statement p{margin:0 0 13px}
 .home-page .feminist-statement strong{color:#A94E38;font-weight:650}
 .home-page .feminist-invitation{
-  margin:20px auto 0;
   max-width:790px;
+  margin:20px auto 0;
   color:#7D4B40;
   font-size:16px;
   line-height:1.9;
@@ -55,140 +56,147 @@
 .home-page .feminist-links{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px;
-  max-width:900px;
+  align-items:stretch;
+  gap:16px;
+  width:100%;
+  max-width:920px;
   margin:0 auto;
 }
-.home-page .feminist-link{
-  min-width:0;
-  min-height:0;
-  box-sizing:border-box;
+.home-page .feminist-card,
+.home-page .feminist-card *{box-sizing:border-box;min-width:0}
+.home-page .feminist-card{
   display:flex;
   flex-direction:column;
   align-items:flex-start;
-  justify-content:flex-start;
-  gap:16px;
-  padding:20px;
-  overflow:hidden;
-  border:1px solid rgba(132,116,98,.24);
-  border-radius:3px;
-  color:#302D29;
-  text-decoration:none;
-  background:rgba(255,255,255,.22);
-  transition:border-color .2s ease,transform .2s ease,background .2s ease;
+  min-width:0;
+  padding:22px 20px 20px;
+  border:1px solid rgba(132,116,98,.25);
+  border-radius:5px;
+  background:rgba(255,255,255,.28);
+  text-align:left;
+  transition:border-color .2s ease,background .2s ease,transform .2s ease;
 }
-.home-page .feminist-link:hover{
-  border-color:rgba(196,75,55,.55);
-  background:rgba(255,255,255,.42);
+.home-page .feminist-card:hover{
+  border-color:rgba(196,75,55,.5);
+  background:rgba(255,255,255,.48);
   transform:translateY(-2px);
 }
+.home-page .feminist-card-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  min-height:42px;
+  margin-bottom:17px;
+}
 .home-page .feminist-mark{
-  width:32px;height:32px;flex:0 0 32px;
-  display:grid;place-items:center;
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  flex:0 0 38px;
   color:#C64B37;
 }
-.home-page .feminist-mark svg,.home-page .feminist-mark img{
-  display:block;width:32px;height:32px;flex-shrink:0;object-fit:contain;
+.home-page .feminist-mark img{
+  display:block;
+  width:38px;
+  height:38px;
+  flex-shrink:0;
+  object-fit:contain;
 }
 .home-page .feminist-wordmark{
-  min-height:32px;
-  display:flex;align-items:center;justify-content:flex-start;
+  display:flex;
+  align-items:center;
+  min-height:38px;
   color:#302D29;
   font-family:"DM Sans",sans-serif;
-  font-size:21px;
+  font-size:22px;
+  line-height:1.2;
   font-weight:700;
   letter-spacing:-.045em;
 }
 .home-page .feminist-wordmark.shared-shelf{
-  flex-direction:column;
-  gap:0;
   font-family:Georgia,serif;
-  font-size:16px;
-  letter-spacing:.12em;
+  font-size:15px;
   line-height:1.35;
-  text-align:center;
+  letter-spacing:.13em;
 }
-.home-page .feminist-link strong{
-  font:600 15px/1.5 "DM Sans","Noto Serif SC",sans-serif;
+.home-page .feminist-card-index{
+  color:#B6AA9B;
+  font:500 11px/1 "DM Sans",sans-serif;
+  letter-spacing:.12em;
 }
-.home-page .feminist-link small.card-desc{
-  display:block;
-  max-width:100%;
-  color:#777067;
-  font-size:14px;
+.home-page .feminist-card h3{
+  margin:0;
+  color:#302D29;
+  font:600 17px/1.45 "DM Sans","Noto Serif SC",sans-serif;
+  overflow-wrap:anywhere;
+}
+.home-page .feminist-card-cn{
+  margin:4px 0 15px;
+  color:#8A796B;
+  font-size:12px;
   line-height:1.6;
   overflow-wrap:anywhere;
 }
-.home-page .feminist-link .card-highlight{
-  display:block;
-  box-sizing:border-box;
-  max-width:100%;
-  padding:8px 12px;
-  border-radius:6px;
-  background:rgba(196,75,55,.055);
-  color:#A94E38;
-  font-size:14px;
-  line-height:1.6;
+.home-page .feminist-card-description{
+  width:100%;
+  margin:0 0 18px;
+  padding:13px 14px;
+  border-left:2px solid rgba(196,75,55,.48);
+  background:rgba(196,75,55,.045);
+  color:#62594F;
+  font-size:13px;
+  line-height:1.8;
   overflow-wrap:anywhere;
+  flex:1 0 auto;
 }
-.home-page .feminist-link .feminist-visit{
-  display:inline-block;
+.home-page .feminist-card-description p{margin:0}
+.home-page .feminist-card-description p+p{margin-top:8px}
+.home-page .feminist-visit{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
   max-width:100%;
-  margin-top:0;
+  margin-top:auto;
+  padding-top:2px;
   color:#A94E38;
-  font-size:14px;
+  font-size:13px;
   line-height:1.6;
   font-weight:600;
+  text-decoration:none;
   overflow-wrap:anywhere;
 }
-.home-page .feminist-note{
-  max-width:790px;
-  margin:16px auto 0;
-  color:#82796F;
-  font-size:11px;
-  line-height:1.8;
-  text-align:left;
-}
-@media(max-width:700px){
+.home-page .feminist-visit:hover{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){
   .home-page .feminist-section{
     width:calc(100% - 32px);
     margin:42px auto 52px;
-    padding:30px 4px 32px;
+    padding:30px 0 32px;
   }
   .home-page .feminist-statement{font-size:14px;line-height:2}
   .home-page .feminist-invitation{font-size:14px}
-  .home-page .feminist-links{grid-template-columns:1fr;gap:10px}
-  .home-page .feminist-link{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:14px;
-    box-sizing:border-box;
+  .home-page .feminist-links-heading{margin:30px 0 15px}
+  .home-page .feminist-links{
+    grid-template-columns:minmax(0,1fr);
+    gap:12px;
     width:100%;
-    min-width:0;
-    padding:20px;
-    overflow:hidden;
   }
-  .home-page .feminist-mark,.home-page .feminist-wordmark{
-    width:32px;height:32px;min-height:32px;flex:0 0 32px;
+  .home-page .feminist-card{
+    width:100%;
+    padding:19px 18px 18px;
+    border-radius:4px;
   }
-  .home-page .feminist-link strong,.home-page .feminist-link small,.home-page .feminist-link .feminist-visit{
-    display:block;
-    max-width:100%;
-    text-align:left;
-    overflow-wrap:anywhere;
+  .home-page .feminist-card-heading{margin-bottom:12px}
+  .home-page .feminist-card-description{
+    margin-bottom:14px;
+    font-size:13px;
+    line-height:1.75;
   }
-  .home-page .feminist-note{font-size:10px}
+  .home-page .feminist-card h3{font-size:16px}
 }
-
-/* Narrow-screen containment: keep every feminist resource card inside its grid track. */
-.home-page .feminist-links,
-.home-page .feminist-link,
-.home-page .feminist-link *{box-sizing:border-box;min-width:0;}
-@media(max-width:700px){
-  .home-page .feminist-links{width:100%;grid-template-columns:minmax(0,1fr);}
-  .home-page .feminist-link{width:100%;}
-  .home-page .feminist-link .card-desc,
-  .home-page .feminist-link .card-highlight,
-  .home-page .feminist-link .feminist-visit{overflow-wrap:anywhere;word-break:normal;}
+@media(max-width:390px){
+  .home-page .feminist-section{width:calc(100% - 28px)}
+  .home-page .feminist-card{padding:17px 15px 16px}
+  .home-page .feminist-card-description{padding:11px 12px}
 }
