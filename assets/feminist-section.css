@@ -132,6 +132,11 @@
   font:600 15px/1.4 "DM Sans","Noto Serif SC",sans-serif;
   overflow-wrap:anywhere;
 }
+.home-page .feminist-card-title-line{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
 .home-page .feminist-card-cn{
   margin:3px 0 9px;
   color:#8A796B;
