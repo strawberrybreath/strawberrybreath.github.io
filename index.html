@@ -156,7 +156,7 @@
           <p>一种思想立场与社会运动，而不是某个单一组织。</p>
           <p>关注女性的权利、处境与自主选择，推动不同性别拥有平等的尊严与机会。</p>
         </div>
-        <a class="feminist-visit" href="https://www.unwomen.org/en" target="_blank" rel="noopener noreferrer">了解全球女性议题 <span aria-hidden="true">↗</span></a>
+        <a class="feminist-visit" href="https://www.unwomen.org/en" target="_blank" rel="noopener noreferrer" data-confirm-url="https://www.unwomen.org/en" data-confirm-title="即将前往联合国妇女署" data-confirm-detail="你将离开 Strawberry Breath，前往联合国妇女署官网，了解全球女性议题与相关工作。">了解全球女性议题 <span aria-hidden="true">↗</span></a>
       </article>
 
       <article class="feminist-card">
@@ -170,7 +170,7 @@
           <p>由联合国妇女署发起，倡导男性及所有人共同参与性别平等行动。</p>
           <p>Emma Watson 曾于 2014 年在联合国发表演讲，推动这项倡议。</p>
         </div>
-        <a class="feminist-visit" href="https://www.heforshe.org/en" target="_blank" rel="noopener noreferrer">访问官方网站 <span aria-hidden="true">↗</span></a>
+        <a class="feminist-visit" href="https://www.heforshe.org/en" target="_blank" rel="noopener noreferrer" data-confirm-url="https://www.heforshe.org/en" data-confirm-title="即将前往 HeForShe 官网" data-confirm-detail="你将离开 Strawberry Breath，前往 HeForShe 官方网站，了解这项性别平等倡议。">访问官方网站 <span aria-hidden="true">↗</span></a>
       </article>
 
       <article class="feminist-card">
@@ -183,7 +183,7 @@
         <div class="feminist-card-description">
           <p>虽然目前社群更新放缓，但沉淀的书单与讨论数据依然极具借鉴价值。</p>
         </div>
-        <a class="feminist-visit" href="https://www.goodreads.com/group/show/179584-our-shared-shelf" target="_blank" rel="noopener noreferrer">查看 Goodreads 社群 <span aria-hidden="true">↗</span></a>
+        <a class="feminist-visit" href="https://www.goodreads.com/group/show/179584-our-shared-shelf" target="_blank" rel="noopener noreferrer" data-confirm-url="https://www.goodreads.com/group/show/179584-our-shared-shelf" data-confirm-title="即将前往 Goodreads" data-confirm-detail="你将离开 Strawberry Breath，前往 Goodreads 查看 Our Shared Shelf 的社群页面。">查看 Goodreads 社群 <span aria-hidden="true">↗</span></a>
       </article>
     </div>
 
@@ -260,7 +260,8 @@
     if (previousFocus) previousFocus.focus();
   };
   document.querySelectorAll('[data-confirm-url]').forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', event => {
+      event.preventDefault();
       pendingUrl = button.dataset.confirmUrl;
       confirmTitle.textContent = button.dataset.confirmTitle || '即将跳转';
       confirmDetail.textContent = button.dataset.confirmDetail || '确认后将打开外部应用或网站。';
