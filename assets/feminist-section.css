@@ -84,7 +84,7 @@
   display:grid;place-items:center;
   color:#C64B37;
 }
-.home-page .feminist-mark svg{width:100%;height:100%;display:block}
+.home-page .feminist-mark svg,.home-page .feminist-mark img{width:100%;height:100%;display:block;object-fit:contain}
 .home-page .feminist-wordmark{
   min-height:62px;
   display:flex;align-items:center;justify-content:center;
