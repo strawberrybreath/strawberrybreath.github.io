@@ -1,0 +1,156 @@
+/* Feminist statement section — placed after About/cat gallery and before Contact. */
+.home-page .feminist-section{
+  width:min(100% - 40px, 1080px);
+  margin:clamp(48px,7vw,88px) auto clamp(52px,7vw,92px);
+  padding:clamp(28px,5vw,54px) clamp(20px,4vw,46px);
+  border-top:1px solid rgba(132,116,98,.28);
+  border-bottom:1px solid rgba(132,116,98,.28);
+  color:#302D29;
+  text-align:center;
+}
+.home-page .feminist-kicker{
+  margin:0 0 12px;
+  color:#858D70;
+  font:600 11px/1.5 "DM Sans",sans-serif;
+  letter-spacing:.2em;
+}
+.home-page .feminist-section h2{
+  margin:0;
+  color:#C64B37;
+  font-size:clamp(27px,4vw,42px);
+  line-height:1.3;
+  font-weight:600;
+  letter-spacing:.015em;
+}
+.home-page .feminist-subtitle{
+  margin:8px 0 22px;
+  color:#514B44;
+  font-size:clamp(16px,2vw,20px);
+  line-height:1.7;
+}
+.home-page .feminist-statement{
+  max-width:790px;
+  margin:0 auto;
+  color:#49443E;
+  font-size:16px;
+  line-height:2.05;
+  text-align:left;
+}
+.home-page .feminist-statement p{margin:0 0 13px}
+.home-page .feminist-statement strong{color:#A94E38;font-weight:650}
+.home-page .feminist-invitation{
+  margin:20px auto 0;
+  max-width:790px;
+  color:#7D4B40;
+  font-size:16px;
+  line-height:1.9;
+  font-weight:600;
+}
+.home-page .feminist-links-heading{
+  margin:36px 0 18px;
+  color:#514B44;
+  font:600 12px/1.5 "DM Sans",sans-serif;
+  letter-spacing:.16em;
+}
+.home-page .feminist-links{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  max-width:900px;
+  margin:0 auto;
+}
+.home-page .feminist-link{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  gap:9px;
+  padding:18px 14px 16px;
+  border:1px solid rgba(132,116,98,.24);
+  border-radius:3px;
+  color:#302D29;
+  text-decoration:none;
+  background:rgba(255,255,255,.22);
+  transition:border-color .2s ease,transform .2s ease,background .2s ease;
+}
+.home-page .feminist-link:hover{
+  border-color:rgba(196,75,55,.55);
+  background:rgba(255,255,255,.42);
+  transform:translateY(-2px);
+}
+.home-page .feminist-mark{
+  width:62px;height:62px;
+  display:grid;place-items:center;
+  color:#C64B37;
+}
+.home-page .feminist-mark svg{width:100%;height:100%;display:block}
+.home-page .feminist-wordmark{
+  min-height:62px;
+  display:flex;align-items:center;justify-content:center;
+  color:#302D29;
+  font-family:"DM Sans",sans-serif;
+  font-size:21px;
+  font-weight:700;
+  letter-spacing:-.045em;
+}
+.home-page .feminist-wordmark.shared-shelf{
+  flex-direction:column;
+  gap:0;
+  font-family:Georgia,serif;
+  font-size:16px;
+  letter-spacing:.12em;
+  line-height:1.35;
+  text-align:center;
+}
+.home-page .feminist-link strong{
+  font:600 15px/1.5 "DM Sans","Noto Serif SC",sans-serif;
+}
+.home-page .feminist-link small{
+  color:#777067;
+  font-size:12px;
+  line-height:1.65;
+}
+.home-page .feminist-link .feminist-visit{
+  margin-top:3px;
+  color:#A94E38;
+  font-size:12px;
+  font-weight:600;
+}
+.home-page .feminist-note{
+  max-width:790px;
+  margin:16px auto 0;
+  color:#82796F;
+  font-size:11px;
+  line-height:1.8;
+  text-align:left;
+}
+@media(max-width:700px){
+  .home-page .feminist-section{
+    width:calc(100% - 32px);
+    margin:42px auto 52px;
+    padding:30px 4px 32px;
+  }
+  .home-page .feminist-statement{font-size:14px;line-height:2}
+  .home-page .feminist-invitation{font-size:14px}
+  .home-page .feminist-links{grid-template-columns:1fr;gap:10px}
+  .home-page .feminist-link{
+    display:grid;
+    grid-template-columns:58px minmax(0,1fr);
+    grid-template-rows:auto auto auto;
+    column-gap:13px;
+    text-align:left;
+    padding:13px;
+    align-items:center;
+  }
+  .home-page .feminist-mark,.home-page .feminist-wordmark{
+    grid-column:1;grid-row:1/4;width:54px;height:54px;min-height:54px;
+  }
+  .home-page .feminist-link strong,.home-page .feminist-link small,.home-page .feminist-link .feminist-visit{
+    grid-column:2;text-align:left;
+  }
+  .home-page .feminist-link strong{align-self:end}
+  .home-page .feminist-link small{align-self:center}
+  .home-page .feminist-link .feminist-visit{align-self:start}
+  .home-page .feminist-note{font-size:10px}
+}
