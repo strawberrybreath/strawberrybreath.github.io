@@ -1,0 +1,22 @@
+.history-page .archive-heading{margin-bottom:34px}
+.site-history{width:min(820px,calc(100% - 60px));margin:0 auto 70px}
+.history-intro{max-width:680px;margin:0 auto 34px;color:#62594F;font-size:14px;line-height:2}
+.history-timeline{position:relative;list-style:none;margin:0;padding:0 0 0 28px}
+.history-timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:10px;width:1px;background:rgba(166,83,78,.32)}
+.history-entry{position:relative;display:grid;grid-template-columns:125px minmax(0,1fr);gap:22px;padding:0 0 30px}
+.history-entry::before{content:"";position:absolute;left:-26px;top:7px;width:9px;height:9px;border-radius:50%;background:#C64B37;box-shadow:0 0 0 4px #F4F0E8}
+.history-entry time{color:#9B655A;font-size:12px;letter-spacing:.03em;padding-top:3px}
+.history-entry h2{margin:0 0 6px;color:#302D29;font:500 17px/1.6 var(--serif,serif)}
+.history-entry p{margin:0;color:#62594F;font-size:13px;line-height:1.9}
+.history-note{margin:12px 0 0;padding:18px 20px;border-left:2px solid #C64B37;background:rgba(220,200,185,.22);color:#62594F;font-size:12px;line-height:1.9}
+.history-footer-link{display:inline-block;margin-top:28px;color:#9B5144;font-size:12px;text-underline-offset:4px}
+@media(max-width:600px){
+ .site-history{width:calc(100% - 38px);margin-bottom:48px}
+ .history-timeline{padding-left:23px}
+ .history-entry{grid-template-columns:1fr;gap:5px;padding-bottom:24px}
+ .history-entry::before{left:-21px}
+ .history-entry time{font-size:11px}
+ .history-entry h2{font-size:16px}
+ .history-entry p{font-size:12px}
+ .history-note{padding:14px 15px}
+}
