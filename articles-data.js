@@ -141,7 +141,7 @@ function articleCard(article, index, interactiveTags = false) {
       <img src="${article.image}" alt="${article.imageAlt || ""}" loading="lazy" decoding="async">
     </a>` : "";
   const date = article.date && article.dateLabel ? `<time class="article-list-date" datetime="${article.date}">${article.dateLabel}</time>` : "";
-  const issueNumber = Number((article.href.match(/article-(\\d+)\\.html/) || [null, String(index + 1)])[1]);
+  const issueNumber = Number((article.href.match(/article-(\d+)\.html/) || [null, String(index + 1)])[1]);
   const issue = `<span class="article-issue" aria-label="第${issueNumber}期"><span class="article-issue-prefix">第</span><span class="article-issue-number">${issueNumber}</span><span class="article-issue-suffix">期</span></span>`;
   const tags = (article.tags || []).map(tag => interactiveTags
     ? `<button class="article-tag" type="button" data-filter-tag="${tag}" aria-label="按标签筛选：${tag}">${tag}</button>`
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const html=await response.text();
         const page=new DOMParser().parseFromString(html,"text/html");
         const content=page.querySelector(".essay-content")||page.querySelector("main");
-        bodyIndex[article.href]=(content?.textContent||"").replace(/\\s+/g," ").toLocaleLowerCase();
+        bodyIndex[article.href]=(content?.textContent||"").replace(/\s+/g," ").toLocaleLowerCase();
       }catch(error){bodyIndex[article.href]="";}
     }));
     return bodyIndexPromise;
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateResults=async()=>{
     const current=++version;
     const query=(search?.value||"").trim().toLocaleLowerCase();
-    const terms=query.split(/\\s+/).filter(Boolean);
+    const terms=query.split(/\s+/).filter(Boolean);
     if(terms.length&&!Object.keys(bodyIndex).length){
       if(count)count.textContent="正在检索正文…";
       await loadBodyIndex();
