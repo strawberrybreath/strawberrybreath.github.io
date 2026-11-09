@@ -1,9 +1,9 @@
 /* Curated related reading, driven by the shared article catalogue. */
 document.addEventListener("DOMContentLoaded", () => {
   const host = document.querySelector("[data-related-reading]");
-  if (!host || !Array.isArray(window.articles)) return;
+  if (!host || typeof articles === "undefined" || !Array.isArray(articles)) return;
   const current = location.pathname.split("/").pop();
-  const article = window.articles.find(item => item.href === current);
+  const article = articles.find(item => item.href === current);
   if (!article || !Array.isArray(article.related)) return;
   const related = article.related
     .map(href => window.articles.find(item => item.href === href))
