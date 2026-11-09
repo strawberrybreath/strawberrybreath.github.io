@@ -220,3 +220,23 @@ html.site-night body.article-page .footer-glass-card{
   .site-header .site-nav .site-theme-toggle{width:28px!important;height:32px!important;min-height:32px!important;flex-basis:28px!important}
   .site-header .site-nav .site-theme-toggle svg{width:21px!important;height:21px!important}
 }
+
+
+/* Night mode typography: every page and every text role uses the same pure white. */
+html.site-night body,
+html.site-night body *,
+html.site-night body *::before,
+html.site-night body *::after{
+  color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;
+  text-shadow:none!important;
+}
+html.site-night body input::placeholder,
+html.site-night body textarea::placeholder{
+  color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;
+  opacity:.82!important;
+}
+/* Keep the lamp's warm light as an icon detail; all actual text remains white. */
+html.site-night .site-theme-toggle .bulb-on-icon .bulb-outline{stroke:#E7B83F!important}
+html.site-night .site-theme-toggle .bulb-on-icon .bulb-rays{stroke:#F4C542!important}
