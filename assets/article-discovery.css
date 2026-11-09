@@ -1,0 +1,28 @@
+/* Article discovery: category filters, tag chips and responsive editorial controls. */
+.archive-page .article-discovery{max-width:900px;margin:0 auto 26px}
+.archive-page .article-category-filters{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 12px}
+.article-filter-chip,.article-tag{appearance:none;border:1px solid rgba(88,75,63,.22);border-radius:999px;background:rgba(255,252,247,.72);color:#62594F;font:inherit;line-height:1.4;cursor:pointer;transition:background .18s ease,border-color .18s ease,color .18s ease}
+.article-filter-chip{padding:8px 13px;font-size:13px}
+.article-filter-chip:hover,.article-tag:hover{border-color:rgba(198,75,55,.48);color:#8E3D31}
+.article-filter-chip[aria-pressed="true"]{background:#C64B37;border-color:#C64B37;color:#fffaf4}
+.article-filter-status{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;min-height:28px;margin:4px 0 14px;color:#81766B;font-size:12px}
+.article-filter-reset{padding:3px 0;border:0;background:transparent;color:#9B5144;font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.article-list-item .article-list-meta{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px}
+.article-category-label{display:inline-flex;align-items:center;padding:3px 8px;border:1px solid rgba(48,45,41,.12);border-radius:999px;background:rgba(255,252,247,.52);color:#62594F;font-size:11px;line-height:1.5}
+.article-card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.article-tag{display:inline-flex;align-items:center;padding:4px 8px;font-size:11px;line-height:1.35}
+.article-list-item[hidden]{display:none!important}
+.archive-page .article-list-item .article-card-tags .article-tag{background:rgba(255,252,247,.62)}
+.home-page:not(.archive-page) .article-card-tags .article-tag{cursor:default}
+@media(max-width:760px){
+ .archive-page .article-discovery{margin-bottom:20px}
+ .archive-page .article-category-filters{gap:7px;margin:12px 0 10px}
+ .article-filter-chip{padding:7px 10px;font-size:12px}
+ .article-filter-status{font-size:11px}
+ .article-list-item .article-list-meta{gap:6px 8px}
+ .article-category-label{font-size:10px;padding:2px 7px}
+ .article-card-tags{gap:5px;margin-top:7px}
+ .article-tag{font-size:10px;padding:4px 7px}
+}
+@media(max-width:390px){.archive-page .article-category-filters{gap:6px}.article-filter-chip{padding:6px 9px;font-size:11px}.article-list-item .article-list-meta{gap:5px 7px}}
+@media(prefers-reduced-motion:reduce){.article-filter-chip,.article-tag{transition:none}}
