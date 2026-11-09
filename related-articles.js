@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const article = articles.find(item => item.href === current);
   if (!article || !Array.isArray(article.related)) return;
   const related = article.related
-    .map(href => window.articles.find(item => item.href === href))
+    .map(href => articles.find(item => item.href === href))
     .filter(Boolean)
     .slice(0, 3);
   if (!related.length) return;
