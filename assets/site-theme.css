@@ -72,21 +72,25 @@ html.site-night textarea,
 html.site-night select{background:#202321!important;color:#BDB8AE!important;border-color:#343A36!important}
 .site-header .site-nav{gap:clamp(6px,1.2vw,14px)!important}
 .site-header .site-nav .site-theme-toggle{
-  appearance:none;display:inline-flex;align-items:center;justify-content:center;
-  min-height:32px;padding:6px 11px;margin:0;
-  border:1px solid rgba(120,105,88,.28);border-radius:999px;
+  appearance:none;display:inline-grid;place-items:center;flex:0 0 34px;
+  width:34px;height:34px;min-height:34px;padding:0;margin:0;
+  border:1px solid rgba(120,105,88,.28);border-radius:50%;
   background:rgba(255,252,247,.62);color:var(--muted,#62594F);
-  font:inherit;font-size:11px;line-height:1.2;white-space:nowrap;cursor:pointer;
+  cursor:pointer;transition:background .2s ease,border-color .2s ease,color .2s ease;
 }
+.site-header .site-nav .site-theme-toggle svg{
+  display:block;width:18px;height:18px;fill:none;stroke:currentColor;
+  stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;
+}
+.site-header .site-nav .site-theme-toggle:hover{border-color:#C64B37;color:#A34436}
 .site-header .site-nav .site-theme-toggle:hover{border-color:#C64B37;color:#A34436}
 @media(max-width:900px) and (min-width:761px){
   .site-header .site-nav{gap:5px!important}
   .site-header .site-nav a{font-size:10px!important}
-  .site-header .site-nav .site-theme-toggle{font-size:9px;padding:5px 5px}
+  .site-header .site-nav .site-theme-toggle{width:31px;height:31px;min-height:31px;flex-basis:31px}
 }
 @media(max-width:760px){
-  .site-header .site-nav{grid-template-columns:repeat(5,minmax(0,1fr))!important}
-  .site-header .site-nav .site-theme-toggle{width:100%;min-height:30px;padding:5px 1px;border-radius:8px;font-size:10px;white-space:normal}
+  .site-header .site-nav{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+  .site-header .site-nav .site-theme-toggle{justify-self:center;width:30px;height:30px;min-height:30px;flex-basis:30px;padding:0;border-radius:50%}
 }
-@media(max-width:360px){.site-header .site-nav .site-theme-toggle{font-size:9px}}
 @media(prefers-reduced-motion:reduce){html.site-night *{transition:none!important;animation:none!important}}
