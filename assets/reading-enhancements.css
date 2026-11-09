@@ -157,3 +157,32 @@
 .article-page.reading-night .site-header .site-nav a.is-current::after {
   background: #918D85 !important;
 }
+
+
+/* Night-reading control lives in the primary navigation on article pages. */
+.site-header .site-nav .reading-theme-toggle{
+  appearance:none;display:inline-flex;align-items:center;justify-content:center;
+  min-height:32px;padding:6px 10px;margin:0;
+  border:1px solid rgba(120,105,88,.28);border-radius:999px;
+  background:rgba(255,252,247,.62);color:var(--muted,#62594F);
+  font:inherit;font-size:12px;line-height:1.2;white-space:nowrap;cursor:pointer;
+}
+.site-header .site-nav .reading-theme-toggle:hover{
+  border-color:#C64B37;color:#A34436;
+}
+.article-page.reading-night .site-header .site-nav .reading-theme-toggle{
+  background:#202321!important;border-color:#3A413C!important;color:#BDB8AE!important;
+}
+@media(max-width:900px) and (min-width:761px){
+  .site-header .site-nav .reading-theme-toggle{font-size:11px;padding:6px 8px}
+}
+@media(max-width:760px){
+  .site-header .site-nav{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+  .site-header .site-nav .reading-theme-toggle{
+    width:100%;min-height:30px;padding:5px 1px;border-radius:8px;
+    font-size:10px;white-space:normal;
+  }
+}
+@media(max-width:360px){
+  .site-header .site-nav .reading-theme-toggle{font-size:9px}
+}
