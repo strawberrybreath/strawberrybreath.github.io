@@ -506,3 +506,45 @@ body.home-page.archive-page .archive-list .article-list-item>.article-list-image
     line-height:1.5!important;
   }
 }
+
+/* 2026-11-09 · Carry each article's established palette into home and archive cards. */
+.home-page .article-list-item[data-article-theme],
+.archive-page .article-list-item[data-article-theme]{
+  --card-theme-bg:#F4F0E8;
+  --card-theme-border:rgba(48,45,41,.12);
+  display:grid!important;
+  align-items:center!important;
+  padding:13px 15px!important;
+  border:1px solid var(--card-theme-border)!important;
+  border-bottom:1px solid var(--card-theme-border)!important;
+  border-radius:5px!important;
+  background:var(--card-theme-bg)!important;
+  box-shadow:0 3px 12px rgba(48,40,34,.035)!important;
+  transition:transform .2s ease,box-shadow .2s ease!important;
+}
+.home-page .article-list-item[data-article-theme]:hover,
+.archive-page .article-list-item[data-article-theme]:hover{
+  transform:translateY(-2px);
+  box-shadow:0 7px 18px rgba(48,40,34,.07)!important;
+}
+.article-list-item[data-article-theme="issue01"]{--card-theme-bg:#F2E4DE;--card-theme-border:rgba(166,83,78,.24)}
+.article-list-item[data-article-theme="issue02"]{--card-theme-bg:#EAE4D8;--card-theme-border:rgba(117,96,71,.25)}
+.article-list-item[data-article-theme="issue03"]{--card-theme-bg:#E5ECE7;--card-theme-border:rgba(97,124,120,.24)}
+.article-list-item[data-article-theme="issue04"]{--card-theme-bg:#EEE8D9;--card-theme-border:rgba(138,112,71,.25)}
+.article-list-item[data-article-theme="issue05"]{--card-theme-bg:#F1E5DF;--card-theme-border:rgba(140,69,75,.24)}
+.article-list-item[data-article-theme="issue06"]{--card-theme-bg:#E9DFE7;--card-theme-border:rgba(81,54,79,.23)}
+.article-list-item[data-article-theme="issue07"]{--card-theme-bg:#E5E8DE;--card-theme-border:rgba(63,81,69,.23)}
+.article-list-item[data-article-theme="issue08"]{--card-theme-bg:#E8EDF0;--card-theme-border:rgba(53,70,83,.23)}
+.home-page .article-list-item[data-article-theme] .article-list-copy,
+.archive-page .article-list-item[data-article-theme] .article-list-copy{min-width:0}
+.home-page .article-list-item[data-article-theme] h3 a,
+.archive-page .article-list-item[data-article-theme] h3 a{color:#302D29}
+.home-page .article-list-item[data-article-theme] .article-list-date,
+.archive-page .article-list-item[data-article-theme] .article-list-date{color:#74695F}
+@media(max-width:700px){
+  .home-page .article-list-item[data-article-theme],
+  .archive-page .article-list-item[data-article-theme]{
+    padding:10px!important;
+    gap:13px!important;
+  }
+}
