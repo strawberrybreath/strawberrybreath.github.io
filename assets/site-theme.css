@@ -1,0 +1,89 @@
+/* Global night palette: low luminance, soft contrast, no bright paper panels. */
+html.site-night{color-scheme:dark;background:#111312}
+html.site-night body,
+html.site-night .site-frame,
+html.site-night main,
+html.site-night .home-page,
+html.site-night .archive-page{background:#111312!important;background-image:none!important;color:#BDB8AE!important}
+html.site-night body *{text-shadow:none!important}
+html.site-night .site-header,
+html.site-night .site-nav,
+html.site-night .footer-glass-card,
+html.site-night .home-profile,
+html.site-night .home-articles,
+html.site-night .home-intro,
+html.site-night .feminist-section,
+html.site-night .article-hero,
+html.site-night .article-ending,
+html.site-night .article-highlight,
+html.site-night .related-reading,
+html.site-night .reading-toc,
+html.site-night .article-list-item,
+html.site-night .article-list-card,
+html.site-night .history-card,
+html.site-night .history-timeline,
+html.site-night .feminist-card,
+html.site-night .about-cats-gallery,
+html.site-night .site-stats,
+html.site-night [class*="glass-card"],
+html.site-night [class*="info-card"],
+html.site-night [class*="quote-card"]{
+  background:#1A1D1B!important;background-image:none!important;
+  border-color:#343A36!important;box-shadow:none!important;
+}
+html.site-night .essay-content,
+html.site-night .essay-content p,
+html.site-night .essay-content li,
+html.site-night .essay-content blockquote,
+html.site-night .home-about,
+html.site-night .home-profile p,
+html.site-night .feminist-section p,
+html.site-night .article-list-item p,
+html.site-night .article-list-item h3,
+html.site-night .history-timeline p,
+html.site-night .site-footer,
+html.site-night .site-footer p,
+html.site-night .site-header *,
+html.site-night main h1,
+html.site-night main h2,
+html.site-night main h3,
+html.site-night main h4{
+  color:#BDB8AE!important;
+}
+html.site-night a,
+html.site-night .essay-content a,
+html.site-night .site-nav a{color:#B99A8D!important}
+html.site-night a:hover{color:#D0A99A!important}
+html.site-night .site-nav a.is-current{color:#D0A99A!important}
+html.site-night .site-header{background:#151816!important;border-color:#303632!important}
+html.site-night .site-theme-toggle{
+  color:#C5BFB3!important;background:#202321!important;border-color:#3A413C!important;
+}
+html.site-night .article-list-item,
+html.site-night .article-list-copy,
+html.site-night .article-list-item .article-list-copy,
+html.site-night .related-reading-card{background:#1A1D1B!important}
+html.site-night img:not(.brand-avatar){filter:brightness(.78) saturate(.82)}
+html.site-night .brand-avatar{filter:none}
+html.site-night .reading-ring,
+html.site-night .reading-confetti{filter:brightness(.78) saturate(.7)}
+html.site-night input,
+html.site-night textarea,
+html.site-night select{background:#202321!important;color:#BDB8AE!important;border-color:#343A36!important}
+.site-header .site-nav .site-theme-toggle{
+  appearance:none;display:inline-flex;align-items:center;justify-content:center;
+  min-height:32px;padding:6px 11px;margin:0;
+  border:1px solid rgba(120,105,88,.28);border-radius:999px;
+  background:rgba(255,252,247,.62);color:var(--muted,#62594F);
+  font:inherit;font-size:12px;line-height:1.2;white-space:nowrap;cursor:pointer;
+}
+.site-header .site-nav .site-theme-toggle:hover{border-color:#C64B37;color:#A34436}
+@media(max-width:900px) and (min-width:761px){
+  .site-header .site-nav .site-theme-toggle{font-size:11px;padding:6px 8px}
+}
+@media(max-width:760px){
+  .site-header .site-nav{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+  .site-header .site-nav .site-theme-toggle{width:100%;min-height:30px;padding:5px 1px;border-radius:8px;font-size:10px;white-space:normal}
+}
+@media(max-width:360px){.site-header .site-nav .site-theme-toggle{font-size:9px}}
+@media(prefers-reduced-motion:reduce){html.site-night *{transition:none!important;animation:none!important}}
