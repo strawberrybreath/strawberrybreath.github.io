@@ -27,3 +27,9 @@
 .article-page.reading-night .essay-content mark.search-hit{background:#785B36;color:#FFF4E2}
 @media(max-width:700px){.reading-tools{padding:0 14px;margin-bottom:10px}.reading-toc{margin:0 14px 20px;padding:11px 13px}.reading-toc ol{columns:1}.reading-toc li{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.reading-theme-toggle,.article-search-open{transition:none}}
+
+.article-page.reading-night .article-highlight,.article-page.reading-night section[class*="ending"],.article-page.reading-night .related-reading,.article-page.reading-night .footer-glass-card{background:#353128!important;color:#E8DFD1!important;border-color:rgba(230,213,188,.2)!important}
+.article-page.reading-night .article-highlight p,.article-page.reading-night section[class*="ending"] p,.article-page.reading-night .related-reading p{color:#E8DFD1!important}
+.article-page.reading-night .article-tags span,.article-page.reading-night .article-category-label{background:#353128!important;color:#E8DFD1!important;border-color:rgba(230,213,188,.22)!important}
+.article-page.reading-night .essay-content a,.article-page.reading-night .related-reading a{color:#E8A18E}
+.article-page.reading-night .site-header{background:rgba(41,39,34,.94)!important;border-color:rgba(230,213,188,.16)!important}
