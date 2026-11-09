@@ -254,6 +254,13 @@ document.addEventListener("DOMContentLoaded", () => {
         (activeCategory==="全部"||article.category===activeCategory)&&
         (!activeTag||(article.tags||[]).includes(activeTag));
       item.hidden=!match; if(match)visible++;
+      let jump=item.querySelector(".article-search-open");
+      if(terms.length&&match){
+        if(!jump){jump=document.createElement("a");jump.className="article-search-open";item.querySelector(".article-list-copy")?.appendChild(jump);}
+        jump.href=article.href+"?q="+encodeURIComponent(query)+"#bodycopy";
+        jump.textContent="查看正文匹配位置 →";
+        jump.hidden=false;
+      }else if(jump){jump.hidden=true;}
     });
     if(count)count.textContent=String(visible);
     if(empty)empty.hidden=visible!==0;
