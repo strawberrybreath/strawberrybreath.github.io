@@ -148,3 +148,75 @@ html.site-night .site-header .site-nav .site-theme-toggle:hover{
   background:transparent!important;
   box-shadow:none!important;
 }
+
+
+/* Night mode must suppress the decorative daytime wave layers and all issue-specific light washes. */
+html.site-night,
+html.site-night body,
+html.site-night .site-frame,
+html.site-night body.article-page,
+html.site-night body.article-page main,
+html.site-night body.article-page .article-hero,
+html.site-night body.article-page .film-credits,
+html.site-night body.article-page .film-credit-person,
+html.site-night body.article-page .poem-original,
+html.site-night body.article-page .poem-context,
+html.site-night body.article-page blockquote,
+html.site-night body.article-page .article08-ending,
+html.site-night body.article-page .article-ending,
+html.site-night body.article-page .article-highlight,
+html.site-night body.article-page .related-reading,
+html.site-night body.article-page .footer-glass-card{
+  background:#080909!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+html.site-night::before,
+html.site-night::after,
+html.site-night body::before,
+html.site-night body::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  animation:none!important;
+  opacity:0!important;
+}
+html.site-night body.article-page .article-hero,
+html.site-night body.article-page .film-credits,
+html.site-night body.article-page .film-credit-person,
+html.site-night body.article-page .poem-original,
+html.site-night body.article-page .poem-context,
+html.site-night body.article-page blockquote,
+html.site-night body.article-page .article08-ending,
+html.site-night body.article-page .article-ending,
+html.site-night body.article-page .article-highlight,
+html.site-night body.article-page .related-reading,
+html.site-night body.article-page .related-reading-card,
+html.site-night body.article-page .footer-glass-card{
+  background:#111212!important;
+  background-image:none!important;
+  border-color:#292D2B!important;
+}
+
+/* Navigation: three text links receive more horizontal room; the lamp stays compact. */
+.site-header .site-nav{
+  grid-template-columns:repeat(3,minmax(0,1fr)) 34px!important;
+  column-gap:clamp(8px,1.8vw,22px)!important;
+}
+.site-header .site-nav .site-theme-toggle{
+  width:30px!important;height:36px!important;min-height:36px!important;
+  flex:0 0 30px!important;padding:0!important;
+}
+.site-header .site-nav .site-theme-toggle svg{
+  width:22px!important;height:22px!important;
+  transform:scaleX(.88);
+}
+@media(max-width:900px) and (min-width:761px){
+  .site-header .site-nav{column-gap:clamp(5px,1vw,10px)!important}
+  .site-header .site-nav .site-theme-toggle{width:28px!important;flex-basis:28px!important}
+}
+@media(max-width:760px){
+  .site-header .site-nav{grid-template-columns:repeat(3,minmax(0,1fr)) 30px!important;column-gap:4px!important}
+  .site-header .site-nav .site-theme-toggle{width:28px!important;height:32px!important;min-height:32px!important;flex-basis:28px!important}
+  .site-header .site-nav .site-theme-toggle svg{width:21px!important;height:21px!important}
+}
