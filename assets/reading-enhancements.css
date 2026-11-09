@@ -36,3 +36,112 @@
 
 /* Pure-black reading canvas; preserve the existing typography and article theme accents. */
 .article-page.reading-night,.article-page.reading-night .site-frame,.article-page.reading-night main,.article-page.reading-night .essay-content{background-color:#000!important}
+
+
+/* Low-luminance night reading: restrained charcoal surfaces and softened warm text. */
+.article-page.reading-night {
+  color-scheme: dark;
+  --paper: #111312;
+  --ink: #BDB8AE;
+  --muted: #918D85;
+  --reading-tool-bg: #202321;
+  --reading-tool-line: #343936;
+  --reading-tool-text: #BDB8AE;
+  background: #111312 !important;
+  color: #BDB8AE !important;
+}
+.article-page.reading-night,
+.article-page.reading-night body,
+.article-page.reading-night .site-frame,
+.article-page.reading-night main,
+.article-page.reading-night .essay-content {
+  background: #111312 !important;
+  background-image: none !important;
+  color: #BDB8AE !important;
+}
+.article-page.reading-night .site-header {
+  background: #151816 !important;
+  background-image: none !important;
+  border-color: #303632 !important;
+  box-shadow: none !important;
+}
+.article-page.reading-night .article-hero,
+.article-page.reading-night .article08-ending,
+.article-page.reading-night .article-ending,
+.article-page.reading-night .article-highlight,
+.article-page.reading-night .article-tags span,
+.article-page.reading-night .reading-toc,
+.article-page.reading-night .related-reading,
+.article-page.reading-night .related-reading-card,
+.article-page.reading-night .footer-glass-card,
+.article-page.reading-night section[class*="ending"] {
+  background: #1A1D1B !important;
+  background-image: none !important;
+  border-color: #343A36 !important;
+  box-shadow: none !important;
+  color: #BDB8AE !important;
+}
+.article-page.reading-night .article-hero *,
+.article-page.reading-night .article08-ending *,
+.article-page.reading-night .article-highlight *,
+.article-page.reading-night .article-ending *,
+.article-page.reading-night .related-reading *,
+.article-page.reading-night .footer-glass-card * {
+  color: #BDB8AE !important;
+}
+.article-page.reading-night .article-hero h1,
+.article-page.reading-night .article-hero .article-subtitle,
+.article-page.reading-night .article-hero .article-deck,
+.article-page.reading-night .article-highlight,
+.article-page.reading-night .article08-ending .quote,
+.article-page.reading-night .related-reading-heading h2 {
+  color: #C5BFB3 !important;
+}
+.article-page.reading-night .article-topline,
+.article-page.reading-night .article-publication-meta,
+.article-page.reading-night .article-publication-meta span,
+.article-page.reading-night .article-hero .eyebrow,
+.article-page.reading-night .article08-ending .kicker,
+.article-page.reading-night .related-reading-kicker,
+.article-page.reading-night .related-reading-intro,
+.article-page.reading-night .related-reading-category,
+.article-page.reading-night .related-reading-description,
+.article-page.reading-night .related-reading-tags span,
+.article-page.reading-night .article08-cover figcaption {
+  color: #918D85 !important;
+}
+.article-page.reading-night .article-topline a,
+.article-page.reading-night .essay-content a,
+.article-page.reading-night .related-reading a {
+  color: #B99A8D !important;
+}
+.article-page.reading-night .reading-theme-toggle {
+  background: #202321 !important;
+  border-color: #3A413C !important;
+  color: #BDB8AE !important;
+  box-shadow: none !important;
+}
+.article-page.reading-night .essay-content p,
+.article-page.reading-night .essay-content li,
+.article-page.reading-night .essay-content blockquote,
+.article-page.reading-night .essay-content h2,
+.article-page.reading-night .essay-content h3 {
+  color: #BDB8AE !important;
+}
+.article-page.reading-night .essay-content img,
+.article-page.reading-night .article-hero img,
+.article-page.reading-night .related-reading-image {
+  filter: brightness(.72) saturate(.78);
+}
+.article-page.reading-night .essay-content mark.search-hit {
+  background: #554638 !important;
+  color: #D4C8B6 !important;
+  box-shadow: none !important;
+}
+.article-page.reading-night .reading-ring,
+.article-page.reading-night .reading-confetti {
+  filter: brightness(.78) saturate(.7);
+}
+@media (prefers-reduced-motion: reduce) {
+  .article-page.reading-night * { scroll-behavior: auto !important; }
+}
