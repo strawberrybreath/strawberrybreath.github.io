@@ -6,10 +6,11 @@ document.addEventListener("DOMContentLoaded",()=>{
   const button=document.createElement("button");
   button.type="button";
   button.className="site-theme-toggle";
-  button.setAttribute("aria-label","切换全站夜间模式");
+  button.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M8.2 14.7a7 7 0 1 1 7.6 0c-.9.6-1.3 1.4-1.5 2.3h-4.6c-.2-.9-.6-1.7-1.5-2.3Z"/></svg>';
   const apply=enabled=>{
     document.documentElement.classList.toggle("site-night",enabled);
-    button.textContent=enabled?"日间模式":"夜间模式";
+    button.setAttribute("aria-label",enabled?"切换到日间阅读":"切换到夜间阅读");
+    button.title=enabled?"切换到日间阅读":"切换到夜间阅读";
     button.setAttribute("aria-pressed",String(enabled));
     try{localStorage.setItem(key,enabled?"1":"0")}catch(error){}
   };
