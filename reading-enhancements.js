@@ -5,10 +5,8 @@ document.addEventListener("DOMContentLoaded",()=>{
   const essay=document.querySelector(".essay-content");
   if(!essay)return;
 
-  const tools=document.createElement("div");
-  tools.className="reading-tools";
   const toggle=document.createElement("button");
-  toggle.type="button";toggle.className="reading-theme-toggle";
+  toggle.type="button";toggle.className="reading-theme-toggle";toggle.setAttribute("aria-label","切换夜间阅读模式");
   const nightKey="strawberrybreath-reading-night";
   const setNight=enabled=>{
     page.classList.toggle("reading-night",enabled);
@@ -18,10 +16,9 @@ document.addEventListener("DOMContentLoaded",()=>{
   };
   let saved=false;try{saved=localStorage.getItem(nightKey)==="1"}catch(error){}
   toggle.addEventListener("click",()=>setNight(!page.classList.contains("reading-night")));
-  tools.appendChild(toggle);
-  const topline=document.querySelector(".article-topline");
-  if(topline)topline.insertAdjacentElement("afterend",tools);
-  else essay.insertAdjacentElement("beforebegin",tools);
+  const nav=document.querySelector(".site-header .site-nav");
+  if(nav){nav.appendChild(toggle);}
+  else{toggle.classList.add("reading-theme-toggle-fallback");document.querySelector(".site-header")?.appendChild(toggle);}
   setNight(saved);
 
   const headings=[...essay.querySelectorAll("h2,h3")].filter(h=>h.textContent.trim());
