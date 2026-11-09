@@ -83,7 +83,6 @@ html.site-night select{background:#202321!important;color:#BDB8AE!important;bord
   stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;
 }
 .site-header .site-nav .site-theme-toggle:hover{border-color:#C64B37;color:#A34436}
-.site-header .site-nav .site-theme-toggle:hover{border-color:#C64B37;color:#A34436}
 @media(max-width:900px) and (min-width:761px){
   .site-header .site-nav{gap:5px!important}
   .site-header .site-nav a{font-size:10px!important}
