@@ -33,6 +33,7 @@
 <link rel="stylesheet" href="assets/article-index.css?v=20261109-article-theme-cards">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Italianno&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/article-card-themes.css?v=20261109-fix-2">
+<link rel="stylesheet" href="assets/article-discovery.css?v=20261109-first-batch">
 </head>
 <body class="home-page archive-page">
 <div class="site-frame">
@@ -63,14 +64,18 @@
     <p>这里收录所有已经发表的文章，按发表时间由新到旧排列。首页只展示最新三篇，完整内容可以在这里继续浏览。</p>
   </div>
   <section class="archive-list" aria-label="全部文章">
-    <label class="article-search" for="article-search-input">
-      <span class="article-search-label">搜索文章</span>
-      <span class="article-search-field">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
-        <input id="article-search-input" type="search" data-article-search placeholder="输入标题或关键词…" autocomplete="off">
-        <span class="article-search-hint">⌕</span>
-      </span>
-    </label>
+    <div class="article-discovery">
+      <label class="article-search" for="article-search-input">
+        <span class="article-search-label">搜索文章</span>
+        <span class="article-search-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+          <input id="article-search-input" type="search" data-article-search placeholder="搜索标题、正文或标签…" autocomplete="off">
+          <span class="article-search-hint">⌕</span>
+        </span>
+      </label>
+      <div class="article-category-filters" data-category-filters aria-label="按文章分类筛选"></div>
+      <div class="article-filter-status"><span data-active-filter-label>按分类浏览，也可以搜索标题、标签和正文</span><button class="article-filter-reset" type="button" data-reset-article-filters>清除筛选</button></div>
+    </div>
     <div data-all-articles><article class="article-list-item" data-article-theme="issue08">
 <a class="article-list-image" href="article-08.html" tabindex="-1" aria-hidden="true"><img src="https://images.pexels.com/photos/19561464/pexels-photo-19561464/free-photo-of-open-book-on-desk.jpeg?auto=compress&cs=tinysrgb&w=900" alt="阳光下摊开的书本，摄影：Jessika Arraes / Pexels" loading="lazy" decoding="async"></a>
 <div class="article-list-copy"><div class="article-list-meta"><time class="article-list-date" datetime="2026-11-06">2026年11月6日</time></div>
