@@ -35,12 +35,15 @@
   <link rel="stylesheet" href="assets/article-card-themes.css?v=20261109-fix-2">
 <link rel="stylesheet" href="assets/article-discovery.css?v=20261109-first-batch">
 <link rel="stylesheet" href="assets/site-history.css?v=20261109">
+<link rel="stylesheet" href="assets/accessibility-performance.css?v=20261109-third-batch">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"文章列表｜Strawberry Breath","url":"https://strawberrybreath.github.io/articles.html","inLanguage":"zh-CN","description":"浏览 Strawberry Breath 已发表的全部文章，按时间收录电影、书籍、历史、女性主义与社会议题等主题的阅读和思考。","isPartOf":{"@type":"WebSite","name":"Strawberry Breath","url":"https://strawberrybreath.github.io/"}}</script>
 </head>
 <body class="home-page archive-page">
+<a class="skip-to-content" href="#main-content">跳到正文</a>
 <div class="site-frame">
 <header class="site-header">
   <a class="brand" href="./" aria-label="Strawberry Breath 首页">
-    <img class="brand-avatar" src="assets/avatar-circle-256.png" alt="Strawberry Breath 头像">
+    <img class="brand-avatar" src="assets/avatar-circle-256.png" alt="Strawberry Breath 头像" decoding="async" loading="lazy">
     <span class="brand-text"><strong>Strawberry Breath</strong><small>草莓味口气</small></span>
   </a>
   <div class="header-reading" aria-label="阅读进度与文章统计">
@@ -58,9 +61,10 @@
     <a href="./#contact"><span class="nav-en">CONTACT</span><span class="nav-zh">联系</span></a>
   </nav>
 </header>
-<main>
+<main id="main-content">
   <div class="archive-heading">
     <p class="eyebrow">THE ARCHIVE</p>
+    <p class="archive-stats" data-site-stats>正在统计文章内容…</p>
     <h1>文章列表</h1>
     <p>这里收录所有已经发表的文章，按发表时间由新到旧排列。首页只展示最新三篇，完整内容可以在这里继续浏览。</p>
   </div>
@@ -130,5 +134,6 @@
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="progress.js" defer></script>
 <script src="articles-data.js?v=20261106-static-fallback" defer></script>
+<script src="site-stats.js?v=20261109" defer></script>
 </body>
 </html>
