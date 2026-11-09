@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const related = article.related
     .map(href => articles.find(item => item.href === href))
     .filter(Boolean)
-    .slice(0, 3);
+    .slice(0, 2);
   if (!related.length) return;
 
   const heading = document.createElement("div");
