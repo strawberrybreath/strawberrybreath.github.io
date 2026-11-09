@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded",()=>{
       item.appendChild(link);list.appendChild(item);
     });
     toc.append(summary,list);
-    tools.insertAdjacentElement("afterend",toc);
+    const topline=document.querySelector(".article-topline");
+    if(topline)topline.insertAdjacentElement("afterend",toc);
+    else essay.insertAdjacentElement("beforebegin",toc);
   }
 
   const params=new URLSearchParams(location.search);
