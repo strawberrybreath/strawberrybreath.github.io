@@ -14,6 +14,11 @@ const articles = [
       "语言表达",
       "情绪识别",
       "阅读与文化"
+    ],
+    "related": [
+      "article-07.html",
+      "article-04.html",
+      "article-02.html"
     ]
   },
   {
@@ -30,6 +35,11 @@ const articles = [
       "康德",
       "自律与自由",
       "自我选择"
+    ],
+    "related": [
+      "article-06.html",
+      "article-08.html",
+      "article-03.html"
     ]
   },
   {
@@ -46,6 +56,11 @@ const articles = [
       "陈奕迅",
       "葡萄成熟时",
       "等待与遗憾"
+    ],
+    "related": [
+      "article-03.html",
+      "article-07.html",
+      "article-08.html"
     ]
   },
   {
@@ -62,6 +77,11 @@ const articles = [
       "红楼梦",
       "女性群像",
       "女性友谊"
+    ],
+    "related": [
+      "article-01.html",
+      "article-02.html",
+      "article-04.html"
     ]
   },
   {
@@ -78,6 +98,11 @@ const articles = [
       "二手烟",
       "女性处境",
       "公共卫生"
+    ],
+    "related": [
+      "article-02.html",
+      "article-05.html",
+      "article-01.html"
     ]
   },
   {
@@ -94,6 +119,11 @@ const articles = [
       "诗经",
       "亲密关系",
       "女性经验"
+    ],
+    "related": [
+      "article-06.html",
+      "article-07.html",
+      "article-01.html"
     ]
   },
   {
@@ -110,6 +140,11 @@ const articles = [
       "欧洲猎巫",
       "女性历史",
       "社会规训"
+    ],
+    "related": [
+      "article-04.html",
+      "article-05.html",
+      "article-01.html"
     ]
   },
   {
@@ -126,6 +161,11 @@ const articles = [
       "Enola Holmes",
       "女性主体性",
       "自我选择"
+    ],
+    "related": [
+      "article-02.html",
+      "article-05.html",
+      "article-04.html"
     ]
   }
 ];
