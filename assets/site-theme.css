@@ -131,3 +131,20 @@ html.site-night select{background:#202321!important;color:#BDB8AE!important;bord
   background:rgba(255,218,115,.12)!important;
   border-color:rgba(231,184,63,.5)!important;
 }
+
+
+/* The theme switch is a bare bulb icon, without a square or circular frame. */
+.site-header .site-nav .site-theme-toggle,
+html.site-night .site-header .site-nav .site-theme-toggle{
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  outline:none!important;
+}
+.site-header .site-nav .site-theme-toggle:hover,
+html.site-night .site-header .site-nav .site-theme-toggle:hover{
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
