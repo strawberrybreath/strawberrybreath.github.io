@@ -1,0 +1,38 @@
+/* Final override: visible per-article theme fills for home and archive cards. */
+body.home-page .article-list-item[data-article-theme],
+body.archive-page .article-list-item[data-article-theme]{
+  background:var(--card-theme-bg)!important;
+  background-image:none!important;
+  border:1px solid var(--card-theme-border)!important;
+  border-bottom:1px solid var(--card-theme-border)!important;
+  border-radius:6px!important;
+  box-shadow:0 4px 14px rgba(48,40,34,.055)!important;
+  padding:14px 16px!important;
+  margin:0 0 15px!important;
+}
+body.home-page .article-list-item[data-article-theme="issue01"],
+body.archive-page .article-list-item[data-article-theme="issue01"]{--card-theme-bg:#F2E4DE;--card-theme-border:rgba(166,83,78,.3)}
+body.home-page .article-list-item[data-article-theme="issue02"],
+body.archive-page .article-list-item[data-article-theme="issue02"]{--card-theme-bg:#EAE4D8;--card-theme-border:rgba(117,96,71,.3)}
+body.home-page .article-list-item[data-article-theme="issue03"],
+body.archive-page .article-list-item[data-article-theme="issue03"]{--card-theme-bg:#E5ECE7;--card-theme-border:rgba(97,124,120,.3)}
+body.home-page .article-list-item[data-article-theme="issue04"],
+body.archive-page .article-list-item[data-article-theme="issue04"]{--card-theme-bg:#EEE8D9;--card-theme-border:rgba(138,112,71,.3)}
+body.home-page .article-list-item[data-article-theme="issue05"],
+body.archive-page .article-list-item[data-article-theme="issue05"]{--card-theme-bg:#F1E5DF;--card-theme-border:rgba(140,69,75,.3)}
+body.home-page .article-list-item[data-article-theme="issue06"],
+body.archive-page .article-list-item[data-article-theme="issue06"]{--card-theme-bg:#E9DFE7;--card-theme-border:rgba(81,54,79,.3)}
+body.home-page .article-list-item[data-article-theme="issue07"],
+body.archive-page .article-list-item[data-article-theme="issue07"]{--card-theme-bg:#E5E8DE;--card-theme-border:rgba(63,81,69,.3)}
+body.home-page .article-list-item[data-article-theme="issue08"],
+body.archive-page .article-list-item[data-article-theme="issue08"]{--card-theme-bg:#E8EDF0;--card-theme-border:rgba(53,70,83,.3)}
+body.home-page .article-list-item[data-article-theme] .article-list-copy,
+body.archive-page .article-list-item[data-article-theme] .article-list-copy{background:transparent!important}
+body.home-page .article-list-item[data-article-theme] h3 a,
+body.archive-page .article-list-item[data-article-theme] h3 a{color:#302D29!important}
+body.home-page .article-list-item[data-article-theme] .article-list-copy>p,
+body.archive-page .article-list-item[data-article-theme] .article-list-copy>p{color:#62594F!important}
+@media(max-width:700px){
+ body.home-page .article-list-item[data-article-theme],
+ body.archive-page .article-list-item[data-article-theme]{padding:10px!important;margin-bottom:12px!important;gap:13px!important}
+}
