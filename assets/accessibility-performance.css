@@ -16,3 +16,5 @@
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 img{max-width:100%}
+
+.archive-stats{margin:8px 0 0;color:#81766B;font-size:12px;line-height:1.8;letter-spacing:.02em}
