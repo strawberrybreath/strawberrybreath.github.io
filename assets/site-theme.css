@@ -93,3 +93,26 @@ html.site-night select{background:#202321!important;color:#BDB8AE!important;bord
   .site-header .site-nav .site-theme-toggle{justify-self:center;width:30px;height:30px;min-height:30px;flex-basis:30px;padding:0;border-radius:50%}
 }
 @media(prefers-reduced-motion:reduce){html.site-night *{transition:none!important;animation:none!important}}
+
+/* Four navigation actions share the available navigation width evenly. */
+.site-header .site-nav{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  align-items:center!important;
+  justify-items:stretch!important;
+  justify-content:stretch!important;
+  width:100%!important;
+  min-width:0!important;
+  gap:0!important;
+}
+.site-header .site-nav>a{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:0!important;
+  text-align:center!important;
+}
+.site-header .site-nav>.site-theme-toggle{
+  justify-self:center!important;
+  align-self:center!important;
+}
