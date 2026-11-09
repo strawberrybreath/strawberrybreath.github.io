@@ -16,8 +16,8 @@
 .reading-toc a:hover{color:#C64B37;text-decoration:underline;text-underline-offset:3px}
 .essay-content h2,.essay-content h3{scroll-margin-top:105px}
 .essay-content mark.search-hit{background:#F3D7A9;color:#392F27;border-radius:3px;padding:0 .08em;box-shadow:0 0 0 2px rgba(243,215,169,.25)}
-.article-page.reading-night{--paper:#292722;--ink:#E8DFD1;--muted:#B8AA98;--reading-tool-bg:#353128;--reading-tool-line:rgba(230,213,188,.2);--reading-tool-text:#E8DFD1;background:#292722!important;color:#E8DFD1!important}
-.article-page.reading-night .site-frame,.article-page.reading-night main,.article-page.reading-night .essay-content{background:transparent!important;color:#E8DFD1!important}
+.article-page.reading-night{--paper:#000;--ink:#E8DFD1;--muted:#B8AA98;--reading-tool-bg:#353128;--reading-tool-line:rgba(230,213,188,.2);--reading-tool-text:#E8DFD1;background:#000!important;color:#E8DFD1!important}
+.article-page.reading-night .site-frame,.article-page.reading-night main,.article-page.reading-night .essay-content{background:#000!important;color:#E8DFD1!important}
 .article-page.reading-night .essay-content p,.article-page.reading-night .essay-content li,.article-page.reading-night .essay-content blockquote{color:#E8DFD1!important}
 .article-page.reading-night .article-topline,.article-page.reading-night .article-publication-meta{color:#C7B9A6}
 .article-page.reading-night .reading-toc{background:#353128;border-color:rgba(230,213,188,.2);color:#E8DFD1}
@@ -32,4 +32,7 @@
 .article-page.reading-night .article-highlight p,.article-page.reading-night section[class*="ending"] p,.article-page.reading-night .related-reading p{color:#E8DFD1!important}
 .article-page.reading-night .article-tags span,.article-page.reading-night .article-category-label{background:#353128!important;color:#E8DFD1!important;border-color:rgba(230,213,188,.22)!important}
 .article-page.reading-night .essay-content a,.article-page.reading-night .related-reading a{color:#E8A18E}
-.article-page.reading-night .site-header{background:rgba(41,39,34,.94)!important;border-color:rgba(230,213,188,.16)!important}
+.article-page.reading-night .site-header{background:#000!important;border-color:rgba(230,213,188,.16)!important}
+
+/* Pure-black reading canvas; preserve the existing typography and article theme accents. */
+.article-page.reading-night,.article-page.reading-night .site-frame,.article-page.reading-night main,.article-page.reading-night .essay-content{background-color:#000!important}
