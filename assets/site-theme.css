@@ -240,3 +240,94 @@ html.site-night body textarea::placeholder{
 /* Keep the lamp's warm light as an icon detail; all actual text remains white. */
 html.site-night .site-theme-toggle .bulb-on-icon .bulb-outline{stroke:#E7B83F!important}
 html.site-night .site-theme-toggle .bulb-on-icon .bulb-rays{stroke:#F4C542!important}
+
+
+/* Night mode has no article-specific palette: cards use one quiet neutral grey. */
+html.site-night body.home-page .article-list-item[data-article-theme],
+html.site-night body.archive-page .article-list-item[data-article-theme],
+html.site-night body.home-page .article-list-item[data-article-theme] .article-list-copy,
+html.site-night body.archive-page .article-list-item[data-article-theme] .article-list-copy,
+html.site-night body.article-page .article-hero,
+html.site-night body.article-page .article-ending,
+html.site-night body.article-page .article-highlight,
+html.site-night body.article-page .article08-ending,
+html.site-night body.article-page .essay-content p.article-highlight,
+html.site-night body.article-page .film-credits,
+html.site-night body.article-page .film-credit-person,
+html.site-night body.article-page .poem-original,
+html.site-night body.article-page .poem-context,
+html.site-night body.article-page blockquote,
+html.site-night body.article-page .related-reading,
+html.site-night body.article-page .related-reading-card,
+html.site-night body.article-page .footer-glass-card,
+html.site-night body.article-page [class*="quote"],
+html.site-night body.article-page [class*="highlight"],
+html.site-night body.article-page [class*="card"]{
+  background:#252827!important;
+  background-image:none!important;
+  border-color:#383D3B!important;
+  box-shadow:none!important;
+}
+
+/* Strip all per-issue color washes from the article title panel and page chrome. */
+html.site-night body.article-page .article-hero,
+html.site-night body.article-page .article-hero *,
+html.site-night body.article-page .article-hero::before,
+html.site-night body.article-page .article-hero::after{
+  background-color:transparent;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+html.site-night body.article-page .article-hero{
+  background:#252827!important;
+  border:1px solid #383D3B!important;
+}
+html.site-night body.article-page .site-header{
+  background:#171A19!important;
+  background-image:none!important;
+  border-color:#303533!important;
+}
+
+/* Remove daytime decorative strips/waves from the entire article canvas, not just body pseudo-elements. */
+html.site-night body.article-page,
+html.site-night body.article-page .site-frame,
+html.site-night body.article-page main,
+html.site-night body.article-page main::before,
+html.site-night body.article-page main::after,
+html.site-night body.article-page .site-frame::before,
+html.site-night body.article-page .site-frame::after,
+html.site-night body.article-page .article-topline,
+html.site-night body.article-page .article-publication-meta,
+html.site-night body.article-page .essay-content,
+html.site-night body.article-page .site-footer,
+html.site-night body.article-page .site-footer::before,
+html.site-night body.article-page .site-footer::after{
+  background-color:#080909!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+html.site-night body.article-page::before,
+html.site-night body.article-page::after,
+html.site-night body.article-page main::before,
+html.site-night body.article-page main::after,
+html.site-night body.article-page .site-frame::before,
+html.site-night body.article-page .site-frame::after{
+  content:none!important;
+  display:none!important;
+  opacity:0!important;
+  animation:none!important;
+}
+html.site-night body.article-page .article-hero::before,
+html.site-night body.article-page .article-hero::after{
+  content:none!important;
+  display:none!important;
+}
+
+/* Article-specific accent variables must not leak into night-mode borders or fills. */
+html.site-night body.article-page{
+  --article-accent:#BFC3C1!important;
+  --article-accent-strong:#BFC3C1!important;
+  --article-wash:#252827!important;
+  --article-wash-deep:#252827!important;
+  --article-line:#383D3B!important;
+}
