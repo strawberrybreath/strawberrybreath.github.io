@@ -1,25 +1,9 @@
-/* Article reading tools: generated contents, search handoff and warm night mode. */
+/* Article reading tools: generated contents, search handoff and article contents. */
 document.addEventListener("DOMContentLoaded",()=>{
   const page=document.body;
   if(!page.classList.contains("article-page"))return;
   const essay=document.querySelector(".essay-content");
   if(!essay)return;
-
-  const toggle=document.createElement("button");
-  toggle.type="button";toggle.className="reading-theme-toggle";toggle.setAttribute("aria-label","切换夜间阅读模式");
-  const nightKey="strawberrybreath-reading-night";
-  const setNight=enabled=>{
-    page.classList.toggle("reading-night",enabled);
-    toggle.setAttribute("aria-pressed",String(enabled));
-    toggle.textContent=enabled?"切换为纸页模式":"切换为夜读模式";
-    try{localStorage.setItem(nightKey,enabled?"1":"0")}catch(error){}
-  };
-  let saved=false;try{saved=localStorage.getItem(nightKey)==="1"}catch(error){}
-  toggle.addEventListener("click",()=>setNight(!page.classList.contains("reading-night")));
-  const nav=document.querySelector(".site-header .site-nav");
-  if(nav){nav.appendChild(toggle);}
-  else{toggle.classList.add("reading-theme-toggle-fallback");document.querySelector(".site-header")?.appendChild(toggle);}
-  setNight(saved);
 
   const headings=[...essay.querySelectorAll("h2,h3")].filter(h=>h.textContent.trim());
   if(headings.length>=2){
