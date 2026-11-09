@@ -1,0 +1,18 @@
+/* Accessibility and image-loading refinements — preserves the existing editorial design. */
+.skip-to-content{
+  position:fixed;z-index:10000;top:12px;left:12px;
+  transform:translateY(-160%);padding:10px 15px;
+  border:2px solid #302D29;border-radius:4px;
+  background:#F4F0E8;color:#302D29;
+  font:600 14px/1.5 system-ui,sans-serif;text-decoration:none;
+  box-shadow:0 4px 16px rgba(48,45,41,.16)
+}
+.skip-to-content:focus{transform:translateY(0);outline:3px solid #C64B37;outline-offset:3px}
+:where(a,button,input,textarea,select,[tabindex]):focus-visible{
+  outline:2px solid #A63F30;outline-offset:3px
+}
+:where(a,button,input,textarea,select):focus:not(:focus-visible){outline:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+img{max-width:100%}
