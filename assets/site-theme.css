@@ -70,16 +70,19 @@ html.site-night .reading-confetti{filter:brightness(.78) saturate(.7)}
 html.site-night input,
 html.site-night textarea,
 html.site-night select{background:#202321!important;color:#BDB8AE!important;border-color:#343A36!important}
+.site-header .site-nav{gap:clamp(6px,1.2vw,14px)!important}
 .site-header .site-nav .site-theme-toggle{
   appearance:none;display:inline-flex;align-items:center;justify-content:center;
   min-height:32px;padding:6px 11px;margin:0;
   border:1px solid rgba(120,105,88,.28);border-radius:999px;
   background:rgba(255,252,247,.62);color:var(--muted,#62594F);
-  font:inherit;font-size:12px;line-height:1.2;white-space:nowrap;cursor:pointer;
+  font:inherit;font-size:11px;line-height:1.2;white-space:nowrap;cursor:pointer;
 }
 .site-header .site-nav .site-theme-toggle:hover{border-color:#C64B37;color:#A34436}
 @media(max-width:900px) and (min-width:761px){
-  .site-header .site-nav .site-theme-toggle{font-size:11px;padding:6px 8px}
+  .site-header .site-nav{gap:5px!important}
+  .site-header .site-nav a{font-size:10px!important}
+  .site-header .site-nav .site-theme-toggle{font-size:9px;padding:5px 5px}
 }
 @media(max-width:760px){
   .site-header .site-nav{grid-template-columns:repeat(5,minmax(0,1fr))!important}
