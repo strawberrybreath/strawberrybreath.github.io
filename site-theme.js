@@ -1,7 +1,7 @@
 /* Site-wide night reading mode. One preference shared by every page. */
 document.addEventListener("DOMContentLoaded",()=>{
   const nav=document.querySelector(".site-header .site-nav");
-  if(!nav)return;
+  if(!nav||nav.querySelector(".site-theme-toggle"))return;
   const key="strawberrybreath-site-night";
   const button=document.createElement("button");
   button.type="button";
