@@ -48,3 +48,16 @@ html.site-night .site-footer .site-metric-value{color:#f2f2f2!important}
 }
 html.site-night .site-footer .site-metric-goatcounter{color:#f2f2f2!important}
 @media(max-width:760px){.site-footer .site-metric-goatcounter{font-size:12px}}
+
+
+/* Compact site facts beneath the live metrics */
+.site-footer .site-metric-info{
+  flex-basis:100%;
+  text-align:center;
+  margin-top:1px;
+  color:var(--muted,#858078);
+  font-size:10px;
+  line-height:1.6;
+  letter-spacing:.02em;
+}
+html.site-night .site-footer .site-metric-info{color:#aaa!important}
