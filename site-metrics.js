@@ -1,11 +1,12 @@
 /* Strawberry Breath footer metrics */
 (() => {
   const START_DATE = new Date("2026-08-18T00:00:00+08:00");
+  const COUNTER_URL = "https://strawberrybreath.goatcounter.com/count";
 
-  // GoatCounter: one shared site-wide page-view counter across every page.
   const renderVisitorCount = () => {
     const target = document.querySelector("[data-site-views]");
-    if (!target || target.dataset.loaded === "true" || !window.goatcounter?.visit_count) return;
+    if (!target || target.dataset.loaded === "true") return;
+    if (!window.goatcounter?.visit_count) return;
     target.dataset.loaded = "true";
     try {
       window.goatcounter.visit_count({
@@ -21,36 +22,48 @@
   };
 
   const loadGoatCounter = () => {
-    if (document.querySelector('script[data-goatcounter="https://strawberrybreath.goatcounter.com/count"]')) return;
+    if (window.goatcounter?.visit_count) {
+      renderVisitorCount();
+      return;
+    }
+    if (document.querySelector('script[data-goatcounter="' + COUNTER_URL + '"]')) return;
     const tracker = document.createElement("script");
-    tracker.setAttribute("data-goatcounter", "https://strawberrybreath.goatcounter.com/count");
+    tracker.setAttribute("data-goatcounter", COUNTER_URL);
     tracker.async = true;
     tracker.src = "https://gc.zgo.at/count.js";
     tracker.addEventListener("load", renderVisitorCount, { once: true });
+    tracker.addEventListener("error", () => {
+      const target = document.querySelector("[data-site-views]");
+      if (target) target.textContent = "暂不可用";
+    }, { once: true });
     document.head.appendChild(tracker);
   };
+
   const render = () => {
     const footer = document.querySelector(".site-footer .footer-glass-card");
     if (!footer || footer.querySelector(".site-metrics")) return;
-
-    const now = new Date();
-    const elapsed = Math.max(0, Math.floor((now.getTime() - START_DATE.getTime()) / 86400000));
+    const elapsed = Math.max(0, Math.floor((Date.now() - START_DATE.getTime()) / 86400000));
     const metrics = document.createElement("div");
     metrics.className = "site-metrics";
     metrics.setAttribute("aria-label", "网站运行信息");
-    metrics.innerHTML = '<span class="site-metric"><span class="site-metric-label">运行时间</span><strong class="site-metric-value" data-site-runtime></strong><span class="site-metric-unit">天</span></span><span class="site-metric site-metric-counter"><span class="site-metric-label">累计访问量</span><span class="site-metric-goatcounter" data-site-views>读取中</span></span><span class="site-metric-date">始于 2026.08.18</span><span class="site-metric-info">个人博客 · 阅读、观察与生活记录 · GitHub Pages</span>';
+    metrics.innerHTML =
+      '<span class="site-metric"><span class="site-metric-label">运行时间</span><strong class="site-metric-value" data-site-runtime>' + elapsed.toLocaleString("zh-CN") + '</strong><span class="site-metric-unit">天</span></span>' +
+      '<span class="site-metric site-metric-counter"><span class="site-metric-label">累计访问量</span><span class="site-metric-goatcounter" data-site-views>读取中</span></span>' +
+      '<p class="site-metric-info">始于 2026.08.18 <span aria-hidden="true">·</span> 个人博客 <span aria-hidden="true">·</span> GitHub Pages</p>';
     const identity = footer.querySelector(".footer-identity");
     if (identity) identity.insertAdjacentElement("afterend", metrics);
     else footer.appendChild(metrics);
-    metrics.querySelector("[data-site-runtime]").textContent = elapsed.toLocaleString("zh-CN");
-    renderVisitorCount();
+    loadGoatCounter();
+    window.setTimeout(() => {
+      const target = document.querySelector("[data-site-views]");
+      if (target && target.textContent.trim() === "读取中") target.textContent = "暂不可用";
+    }, 12000);
   };
-
-  loadGoatCounter();
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", render, { once: true });
   } else {
     render();
   }
+  loadGoatCounter();
 })();
