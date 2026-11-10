@@ -22,12 +22,11 @@
 }
 
 
-/* 2026-11-10: unify typography throughout the history page with the site's LXGW WenKai system. */
-body.history-page,
-body.history-page :where(h1,h2,h3,h4,h5,h6,p,a,li,time,span,small,strong,em,button,div,section,nav,footer){
-  font-family:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","华文楷体","楷体",serif!important;
-}
-body.history-page .brand-text strong,
-body.history-page .footer-brand{
-  font-family:"DM Sans","PingFang SC",Arial,sans-serif!important;
+/* Use the same global body typeface as the rest of the site.
+   The history page must not introduce its own font stack. */
+body.history-page main,
+body.history-page main *,
+body.history-page .site-footer,
+body.history-page .site-footer *{
+  font-family:var(--body)!important;
 }
