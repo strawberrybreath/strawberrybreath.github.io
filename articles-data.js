@@ -1,6 +1,19 @@
 /* Article catalogue: one source of truth for home cards, archive filters and search. */
 const articles = [
   {
+    "title": "重男轻女：当偏见成为代际传递的枷锁",
+    "href": "article-09.html",
+    "date": "2026-11-10",
+    "dateLabel": "2026年11月10日",
+    "description": "从价值认同、家庭经济逻辑与代际创伤出发，思考重男轻女如何在家庭中延续，以及女性如何打破偏见的循环。",
+    "image": "https://images.unsplash.com/photo-1593046896207-493ffa0d222f?auto=format&fit=crop&w=1200&h=1500&q=85",
+    "imageAlt": "一位女性站在窗前的剪影，摄影：Igor / Unsplash",
+    "theme": "issue09",
+    "category": "女性主义与社会观察",
+    "tags": ["女性主义", "重男轻女", "家庭与代际", "自我价值"],
+    "related": ["article-08.html", "article-07.html", "article-05.html"]
+  },
+  {
     "title": "语言的通货膨胀：当「爱你」沦为一句谢谢",
     "href": "article-08.html",
     "date": "2026-11-06",
