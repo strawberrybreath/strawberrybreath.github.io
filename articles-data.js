@@ -1,17 +1,30 @@
 /* Article catalogue: one source of truth for home cards, archive filters and search. */
 const articles = [
   {
+    "title": "当爱情开始承担整个社会的重量",
+    "href": "article-10.html",
+    "date": "2026-11-10",
+    "dateLabel": "2026年11月10日",
+    "description": "当亲情、友情、陪伴与归属感逐渐集中到伴侣身上，我们是不是正在让爱情替整个社会关系网络买单？",
+    "image": "https://images.pexels.com/photos/14434280/pexels-photo-14434280.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "imageAlt": "暮色中透过窗帘看到的城市天际线，摄影：Uğurcan Özmen / Pexels",
+    "theme": "issue10",
+    "category": "社会观察与亲密关系",
+    "tags": ["社会关系", "弱关系", "社会资本", "亲密关系"],
+    "related": ["article-09.html", "article-03.html", "article-06.html"]
+  },
+  {
     "title": "重男轻女：当偏见成为代际传递的枷锁",
     "href": "article-09.html",
     "date": "2026-11-10",
     "dateLabel": "2026年11月10日",
     "description": "从价值认同、家庭经济逻辑与代际创伤出发，思考重男轻女如何在家庭中延续，以及女性如何打破偏见的循环。",
-    "image": "https://images.unsplash.com/photo-1593046896207-493ffa0d222f?auto=format&fit=crop&w=1200&h=1500&q=85",
-    "imageAlt": "一位女性站在窗前的剪影，摄影：Igor / Unsplash",
+    "image": "https://images.pexels.com/photos/7642224/pexels-photo-7642224.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "imageAlt": "母亲与女儿们坐在窗边的家庭纪实摄影，摄影：Alena Darmel / Pexels",
     "theme": "issue09",
     "category": "女性主义与社会观察",
     "tags": ["女性主义", "重男轻女", "家庭与代际", "自我价值"],
-    "related": ["article-08.html", "article-07.html", "article-05.html"]
+    "related": ["article-10.html", "article-05.html", "article-02.html"]
   },
   {
     "title": "语言的通货膨胀：当「爱你」沦为一句谢谢",
