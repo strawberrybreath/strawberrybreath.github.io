@@ -99,3 +99,15 @@ html.site-night .site-footer .site-metric-info{border-top-color:rgba(255,255,255
   .site-footer .site-metric-value,.site-footer .site-metric-goatcounter{font-size:13px}
   .site-footer .site-metric-info{grid-column:auto;text-align:center;padding-top:9px}
 }
+
+/* CounterAPI plain-text count */
+.site-footer .site-metric-goatcounter{
+  display:inline-flex!important;
+  align-items:baseline;
+  min-width:1ch;
+  color:var(--ink,#302D29)!important;
+  font:600 14px/1.4 inherit!important;
+  font-variant-numeric:tabular-nums;
+}
+html.site-night .site-footer .site-metric-goatcounter{color:#f2f2f2!important}
+.site-footer .site-metric-goatcounter a{color:inherit!important;text-decoration:none!important}
