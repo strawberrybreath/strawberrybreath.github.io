@@ -105,3 +105,7 @@
   .home-page .feminist-section{width:calc(100% - 28px)}
   .home-page .feminist-card{padding:16px 15px 14px}
 }
+
+
+/* Avoid the doubled divider between the feminist resource cards and contact section. */
+.home-page .feminist-section{border-bottom:0!important}
