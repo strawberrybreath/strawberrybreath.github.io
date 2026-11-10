@@ -1,10 +1,10 @@
 /* Global night palette: low luminance, soft contrast, no bright paper panels. */
-html.site-night{color-scheme:dark;background:#111312}
+html.site-night{color-scheme:dark;background:#000000}
 html.site-night body,
 html.site-night .site-frame,
 html.site-night main,
 html.site-night .home-page,
-html.site-night .archive-page{background:#111312!important;background-image:none!important;color:#BDB8AE!important}
+html.site-night .archive-page{background:#000000!important;background-image:none!important;color:#BDB8AE!important}
 html.site-night body *{text-shadow:none!important}
 html.site-night .site-header,
 html.site-night .site-nav,
@@ -330,4 +330,26 @@ html.site-night body.article-page{
   --article-wash:#252827!important;
   --article-wash-deep:#252827!important;
   --article-line:#383D3B!important;
+}
+
+
+/* 2026-11-10: enforce black night canvas; grid and decorative layers stay off. */
+html.site-night,
+html.site-night body,
+html.site-night .site-frame,
+html.site-night main,
+html.site-night .home-page,
+html.site-night .archive-page{
+  background:#000000!important;
+  background-image:none!important;
+}
+html.site-night::before{
+  background:#000000!important;
+  background-image:none!important;
+}
+html.site-night::after{
+  content:none!important;
+  display:none!important;
+  animation:none!important;
+  background-image:none!important;
 }
