@@ -1,63 +1,101 @@
-/* Quiet footer metrics — aligned with the existing site identity */
+/* Footer redesign: quiet editorial signature, not a dashboard or glass card */
+.site-footer .footer-glass-card{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:14px 28px;
+  width:100%;
+  max-width:var(--content-width,1100px);
+  margin:18px auto 0!important;
+  padding:22px 0 15px!important;
+  border:0!important;
+  border-top:1px solid rgba(72,64,54,.18)!important;
+  border-bottom:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+}
+.site-footer .footer-identity{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:5px;
+  min-width:0;
+}
+.site-footer .footer-brand{
+  color:var(--ink,#302D29);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(18px,2vw,22px);
+  line-height:1.2;
+  letter-spacing:.015em;
+  text-decoration:none;
+}
+.site-footer .footer-copy{
+  margin:0!important;
+  color:var(--muted,#858078);
+  font-size:10px;
+  line-height:1.6;
+  letter-spacing:.035em;
+}
 .site-footer .site-metrics{
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:flex-end;
   flex-wrap:wrap;
-  gap:5px 14px;
-  margin:12px 0 0;
+  gap:5px 22px;
+  margin:0!important;
   color:var(--muted,#858078);
   font-size:11px;
   line-height:1.7;
   letter-spacing:.025em;
 }
-.site-footer .site-metric{display:inline-flex;align-items:baseline;gap:5px}
-.site-footer .site-metric-label{color:var(--muted,#858078)}
-.site-footer .site-metric-value{color:var(--ink,#302D29);font-size:13px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums}
-.site-footer .site-metric-unit{color:var(--muted,#858078)}
-.site-footer .site-metric-date{font-size:10px;opacity:.78}
-html.site-night .site-footer .site-metrics,
-html.site-night .site-footer .site-metric-label,
-html.site-night .site-footer .site-metric-unit,
-html.site-night .site-footer .site-metric-date{color:#aaa!important}
-html.site-night .site-footer .site-metric-value{color:#f2f2f2!important}
-@media(max-width:760px){
-  .site-footer .site-metrics{margin-top:10px;gap:3px 10px;font-size:10px}
-  .site-footer .site-metric-value{font-size:12px}
-}
-
-.site-footer .site-metric-goatcounter{
-  display:inline-flex;
-  align-items:baseline;
+.site-footer .site-metric{display:inline-flex;align-items:baseline;gap:6px;white-space:nowrap}
+.site-footer .site-metric-label,.site-footer .site-metric-unit{color:var(--muted,#858078)}
+.site-footer .site-metric-value,.site-footer .site-metric-goatcounter{
   color:var(--ink,#302D29);
-  font-size:13px;
+  font-size:14px;
   font-weight:600;
   line-height:1.4;
   font-variant-numeric:tabular-nums;
 }
-.site-footer .site-metric-goatcounter > div{
-  display:inline!important;
-  width:auto!important;
-  height:auto!important;
-  margin:0!important;
-  padding:0!important;
-  border:0!important;
-  background:transparent!important;
-  color:inherit!important;
-  font:inherit!important;
+.site-footer .site-metric-goatcounter{display:inline-flex;align-items:baseline}
+.site-footer .site-metric-goatcounter>div{
+  display:inline!important;width:auto!important;height:auto!important;margin:0!important;padding:0!important;
+  border:0!important;background:transparent!important;color:inherit!important;font:inherit!important;
 }
-html.site-night .site-footer .site-metric-goatcounter{color:#f2f2f2!important}
-@media(max-width:760px){.site-footer .site-metric-goatcounter{font-size:12px}}
-
-
-/* Compact site facts beneath the live metrics */
 .site-footer .site-metric-info{
-  flex-basis:100%;
-  text-align:center;
-  margin-top:1px;
+  grid-column:1/-1;
+  margin:0!important;
+  padding-top:10px;
+  border-top:1px solid rgba(72,64,54,.10);
   color:var(--muted,#858078);
   font-size:10px;
   line-height:1.6;
-  letter-spacing:.02em;
+  letter-spacing:.035em;
+  text-align:right;
 }
+.site-footer .site-history-entry{margin-top:7px}
+html.site-night .site-footer .footer-glass-card{border-top-color:rgba(255,255,255,.16)!important}
+html.site-night .site-footer .footer-brand,
+html.site-night .site-footer .site-metric-value,
+html.site-night .site-footer .site-metric-goatcounter{color:#f2f2f2!important}
+html.site-night .site-footer .footer-copy,
+html.site-night .site-footer .site-metrics,
+html.site-night .site-footer .site-metric-label,
+html.site-night .site-footer .site-metric-unit,
 html.site-night .site-footer .site-metric-info{color:#aaa!important}
+html.site-night .site-footer .site-metric-info{border-top-color:rgba(255,255,255,.10)}
+@media(max-width:760px){
+  .site-footer .footer-glass-card{
+    grid-template-columns:1fr;
+    gap:13px;
+    margin-top:15px!important;
+    padding:18px 0 12px!important;
+  }
+  .site-footer .footer-identity{align-items:center;text-align:center}
+  .site-footer .site-metrics{justify-content:center;gap:4px 15px}
+  .site-footer .site-metric-value,.site-footer .site-metric-goatcounter{font-size:13px}
+  .site-footer .site-metric-info{grid-column:auto;text-align:center;padding-top:9px}
+}
