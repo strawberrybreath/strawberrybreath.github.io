@@ -548,3 +548,5 @@ body.home-page.archive-page .archive-list .article-list-item>.article-list-image
     gap:13px!important;
   }
 }
+
+.article-list-item[data-article-theme="issue09"]{--card-theme-bg:#F1E4DF;--card-theme-border:rgba(150,93,88,.24)}
