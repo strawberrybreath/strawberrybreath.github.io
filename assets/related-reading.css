@@ -43,3 +43,5 @@
  .related-reading-description{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){.related-reading-card{transition:none}}
+
+.related-reading-card[data-article-theme="issue09"]{--related-bg:#F1E4DF;--related-border:rgba(150,93,88,.30)}
