@@ -36,3 +36,6 @@ body.archive-page .article-list-item[data-article-theme] .article-list-copy>p{co
  body.home-page .article-list-item[data-article-theme],
  body.archive-page .article-list-item[data-article-theme]{padding:10px!important;margin-bottom:12px!important;gap:13px!important}
 }
+
+body.home-page .article-list-item[data-article-theme="issue09"],
+body.archive-page .article-list-item[data-article-theme="issue09"]{--card-theme-bg:#F1E4DF;--card-theme-border:rgba(150,93,88,.30)}
