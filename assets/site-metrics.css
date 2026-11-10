@@ -1,0 +1,27 @@
+/* Quiet footer metrics — aligned with the existing site identity */
+.site-footer .site-metrics{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:5px 14px;
+  margin:12px 0 0;
+  color:var(--muted,#858078);
+  font-size:11px;
+  line-height:1.7;
+  letter-spacing:.025em;
+}
+.site-footer .site-metric{display:inline-flex;align-items:baseline;gap:5px}
+.site-footer .site-metric-label{color:var(--muted,#858078)}
+.site-footer .site-metric-value{color:var(--ink,#302D29);font:600 13px/1.4 inherit;font-variant-numeric:tabular-nums}
+.site-footer .site-metric-unit{color:var(--muted,#858078)}
+.site-footer .site-metric-date{font-size:10px;opacity:.78}
+html.site-night .site-footer .site-metrics,
+html.site-night .site-footer .site-metric-label,
+html.site-night .site-footer .site-metric-unit,
+html.site-night .site-footer .site-metric-date{color:#aaa!important}
+html.site-night .site-footer .site-metric-value{color:#f2f2f2!important}
+@media(max-width:760px){
+  .site-footer .site-metrics{margin-top:10px;gap:3px 10px;font-size:10px}
+  .site-footer .site-metric-value{font-size:12px}
+}
