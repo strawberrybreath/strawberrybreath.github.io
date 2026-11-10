@@ -100,14 +100,71 @@ html.site-night .site-footer .site-metric-info{border-top-color:rgba(255,255,255
   .site-footer .site-metric-info{grid-column:auto;text-align:center;padding-top:9px}
 }
 
-/* CounterAPI plain-text count */
+/* Stable text fallback: never allow a third-party error frame to distort the footer. */
 .site-footer .site-metric-goatcounter{
   display:inline-flex!important;
   align-items:baseline;
-  min-width:1ch;
+  min-width:0;
   color:var(--ink,#302D29)!important;
-  font:600 14px/1.4 inherit!important;
+  font-family:inherit!important;
+  font-size:13px!important;
+  font-weight:600!important;
+  line-height:1.4!important;
   font-variant-numeric:tabular-nums;
 }
 html.site-night .site-footer .site-metric-goatcounter{color:#f2f2f2!important}
 .site-footer .site-metric-goatcounter a{color:inherit!important;text-decoration:none!important}
+
+@media(max-width:760px){
+  .site-footer .footer-glass-card{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    justify-items:center!important;
+    gap:12px!important;
+    padding:17px 0 12px!important;
+  }
+  .site-footer .footer-identity{
+    align-items:center!important;
+    text-align:center!important;
+    gap:4px!important;
+  }
+  .site-footer .footer-brand{
+    font-family:var(--body)!important;
+    font-size:19px!important;
+    line-height:1.5!important;
+  }
+  .site-footer .footer-copy{
+    font-size:11px!important;
+    line-height:1.6!important;
+  }
+  .site-footer .site-metrics{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    justify-content:stretch!important;
+    align-items:center!important;
+    width:100%!important;
+    gap:9px 8px!important;
+    font-size:11px!important;
+  }
+  .site-footer .site-metric{
+    justify-content:center!important;
+    gap:5px!important;
+    min-width:0!important;
+    white-space:nowrap!important;
+  }
+  .site-footer .site-metric-value,
+  .site-footer .site-metric-goatcounter{
+    font-size:13px!important;
+  }
+  .site-footer .site-metric-info{
+    grid-column:1/-1!important;
+    width:100%!important;
+    box-sizing:border-box!important;
+    padding-top:9px!important;
+    margin-top:1px!important;
+    text-align:center!important;
+    font-size:10px!important;
+    line-height:1.7!important;
+    white-space:normal!important;
+  }
+}
