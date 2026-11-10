@@ -4760,3 +4760,66 @@ html body.reading-complete .site-header .header-reading .reading-ring{
     display:inline!important;flex:0 1 auto!important;white-space:nowrap!important;
   }
 }
+
+
+/* 2026-11-10: replace the animated wave with a quiet, static warm-paper grid. */
+html{
+  background:#F4F0E8!important;
+}
+html::before{
+  content:""!important;
+  position:fixed!important;
+  inset:0!important;
+  z-index:-2!important;
+  display:block!important;
+  pointer-events:none!important;
+  opacity:1!important;
+  transform:none!important;
+  animation:none!important;
+  will-change:auto!important;
+  background-color:#F4F0E8!important;
+  background-image:
+    linear-gradient(rgba(91,78,62,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(91,78,62,.045) 1px,transparent 1px)!important;
+  background-size:28px 28px!important;
+  background-position:0 0!important;
+  background-repeat:repeat!important;
+}
+html::after{
+  content:none!important;
+  display:none!important;
+  animation:none!important;
+  background-image:none!important;
+  transform:none!important;
+  will-change:auto!important;
+}
+body{
+  background:transparent!important;
+  background-image:none!important;
+  isolation:auto!important;
+}
+@media(prefers-reduced-motion:reduce){
+  html::before,html::after{animation:none!important;transform:none!important}
+}
+
+/* Night reading remains a pure-black canvas with no daytime grid. */
+html.site-night,
+html.site-night body,
+html.site-night .site-frame,
+html.site-night main,
+html.site-night .home-page,
+html.site-night .archive-page{
+  background:#000000!important;
+  background-image:none!important;
+}
+html.site-night::before{
+  background:#000000!important;
+  background-image:none!important;
+  opacity:1!important;
+}
+html.site-night::after{
+  content:none!important;
+  display:none!important;
+  background-image:none!important;
+  animation:none!important;
+}
