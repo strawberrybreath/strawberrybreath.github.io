@@ -38,7 +38,7 @@
     const metrics = document.createElement("div");
     metrics.className = "site-metrics";
     metrics.setAttribute("aria-label", "网站运行信息");
-    metrics.innerHTML = '<span class="site-metric"><span class="site-metric-label">网站运行</span><strong class="site-metric-value" data-site-runtime></strong><span class="site-metric-unit">天</span></span><span class="site-metric site-metric-counter"><span class="site-metric-label">累计访问</span><span class="site-metric-goatcounter" data-site-views>读取中</span></span><span class="site-metric-date">始于 2026.08.18</span>';
+    metrics.innerHTML = '<span class="site-metric"><span class="site-metric-label">运行时间</span><strong class="site-metric-value" data-site-runtime></strong><span class="site-metric-unit">天</span></span><span class="site-metric site-metric-counter"><span class="site-metric-label">累计访问量</span><span class="site-metric-goatcounter" data-site-views>读取中</span></span><span class="site-metric-date">始于 2026.08.18</span><span class="site-metric-info">个人博客 · 阅读、观察与生活记录 · GitHub Pages</span>';
     const identity = footer.querySelector(".footer-identity");
     if (identity) identity.insertAdjacentElement("afterend", metrics);
     else footer.appendChild(metrics);
