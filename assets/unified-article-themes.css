@@ -2,16 +2,16 @@
    One palette per issue. Shared by article chrome, emphasis cards and archive/home cards.
    Night mode intentionally removes all issue colors. */
 :root{
-  --issue01-accent:#A6534E;--issue01-strong:#783B3C;--issue01-wash:#F2E4DE;--issue01-deep:#E8D0C8;--issue01-line:rgba(166,83,78,.25);
-  --issue02-accent:#756047;--issue02-strong:#4F3D35;--issue02-wash:#EAE4D8;--issue02-deep:#DCD1BD;--issue02-line:rgba(117,96,71,.25);
-  --issue03-accent:#617C78;--issue03-strong:#3F5E5B;--issue03-wash:#E5ECE7;--issue03-deep:#D3E1DB;--issue03-line:rgba(97,124,120,.25);
-  --issue04-accent:#8A7047;--issue04-strong:#5F4B31;--issue04-wash:#EEE8D9;--issue04-deep:#E1D5BC;--issue04-line:rgba(138,112,71,.25);
-  --issue05-accent:#8C454B;--issue05-strong:#63363A;--issue05-wash:#F1E5DF;--issue05-deep:#E8D5D0;--issue05-line:rgba(140,69,75,.25);
-  --issue06-accent:#684A63;--issue06-strong:#51364F;--issue06-wash:#E9DFE7;--issue06-deep:#D8C8D8;--issue06-line:rgba(104,74,99,.25);
-  --issue07-accent:#526B56;--issue07-strong:#3F5145;--issue07-wash:#E5E8DE;--issue07-deep:#D6DDCF;--issue07-line:rgba(63,81,69,.25);
-  --issue08-accent:#354653;--issue08-strong:#263640;--issue08-wash:#E8EDF0;--issue08-deep:#D5E0E5;--issue08-line:rgba(53,70,83,.25);
-  --issue09-accent:#965D58;--issue09-strong:#714A45;--issue09-wash:#F1E4DF;--issue09-deep:#E8D3CE;--issue09-line:rgba(150,93,88,.25);
-  --issue10-accent:#687C83;--issue10-strong:#40575E;--issue10-wash:#E7ECEC;--issue10-deep:#D3DEDF;--issue10-line:rgba(104,124,131,.25);
+  --issue01-accent:#B86B45;--issue01-strong:#78452F;--issue01-wash:#F5E9DE;--issue01-deep:#EBD3C1;--issue01-line:rgba(184,107,69,.25);
+  --issue02-accent:#76647C;--issue02-strong:#4D4057;--issue02-wash:#ECE7EF;--issue02-deep:#DCD3E2;--issue02-line:rgba(118,100,124,.25);
+  --issue03-accent:#68857E;--issue03-strong:#435F5A;--issue03-wash:#E8EFEB;--issue03-deep:#D4E2DC;--issue03-line:rgba(104,133,126,.25);
+  --issue04-accent:#777B78;--issue04-strong:#454A47;--issue04-wash:#E9EAE7;--issue04-deep:#D7DAD5;--issue04-line:rgba(119,123,120,.25);
+  --issue05-accent:#A66C75;--issue05-strong:#704650;--issue05-wash:#F3E8E8;--issue05-deep:#E6D3D7;--issue05-line:rgba(166,108,117,.25);
+  --issue06-accent:#79627A;--issue06-strong:#514257;--issue06-wash:#EEE8F0;--issue06-deep:#DDD1E2;--issue06-line:rgba(121,98,122,.25);
+  --issue07-accent:#65765B;--issue07-strong:#414F3D;--issue07-wash:#E9EDE3;--issue07-deep:#D8E0D0;--issue07-line:rgba(101,118,91,.25);
+  --issue08-accent:#526A79;--issue08-strong:#344956;--issue08-wash:#E8EEF1;--issue08-deep:#D5E0E6;--issue08-line:rgba(82,106,121,.25);
+  --issue09-accent:#A65F59;--issue09-strong:#71413E;--issue09-wash:#F3E7E2;--issue09-deep:#E8D3CC;--issue09-line:rgba(166,95,89,.25);
+  --issue10-accent:#617D83;--issue10-strong:#3D555C;--issue10-wash:#E7EEEF;--issue10-deep:#D3E0E2;--issue10-line:rgba(97,125,131,.25);
 }
 
 /* Each article body receives its own single source of truth. */
