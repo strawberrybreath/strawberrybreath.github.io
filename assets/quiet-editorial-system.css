@@ -4823,3 +4823,14 @@ html.site-night::after{
   background-image:none!important;
   animation:none!important;
 }
+
+
+/* Let the grid remain visible beneath page content while retaining a soft profile surface. */
+html body.article-page{
+  background:transparent!important;
+  background-image:none!important;
+}
+html body.home-page .home-profile{
+  background:rgba(248,245,239,.58)!important;
+  background-image:none!important;
+}
