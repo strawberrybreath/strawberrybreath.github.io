@@ -1,0 +1,143 @@
+/* Strawberry Breath · Unified article theme system
+   One palette per issue. Shared by article chrome, emphasis cards and archive/home cards.
+   Night mode intentionally removes all issue colors. */
+:root{
+  --issue01-accent:#A6534E;--issue01-strong:#783B3C;--issue01-wash:#F2E4DE;--issue01-deep:#E8D0C8;--issue01-line:rgba(166,83,78,.25);
+  --issue02-accent:#756047;--issue02-strong:#4F3D35;--issue02-wash:#EAE4D8;--issue02-deep:#DCD1BD;--issue02-line:rgba(117,96,71,.25);
+  --issue03-accent:#617C78;--issue03-strong:#3F5E5B;--issue03-wash:#E5ECE7;--issue03-deep:#D3E1DB;--issue03-line:rgba(97,124,120,.25);
+  --issue04-accent:#8A7047;--issue04-strong:#5F4B31;--issue04-wash:#EEE8D9;--issue04-deep:#E1D5BC;--issue04-line:rgba(138,112,71,.25);
+  --issue05-accent:#8C454B;--issue05-strong:#63363A;--issue05-wash:#F1E5DF;--issue05-deep:#E8D5D0;--issue05-line:rgba(140,69,75,.25);
+  --issue06-accent:#684A63;--issue06-strong:#51364F;--issue06-wash:#E9DFE7;--issue06-deep:#D8C8D8;--issue06-line:rgba(104,74,99,.25);
+  --issue07-accent:#526B56;--issue07-strong:#3F5145;--issue07-wash:#E5E8DE;--issue07-deep:#D6DDCF;--issue07-line:rgba(63,81,69,.25);
+  --issue08-accent:#354653;--issue08-strong:#263640;--issue08-wash:#E8EDF0;--issue08-deep:#D5E0E5;--issue08-line:rgba(53,70,83,.25);
+  --issue09-accent:#965D58;--issue09-strong:#714A45;--issue09-wash:#F1E4DF;--issue09-deep:#E8D3CE;--issue09-line:rgba(150,93,88,.25);
+  --issue10-accent:#687C83;--issue10-strong:#40575E;--issue10-wash:#E7ECEC;--issue10-deep:#D3DEDF;--issue10-line:rgba(104,124,131,.25);
+}
+
+/* Each article body receives its own single source of truth. */
+body.article-page.enola-article-page{--article-accent:var(--issue01-accent);--article-accent-strong:var(--issue01-strong);--article-wash:var(--issue01-wash);--article-wash-deep:var(--issue01-deep);--article-line:var(--issue01-line)}
+body.article-page.witch-article-page{--article-accent:var(--issue02-accent);--article-accent-strong:var(--issue02-strong);--article-wash:var(--issue02-wash);--article-wash-deep:var(--issue02-deep);--article-line:var(--issue02-line)}
+body.article-page.poem-article-page{--article-accent:var(--issue03-accent);--article-accent-strong:var(--issue03-strong);--article-wash:var(--issue03-wash);--article-wash-deep:var(--issue03-deep);--article-line:var(--issue03-line)}
+body.article-page.tobacco-article-page{--article-accent:var(--issue04-accent);--article-accent-strong:var(--issue04-strong);--article-wash:var(--issue04-wash);--article-wash-deep:var(--issue04-deep);--article-line:var(--issue04-line)}
+body.article-page.redchamber-page{--article-accent:var(--issue05-accent);--article-accent-strong:var(--issue05-strong);--article-wash:var(--issue05-wash);--article-wash-deep:var(--issue05-deep);--article-line:var(--issue05-line)}
+body.article-page.article06-page{--article-accent:var(--issue06-accent);--article-accent-strong:var(--issue06-strong);--article-wash:var(--issue06-wash);--article-wash-deep:var(--issue06-deep);--article-line:var(--issue06-line)}
+body.article-page.article07-page{--article-accent:var(--issue07-accent);--article-accent-strong:var(--issue07-strong);--article-wash:var(--issue07-wash);--article-wash-deep:var(--issue07-deep);--article-line:var(--issue07-line)}
+body.article-page.article08-page{--article-accent:var(--issue08-accent);--article-accent-strong:var(--issue08-strong);--article-wash:var(--issue08-wash);--article-wash-deep:var(--issue08-deep);--article-line:var(--issue08-line)}
+body.article-page.article09-page{--article-accent:var(--issue09-accent);--article-accent-strong:var(--issue09-strong);--article-wash:var(--issue09-wash);--article-wash-deep:var(--issue09-deep);--article-line:var(--issue09-line)}
+body.article-page.article10-page{--article-accent:var(--issue10-accent);--article-accent-strong:var(--issue10-strong);--article-wash:var(--issue10-wash);--article-wash-deep:var(--issue10-deep);--article-line:var(--issue10-line)}
+
+/* Article navigation: the strong shade is the shared navigation color. */
+body.article-page .site-header{
+  background:var(--article-accent-strong)!important;background-image:none!important;
+  border-bottom:1px solid var(--article-accent-strong)!important;
+  box-shadow:0 3px 12px rgba(40,30,25,.10)!important;
+  backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+}
+body.article-page .site-header .brand-text strong,
+body.article-page .site-header .brand-text small,
+body.article-page .site-header .site-nav a,
+body.article-page .site-header .site-nav a:hover,
+body.article-page .site-header .site-nav a.is-current,
+body.article-page .site-header .header-reading,
+body.article-page .site-header .header-reading *{color:#FFF9F2!important}
+body.article-page .site-header .site-nav a.is-current::after{background:#FFF9F2!important}
+body.article-page .site-header .header-reading .reading-ring:before{background:var(--article-accent-strong)!important}
+
+/* Article opening/title panel. */
+body.article-page .article-hero{
+  background:linear-gradient(132deg,var(--article-wash) 0%,#FBF8F1 56%,var(--article-wash-deep) 100%)!important;
+  border:1px solid var(--article-line)!important;border-bottom:1px solid var(--article-line)!important;
+  box-shadow:inset 0 3px 0 var(--article-line),0 12px 30px rgba(48,40,34,.045)!important;
+}
+body.article-page .article-hero h1{color:var(--article-accent-strong)!important}
+body.article-page .article-hero h1 em,
+body.article-page .article-topline a,
+body.article-page .article-publication-meta span{color:var(--article-accent)!important}
+body.article-page .article-subtitle{color:var(--article-accent-strong)!important}
+body.article-page .article-tags span{
+  background:rgba(255,252,247,.68)!important;border:1px solid var(--article-line)!important;color:var(--article-accent-strong)!important;
+}
+
+/* Highlighted sentences, quotations and closing cards use the same light wash. */
+body.article-page .essay-content p.article-highlight,
+body.article-page .essay-content blockquote,
+body.article-page .essay-content .essay-quote,
+body.article-page .essay-content .quote-card,
+body.article-page .essay-content .redchamber-quote,
+body.article-page .essay-content .poem-original,
+body.article-page .essay-content .poem-context,
+body.article-page .article08-ending,
+body.article-page .article09-ending,
+body.article-page .article10-ending{
+  background:linear-gradient(135deg,var(--article-wash) 0%,var(--article-wash-deep) 100%)!important;
+  border-color:var(--article-line)!important;
+  color:var(--article-accent-strong)!important;
+}
+body.article-page .essay-content p.article-highlight{
+  border:1px solid var(--article-line)!important;border-left:4px solid var(--article-accent)!important;
+  border-radius:0 10px 10px 0!important;padding:1.05em 1.25em!important;
+}
+body.article-page .essay-content blockquote,
+body.article-page .essay-content .essay-quote,
+body.article-page .essay-content .redchamber-quote{border-left:4px solid var(--article-accent)!important}
+body.article-page .essay-section-title,
+body.article-page .article08-ending .quote,
+body.article-page .article09-ending .quote,
+body.article-page .article10-ending .quote{color:var(--article-accent-strong)!important}
+body.article-page .essay-section-title{border-left-color:var(--article-accent)!important}
+body.article-page .article08-ending,
+body.article-page .article09-ending,
+body.article-page .article10-ending{border:1px solid var(--article-line)!important}
+
+/* Homepage and archive cards use exactly the same light shade as their article. */
+body.home-page .article-list-item[data-article-theme],
+body.archive-page .article-list-item[data-article-theme]{
+  background:var(--card-theme-bg)!important;background-image:none!important;
+  border:1px solid var(--card-theme-border)!important;border-bottom:1px solid var(--card-theme-border)!important;
+}
+body.home-page .article-list-item[data-article-theme="issue01"],
+body.archive-page .article-list-item[data-article-theme="issue01"]{--card-theme-bg:var(--issue01-wash);--card-theme-border:var(--issue01-line)}
+body.home-page .article-list-item[data-article-theme="issue02"],
+body.archive-page .article-list-item[data-article-theme="issue02"]{--card-theme-bg:var(--issue02-wash);--card-theme-border:var(--issue02-line)}
+body.home-page .article-list-item[data-article-theme="issue03"],
+body.archive-page .article-list-item[data-article-theme="issue03"]{--card-theme-bg:var(--issue03-wash);--card-theme-border:var(--issue03-line)}
+body.home-page .article-list-item[data-article-theme="issue04"],
+body.archive-page .article-list-item[data-article-theme="issue04"]{--card-theme-bg:var(--issue04-wash);--card-theme-border:var(--issue04-line)}
+body.home-page .article-list-item[data-article-theme="issue05"],
+body.archive-page .article-list-item[data-article-theme="issue05"]{--card-theme-bg:var(--issue05-wash);--card-theme-border:var(--issue05-line)}
+body.home-page .article-list-item[data-article-theme="issue06"],
+body.archive-page .article-list-item[data-article-theme="issue06"]{--card-theme-bg:var(--issue06-wash);--card-theme-border:var(--issue06-line)}
+body.home-page .article-list-item[data-article-theme="issue07"],
+body.archive-page .article-list-item[data-article-theme="issue07"]{--card-theme-bg:var(--issue07-wash);--card-theme-border:var(--issue07-line)}
+body.home-page .article-list-item[data-article-theme="issue08"],
+body.archive-page .article-list-item[data-article-theme="issue08"]{--card-theme-bg:var(--issue08-wash);--card-theme-border:var(--issue08-line)}
+body.home-page .article-list-item[data-article-theme="issue09"],
+body.archive-page .article-list-item[data-article-theme="issue09"]{--card-theme-bg:var(--issue09-wash);--card-theme-border:var(--issue09-line)}
+body.home-page .article-list-item[data-article-theme="issue10"],
+body.archive-page .article-list-item[data-article-theme="issue10"]{--card-theme-bg:var(--issue10-wash);--card-theme-border:var(--issue10-line)}
+body.home-page .article-list-item[data-article-theme] h3 a,
+body.archive-page .article-list-item[data-article-theme] h3 a{color:#302D29!important}
+body.home-page .article-list-item[data-article-theme] .article-list-copy>p,
+body.archive-page .article-list-item[data-article-theme] .article-list-copy>p{color:#62594F!important}
+
+/* Night reading is intentionally neutral and overrides every article palette. */
+html.site-night body.home-page .article-list-item[data-article-theme],
+html.site-night body.archive-page .article-list-item[data-article-theme]{
+  background:#252827!important;background-image:none!important;border-color:#383D3B!important;box-shadow:none!important;
+}
+html.site-night body.article-page .site-header{background:#171A19!important;background-image:none!important;border-color:#303533!important}
+html.site-night body.article-page .article-hero,
+html.site-night body.article-page .essay-content p.article-highlight,
+html.site-night body.article-page .essay-content blockquote,
+html.site-night body.article-page .essay-content .essay-quote,
+html.site-night body.article-page .essay-content .quote-card,
+html.site-night body.article-page .essay-content .redchamber-quote,
+html.site-night body.article-page .essay-content .poem-original,
+html.site-night body.article-page .essay-content .poem-context,
+html.site-night body.article-page .article08-ending,
+html.site-night body.article-page .article09-ending,
+html.site-night body.article-page .article10-ending{
+  background:#252827!important;background-image:none!important;border-color:#383D3B!important;box-shadow:none!important;
+}
+html.site-night body.article-page .article-hero::before,
+html.site-night body.article-page .article-hero::after{content:none!important;display:none!important}
