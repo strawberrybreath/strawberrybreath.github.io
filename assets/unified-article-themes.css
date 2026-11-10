@@ -141,3 +141,18 @@ html.site-night body.article-page .article10-ending{
 }
 html.site-night body.article-page .article-hero::before,
 html.site-night body.article-page .article-hero::after{content:none!important;display:none!important}
+
+/* The theme stylesheet is loaded after legacy page styles; explicitly preserve night-mode white typography. */
+html.site-night body.article-page .article-hero *,
+html.site-night body.article-page .essay-content p.article-highlight *,
+html.site-night body.article-page .essay-content blockquote *,
+html.site-night body.article-page .essay-content .essay-quote *,
+html.site-night body.article-page .essay-content .quote-card *,
+html.site-night body.article-page .essay-content .redchamber-quote *,
+html.site-night body.article-page .essay-content .poem-original *,
+html.site-night body.article-page .essay-content .poem-context *,
+html.site-night body.article-page .article08-ending *,
+html.site-night body.article-page .article09-ending *,
+html.site-night body.article-page .article10-ending *{
+  color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+}
