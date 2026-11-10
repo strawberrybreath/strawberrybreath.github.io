@@ -291,3 +291,47 @@
   font-size:16px!important;
   line-height:2.12!important;
 }
+
+
+/* 2026-11-10: homepage typography and component scale normalization. */
+.home-page main,
+.home-page main :where(h1,h2,h3,h4,p,a,li,button,small,time,span,figcaption){font-family:"LXGW WenKai","KaiTi","STKaiti","Kaiti SC","华文楷体","楷体",serif}
+.home-page .brand-text strong,.home-page .feminist-kicker,.home-page .feminist-links-heading,.home-page .contact-eyebrow,.home-page .site-slogan span+span{font-family:"DM Sans","PingFang SC",Arial,sans-serif!important}
+.home-page .home-intro h1{font-size:clamp(40px,4.6vw,58px)!important;line-height:1.32!important;margin-bottom:20px!important}
+.home-page .home-profile h2,.home-page .home-section-heading h2,.home-page .contact-intro h2,.home-page .feminist-section h2{font-size:clamp(26px,3vw,34px)!important;line-height:1.45!important;font-weight:500!important}
+.home-page .home-subtitle{font-size:16px!important;line-height:1.9!important}
+.home-page .home-about p,.home-page .home-profile p:not(.about-cats-intro),.home-page .feminist-statement,.home-page .feminist-invitation{font-size:16px!important;line-height:2.05!important}
+.home-page .home-profile .about-lead{font-size:20px!important;line-height:1.85!important}
+.home-page .home-section-heading{align-items:center;min-height:48px}
+.home-page .article-list-item[data-article-theme]{display:grid!important;grid-template-columns:132px minmax(0,1fr)!important;gap:20px!important;align-items:center!important;min-height:142px;padding:14px 16px!important;margin:0 0 14px!important}
+.home-page .article-list-image{width:132px!important;max-width:132px!important;height:108px!important;overflow:hidden!important}
+.home-page .article-list-image img{width:100%!important;height:100%!important;object-fit:cover!important}
+.home-page .article-list-copy h3{font-size:19px!important;line-height:1.55!important;margin:0 0 7px!important}
+.home-page .article-list-copy>p:not(.article-list-category){font-size:14px!important;line-height:1.85!important}
+.home-page .article-list-meta,.home-page .article-list-date{font-size:12px!important;line-height:1.6!important}
+.home-page .feminist-links{align-items:stretch;gap:16px!important}
+.home-page .feminist-card{height:100%;min-height:260px;padding:20px!important;border-radius:5px!important}
+.home-page .feminist-card h3{font-size:16px!important;line-height:1.5!important}
+.home-page .feminist-card-cn{font-size:12px!important;line-height:1.65!important}
+.home-page .feminist-card-description{font-size:13px!important;line-height:1.85!important}
+.home-page .feminist-visit{font-size:12px!important;line-height:1.65!important}
+.home-page .contact-card{min-height:76px!important;padding:12px 4px!important}
+.home-page .contact-card-copy strong{font-size:16px!important;line-height:1.5!important}
+.home-page .contact-card-copy small{font-size:12px!important;line-height:1.7!important}
+.home-page .about-cats-track img{aspect-ratio:4/5;object-fit:cover}
+@media(max-width:760px){
+.home-page .home-intro h1{font-size:clamp(32px,8.4vw,43px)!important;line-height:1.38!important}
+.home-page .home-profile h2,.home-page .home-section-heading h2,.home-page .contact-intro h2,.home-page .feminist-section h2{font-size:25px!important;line-height:1.45!important}
+.home-page .home-about p,.home-page .home-profile p:not(.about-cats-intro),.home-page .feminist-statement,.home-page .feminist-invitation{font-size:14px!important;line-height:2.05!important}
+.home-page .home-profile .about-lead{font-size:17px!important;line-height:1.85!important}
+.home-page .article-list-item[data-article-theme]{grid-template-columns:92px minmax(0,1fr)!important;gap:13px!important;min-height:116px;padding:10px!important}
+.home-page .article-list-image{width:92px!important;max-width:92px!important;height:96px!important}
+.home-page .article-list-copy h3{font-size:15px!important;line-height:1.5!important}
+.home-page .article-list-copy>p:not(.article-list-category){font-size:12px!important;line-height:1.75!important}
+.home-page .article-list-meta,.home-page .article-list-date{font-size:10px!important}
+.home-page .feminist-card{min-height:0;padding:17px 16px!important}
+.home-page .feminist-card-description{font-size:12px!important;line-height:1.8!important}
+.home-page .contact-card{min-height:68px!important;padding:10px 0!important}
+.home-page .contact-card-copy strong{font-size:15px!important}
+.home-page .contact-card-copy small{font-size:11px!important}
+}
