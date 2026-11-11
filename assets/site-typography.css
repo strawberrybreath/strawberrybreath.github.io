@@ -301,3 +301,11 @@ html body .history-entry p {
     line-height: 1.85 !important;
   }
 }
+
+/* Homepage wordmark: use the decorative Latin script only for the English site title. */
+.home-page .home-intro h1,
+.home-page .home-intro h1#site-title {
+  font-family: "Italianno", cursive !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
