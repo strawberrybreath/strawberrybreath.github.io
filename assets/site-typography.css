@@ -200,7 +200,7 @@ body.home-page .site-history .history-entry h2 {
 
 /* Final site-wide font lock + Chinese paragraph edge alignment.
    Keep the final line naturally left-aligned; justify only the preceding lines. */
-html, html body, html body * {
+html, html body, html body *:not(#font-lock-never) {
   font-family: var(--site-font-cn) !important;
 }
 .article-page .essay-content p,
