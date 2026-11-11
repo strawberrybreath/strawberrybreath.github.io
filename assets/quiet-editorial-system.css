@@ -4834,3 +4834,31 @@ html body.home-page .home-profile{
   background:rgba(248,245,239,.58)!important;
   background-image:none!important;
 }
+
+
+/* 2026-11-11: make the About section flow directly on the page, like the opening introduction.
+   No separate surface, tint, decorative panel, or night-mode color seam. */
+html body.home-page .home-profile,
+html body.home-page .home-profile-inner {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+html body.home-page .home-profile {
+  border: 0 !important;
+}
+html body.home-page .home-profile::before,
+html body.home-page .home-profile::after {
+  content: none !important;
+  display: none !important;
+}
+html.site-night body.home-page .home-profile,
+html.site-night body.home-page .home-profile-inner {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
