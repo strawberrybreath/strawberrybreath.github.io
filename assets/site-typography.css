@@ -1,0 +1,175 @@
+/* Strawberry Breath — unified site typography, 2026-11-11
+   One shared type scale for the homepage, archive, history section and all essays.
+   Theme colors, spacing, card geometry and article content are intentionally untouched. */
+:root {
+  --site-font-cn: "LXGW WenKai", "霞鹜文楷", "Kaiti SC", "STKaiti", serif;
+  --site-font-body-size: 17px;
+}
+html, body {
+  font-family: var(--site-font-cn) !important;
+  font-size: var(--site-font-body-size) !important;
+}
+body,
+body p, body li, body a, body button, body input, body textarea, body select,
+body label, body small, body div, body nav, body footer, body header,
+body h1, body h2, body h3, body h4, body figcaption, body blockquote,
+body cite, body time, body dt, body dd, body strong, body em {
+  font-family: var(--site-font-cn) !important;
+}
+
+/* Shared semantic hierarchy */
+body h1 { font-size: clamp(38px, 4.6vw, 48px) !important; line-height: 1.42 !important; }
+body h2 { font-size: 26px !important; line-height: 1.55 !important; }
+body h3 { font-size: 21px !important; line-height: 1.55 !important; }
+body h4 { font-size: 18px !important; line-height: 1.6 !important; }
+body p, body li { font-size: 17px !important; line-height: 2.05 !important; }
+
+/* Shared header, navigation and supporting information */
+.site-header .brand-text strong, .site-header .brand-text small,
+.site-nav a, .site-footer, .footer-bottom, .article-meta,
+.article-topline, .article-tags, .article-list-meta,
+.archive-meta, .archive-page .article-list-meta {
+  font-family: var(--site-font-cn) !important;
+}
+.site-nav a { font-size: 13px !important; }
+.article-meta, .article-topline, .article-tags, .article-list-meta,
+.archive-meta { font-size: 12px !important; line-height: 1.7 !important; }
+.site-footer, .footer-bottom { font-size: 12px !important; line-height: 1.8 !important; }
+
+/* Homepage: introduction, section headings, profile, feminist resources and contact */
+.home-page .home-intro h1 {
+  font-size: clamp(42px, 5.2vw, 58px) !important;
+  line-height: 1.4 !important;
+}
+.home-page .home-subtitle { font-size: 16px !important; line-height: 1.85 !important; }
+.home-page .home-about p, .home-page .home-profile p,
+.home-page .contact-intro > p, .home-page .home-contact-intro,
+.home-page .feminist-section p {
+  font-size: 16px !important; line-height: 2.05 !important;
+}
+.home-page .home-section-heading h2,
+.home-page .home-profile h2, .home-page .contact-intro h2,
+.home-page .home-contact h2, .home-page .feminist-section h2 {
+  font-size: 26px !important; line-height: 1.55 !important;
+}
+.home-page .article-list-copy h3 { font-size: 18px !important; line-height: 1.6 !important; }
+.home-page .article-list-copy > p:not(.article-list-category):not(.article-list-meta) {
+  font-size: 14px !important; line-height: 1.9 !important;
+}
+.home-page .article-list-category, .home-page .article-list-meta,
+.home-page .home-kicker, .home-page .contact-card-copy small {
+  font-size: 12px !important; line-height: 1.75 !important;
+}
+.home-page .contact-card-copy strong, .home-page .home-contact-links {
+  font-size: 16px !important;
+}
+
+/* Article archive / list page */
+.archive-page .archive-heading h1,
+.archive-page .archive-title, .archive-page .page-title {
+  font-size: clamp(34px, 4.2vw, 44px) !important; line-height: 1.45 !important;
+}
+.archive-page .archive-heading p { font-size: 15px !important; line-height: 2 !important; }
+.archive-page .article-list-copy h3 { font-size: 18px !important; line-height: 1.6 !important; }
+.archive-page .article-list-copy > p:not(.article-list-category) {
+  font-size: 14px !important; line-height: 1.9 !important;
+}
+.archive-page .article-list-category, .archive-page .article-list-meta,
+.archive-page .article-issue, .archive-page .article-list-date,
+.archive-page .archive-meta { font-size: 12px !important; line-height: 1.7 !important; }
+
+/* Article detail pages: identical reading scale, while each issue keeps its own colors */
+.article-page .article-hero h1, .article-page .article-title,
+.article-page .issue-hero h1 {
+  font-size: clamp(38px, 4.6vw, 48px) !important; line-height: 1.48 !important;
+}
+.article-page .article-subtitle { font-size: 17px !important; line-height: 1.9 !important; }
+.article-page .article-deck { font-size: 15px !important; line-height: 2 !important; }
+.article-page .essay-content p, .article-page .essay-content li,
+.article-page .article-body p, .article-page .issue-content p,
+.article-page .essay-body p {
+  font-size: 17px !important; line-height: 2.05 !important;
+  letter-spacing: 0 !important; text-align: left !important;
+}
+.article-page .essay-content h2, .article-page .essay-section-title,
+.article-page .article-section h2 { font-size: 25px !important; line-height: 1.6 !important; }
+.article-page .essay-content h3, .article-page .article-section h3 { font-size: 20px !important; line-height: 1.6 !important; }
+.article-page figure figcaption, .article-page .article-caption,
+.article-page .image-caption { font-size: 11px !important; line-height: 1.7 !important; }
+.article-page .article-tags span, .article-page .article-meta,
+.article-page .article-topline span { font-size: 12px !important; line-height: 1.7 !important; }
+
+/* History timeline and history copy inside the homepage */
+.site-history, #site-history, .history-section, .site-history-entry,
+.site-history-timeline, .history-timeline {
+  font-family: var(--site-font-cn) !important;
+}
+.site-history h2, #site-history h2, .history-section h2 { font-size: 25px !important; line-height: 1.55 !important; }
+.site-history h3, #site-history h3, .history-section h3 { font-size: 19px !important; line-height: 1.6 !important; }
+.site-history p, #site-history p, .history-section p,
+.site-history li, #site-history li, .history-section li {
+  font-size: 15px !important; line-height: 1.95 !important;
+}
+.site-history time, #site-history time, .history-date,
+.site-history small, #site-history small { font-size: 12px !important; line-height: 1.7 !important; }
+
+/* Preserve deliberately distinct Latin/script and pronunciation treatments */
+.brand-en, .script-wordmark, .english-script, .article06-page .lyric-pronunciation,
+.article07-page .lyric-pronunciation {
+  font-family: "Italianno", Arial, sans-serif !important;
+}
+.article06-page .lyric-pronunciation, .article07-page .lyric-pronunciation {
+  font-family: Arial, sans-serif !important;
+}
+
+@media (max-width: 760px) {
+  :root { --site-font-body-size: 16px; }
+  body, body p, body li { font-size: 16px !important; line-height: 2 !important; }
+  body h1 { font-size: clamp(30px, 8vw, 36px) !important; line-height: 1.48 !important; }
+  body h2 { font-size: 23px !important; line-height: 1.55 !important; }
+  body h3 { font-size: 19px !important; line-height: 1.6 !important; }
+  body h4 { font-size: 17px !important; }
+  .site-nav a { font-size: 12px !important; }
+  .article-meta, .article-topline, .article-tags, .article-list-meta,
+  .archive-meta, .site-footer, .footer-bottom { font-size: 11px !important; }
+  .home-page .home-intro h1 { font-size: clamp(34px, 9vw, 44px) !important; line-height: 1.45 !important; }
+  .home-page .home-subtitle { font-size: 14px !important; }
+  .home-page .home-about p, .home-page .home-profile p,
+  .home-page .contact-intro > p, .home-page .home-contact-intro,
+  .home-page .feminist-section p { font-size: 15px !important; line-height: 2 !important; }
+  .home-page .home-section-heading h2, .home-page .home-profile h2,
+  .home-page .contact-intro h2, .home-page .home-contact h2,
+  .home-page .feminist-section h2 { font-size: 23px !important; }
+  .home-page .article-list-copy h3, .archive-page .article-list-copy h3 {
+    font-size: 16px !important; line-height: 1.6 !important;
+  }
+  .home-page .article-list-copy > p:not(.article-list-category):not(.article-list-meta),
+  .archive-page .article-list-copy > p:not(.article-list-category) {
+    font-size: 13px !important; line-height: 1.9 !important;
+  }
+  .home-page .article-list-category, .home-page .article-list-meta,
+  .home-page .home-kicker, .home-page .contact-card-copy small,
+  .archive-page .article-list-category, .archive-page .article-list-meta,
+  .archive-page .article-issue, .archive-page .article-list-date,
+  .archive-page .archive-meta { font-size: 11px !important; }
+  .archive-page .archive-heading h1, .archive-page .archive-title,
+  .archive-page .page-title { font-size: 32px !important; }
+  .article-page .article-hero h1, .article-page .article-title,
+  .article-page .issue-hero h1 { font-size: clamp(30px, 8vw, 36px) !important; }
+  .article-page .article-subtitle { font-size: 15px !important; }
+  .article-page .article-deck { font-size: 14px !important; }
+  .article-page .essay-content p, .article-page .essay-content li,
+  .article-page .article-body p, .article-page .issue-content p,
+  .article-page .essay-body p { font-size: 16px !important; line-height: 2 !important; }
+  .article-page .essay-content h2, .article-page .essay-section-title,
+  .article-page .article-section h2 { font-size: 22px !important; }
+  .article-page .essay-content h3, .article-page .article-section h3 { font-size: 19px !important; }
+  .article-page figure figcaption, .article-page .article-caption,
+  .article-page .image-caption { font-size: 10px !important; }
+  .site-history h2, #site-history h2, .history-section h2 { font-size: 22px !important; }
+  .site-history h3, #site-history h3, .history-section h3 { font-size: 18px !important; }
+  .site-history p, #site-history p, .history-section p,
+  .site-history li, #site-history li, .history-section li { font-size: 14px !important; line-height: 1.95 !important; }
+  .site-history time, #site-history time, .history-date,
+  .site-history small, #site-history small { font-size: 11px !important; }
+}
