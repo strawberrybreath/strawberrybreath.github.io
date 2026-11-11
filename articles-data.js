@@ -9,7 +9,6 @@ const articles = [
     "image": "https://images.unsplash.com/photo-1761433417515-25063a760d04?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8&ixlib=rb-4.1.0&q=60&w=1400",
     "imageAlt": "中国列车车厢内，一名乘客独自坐在窗边看手机",
     "theme": "issue10",
-    "category": "社会观察与亲密关系",
     "tags": ["亲密关系","社会观察"],
     "related": ["article-09.html", "article-03.html", "article-06.html"]
   },
@@ -22,7 +21,6 @@ const articles = [
     "image": "https://storage.googleapis.com/opinion-cms-cwg-tw/article/202108/article-611b8953c2208.jpeg",
     "imageAlt": "母亲与女儿坐在餐桌旁，女儿神情若有所思",
     "theme": "issue09",
-    "category": "女性主义与社会观察",
     "tags": ["女性主义","社会观察"],
     "related": ["article-10.html", "article-05.html", "article-02.html"]
   },
@@ -35,7 +33,6 @@ const articles = [
     "image": "https://images.pexels.com/photos/19561464/pexels-photo-19561464/free-photo-of-open-book-on-desk.jpeg?auto=compress&cs=tinysrgb&w=900",
     "imageAlt": "阳光下摊开的书本，摄影：Jessika Arraes / Pexels",
     "theme": "issue08",
-    "category": "历史与文化",
     "tags": ["社会观察","文学艺术"],
     "related": [
       "article-07.html",
@@ -52,7 +49,6 @@ const articles = [
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Immanuel_Kant_portrait_c1790.jpg",
     "imageAlt": "德国哲学家伊曼努尔·康德约1790年的肖像",
     "theme": "issue07",
-    "category": "哲学与个人思考",
     "tags": ["自我成长"],
     "related": [
       "article-06.html",
@@ -69,7 +65,6 @@ const articles = [
     "image": "https://img.yec.tw/zp/images/8170DCC60B5F2FA0CD306522B5F289F536180D21",
     "imageAlt": "陈奕迅2005年专辑《U 87》封面",
     "theme": "issue06",
-    "category": "音乐与生活",
     "tags": ["亲密关系","文学艺术"],
     "related": [
       "article-03.html",
@@ -86,7 +81,6 @@ const articles = [
     "image": "https://static.bjd.com.cn/dams-res/editing/image/202312/30/658f8ee1d5de9bf28166ae9f.jpeg",
     "imageAlt": "人民文学出版社《红楼梦》四十周年纪念版书籍封面",
     "theme": "issue05",
-    "category": "文学与电影",
     "tags": ["女性主义","文学艺术"],
     "related": [
       "article-01.html",
@@ -103,7 +97,6 @@ const articles = [
     "image": "https://ncdalliance.org/sites/default/files/styles/original_small/public/news/screen_shot_2015-01-09_at_15.04.28.png.webp?itok=_u5zed-9",
     "imageAlt": "不同国家烟草包装上的图形健康警示对比",
     "theme": "issue04",
-    "category": "女性主义与社会观察",
     "tags": ["女性主义","社会观察"],
     "related": [
       "article-02.html",
@@ -120,7 +113,6 @@ const articles = [
     "image": "https://www.nlc.cn/upload/img/2023-11-27/4db96e11.jpg",
     "imageAlt": "国家图书馆展出的宋刻本毛诗注疏古籍",
     "theme": "issue03",
-    "category": "文学与电影",
     "tags": ["亲密关系","文学艺术"],
     "related": [
       "article-06.html",
@@ -137,7 +129,6 @@ const articles = [
     "image": "https://monstrousregiment.co.uk/wp-content/uploads/1976/10/Vinegar_Tom_1976_Photo_4-1024x696.jpg",
     "imageAlt": "Monstrous Regiment 1976年《Vinegar Tom》原始演出黑白剧照",
     "theme": "issue02",
-    "category": "历史与文化",
     "tags": ["女性主义","历史文化"],
     "related": [
       "article-04.html",
@@ -154,7 +145,6 @@ const articles = [
     "image": "assets/Enola%20Holmes1.JPG",
     "imageAlt": "电影《Enola Holmes》第一部官方海报",
     "theme": "issue01",
-    "category": "文学与电影",
     "tags": ["女性主义","自我成长","文学艺术"],
     "related": [
       "article-02.html",
@@ -163,13 +153,11 @@ const articles = [
     ]
   }
 ];
-const articleCategories = ["全部","文学与电影","女性主义与社会观察","历史与文化","哲学与个人思考","音乐与生活"];
 
 function articleCard(article, index, interactiveTags = false) {
   const item = document.createElement("article");
   item.className = "article-list-item";
   item.dataset.articleTheme = article.theme || "";
-  item.dataset.articleCategory = article.category || "";
   const image = article.image ? `
     <a class="article-list-image" href="${article.href}" tabindex="-1" aria-hidden="true">
       <img src="${article.image}" alt="${article.imageAlt || ""}" loading="lazy" decoding="async">
@@ -181,7 +169,7 @@ function articleCard(article, index, interactiveTags = false) {
     ? `<button class="article-tag" type="button" data-filter-tag="${tag}" aria-label="按标签筛选：${tag}">${tag}</button>`
     : `<span class="article-tag">${tag}</span>`).join("");
   item.innerHTML = `${image}<div class="article-list-copy">
-    <div class="article-list-meta">${issue}${date}<span class="article-category-label">${article.category || ""}</span></div>
+    <div class="article-list-meta">${issue}${date}</div>
     <h3><a href="${article.href}">${article.title}</a></h3><p>${article.description || ""}</p>
     <div class="article-card-tags" aria-label="文章标签">${tags}</div>
   </div>`;
@@ -200,22 +188,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const search=document.querySelector("[data-article-search]");
   const count=document.querySelector("[data-article-count]");
   const empty=document.querySelector("[data-article-empty]");
-  const categoryHost=document.querySelector("[data-category-filters]");
   const activeLabel=document.querySelector("[data-active-filter-label]");
   const reset=document.querySelector("[data-reset-article-filters]");
   const tagHost=document.querySelector("[data-tag-filters]");
-  let activeCategory="全部", activeTag="", bodyIndex={}, bodyIndexPromise=null, version=0;
-
-  if(categoryHost){
-    categoryHost.replaceChildren();
-    articleCategories.forEach(category=>{
-      const button=document.createElement("button");
-      button.type="button"; button.className="article-filter-chip";
-      button.textContent=category; button.dataset.filterCategory=category;
-      button.setAttribute("aria-pressed",String(category===activeCategory));
-      categoryHost.appendChild(button);
-    });
-  }
+  let activeTag="", bodyIndex={}, bodyIndexPromise=null, version=0;
 
   if(tagHost){
     const allTags=[...new Set(ordered.flatMap(article=>article.tags||[]))].sort((a,b)=>a.localeCompare(b,"zh-CN"));
@@ -256,9 +232,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let visible=0;
     archive.querySelectorAll(".article-list-item").forEach((item,index)=>{
       const article=ordered[index];
-      const text=[article.title,article.description,article.dateLabel,article.category,...(article.tags||[]),bodyIndex[article.href]||""].join(" ").toLocaleLowerCase();
+      const text=[article.title,article.description,article.dateLabel,...(article.tags||[]),bodyIndex[article.href]||""].join(" ").toLocaleLowerCase();
       const match=terms.every(term=>text.includes(term))&&
-        (activeCategory==="全部"||article.category===activeCategory)&&
         (!activeTag||(article.tags||[]).includes(activeTag));
       item.hidden=!match; if(match)visible++;
       let jump=item.querySelector(".article-search-open");
@@ -273,21 +248,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if(empty)empty.hidden=visible!==0;
     if(activeLabel){
       const selected=[];
-      if(activeCategory!=="全部")selected.push(activeCategory);
       if(activeTag)selected.push("#"+activeTag);
-      activeLabel.textContent=selected.length?"当前筛选："+selected.join(" · "):"按分类或标签浏览，也可以搜索标题、标签和正文";
+      activeLabel.textContent=selected.length?"当前筛选："+selected.join(" · "):"按标签浏览，也可以搜索标题、标签和正文";
     }
-    categoryHost?.querySelectorAll("[data-filter-category]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.filterCategory===activeCategory)));
     tagHost?.querySelectorAll("[data-filter-tag]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.filterTag===activeTag)));
   };
   search?.addEventListener("input",updateResults);
-  categoryHost?.addEventListener("click",event=>{
-    const button=event.target.closest("[data-filter-category]"); if(!button)return;
-    activeCategory=button.dataset.filterCategory; activeTag=""; updateResults();
-  });
   const applyTagFilter=tag=>{
     activeTag=activeTag===tag?"":tag;
-    activeCategory="全部";
     if(search)search.value="";
     updateResults();
   };
@@ -301,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".article-search")?.scrollIntoView({behavior:"smooth",block:"nearest"});
   });
   reset?.addEventListener("click",()=>{
-    if(search)search.value=""; activeCategory="全部"; activeTag=""; updateResults();
+    if(search)search.value=""; activeTag=""; updateResults();
   });
   updateResults();
 });
