@@ -353,3 +353,19 @@ html.site-night::after{
   animation:none!important;
   background-image:none!important;
 }
+
+
+/* 2026-11-11: night mode keeps editorial sections flush with the black page canvas. */
+html.site-night body.home-page .home-intro,
+html.site-night body.home-page .feminist-section,
+html.site-night body.archive-page .archive-heading,
+html.site-night body.archive-page .site-history,
+html.site-night body.archive-page .history-intro,
+html.site-night body.archive-page .history-note {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
