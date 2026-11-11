@@ -803,3 +803,164 @@ body.archive-page:not(.history-page) main figcaption {
     font-size: 13px !important;
   }
 }
+
+
+/* 2026-11-11: authoritative page-scoped typography.
+   This final layer resolves legacy !important collisions without enlarging metadata,
+   feminist resource cards, or the intentionally compact history archive. */
+
+/* Homepage introduction and About: comfortable reading size, no oversized paragraphs. */
+html body.home-page main .home-intro .home-about p,
+html body.home-page main .home-profile .home-profile-inner > p:not(.about-cats-intro),
+html body.home-page main .home-profile .home-profile-inner > p.about-lead {
+  font-size: 19px !important;
+  line-height: 2 !important;
+}
+html body.home-page main .home-profile .home-profile-inner > p.about-lead {
+  font-size: 23px !important;
+  line-height: 1.8 !important;
+}
+html body.home-page main .home-profile .home-profile-inner > h2,
+html body.home-page main .home-section-heading > h2,
+html body.home-page main .feminist-section > h2 {
+  font-size: 32px !important;
+  line-height: 1.45 !important;
+}
+
+/* Feminist statement and invitation are distinct reading levels; resource cards stay compact. */
+html body.home-page main .feminist-section .feminist-statement > p {
+  font-size: 19px !important;
+  line-height: 2 !important;
+}
+html body.home-page main .feminist-section > p.feminist-subtitle {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+html body.home-page main .feminist-section > p.feminist-invitation {
+  font-size: 17px !important;
+  line-height: 1.95 !important;
+}
+html body.home-page main .feminist-section .feminist-card h3,
+html body.home-page main .feminist-section .feminist-card-title-line {
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+}
+html body.home-page main .feminist-section .feminist-card-cn,
+html body.home-page main .feminist-section .feminist-card-description,
+html body.home-page main .feminist-section .feminist-card-description p,
+html body.home-page main .feminist-section .feminist-visit {
+  font-size: 12px !important;
+  line-height: 1.8 !important;
+}
+
+/* Homepage and archive article previews: title, summary, and metadata remain clearly separated. */
+html body.home-page main .article-list-copy h3,
+html body.archive-page:not(.history-page) main .article-list-copy h3 {
+  font-size: 22px !important;
+  line-height: 1.5 !important;
+}
+html body.home-page main .article-list-copy > p:not(.article-list-category):not(.article-list-meta),
+html body.archive-page:not(.history-page) main .article-list-copy > p:not(.article-list-category):not(.article-list-meta) {
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+}
+html body.archive-page:not(.history-page) main .archive-heading > p:not(.eyebrow):not(.archive-stats) {
+  font-size: 19px !important;
+  line-height: 1.9 !important;
+}
+
+/* Tablet: slightly tighter than desktop, still comfortably readable. */
+@media (min-width: 761px) and (max-width: 1024px) {
+  html body.home-page main .home-intro .home-about p,
+  html body.home-page main .home-profile .home-profile-inner > p:not(.about-cats-intro),
+  html body.home-page main .feminist-section .feminist-statement > p {
+    font-size: 18px !important;
+    line-height: 1.95 !important;
+  }
+  html body.home-page main .home-profile .home-profile-inner > p.about-lead {
+    font-size: 21px !important;
+  }
+  html body.home-page main .home-profile .home-profile-inner > h2,
+  html body.home-page main .home-section-heading > h2,
+  html body.home-page main .feminist-section > h2 {
+    font-size: 28px !important;
+  }
+  html body.home-page main .feminist-section > p.feminist-invitation,
+  html body.archive-page:not(.history-page) main .archive-heading > p:not(.eyebrow):not(.archive-stats) {
+    font-size: 16px !important;
+    line-height: 1.9 !important;
+  }
+  html body.home-page main .article-list-copy h3,
+  html body.archive-page:not(.history-page) main .article-list-copy h3 {
+    font-size: 20px !important;
+  }
+  html body.home-page main .article-list-copy > p:not(.article-list-category):not(.article-list-meta),
+  html body.archive-page:not(.history-page) main .article-list-copy > p:not(.article-list-category):not(.article-list-meta) {
+    font-size: 16px !important;
+  }
+}
+
+/* Phone: preserve hierarchy while avoiding tiny body copy and oversized headings. */
+@media (max-width: 760px) {
+  html body.home-page main .home-intro .home-about p,
+  html body.home-page main .home-profile .home-profile-inner > p:not(.about-cats-intro),
+  html body.home-page main .feminist-section .feminist-statement > p {
+    font-size: 17px !important;
+    line-height: 1.95 !important;
+  }
+  html body.home-page main .home-profile .home-profile-inner > p.about-lead {
+    font-size: 19px !important;
+    line-height: 1.8 !important;
+  }
+  html body.home-page main .home-profile .home-profile-inner > h2,
+  html body.home-page main .home-section-heading > h2,
+  html body.home-page main .feminist-section > h2 {
+    font-size: 25px !important;
+    line-height: 1.5 !important;
+  }
+  html body.home-page main .feminist-section > p.feminist-subtitle {
+    font-size: 16px !important;
+  }
+  html body.home-page main .feminist-section > p.feminist-invitation,
+  html body.archive-page:not(.history-page) main .archive-heading > p:not(.eyebrow):not(.archive-stats) {
+    font-size: 15px !important;
+    line-height: 1.9 !important;
+  }
+  html body.home-page main .article-list-copy h3,
+  html body.archive-page:not(.history-page) main .article-list-copy h3 {
+    font-size: 19px !important;
+    line-height: 1.5 !important;
+  }
+  html body.home-page main .article-list-copy > p:not(.article-list-category):not(.article-list-meta),
+  html body.archive-page:not(.history-page) main .article-list-copy > p:not(.article-list-category):not(.article-list-meta) {
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+  }
+}
+
+/* History is a changelog, not a reading essay: retain its deliberately restrained scale. */
+html body.history-page main .archive-heading > p:not(.eyebrow),
+html body.history-page main .history-intro {
+  font-size: 14px !important;
+  line-height: 1.9 !important;
+}
+html body.history-page main .history-entry h2 {
+  font-size: 17px !important;
+  line-height: 1.55 !important;
+}
+html body.history-page main .history-entry p {
+  font-size: 13px !important;
+  line-height: 1.9 !important;
+}
+@media (max-width: 760px) {
+  html body.history-page main .archive-heading > p:not(.eyebrow),
+  html body.history-page main .history-intro {
+    font-size: 13px !important;
+  }
+  html body.history-page main .history-entry h2 {
+    font-size: 16px !important;
+  }
+  html body.history-page main .history-entry p {
+    font-size: 12px !important;
+  }
+}
