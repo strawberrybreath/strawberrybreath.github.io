@@ -4862,3 +4862,38 @@ html.site-night body.home-page .home-profile-inner {
   box-shadow: none !important;
   border: 0 !important;
 }
+
+
+/* 2026-11-11: open editorial surfaces for site introduction, feminist statement and history. */
+html body.home-page .home-intro,
+html body.home-page .feminist-section,
+html body.archive-page .archive-heading,
+html body.archive-page .site-history,
+html body.archive-page .history-intro,
+html body.archive-page .history-note {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+html body.home-page .feminist-section {
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+}
+html body.archive-page .history-note {
+  border: 0 !important;
+  padding-left: 0 !important;
+}
+html body.home-page .home-intro::before,
+html body.home-page .home-intro::after,
+html body.home-page .feminist-section::before,
+html body.home-page .feminist-section::after,
+html body.archive-page .archive-heading::before,
+html body.archive-page .archive-heading::after,
+html body.archive-page .site-history::before,
+html body.archive-page .site-history::after {
+  content: none !important;
+  display: none !important;
+}
