@@ -216,3 +216,88 @@ html, html body, html body *:not(.brand-en):not(.script-wordmark):not(.english-s
   word-break: normal;
   overflow-wrap: break-word;
 }
+
+/* 2026-11-11: user-requested large reading scale across all 13 pages */
+/* Desktop: all content headings 36px; main reading text 28px. */
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6,
+html body .article-title,
+html body .archive-title,
+html body .page-title,
+html body .section-title,
+html body .history-entry-title,
+html body .home-section-heading,
+html body .essay-section-title {
+  font-size: 36px !important;
+  line-height: 1.5 !important;
+}
+html body p,
+html body li,
+html body blockquote,
+html body .home-subtitle,
+html body .home-about p,
+html body .home-profile p,
+html body .contact-intro > p,
+html body .home-contact-intro,
+html body .feminist-section p,
+html body .article-list-copy > p,
+html body .archive-heading p,
+html body .essay-content p,
+html body .essay-content li,
+html body .article-body p,
+html body .issue-content p,
+html body .essay-body p,
+html body .history-intro,
+html body .site-history p,
+html body .history-section p,
+html body .history-entry p {
+  font-size: 28px !important;
+  line-height: 1.85 !important;
+}
+
+/* Mobile: the exact requested scale — every heading 30px, reading text 26px. */
+@media (max-width: 760px) {
+  html body h1,
+  html body h2,
+  html body h3,
+  html body h4,
+  html body h5,
+  html body h6,
+  html body .article-title,
+  html body .archive-title,
+  html body .page-title,
+  html body .section-title,
+  html body .history-entry-title,
+  html body .home-section-heading,
+  html body .essay-section-title {
+    font-size: 30px !important;
+    line-height: 1.5 !important;
+  }
+  html body p,
+  html body li,
+  html body blockquote,
+  html body .home-subtitle,
+  html body .home-about p,
+  html body .home-profile p,
+  html body .contact-intro > p,
+  html body .home-contact-intro,
+  html body .feminist-section p,
+  html body .article-list-copy > p,
+  html body .archive-heading p,
+  html body .essay-content p,
+  html body .essay-content li,
+  html body .article-body p,
+  html body .issue-content p,
+  html body .essay-body p,
+  html body .history-intro,
+  html body .site-history p,
+  html body .history-section p,
+  html body .history-entry p {
+    font-size: 26px !important;
+    line-height: 1.85 !important;
+  }
+}
