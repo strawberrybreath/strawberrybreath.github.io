@@ -26,3 +26,12 @@
 }
 @media(max-width:390px){.archive-page .article-category-filters{gap:6px}.article-filter-chip{padding:6px 9px;font-size:11px}.article-list-item .article-list-meta{gap:5px 7px}}
 @media(prefers-reduced-motion:reduce){.article-filter-chip,.article-tag{transition:none}}
+
+/* Explicit tag filter controls above the archive list. */
+.archive-page .article-tag-filter-heading{margin:2px 0 0;color:#81766B;font-size:12px;letter-spacing:.04em}
+.archive-page .article-tag-filters{margin:8px 0 12px}
+.archive-page .article-tag-filter-chip[aria-pressed="true"]{background:#8E5148;border-color:#8E5148;color:#fffaf4}
+@media(max-width:760px){
+ .archive-page .article-tag-filter-heading{font-size:11px}
+ .archive-page .article-tag-filters{margin:7px 0 10px}
+}
