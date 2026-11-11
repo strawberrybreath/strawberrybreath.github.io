@@ -23,7 +23,7 @@ const articles = [
     "imageAlt": "母亲与女儿坐在餐桌旁，女儿神情若有所思",
     "theme": "issue09",
     "category": "女性主义与社会观察",
-    "tags": ["女性与性别","社会观察"],
+    "tags": ["女性主义","社会观察"],
     "related": ["article-10.html", "article-05.html", "article-02.html"]
   },
   {
@@ -87,7 +87,7 @@ const articles = [
     "imageAlt": "人民文学出版社《红楼梦》四十周年纪念版书籍封面",
     "theme": "issue05",
     "category": "文学与电影",
-    "tags": ["女性与性别","文学艺术"],
+    "tags": ["女性主义","文学艺术"],
     "related": [
       "article-01.html",
       "article-02.html",
@@ -104,7 +104,7 @@ const articles = [
     "imageAlt": "不同国家烟草包装上的图形健康警示对比",
     "theme": "issue04",
     "category": "女性主义与社会观察",
-    "tags": ["女性与性别","社会观察"],
+    "tags": ["女性主义","社会观察"],
     "related": [
       "article-02.html",
       "article-05.html",
@@ -138,7 +138,7 @@ const articles = [
     "imageAlt": "Monstrous Regiment 1976年《Vinegar Tom》原始演出黑白剧照",
     "theme": "issue02",
     "category": "历史与文化",
-    "tags": ["女性与性别","历史文化"],
+    "tags": ["女性主义","历史文化"],
     "related": [
       "article-04.html",
       "article-05.html",
@@ -155,7 +155,7 @@ const articles = [
     "imageAlt": "电影《Enola Holmes》第一部官方海报",
     "theme": "issue01",
     "category": "文学与电影",
-    "tags": ["女性与性别","自我成长","文学艺术"],
+    "tags": ["女性主义","自我成长","文学艺术"],
     "related": [
       "article-02.html",
       "article-05.html",
