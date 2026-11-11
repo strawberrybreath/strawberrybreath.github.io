@@ -400,3 +400,119 @@ html body .history-entry p {
     font-weight: 400 !important;
   }
 }
+
+/* 2026-11-11 corrective override: apply the reading scale to real page content.
+   The previous generic selectors lost to page-specific selectors with higher specificity.
+   History is intentionally compact; all other pages use the enlarged reading scale. */
+@media (max-width: 1024px) {
+  body.home-page:not(.history-page) main p,
+  body.home-page:not(.history-page) main li,
+  body.home-page:not(.history-page) main blockquote,
+  body.home-page:not(.history-page) .home-about p,
+  body.home-page:not(.history-page) .home-profile p,
+  body.home-page:not(.history-page) .contact-intro p,
+  body.home-page:not(.history-page) .feminist-section p,
+  body.home-page:not(.history-page) .article-list-copy > p,
+  body.archive-page:not(.history-page) main p,
+  body.archive-page:not(.history-page) main li,
+  body.archive-page:not(.history-page) .article-list-copy > p,
+  body.article-page:not(.history-page) .essay-content p,
+  body.article-page:not(.history-page) .essay-content li,
+  body.article-page:not(.history-page) .article-body p,
+  body.article-page:not(.history-page) .issue-content p,
+  body.article-page:not(.history-page) .article-highlight,
+  body.article-page:not(.history-page) .article-subtitle,
+  body.article-page:not(.history-page) .article-deck {
+    font-size: 22px !important;
+    line-height: 1.9 !important;
+  }
+
+  body.home-page:not(.history-page) main h1,
+  body.home-page:not(.history-page) main h2,
+  body.home-page:not(.history-page) main h3,
+  body.home-page:not(.history-page) main h4,
+  body.archive-page:not(.history-page) main h1,
+  body.archive-page:not(.history-page) main h2,
+  body.archive-page:not(.history-page) main h3,
+  body.archive-page:not(.history-page) main h4,
+  body.article-page:not(.history-page) .article-hero h1,
+  body.article-page:not(.history-page) .essay-content h2,
+  body.article-page:not(.history-page) .essay-content h3,
+  body.article-page:not(.history-page) .essay-section-title {
+    font-size: 26px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Keep compact labels and metadata from growing with the reading text. */
+  body:not(.history-page) .article-meta,
+  body:not(.history-page) .article-topline,
+  body:not(.history-page) .article-tags,
+  body:not(.history-page) .article-list-meta,
+  body:not(.history-page) .article-issue,
+  body:not(.history-page) .article-list-date,
+  body:not(.history-page) .article-category-label,
+  body:not(.history-page) figcaption,
+  body:not(.history-page) .site-nav,
+  body:not(.history-page) .site-footer {
+    font-size: 12px !important;
+  }
+
+  /* Website history: deliberately smaller because it is only a changelog. */
+  body.history-page main h1,
+  body.history-page main h2,
+  body.history-page main h3,
+  body.history-page main h4,
+  body.history-page .archive-heading h1 {
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+  }
+  body.history-page main p,
+  body.history-page main li,
+  body.history-page .history-intro,
+  body.history-page .history-entry p {
+    font-size: 16px !important;
+    line-height: 1.85 !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  body.home-page:not(.history-page) main p,
+  body.home-page:not(.history-page) main li,
+  body.home-page:not(.history-page) .home-about p,
+  body.home-page:not(.history-page) .home-profile p,
+  body.home-page:not(.history-page) .contact-intro p,
+  body.home-page:not(.history-page) .feminist-section p,
+  body.home-page:not(.history-page) .article-list-copy > p,
+  body.archive-page:not(.history-page) .article-list-copy > p,
+  body.article-page:not(.history-page) .essay-content p,
+  body.article-page:not(.history-page) .essay-content li,
+  body.article-page:not(.history-page) .article-body p {
+    font-size: 28px !important;
+    line-height: 1.85 !important;
+  }
+  body.home-page:not(.history-page) main h1,
+  body.home-page:not(.history-page) main h2,
+  body.home-page:not(.history-page) main h3,
+  body.home-page:not(.history-page) main h4,
+  body.archive-page:not(.history-page) main h1,
+  body.archive-page:not(.history-page) main h2,
+  body.archive-page:not(.history-page) main h3,
+  body.archive-page:not(.history-page) main h4,
+  body.article-page:not(.history-page) .article-hero h1,
+  body.article-page:not(.history-page) .essay-content h2,
+  body.article-page:not(.history-page) .essay-content h3 {
+    font-size: 36px !important;
+    line-height: 1.5 !important;
+  }
+  body.history-page main h1,
+  body.history-page main h2,
+  body.history-page main h3,
+  body.history-page main h4 { font-size: 25px !important; }
+  body.history-page main p,
+  body.history-page main li { font-size: 18px !important; line-height: 1.85 !important; }
+}
+
+/* Do not scale the English decorative homepage wordmark with Chinese headings. */
+body.home-page:not(.history-page) .home-intro h1#site-title {
+  font-family: "Italianno", cursive !important;
+}
