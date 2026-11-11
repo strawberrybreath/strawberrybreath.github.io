@@ -10,7 +10,7 @@ const articles = [
     "imageAlt": "中国列车车厢内，一名乘客独自坐在窗边看手机",
     "theme": "issue10",
     "category": "社会观察与亲密关系",
-    "tags": ["社会关系", "弱关系", "社会资本", "亲密关系"],
+    "tags": ["亲密关系","社会观察"],
     "related": ["article-09.html", "article-03.html", "article-06.html"]
   },
   {
@@ -23,7 +23,7 @@ const articles = [
     "imageAlt": "母亲与女儿坐在餐桌旁，女儿神情若有所思",
     "theme": "issue09",
     "category": "女性主义与社会观察",
-    "tags": ["女性主义", "重男轻女", "家庭与代际", "自我价值"],
+    "tags": ["女性与性别","家庭与社会","社会观察"],
     "related": ["article-10.html", "article-05.html", "article-02.html"]
   },
   {
@@ -36,11 +36,7 @@ const articles = [
     "imageAlt": "阳光下摊开的书本，摄影：Jessika Arraes / Pexels",
     "theme": "issue08",
     "category": "历史与文化",
-    "tags": [
-      "语言表达",
-      "情绪识别",
-      "阅读与文化"
-    ],
+    "tags": ["社会观察","文学艺术"],
     "related": [
       "article-07.html",
       "article-04.html",
@@ -57,11 +53,7 @@ const articles = [
     "imageAlt": "德国哲学家伊曼努尔·康德约1790年的肖像",
     "theme": "issue07",
     "category": "哲学与个人思考",
-    "tags": [
-      "康德",
-      "自律与自由",
-      "自我选择"
-    ],
+    "tags": ["自我成长"],
     "related": [
       "article-06.html",
       "article-08.html",
@@ -78,11 +70,7 @@ const articles = [
     "imageAlt": "陈奕迅2005年专辑《U 87》封面",
     "theme": "issue06",
     "category": "音乐与生活",
-    "tags": [
-      "陈奕迅",
-      "葡萄成熟时",
-      "等待与遗憾"
-    ],
+    "tags": ["亲密关系","文学艺术"],
     "related": [
       "article-03.html",
       "article-07.html",
@@ -99,11 +87,7 @@ const articles = [
     "imageAlt": "人民文学出版社《红楼梦》四十周年纪念版书籍封面",
     "theme": "issue05",
     "category": "文学与电影",
-    "tags": [
-      "红楼梦",
-      "女性群像",
-      "女性友谊"
-    ],
+    "tags": ["女性与性别","文学艺术"],
     "related": [
       "article-01.html",
       "article-02.html",
@@ -120,12 +104,7 @@ const articles = [
     "imageAlt": "不同国家烟草包装上的图形健康警示对比",
     "theme": "issue04",
     "category": "女性主义与社会观察",
-    "tags": [
-      "女性主义",
-      "二手烟",
-      "女性处境",
-      "公共卫生"
-    ],
+    "tags": ["女性与性别","社会观察"],
     "related": [
       "article-02.html",
       "article-05.html",
@@ -142,11 +121,7 @@ const articles = [
     "imageAlt": "国家图书馆展出的宋刻本毛诗注疏古籍",
     "theme": "issue03",
     "category": "文学与电影",
-    "tags": [
-      "诗经",
-      "亲密关系",
-      "女性经验"
-    ],
+    "tags": ["亲密关系","文学艺术"],
     "related": [
       "article-06.html",
       "article-07.html",
@@ -163,11 +138,7 @@ const articles = [
     "imageAlt": "Monstrous Regiment 1976年《Vinegar Tom》原始演出黑白剧照",
     "theme": "issue02",
     "category": "历史与文化",
-    "tags": [
-      "欧洲猎巫",
-      "女性历史",
-      "社会规训"
-    ],
+    "tags": ["女性与性别","历史文化"],
     "related": [
       "article-04.html",
       "article-05.html",
@@ -184,11 +155,7 @@ const articles = [
     "imageAlt": "电影《Enola Holmes》第一部官方海报",
     "theme": "issue01",
     "category": "文学与电影",
-    "tags": [
-      "Enola Holmes",
-      "女性主体性",
-      "自我选择"
-    ],
+    "tags": ["女性与性别","自我成长","文学艺术"],
     "related": [
       "article-02.html",
       "article-05.html",
