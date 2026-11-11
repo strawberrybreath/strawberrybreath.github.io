@@ -121,6 +121,7 @@ const articles = [
     "theme": "issue04",
     "category": "女性主义与社会观察",
     "tags": [
+      "女性主义",
       "二手烟",
       "女性处境",
       "公共卫生"
@@ -235,6 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const categoryHost=document.querySelector("[data-category-filters]");
   const activeLabel=document.querySelector("[data-active-filter-label]");
   const reset=document.querySelector("[data-reset-article-filters]");
+  const tagHost=document.querySelector("[data-tag-filters]");
   let activeCategory="全部", activeTag="", bodyIndex={}, bodyIndexPromise=null, version=0;
 
   if(categoryHost){
@@ -245,6 +247,18 @@ document.addEventListener("DOMContentLoaded", () => {
       button.textContent=category; button.dataset.filterCategory=category;
       button.setAttribute("aria-pressed",String(category===activeCategory));
       categoryHost.appendChild(button);
+    });
+  }
+
+  if(tagHost){
+    const allTags=[...new Set(ordered.flatMap(article=>article.tags||[]))].sort((a,b)=>a.localeCompare(b,"zh-CN"));
+    tagHost.replaceChildren();
+    allTags.forEach(tag=>{
+      const button=document.createElement("button");
+      button.type="button"; button.className="article-filter-chip article-tag-filter-chip";
+      button.textContent=tag; button.dataset.filterTag=tag;
+      button.setAttribute("aria-pressed","false");
+      tagHost.appendChild(button);
     });
   }
 
@@ -294,19 +308,29 @@ document.addEventListener("DOMContentLoaded", () => {
       const selected=[];
       if(activeCategory!=="全部")selected.push(activeCategory);
       if(activeTag)selected.push("#"+activeTag);
-      activeLabel.textContent=selected.length?"当前筛选："+selected.join(" · "):"按分类浏览，也可以搜索标题、标签和正文";
+      activeLabel.textContent=selected.length?"当前筛选："+selected.join(" · "):"按分类或标签浏览，也可以搜索标题、标签和正文";
     }
     categoryHost?.querySelectorAll("[data-filter-category]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.filterCategory===activeCategory)));
+    tagHost?.querySelectorAll("[data-filter-tag]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.filterTag===activeTag)));
   };
   search?.addEventListener("input",updateResults);
   categoryHost?.addEventListener("click",event=>{
     const button=event.target.closest("[data-filter-category]"); if(!button)return;
     activeCategory=button.dataset.filterCategory; activeTag=""; updateResults();
   });
+  const applyTagFilter=tag=>{
+    activeTag=activeTag===tag?"":tag;
+    activeCategory="全部";
+    if(search)search.value="";
+    updateResults();
+  };
+  tagHost?.addEventListener("click",event=>{
+    const button=event.target.closest("[data-filter-tag]"); if(!button)return;
+    applyTagFilter(button.dataset.filterTag);
+  });
   archive.addEventListener("click",event=>{
     const button=event.target.closest("[data-filter-tag]"); if(!button)return;
-    activeTag=button.dataset.filterTag; activeCategory="全部"; if(search)search.value="";
-    updateResults();
+    applyTagFilter(button.dataset.filterTag);
     document.querySelector(".article-search")?.scrollIntoView({behavior:"smooth",block:"nearest"});
   });
   reset?.addEventListener("click",()=>{
