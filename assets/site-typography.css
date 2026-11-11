@@ -2,7 +2,7 @@
    One shared type scale for the homepage, archive, history section and all essays.
    Theme colors, spacing, card geometry and article content are intentionally untouched. */
 :root {
-  --site-font-cn: "LXGW WenKai", "霞鹜文楷", "Kaiti SC", "STKaiti", serif;
+  --site-font-cn: "LXGW WenKai Screen", "LXGW WenKai", "霞鹜文楷", serif;
   --site-font-body-size: 17px;
 }
 html, body {
@@ -200,7 +200,7 @@ body.home-page .site-history .history-entry h2 {
 
 /* Final site-wide font lock + Chinese paragraph edge alignment.
    Keep the final line naturally left-aligned; justify only the preceding lines. */
-html, html body, html body *:not(#font-lock-never) {
+html, html body, html body *:not(.brand-en):not(.script-wordmark):not(.english-script):not(.lyric-pronunciation):not([class*="icon"]):not(svg):not(svg *) {
   font-family: var(--site-font-cn) !important;
 }
 .article-page .essay-content p,
