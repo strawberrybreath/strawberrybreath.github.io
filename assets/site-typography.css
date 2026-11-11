@@ -1036,3 +1036,41 @@ html body.home-page main .feminist-section .feminist-card-title-line {
     font-size: 22px !important;
   }
 }
+
+
+/* 2026-11-12: unify the three homepage body-copy sections and soften contact intro. */
+/* Website introduction, About body, and feminist statement share one readable scale. */
+html body.home-page main .home-intro .home-about > p,
+html body.home-page main .home-profile .home-profile-inner > p:not(.about-lead):not(.about-cats-intro),
+html body.home-page main .feminist-section .feminist-statement > p {
+  font-size: 21px !important;
+  line-height: 1.95 !important;
+}
+@media (min-width: 761px) and (max-width: 1024px) {
+  html body.home-page main .home-intro .home-about > p,
+  html body.home-page main .home-profile .home-profile-inner > p:not(.about-lead):not(.about-cats-intro),
+  html body.home-page main .feminist-section .feminist-statement > p {
+    font-size: 19px !important;
+    line-height: 1.95 !important;
+  }
+}
+@media (max-width: 760px) {
+  html body.home-page main .home-intro .home-about > p,
+  html body.home-page main .home-profile .home-profile-inner > p:not(.about-lead):not(.about-cats-intro),
+  html body.home-page main .feminist-section .feminist-statement > p {
+    font-size: 18px !important;
+    line-height: 1.95 !important;
+  }
+}
+
+/* The contact invitation is secondary copy beneath the section heading. */
+html body.home-page .home-contact .contact-intro > p.home-contact-intro {
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+}
+@media (max-width: 1024px) {
+  html body.home-page .home-contact .contact-intro > p.home-contact-intro {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+  }
+}
