@@ -700,3 +700,106 @@ body.article-page.reading-night .essay-content strong,
 body.article-page.reading-night .essay-content b {
   color: #D0CBC2 !important;
 }
+
+
+/* 2026-11-11: apply the same balanced type hierarchy to homepage and archive pages.
+   Keep the decorative English wordmark and the deliberately compact history page unchanged. */
+body.home-page:not(.history-page) main h1:not(#site-title),
+body.archive-page:not(.history-page) main h1 {
+  font-size: 34px !important;
+  line-height: 1.4 !important;
+}
+body.home-page:not(.history-page) main h2,
+body.archive-page:not(.history-page) main h2 {
+  font-size: 28px !important;
+  line-height: 1.5 !important;
+}
+body.home-page:not(.history-page) main h3,
+body.archive-page:not(.history-page) main h3 {
+  font-size: 22px !important;
+  line-height: 1.5 !important;
+}
+body.home-page:not(.history-page) main p,
+body.home-page:not(.history-page) main li,
+body.archive-page:not(.history-page) .archive-heading p,
+body.archive-page:not(.history-page) .history-intro {
+  font-size: 22px !important;
+  line-height: 1.85 !important;
+}
+body.home-page:not(.history-page) .home-subtitle,
+body.archive-page:not(.history-page) .archive-heading .archive-subtitle {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+body.home-page:not(.history-page) .article-list-copy > p,
+body.archive-page:not(.history-page) .article-list-copy > p {
+  font-size: 17px !important;
+  line-height: 1.75 !important;
+}
+body.home-page:not(.history-page) .home-intro h1#site-title {
+  font-size: clamp(78px, 9vw, 108px) !important;
+  line-height: 1.12 !important;
+}
+@media (max-width: 1024px) {
+  body.home-page:not(.history-page) main h1:not(#site-title),
+  body.archive-page:not(.history-page) main h1 {
+    font-size: 27px !important;
+    line-height: 1.45 !important;
+  }
+  body.home-page:not(.history-page) main h2,
+  body.archive-page:not(.history-page) main h2 {
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+  }
+  body.home-page:not(.history-page) main h3,
+  body.archive-page:not(.history-page) main h3 {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+  body.home-page:not(.history-page) main p,
+  body.home-page:not(.history-page) main li,
+  body.archive-page:not(.history-page) .archive-heading p,
+  body.archive-page:not(.history-page) .history-intro {
+    font-size: 19px !important;
+    line-height: 1.85 !important;
+  }
+  body.home-page:not(.history-page) .home-subtitle,
+  body.archive-page:not(.history-page) .archive-heading .archive-subtitle {
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+  body.home-page:not(.history-page) .article-list-copy > p,
+  body.archive-page:not(.history-page) .article-list-copy > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+  body.home-page:not(.history-page) .home-intro h1#site-title {
+    font-size: 78px !important;
+  }
+}
+
+/* Secondary and tertiary reading levels for non-article page content. */
+body.home-page:not(.history-page) main .section-description,
+body.home-page:not(.history-page) main .home-secondary,
+body.archive-page:not(.history-page) .archive-secondary {
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+}
+body.home-page:not(.history-page) main .section-note,
+body.home-page:not(.history-page) main figcaption,
+body.archive-page:not(.history-page) main figcaption {
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+}
+@media (max-width: 1024px) {
+  body.home-page:not(.history-page) main .section-description,
+  body.home-page:not(.history-page) main .home-secondary,
+  body.archive-page:not(.history-page) .archive-secondary {
+    font-size: 16px !important;
+  }
+  body.home-page:not(.history-page) main .section-note,
+  body.home-page:not(.history-page) main figcaption,
+  body.archive-page:not(.history-page) main figcaption {
+    font-size: 13px !important;
+  }
+}
