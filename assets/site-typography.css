@@ -567,3 +567,136 @@ html body.home-page .home-intro h1#site-title {
     -webkit-text-stroke: .55px currentColor;
   }
 }
+
+
+/* 2026-11-11: balanced article typography — readable, but less oversized.
+   Three deliberate reading levels; the article title and deck are not the same size. */
+body.article-page .article-hero h1,
+body.article-page .article-title {
+  font-size: 34px !important;
+  line-height: 1.35 !important;
+  font-weight: 600 !important;
+}
+body.article-page .article-hero .article-subtitle,
+body.article-page .article-subtitle {
+  font-size: 19px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+}
+body.article-page .article-hero .article-deck,
+body.article-page .article-deck {
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+}
+body.article-page .essay-content p,
+body.article-page .essay-content li,
+body.article-page .article-body p,
+body.article-page .issue-content p {
+  font-size: 24px !important;
+  line-height: 1.9 !important;
+}
+body.article-page .essay-content h2,
+body.article-page .essay-content h3,
+body.article-page .essay-section-title {
+  font-size: 25px !important;
+  line-height: 1.5 !important;
+}
+body.article-page .essay-content h3 {
+  font-size: 21px !important;
+}
+body.article-page .essay-content .article-secondary,
+body.article-page .essay-content .essay-note,
+body.article-page .essay-content figcaption,
+body.article-page .essay-content .source-note {
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+}
+body.article-page .essay-content .article-footnote,
+body.article-page .essay-content small {
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+}
+
+/* Use each issue's own accent for key sentences, not a universal highlight color. */
+body.article-page .essay-content p.article-highlight {
+  color: var(--article-accent-strong, var(--article-accent)) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-left: 3px solid var(--article-accent, currentColor) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: .18em 0 .18em 16px !important;
+  font-size: 21px !important;
+  font-weight: 600 !important;
+  line-height: 1.9 !important;
+}
+body.article-page .essay-content strong,
+body.article-page .essay-content b {
+  color: var(--article-accent-strong, var(--article-accent)) !important;
+}
+
+/* Phones and tablets: keep the same hierarchy at a comfortable, moderate scale. */
+@media (max-width: 1024px) {
+  body.article-page .article-hero h1,
+  body.article-page .article-title {
+    font-size: 27px !important;
+    line-height: 1.45 !important;
+  }
+  body.article-page .article-hero .article-subtitle,
+  body.article-page .article-subtitle {
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+  body.article-page .article-hero .article-deck,
+  body.article-page .article-deck {
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+  }
+  body.article-page .essay-content p,
+  body.article-page .essay-content li,
+  body.article-page .article-body p,
+  body.article-page .issue-content p {
+    font-size: 19px !important;
+    line-height: 1.85 !important;
+  }
+  body.article-page .essay-content h2,
+  body.article-page .essay-section-title {
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+  }
+  body.article-page .essay-content h3 {
+    font-size: 19px !important;
+  }
+  body.article-page .essay-content .article-secondary,
+  body.article-page .essay-content .essay-note,
+  body.article-page .essay-content figcaption,
+  body.article-page .essay-content .source-note {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+  }
+  body.article-page .essay-content .article-footnote,
+  body.article-page .essay-content small {
+    font-size: 13px !important;
+    line-height: 1.75 !important;
+  }
+  body.article-page .essay-content p.article-highlight {
+    font-size: 18px !important;
+    line-height: 1.85 !important;
+    padding-left: 12px !important;
+  }
+}
+
+/* Night reading remains neutral: issue colors are deliberately suppressed. */
+html.site-night body.article-page .essay-content p.article-highlight,
+body.article-page.reading-night .essay-content p.article-highlight {
+  color: #C5BFB3 !important;
+  border-left-color: #666A67 !important;
+}
+html.site-night body.article-page .essay-content strong,
+html.site-night body.article-page .essay-content b,
+body.article-page.reading-night .essay-content strong,
+body.article-page.reading-night .essay-content b {
+  color: #D0CBC2 !important;
+}
