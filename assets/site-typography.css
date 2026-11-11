@@ -174,3 +174,26 @@ body p, body li { font-size: 17px !important; line-height: 2.05 !important; }
   .site-history time, #site-history time, .history-date,
   .site-history small, #site-history small { font-size: 11px !important; }
 }
+
+
+/* Explicit history-page override: its legacy h2 shorthand used the old Noto Serif stack. */
+body.history-page main,
+body.history-page main *,
+body.history-page .site-footer,
+body.history-page .site-footer *,
+body.home-page .site-history,
+body.home-page .site-history * {
+  font-family: var(--site-font-cn) !important;
+}
+body.history-page .history-entry h2,
+body.home-page .site-history .history-entry h2 {
+  font-family: var(--site-font-cn) !important;
+  font-size: 25px !important;
+  line-height: 1.55 !important;
+}
+@media (max-width: 760px) {
+  body.history-page .history-entry h2,
+  body.home-page .site-history .history-entry h2 {
+    font-size: 22px !important;
+  }
+}
