@@ -197,3 +197,22 @@ body.home-page .site-history .history-entry h2 {
     font-size: 22px !important;
   }
 }
+
+/* Final site-wide font lock + Chinese paragraph edge alignment.
+   Keep the final line naturally left-aligned; justify only the preceding lines. */
+html, body, body * {
+  font-family: var(--site-font-cn) !important;
+}
+.article-page .essay-content p,
+.article-page .essay-content li,
+.article-page .article-body p,
+.article-page .issue-content p,
+.article-page .essay-body p {
+  text-align: justify !important;
+  text-justify: inter-ideograph;
+  text-align-last: left;
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
