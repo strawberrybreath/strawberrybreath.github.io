@@ -396,7 +396,7 @@ html body .history-entry p {
 @media (max-width: 1024px) {
   html body.home-page .home-intro h1#site-title {
     font-family: "Italianno", cursive !important;
-    font-size: 42px !important;
+    font-size: 26px !important;
     font-weight: 400 !important;
   }
 }
