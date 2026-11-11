@@ -516,3 +516,54 @@ html body .history-entry p {
 body.home-page:not(.history-page) .home-intro h1#site-title {
   font-family: "Italianno", cursive !important;
 }
+
+
+/* 2026-11-11: restore the compact typography of the three feminist resource cards.
+   Keep the resource-card text at its original editorial scale despite global reading-size rules. */
+html body.home-page .feminist-section .feminist-card h3,
+html body.home-page .feminist-section .feminist-card-title-line {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+}
+html body.home-page .feminist-section .feminist-card-cn {
+  font-size: 11px !important;
+  line-height: 1.65 !important;
+}
+html body.home-page .feminist-section .feminist-card-description,
+html body.home-page .feminist-section .feminist-card-description p {
+  font-size: 12px !important;
+  line-height: 1.85 !important;
+}
+html body.home-page .feminist-section .feminist-visit {
+  font-size: 11px !important;
+  line-height: 1.6 !important;
+}
+@media (max-width: 1024px) {
+  html body.home-page .feminist-section .feminist-card h3,
+  html body.home-page .feminist-section .feminist-card-title-line {
+    font-size: 15px !important;
+  }
+  html body.home-page .feminist-section .feminist-card-description,
+  html body.home-page .feminist-section .feminist-card-description p {
+    font-size: 12px !important;
+    line-height: 1.8 !important;
+  }
+}
+
+/* 2026-11-11: enlarge and strengthen the homepage English wordmark only. */
+html body.home-page .home-intro h1#site-title {
+  font-family: "Italianno", cursive !important;
+  font-size: clamp(78px, 9vw, 108px) !important;
+  line-height: 1.12 !important;
+  font-weight: 700 !important;
+  -webkit-text-stroke: .65px currentColor;
+  letter-spacing: 0 !important;
+}
+@media (max-width: 1024px) {
+  html body.home-page .home-intro h1#site-title {
+    font-size: 78px !important;
+    line-height: 1.12 !important;
+    font-weight: 700 !important;
+    -webkit-text-stroke: .55px currentColor;
+  }
+}
