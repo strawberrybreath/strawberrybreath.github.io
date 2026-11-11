@@ -309,3 +309,54 @@ html body .history-entry p {
   font-weight: 400 !important;
   letter-spacing: 0 !important;
 }
+
+/* 2026-11-11: revised responsive type scale
+   Mobile: all headings 26px and reading copy 22px.
+   Desktop retains the larger 36px / 28px scale. */
+@media (max-width: 760px) {
+  html body h1,
+  html body h2,
+  html body h3,
+  html body h4,
+  html body h5,
+  html body h6,
+  html body .article-title,
+  html body .archive-title,
+  html body .page-title,
+  html body .section-title,
+  html body .history-entry-title,
+  html body .home-section-heading,
+  html body .essay-section-title,
+  html body .home-page .home-intro h1,
+  html body .archive-page .archive-heading h1,
+  html body .article-page .article-hero h1,
+  html body .article-page .article-title,
+  html body .article-page .issue-hero h1 {
+    font-size: 26px !important;
+    line-height: 1.55 !important;
+  }
+
+  html body p,
+  html body li,
+  html body blockquote,
+  html body .home-subtitle,
+  html body .home-about p,
+  html body .home-profile p,
+  html body .contact-intro > p,
+  html body .home-contact-intro,
+  html body .feminist-section p,
+  html body .article-list-copy > p,
+  html body .archive-heading p,
+  html body .essay-content p,
+  html body .essay-content li,
+  html body .article-body p,
+  html body .issue-content p,
+  html body .essay-body p,
+  html body .history-intro,
+  html body .site-history p,
+  html body .history-section p,
+  html body .history-entry p {
+    font-size: 22px !important;
+    line-height: 1.9 !important;
+  }
+}
