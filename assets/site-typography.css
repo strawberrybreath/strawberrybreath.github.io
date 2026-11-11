@@ -964,3 +964,75 @@ html body.history-page main .history-entry p {
     font-size: 12px !important;
   }
 }
+
+
+/* 2026-11-12: fine-tune article reading size and small homepage labels. */
+/* Keep the ten essays comfortable to read, but reduce the body copy slightly. */
+html body.article-page .essay-content p:not(.article-highlight),
+html body.article-page .essay-content li,
+html body.article-page .article-body p,
+html body.article-page .issue-content p,
+html body.article-page .essay-body p {
+  font-size: 21px !important;
+  line-height: 1.95 !important;
+}
+@media (max-width: 1024px) {
+  html body.article-page .essay-content p:not(.article-highlight),
+  html body.article-page .essay-content li,
+  html body.article-page .article-body p,
+  html body.article-page .issue-content p,
+  html body.article-page .essay-body p {
+    font-size: 18px !important;
+    line-height: 1.9 !important;
+  }
+}
+
+/* The sentence above the cat gallery is a small caption, not a section lead. */
+html body.home-page main .home-profile .home-profile-inner > p.about-cats-intro {
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+}
+@media (min-width: 761px) and (max-width: 1024px) {
+  html body.home-page main .home-profile .home-profile-inner > p.about-cats-intro {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 760px) {
+  html body.home-page main .home-profile .home-profile-inner > p.about-cats-intro {
+    font-size: 14px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* Reduce the English display typography in the feminism section without shrinking its Chinese copy. */
+html body.home-page main .feminist-section > p.feminist-kicker,
+html body.home-page main .feminist-section > p.feminist-links-heading {
+  font-size: 11px !important;
+  line-height: 1.6 !important;
+  letter-spacing: .12em !important;
+}
+html body.home-page main .feminist-section > h2 {
+  font-size: 28px !important;
+  line-height: 1.4 !important;
+}
+html body.home-page main .feminist-section .feminist-card-title-line {
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+@media (max-width: 1024px) {
+  html body.home-page main .feminist-section > h2 {
+    font-size: 24px !important;
+  }
+  html body.home-page main .feminist-section .feminist-card-title-line {
+    font-size: 13px !important;
+  }
+}
+@media (max-width: 760px) {
+  html body.home-page main .feminist-section > p.feminist-kicker,
+  html body.home-page main .feminist-section > p.feminist-links-heading {
+    font-size: 10px !important;
+  }
+  html body.home-page main .feminist-section > h2 {
+    font-size: 22px !important;
+  }
+}
