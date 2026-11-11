@@ -11,7 +11,7 @@ html, body {
 }
 body,
 body p, body li, body a, body button, body input, body textarea, body select,
-body label, body small, body div, body nav, body footer, body header,
+body label, body small, body span, body div, body nav, body footer, body header,
 body h1, body h2, body h3, body h4, body figcaption, body blockquote,
 body cite, body time, body dt, body dd, body strong, body em {
   font-family: var(--site-font-cn) !important;
@@ -100,18 +100,19 @@ body p, body li { font-size: 17px !important; line-height: 2.05 !important; }
 .article-page .article-topline span { font-size: 12px !important; line-height: 1.7 !important; }
 
 /* History timeline and history copy inside the homepage */
-.site-history, #site-history, .history-section, .site-history-entry,
-.site-history-timeline, .history-timeline {
+.site-history, #site-history, .history-page, .history-section, .site-history-entry,
+.site-history-timeline, .history-timeline, .history-entry, .history-note,
+.history-intro, .history-footer-link {
   font-family: var(--site-font-cn) !important;
 }
-.site-history h2, #site-history h2, .history-section h2 { font-size: 25px !important; line-height: 1.55 !important; }
-.site-history h3, #site-history h3, .history-section h3 { font-size: 19px !important; line-height: 1.6 !important; }
-.site-history p, #site-history p, .history-section p,
+.site-history h2, #site-history h2, .history-section h2, .history-entry h2 { font-size: 25px !important; line-height: 1.55 !important; }
+.site-history h3, #site-history h3, .history-section h3, .history-entry h3 { font-size: 19px !important; line-height: 1.6 !important; }
+.site-history p, #site-history p, .history-section p, .history-entry p, .history-intro,
 .site-history li, #site-history li, .history-section li {
   font-size: 15px !important; line-height: 1.95 !important;
 }
-.site-history time, #site-history time, .history-date,
-.site-history small, #site-history small { font-size: 12px !important; line-height: 1.7 !important; }
+.site-history time, #site-history time, .history-date, .history-entry time,
+.site-history small, #site-history small, .history-note, .history-footer-link { font-size: 12px !important; line-height: 1.7 !important; }
 
 /* Preserve deliberately distinct Latin/script and pronunciation treatments */
 .brand-en, .script-wordmark, .english-script, .article06-page .lyric-pronunciation,
@@ -166,9 +167,9 @@ body p, body li { font-size: 17px !important; line-height: 2.05 !important; }
   .article-page .essay-content h3, .article-page .article-section h3 { font-size: 19px !important; }
   .article-page figure figcaption, .article-page .article-caption,
   .article-page .image-caption { font-size: 10px !important; }
-  .site-history h2, #site-history h2, .history-section h2 { font-size: 22px !important; }
-  .site-history h3, #site-history h3, .history-section h3 { font-size: 18px !important; }
-  .site-history p, #site-history p, .history-section p,
+  .site-history h2, #site-history h2, .history-section h2, .history-entry h2 { font-size: 22px !important; }
+  .site-history h3, #site-history h3, .history-section h3, .history-entry h3 { font-size: 18px !important; }
+  .site-history p, #site-history p, .history-section p, .history-entry p, .history-intro,
   .site-history li, #site-history li, .history-section li { font-size: 14px !important; line-height: 1.95 !important; }
   .site-history time, #site-history time, .history-date,
   .site-history small, #site-history small { font-size: 11px !important; }
