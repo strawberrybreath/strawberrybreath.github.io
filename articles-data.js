@@ -23,7 +23,7 @@ const articles = [
     "imageAlt": "母亲与女儿坐在餐桌旁，女儿神情若有所思",
     "theme": "issue09",
     "category": "女性主义与社会观察",
-    "tags": ["女性与性别","家庭与社会","社会观察"],
+    "tags": ["女性与性别","社会观察"],
     "related": ["article-10.html", "article-05.html", "article-02.html"]
   },
   {
