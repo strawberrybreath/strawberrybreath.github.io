@@ -1310,3 +1310,46 @@ html body.article-page main .related-reading p { font-size: 15px !important; lin
   html body.site-footer .footer-copy,
   html body.site-footer .footer-page-link { font-size: 12px !important; }
 }
+
+
+/* 2026-11-12: homepage About divider and tighter cat-gallery ending. */
+html body.home-page main .home-articles .article-list-item:last-child {
+  border-bottom: 0 !important;
+}
+html body.home-page main .home-profile {
+  border-top: 1px solid var(--line, rgba(48,45,41,.18)) !important;
+  padding-top: 48px !important;
+  padding-bottom: 34px !important;
+}
+html body.home-page main .home-profile .about-cats-gallery {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+html body.home-page main .home-profile .about-cats-gallery > .about-cats-track {
+  padding-bottom: 0 !important;
+}
+html body.home-page main .home-profile .about-cats-hint {
+  margin: 5px 0 0 !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  html body.home-page main .home-profile {
+    padding-top: 40px !important;
+    padding-bottom: 28px !important;
+  }
+  html body.home-page main .home-profile .about-cats-hint {
+    font-size: 11px !important;
+  }
+}
+@media (max-width: 767px) {
+  html body.home-page main .home-profile {
+    padding-top: 32px !important;
+    padding-bottom: 22px !important;
+  }
+  html body.home-page main .home-profile .about-cats-hint {
+    margin-top: 4px !important;
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+  }
+}
