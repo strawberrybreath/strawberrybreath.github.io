@@ -208,7 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
       button.textContent=tag;
       button.dataset.filterTag=tag;
       button.setAttribute("aria-pressed","false");
-      button.addEventListener("click",()=>applyTagFilter(tag));
       tagHost.appendChild(button);
     });
   }
@@ -262,12 +261,19 @@ document.addEventListener("DOMContentLoaded", () => {
     tagHost?.querySelectorAll("[data-filter-tag]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.filterTag===activeTag)));
   };
   search?.addEventListener("input",updateResults);
-  archive.addEventListener("click",event=>{
-    const button=event.target.closest(".article-card-tags [data-filter-tag]");
-    if(!button)return;
+
+  // Use one capture-phase handler for both filter chips and tags inside article rows.
+  // This avoids nested/delegated click handlers cancelling each other's state.
+  document.addEventListener("click",event=>{
+    const button=event.target.closest("button[data-filter-tag]");
+    if(!button || !archive.contains(button) && !tagHost?.contains(button))return;
+    event.preventDefault();
+    event.stopPropagation();
     applyTagFilter(button.dataset.filterTag);
-    document.querySelector(".article-search")?.scrollIntoView({behavior:"smooth",block:"nearest"});
-  });
+    if(button.closest(".article-card-tags")){
+      document.querySelector(".article-search")?.scrollIntoView({behavior:"smooth",block:"nearest"});
+    }
+  },true);
   reset?.addEventListener("click",()=>{
     if(search)search.value=""; activeTag=""; updateResults();
   });
