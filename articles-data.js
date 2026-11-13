@@ -256,7 +256,6 @@ document.addEventListener("DOMContentLoaded", () => {
   search?.addEventListener("input",updateResults);
   const applyTagFilter=tag=>{
     activeTag=activeTag===tag?"":tag;
-    if(search)search.value="";
     updateResults();
   };
   tagHost?.addEventListener("click",event=>{
