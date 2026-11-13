@@ -193,14 +193,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const tagHost=document.querySelector("[data-tag-filters]");
   let activeTag="", bodyIndex={}, bodyIndexPromise=null, version=0;
 
+  function applyTagFilter(tag){
+    activeTag=activeTag===tag?"":tag;
+    updateResults();
+  }
+
   if(tagHost){
     const allTags=[...new Set(ordered.flatMap(article=>article.tags||[]))].sort((a,b)=>a.localeCompare(b,"zh-CN"));
     tagHost.replaceChildren();
     allTags.forEach(tag=>{
       const button=document.createElement("button");
-      button.type="button"; button.className="article-filter-chip article-tag-filter-chip";
-      button.textContent=tag; button.dataset.filterTag=tag;
+      button.type="button";
+      button.className="article-filter-chip article-tag-filter-chip";
+      button.textContent=tag;
+      button.dataset.filterTag=tag;
       button.setAttribute("aria-pressed","false");
+      button.addEventListener("click",()=>applyTagFilter(tag));
       tagHost.appendChild(button);
     });
   }
@@ -254,16 +262,9 @@ document.addEventListener("DOMContentLoaded", () => {
     tagHost?.querySelectorAll("[data-filter-tag]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.filterTag===activeTag)));
   };
   search?.addEventListener("input",updateResults);
-  const applyTagFilter=tag=>{
-    activeTag=activeTag===tag?"":tag;
-    updateResults();
-  };
-  tagHost?.addEventListener("click",event=>{
-    const button=event.target.closest("[data-filter-tag]"); if(!button)return;
-    applyTagFilter(button.dataset.filterTag);
-  });
   archive.addEventListener("click",event=>{
-    const button=event.target.closest("[data-filter-tag]"); if(!button)return;
+    const button=event.target.closest(".article-card-tags [data-filter-tag]");
+    if(!button)return;
     applyTagFilter(button.dataset.filterTag);
     document.querySelector(".article-search")?.scrollIntoView({behavior:"smooth",block:"nearest"});
   });
