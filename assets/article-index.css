@@ -550,3 +550,9 @@ body.home-page.archive-page .archive-list .article-list-item>.article-list-image
 }
 
 .article-list-item[data-article-theme="issue09"]{--card-theme-bg:#F1E4DF;--card-theme-border:rgba(150,93,88,.24)}
+
+
+/* 2026-11-14: ensure filtered archive rows stay hidden despite high-specificity grid layout. */
+body.home-page.archive-page .archive-list .article-list-item[hidden] {
+  display: none !important;
+}
