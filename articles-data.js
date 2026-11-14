@@ -49,7 +49,7 @@ const articles = [
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Immanuel_Kant_portrait_c1790.jpg",
     "imageAlt": "德国哲学家伊曼努尔·康德约1790年的肖像",
     "theme": "issue07",
-    "tags": ["自我成长"],
+    "tags": ["自我成长","历史文化"],
     "related": [
       "article-06.html",
       "article-08.html",
@@ -65,7 +65,7 @@ const articles = [
     "image": "https://img.yec.tw/zp/images/8170DCC60B5F2FA0CD306522B5F289F536180D21",
     "imageAlt": "陈奕迅2005年专辑《U 87》封面",
     "theme": "issue06",
-    "tags": ["亲密关系","文学艺术"],
+    "tags": ["亲密关系","文学艺术","自我成长"],
     "related": [
       "article-03.html",
       "article-07.html",
@@ -81,7 +81,7 @@ const articles = [
     "image": "https://static.bjd.com.cn/dams-res/editing/image/202312/30/658f8ee1d5de9bf28166ae9f.jpeg",
     "imageAlt": "人民文学出版社《红楼梦》四十周年纪念版书籍封面",
     "theme": "issue05",
-    "tags": ["女性主义","文学艺术"],
+    "tags": ["女性主义","文学艺术","历史文化"],
     "related": [
       "article-01.html",
       "article-02.html",
@@ -113,7 +113,7 @@ const articles = [
     "image": "https://www.nlc.cn/upload/img/2023-11-27/4db96e11.jpg",
     "imageAlt": "国家图书馆展出的宋刻本毛诗注疏古籍",
     "theme": "issue03",
-    "tags": ["亲密关系","文学艺术"],
+    "tags": ["亲密关系","女性主义","文学艺术"],
     "related": [
       "article-06.html",
       "article-07.html",
@@ -129,7 +129,7 @@ const articles = [
     "image": "https://monstrousregiment.co.uk/wp-content/uploads/1976/10/Vinegar_Tom_1976_Photo_4-1024x696.jpg",
     "imageAlt": "Monstrous Regiment 1976年《Vinegar Tom》原始演出黑白剧照",
     "theme": "issue02",
-    "tags": ["女性主义","历史文化"],
+    "tags": ["女性主义","历史文化","社会观察"],
     "related": [
       "article-04.html",
       "article-05.html",
