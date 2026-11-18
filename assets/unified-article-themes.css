@@ -13,6 +13,7 @@
   --issue09-accent:#A65F59;--issue09-strong:#71413E;--issue09-wash:#F3E7E2;--issue09-deep:#E8D3CC;--issue09-line:rgba(166,95,89,.25);
   --issue10-accent:#617D83;--issue10-strong:#3D555C;--issue10-wash:#E7EEEF;--issue10-deep:#D3E0E2;--issue10-line:rgba(97,125,131,.25);
   --issue11-accent:#8A8465;--issue11-strong:#5D5944;--issue11-wash:#F0EFE5;--issue11-deep:#E1DFCE;--issue11-line:rgba(138,132,101,.27);
+  --issue12-accent:#657D83;--issue12-strong:#435B61;--issue12-wash:#E8EEF0;--issue12-deep:#D4E0E4;--issue12-line:rgba(101,125,131,.27);
 }
 
 /* Each article body receives its own single source of truth. */
@@ -27,6 +28,7 @@ body.article-page.article08-page{--article-accent:var(--issue08-accent);--articl
 body.article-page.article09-page{--article-accent:var(--issue09-accent);--article-accent-strong:var(--issue09-strong);--article-wash:var(--issue09-wash);--article-wash-deep:var(--issue09-deep);--article-line:var(--issue09-line)}
 body.article-page.article10-page{--article-accent:var(--issue10-accent);--article-accent-strong:var(--issue10-strong);--article-wash:var(--issue10-wash);--article-wash-deep:var(--issue10-deep);--article-line:var(--issue10-line)}
 body.article-page.article11-page{--article-accent:var(--issue11-accent);--article-accent-strong:var(--issue11-strong);--article-wash:var(--issue11-wash);--article-wash-deep:var(--issue11-deep);--article-line:var(--issue11-line)}
+body.article-page.article12-page{--article-accent:var(--issue12-accent);--article-accent-strong:var(--issue12-strong);--article-wash:var(--issue12-wash);--article-wash-deep:var(--issue12-deep);--article-line:var(--issue12-line)}
 
 /* Article navigation: the strong shade is the shared navigation color. */
 body.article-page .site-header{
@@ -73,7 +75,7 @@ body.article-page .essay-content .poem-original,
 body.article-page .essay-content .poem-context,
 body.article-page .article08-ending,
 body.article-page .article09-ending,
-body.article-page .article10-ending,body.article-page .article11-ending{
+body.article-page .article10-ending,body.article-page .article11-ending,body.article-page .article12-ending,body.article-page .article12-sources{
   background:linear-gradient(135deg,var(--article-wash) 0%,var(--article-wash-deep) 100%)!important;
   border-color:var(--article-line)!important;
   color:var(--article-accent-strong)!important;
@@ -88,11 +90,11 @@ body.article-page .essay-content .redchamber-quote{border-left:4px solid var(--a
 body.article-page .essay-section-title,
 body.article-page .article08-ending .quote,
 body.article-page .article09-ending .quote,
-body.article-page .article10-ending .quote,body.article-page .article11-ending .quote{color:var(--article-accent-strong)!important}
+body.article-page .article10-ending .quote,body.article-page .article11-ending .quote,body.article-page .article12-ending .quote{color:var(--article-accent-strong)!important}
 body.article-page .essay-section-title{border-left-color:var(--article-accent)!important}
 body.article-page .article08-ending,
 body.article-page .article09-ending,
-body.article-page .article10-ending,.article11-ending{border:1px solid var(--article-line)!important}
+body.article-page .article10-ending,.article11-ending,.article12-ending{border:1px solid var(--article-line)!important}
 
 /* Homepage and archive cards use exactly the same light shade as their article. */
 body.home-page .article-list-item[data-article-theme],
@@ -122,6 +124,8 @@ body.home-page .article-list-item[data-article-theme="issue10"],
 body.archive-page .article-list-item[data-article-theme="issue10"]{--card-theme-bg:var(--issue10-wash);--card-theme-border:var(--issue10-line)}
 body.home-page .article-list-item[data-article-theme="issue11"],
 body.archive-page .article-list-item[data-article-theme="issue11"]{--card-theme-bg:var(--issue11-wash);--card-theme-border:var(--issue11-line)}
+body.home-page .article-list-item[data-article-theme="issue12"],
+body.archive-page .article-list-item[data-article-theme="issue12"]{--card-theme-bg:var(--issue12-wash);--card-theme-border:var(--issue12-line)}
 body.home-page .article-list-item[data-article-theme] h3 a,
 body.archive-page .article-list-item[data-article-theme] h3 a{color:#302D29!important}
 body.home-page .article-list-item[data-article-theme] .article-list-copy>p,
@@ -146,7 +150,7 @@ html.site-night body.article-page .essay-content .poem-original,
 html.site-night body.article-page .essay-content .poem-context,
 html.site-night body.article-page .article08-ending,
 html.site-night body.article-page .article09-ending,
-html.site-night body.article-page .article10-ending,html.site-night body.article-page .article11-ending{
+html.site-night body.article-page .article10-ending,html.site-night body.article-page .article11-ending,html.site-night body.article-page .article12-ending,html.site-night body.article-page .article12-sources{
   background:#252827!important;background-image:none!important;border-color:#383D3B!important;box-shadow:none!important;
 }
 html.site-night body.article-page .article-hero::before,
@@ -166,6 +170,6 @@ html.site-night body.article-page .essay-content .poem-original *,
 html.site-night body.article-page .essay-content .poem-context *,
 html.site-night body.article-page .article08-ending *,
 html.site-night body.article-page .article09-ending *,
-html.site-night body.article-page .article10-ending *,html.site-night body.article-page .article11-ending *{
+html.site-night body.article-page .article10-ending *,html.site-night body.article-page .article11-ending *,html.site-night body.article-page .article12-ending *,html.site-night body.article-page .article12-sources *{
   color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
 }
