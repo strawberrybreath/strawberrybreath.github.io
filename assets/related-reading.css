@@ -45,3 +45,9 @@
 @media(prefers-reduced-motion:reduce){.related-reading-card{transition:none}}
 
 .related-reading-card[data-article-theme="issue09"]{--related-bg:#F1E4DF;--related-border:rgba(150,93,88,.30)}
+
+/* Related-reading palettes for issues 10–13. */
+.related-reading-card[data-article-theme="issue10"]{--related-bg:#E5EAEC;--related-border:rgba(82,106,114,.30)}
+.related-reading-card[data-article-theme="issue11"]{--related-bg:#EAE7DD;--related-border:rgba(120,112,91,.30)}
+.related-reading-card[data-article-theme="issue12"]{--related-bg:#E9E2D8;--related-border:rgba(112,91,67,.30)}
+.related-reading-card[data-article-theme="issue13"]{--related-bg:#EFE3E6;--related-border:rgba(104,67,76,.30)}
