@@ -10,7 +10,7 @@
   margin:0 auto 24px!important;
   padding:0!important;
   color:#E63F25!important;
-  font-family:"Italianno",cursive!important;
+  font-family:"Great Vibes",cursive!important;
   font-size:clamp(190px,26vw,380px)!important;
   font-weight:400!important;
   line-height:.72!important;
@@ -25,7 +25,7 @@
   display:block!important;
   white-space:nowrap!important;
   color:#E63F25!important;
-  font-family:"Italianno",cursive!important;
+  font-family:"Great Vibes",cursive!important;
 }
 @media(min-width:761px) and (max-width:1100px){
   .home-page #site-title{
