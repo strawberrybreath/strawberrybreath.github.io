@@ -1,6 +1,19 @@
 /* Article catalogue: one source of truth for home cards, archive filters and search. */
 const articles = [
   {
+    "title": "便利的时代，我们为什么反而越来越难快乐？",
+    "href": "article-11.html",
+    "date": "2026-11-18",
+    "dateLabel": "2026年11月18日",
+    "description": "从即时满足、庄子的汉阴丈人，到黑胶唱片和胶片相机，重新思考便利、耐心与生活体验。",
+    "image": "https://images.unsplash.com/photo-1432821397715-257962351702?auto=format&fit=crop&fm=jpg&q=85&w=1400",
+    "imageAlt": "一台老式胶片相机的近景，摄影：RetroSupply / Unsplash",
+    "theme": "issue11",
+    "tags": ["社会观察","自我成长"],
+    "related": ["article-10.html", "article-07.html", "article-08.html"]
+  },
+
+  {
     "title": "当爱情开始承担整个社会的重量",
     "href": "article-10.html",
     "date": "2026-11-10",
