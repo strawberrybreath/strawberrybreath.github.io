@@ -1,4 +1,4 @@
-/* Homepage masthead: oversized, expressive Italianno script wordmark. */
+/* Homepage masthead: oversized, expressive Great Vibes script wordmark. */
 .home-page #site-title{
   display:flex!important;
   flex-direction:column!important;
@@ -36,15 +36,15 @@
 }
 @media(max-width:760px){
   .home-page #site-title{
-    font-size:clamp(104px,25vw,148px)!important;
+    font-size:clamp(220px,58vw,300px)!important;
     line-height:.78!important;
     letter-spacing:-.035em!important;
-    margin-bottom:18px!important;
+    margin-bottom:24px!important;
   }
 }
 @media(max-width:390px){
   .home-page #site-title{
-    font-size:clamp(92px,24vw,112px)!important;
+    font-size:clamp(190px,54vw,230px)!important;
     line-height:.8!important;
     letter-spacing:-.04em!important;
   }
