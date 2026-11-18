@@ -176,3 +176,32 @@ html.site-night body.article-page .article09-ending *,
 html.site-night body.article-page .article10-ending *,html.site-night body.article-page .article11-ending *,html.site-night body.article-page .article13-ending *,html.site-night body.article-page .article12-ending *,html.site-night body.article-page .article13-sources *,html.site-night body.article-page .article12-sources *{
   color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
 }
+
+
+/* Issue 13 night-mode neutralization: no daytime palette remains in music or pagination modules. */
+html.site-night body.article-page.article13-page .article13-ending,
+html.site-night body.article-page.article13-page .article13-music,
+html.site-night body.article-page.article13-page .article-pagination>a,
+html.site-night body.article-page.article13-page .article-pagination-next{
+  background:#252827!important;background-image:none!important;border-color:#383D3B!important;color:#FFFFFF!important;box-shadow:none!important;
+}
+html.site-night body.article-page.article13-page .article13-ending *,
+html.site-night body.article-page.article13-page .article13-music *,
+html.site-night body.article-page.article13-page .article-pagination *{
+  color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+}
+html.site-night body.article-page.article13-page .article13-cover figcaption,
+html.site-night body.article-page.article13-page .article13-cover figcaption a{color:#FFFFFF!important}
+html.site-night body.article-page.article13-page .music-confirm{
+  background:#303533!important;border-color:#505956!important;color:#FFFFFF!important;
+}
+html.site-night body.article-page.article13-page .music-confirm-modal .music-confirm-dialog{
+  background:#252827!important;color:#FFFFFF!important;border:1px solid #383D3B;
+}
+html.site-night body.article-page.article13-page .music-confirm-modal .music-confirm-dialog *,
+html.site-night body.article-page.article13-page .music-confirm-modal .music-confirm-actions button{
+  color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+}
+html.site-night body.article-page.article13-page .music-confirm-actions .continue{
+  background:#68434C!important;border-color:#68434C!important;
+}
