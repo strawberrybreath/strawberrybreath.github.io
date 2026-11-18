@@ -6,8 +6,8 @@ const articles = [
     "date": "2026-11-18",
     "dateLabel": "2026年11月18日",
     "description": "从芒果TV综艺《后会友期》和陈奕迅《最佳损友》出发，重新思考友情、女性亲密关系，以及人生是否只有爱情与婚姻一种答案。",
-    "image": "https://3img.hitv.com/preview/sp_images/2026/11/16/202611161308534786265.jpg?x-oss-process=image/resize,w_1000/format,jpg",
-    "imageAlt": "芒果TV综艺《后会友期》官方节目海报",
+    "image": "https://media.bjnews.com.cn/fz/html/AttachPubDev/2026/10/hejw202610221134263247906.jpg?x-oss-process=image/resize,m_lfit,w_800/quality,q_80",
+    "imageAlt": "芒果TV综艺《后会友期》节目剧照",
     "theme": "issue13",
     "tags": ["女性主义","女性友情","亲密关系"],
     "related": ["article-10.html", "article-05.html"]
