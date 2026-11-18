@@ -6,11 +6,13 @@ document.addEventListener("DOMContentLoaded",()=>{
   if(!essay)return;
 
   const headings=[...essay.querySelectorAll("h2,h3")].filter(h=>h.textContent.trim());
-  if(headings.length>=2){
+  const lyricSection=document.querySelector("#lyrics-section");
+  const tocCount=headings.length+(lyricSection?1:0);
+  if(headings.length>=2||lyricSection){
     const toc=document.createElement("details");
     toc.className="reading-toc";
     const summary=document.createElement("summary");
-    summary.textContent="本文目录 · "+headings.length+" 个章节";
+    summary.textContent="本文目录 · "+tocCount+" 个章节";
     const list=document.createElement("ol");
     headings.forEach((heading,index)=>{
       if(!heading.id)heading.id="reading-section-"+(index+1);
@@ -20,6 +22,12 @@ document.addEventListener("DOMContentLoaded",()=>{
       link.href="#"+heading.id;link.textContent=heading.textContent.trim();
       item.appendChild(link);list.appendChild(item);
     });
+    if(lyricSection){
+      const item=document.createElement("li");
+      const link=document.createElement("a");
+      link.href="#lyrics-section";link.textContent="歌词与粤语罗马音";
+      item.appendChild(link);list.appendChild(item);
+    }
     toc.append(summary,list);
     const topline=document.querySelector(".article-topline");
     if(topline)topline.insertAdjacentElement("afterend",toc);
