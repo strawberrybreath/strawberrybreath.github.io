@@ -73,7 +73,7 @@ body.article-page .essay-content .poem-original,
 body.article-page .essay-content .poem-context,
 body.article-page .article08-ending,
 body.article-page .article09-ending,
-body.article-page .article10-ending,.article11-ending{
+body.article-page .article10-ending,body.article-page .article11-ending{
   background:linear-gradient(135deg,var(--article-wash) 0%,var(--article-wash-deep) 100%)!important;
   border-color:var(--article-line)!important;
   color:var(--article-accent-strong)!important;
@@ -88,7 +88,7 @@ body.article-page .essay-content .redchamber-quote{border-left:4px solid var(--a
 body.article-page .essay-section-title,
 body.article-page .article08-ending .quote,
 body.article-page .article09-ending .quote,
-body.article-page .article10-ending .quote{color:var(--article-accent-strong)!important}
+body.article-page .article10-ending .quote,body.article-page .article11-ending .quote{color:var(--article-accent-strong)!important}
 body.article-page .essay-section-title{border-left-color:var(--article-accent)!important}
 body.article-page .article08-ending,
 body.article-page .article09-ending,
@@ -146,7 +146,7 @@ html.site-night body.article-page .essay-content .poem-original,
 html.site-night body.article-page .essay-content .poem-context,
 html.site-night body.article-page .article08-ending,
 html.site-night body.article-page .article09-ending,
-html.site-night body.article-page .article10-ending,.article11-ending{
+html.site-night body.article-page .article10-ending,html.site-night body.article-page .article11-ending{
   background:#252827!important;background-image:none!important;border-color:#383D3B!important;box-shadow:none!important;
 }
 html.site-night body.article-page .article-hero::before,
