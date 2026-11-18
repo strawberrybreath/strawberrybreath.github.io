@@ -1,6 +1,18 @@
 /* Article catalogue: one source of truth for home cards, archive filters and search. */
 const articles = [
   {
+    "title": "重新定义亲密关系：友情也可以是人生的答案",
+    "href": "article-13.html",
+    "date": "2026-11-18",
+    "dateLabel": "2026年11月18日",
+    "description": "从芒果TV综艺《后会友期》和陈奕迅《最佳损友》出发，重新思考友情、女性亲密关系，以及人生是否只有爱情与婚姻一种答案。",
+    "image": "https://3img.hitv.com/preview/sp_images/2026/11/16/202611161308534786265.jpg?x-oss-process=image/resize,w_1000/format,jpg",
+    "imageAlt": "芒果TV综艺《后会友期》官方节目海报",
+    "theme": "issue13",
+    "tags": ["女性主义","女性友情","亲密关系"],
+    "related": ["article-10.html", "article-05.html"]
+  },
+  {
     "title": "为什么我们总在彼此竞争，却很少追问竞争从何而来？",
     "href": "article-12.html",
     "date": "2026-11-11",
