@@ -1428,3 +1428,20 @@ html body.home-page main .home-profile .about-cats-hint {
 }
 @media(max-width:390px){body.home-page:not(.history-page) .home-intro h1#site-title{font-size:26px!important}body.article-page .reading-toc ol{margin-top:8px!important}body.history-page .site-history{width:calc(100% - 30px)!important}}
 /* The approved long-form reading copy keeps its existing computed font size. */
+
+
+/* Compact auxiliary sections on the homepage as well as the dedicated history page. */
+body.home-page:not(.history-page) .contact-heading h2{font-size:21px!important;line-height:1.4!important}
+@media(min-width:1025px){body.home-page:not(.history-page) .contact-heading h2{font-size:25px!important}}
+body.home-page:not(.history-page) .site-history .history-entry h2{font-size:15px!important;line-height:1.45!important}
+body.home-page:not(.history-page) .site-history .history-entry p,
+body.home-page:not(.history-page) .site-history .history-intro{font-size:12px!important;line-height:1.7!important}
+body.home-page:not(.history-page) .site-history .history-entry time,
+body.home-page:not(.history-page) .site-history .history-note,
+body.home-page:not(.history-page) .site-history .history-footer-link{font-size:10px!important;line-height:1.5!important}
+@media(min-width:1025px){
+ body.home-page:not(.history-page) .site-history .history-entry h2{font-size:17px!important}
+ body.home-page:not(.history-page) .site-history .history-entry p,
+ body.home-page:not(.history-page) .site-history .history-intro{font-size:14px!important;line-height:1.75!important}
+ body.home-page:not(.history-page) .site-history .history-entry time{font-size:11px!important}
+}
