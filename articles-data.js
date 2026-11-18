@@ -1,6 +1,19 @@
 /* Article catalogue: one source of truth for home cards, archive filters and search. */
 const articles = [
   {
+    "title": "为什么我们总在彼此竞争，却很少追问竞争从何而来？",
+    "href": "article-12.html",
+    "date": "2026-11-18",
+    "dateLabel": "2026年11月18日",
+    "description": "从恩格斯《英国工人阶级状况》出发，重新理解现代社会的劳动内卷，以及生产关系、劳动力市场与劳动者之间的竞争。",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/In_a_Cotton_Factory,_Manchester,_c.1892.jpg?width=1400",
+    "imageAlt": "1892年曼彻斯特棉纺厂内部的历史照片，来源：Wikimedia Commons",
+    "theme": "issue12",
+    "tags": ["劳动关系","资本主义","社会结构"],
+    "related": ["article-11.html", "article-10.html"]
+  },
+
+  {
     "title": "便利的时代，我们为什么反而越来越难快乐？",
     "href": "article-11.html",
     "date": "2026-11-18",
