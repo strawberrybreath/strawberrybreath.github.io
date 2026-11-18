@@ -39,3 +39,10 @@ body.archive-page .article-list-item[data-article-theme] .article-list-copy>p{co
 
 body.home-page .article-list-item[data-article-theme="issue09"],
 body.archive-page .article-list-item[data-article-theme="issue09"]{--card-theme-bg:#F1E4DF;--card-theme-border:rgba(150,93,88,.30)}
+
+/* Issue 13: warm muted rose, consistent with the article's own theme. */
+body.home-page .article-list-item[data-article-theme="issue13"],
+body.archive-page .article-list-item[data-article-theme="issue13"]{
+  --card-theme-bg:#F0E5E7;
+  --card-theme-border:rgba(104,67,76,.28);
+}
