@@ -9,7 +9,7 @@ const articles = [
     "image": "https://www.ccwb.cn/pic/202610/23/c4415c01-dd89-4e74-b584-9cea65e85a36.jpg",
     "imageAlt": "芒果TV综艺《后会友期》节目剧照",
     "theme": "issue13",
-    "tags": ["女性主义","女性友情","亲密关系"],
+    "tags": ["女性主义","亲密关系"],
     "related": ["article-10.html", "article-05.html"]
   },
   {
@@ -21,7 +21,7 @@ const articles = [
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/In_a_Cotton_Factory,_Manchester,_c.1892.jpg?width=1400",
     "imageAlt": "1892年曼彻斯特棉纺厂内部的历史照片，来源：Wikimedia Commons",
     "theme": "issue12",
-    "tags": ["劳动关系","资本主义","社会结构"],
+    "tags": ["社会观察"],
     "related": ["article-11.html", "article-10.html"]
   },
 
