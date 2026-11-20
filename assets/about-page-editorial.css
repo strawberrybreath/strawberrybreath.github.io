@@ -250,3 +250,116 @@
   .about-page .about-toc a>span:nth-child(2){font-size:12px}
   .about-page .about-toc-en{font-size:7px}
 }
+
+
+/* 2026-11-20 mobile refinement: full-width editorial layout, no nested panels. */
+@media(max-width:760px){
+  .about-page .about-page-intro{
+    width:calc(100% - 32px);
+    padding:28px 0 14px;
+  }
+  .about-page .about-toc{
+    width:calc(100% - 24px);
+    margin-bottom:18px;
+    background:transparent;
+  }
+  .about-page .home-profile{
+    width:100%;
+    margin:0;
+    padding:12px 0 24px!important;
+  }
+  .about-page .home-profile .home-profile-inner{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:22px 17px 18px!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+  }
+  .about-page .home-profile .home-profile-inner:before{display:none!important}
+  .about-page .home-profile .home-profile-inner h2{
+    margin-bottom:14px!important;
+    font-size:24px!important;
+  }
+  .about-page .home-profile .home-profile-inner>p:not(.about-lead):not(.about-cats-intro){
+    max-width:none!important;
+  }
+  .about-page .home-profile .about-cats-intro{
+    margin-top:8px!important;
+    padding:4px 0 4px 10px!important;
+    background:transparent!important;
+    font-size:14px!important;
+  }
+  .about-page .home-profile .about-cats-gallery{margin-top:10px!important}
+  .about-page .feminist-section{
+    width:100%!important;
+    max-width:none!important;
+    margin:0 0 22px!important;
+    padding:25px 17px 22px!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+  }
+  .about-page .feminist-section h2{font-size:26px!important}
+  .about-page .feminist-subtitle{margin:6px 0 16px!important}
+  .about-page .feminist-statement{padding-left:10px!important}
+  .about-page .feminist-invitation{margin-top:12px!important}
+  .about-page .feminist-links-heading{margin:20px 0 12px!important}
+  .about-page .home-contact{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:23px 14px 22px!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+  }
+  .about-page .contact-intro h2{font-size:24px!important}
+  .about-page .home-contact-intro{
+    margin:9px 0 14px!important;
+    font-size:13px!important;
+    line-height:1.75!important;
+  }
+  .about-page .contact-methods{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:8px!important;
+    width:100%!important;
+  }
+  .about-page .contact-method{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    min-width:0!important;
+    min-height:106px!important;
+    padding:11px 5px!important;
+    border:1px solid rgba(115,126,99,.18)!important;
+    border-radius:4px!important;
+    box-shadow:none!important;
+    text-align:center!important;
+    transform:none!important;
+  }
+  .about-page .contact-method-icon{margin:0 0 5px!important}
+  .about-page .contact-method-title{font-size:14px!important;line-height:1.35!important}
+  .about-page .contact-method-detail{
+    margin-top:3px!important;
+    font-size:10px!important;
+    line-height:1.45!important;
+    overflow-wrap:anywhere;
+  }
+  .about-page .contact-method-action{
+    margin-top:5px!important;
+    font-size:10px!important;
+    line-height:1.35!important;
+  }
+}
+@media(max-width:390px){
+  .about-page .home-profile .home-profile-inner{padding-right:14px!important;padding-left:14px!important}
+  .about-page .contact-methods{gap:6px!important}
+  .about-page .contact-method{min-height:100px!important;padding:9px 3px!important}
+  .about-page .contact-method-title{font-size:13px!important}
+  .about-page .contact-method-detail,.about-page .contact-method-action{font-size:9px!important}
+}
