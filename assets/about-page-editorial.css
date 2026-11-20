@@ -363,3 +363,34 @@
   .about-page .contact-method-title{font-size:13px!important}
   .about-page .contact-method-detail,.about-page .contact-method-action{font-size:9px!important}
 }
+
+
+/* 2026-11-20 mobile alignment fix: prevent padded 100%-width profile content from overflowing. */
+@media(max-width:760px){
+  .about-page .home-profile,
+  .about-page .home-profile .home-profile-inner{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+  .about-page .home-profile .home-profile-inner{
+    padding-left:17px!important;
+    padding-right:17px!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+  .about-page .home-profile .home-profile-inner>p,
+  .about-page .home-profile .home-profile-inner>h2,
+  .about-page .home-profile .about-cats-gallery,
+  .about-page .home-profile .about-cats-hint{
+    box-sizing:border-box!important;
+    max-width:100%!important;
+    margin-right:0!important;
+  }
+}
+@media(max-width:390px){
+  .about-page .home-profile .home-profile-inner{
+    padding-left:15px!important;
+    padding-right:15px!important;
+  }
+}
