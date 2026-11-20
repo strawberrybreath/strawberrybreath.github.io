@@ -1,4 +1,4 @@
-/* Homepage masthead: oversized, expressive Great Vibes script wordmark. */
+/* Homepage masthead: the Great Vibes wordmark is the dominant visual element. */
 .home-page #site-title{
   display:flex!important;
   flex-direction:column!important;
@@ -7,19 +7,19 @@
   gap:0!important;
   width:100%!important;
   max-width:100%!important;
-  margin:0 auto 24px!important;
+  margin:0 auto 30px!important;
   padding:0!important;
   color:#E63F25!important;
   font-family:"Great Vibes",cursive!important;
-  font-size:clamp(190px,26vw,380px)!important;
+  font-size:clamp(220px,34vw,560px)!important;
   font-weight:400!important;
-  line-height:.72!important;
-  letter-spacing:-.025em!important;
+  line-height:.7!important;
+  letter-spacing:-.035em!important;
   text-align:center!important;
   white-space:normal!important;
   overflow:visible!important;
-  -webkit-text-stroke:.35px currentColor!important;
-  text-shadow:0 0 .5px currentColor!important;
+  -webkit-text-stroke:.4px currentColor!important;
+  text-shadow:0 0 .6px currentColor!important;
 }
 .home-page #site-title .hero-word{
   display:block!important;
@@ -29,23 +29,23 @@
 }
 @media(min-width:761px) and (max-width:1100px){
   .home-page #site-title{
-    font-size:clamp(150px,22vw,250px)!important;
-    line-height:.76!important;
-    margin-bottom:22px!important;
+    font-size:clamp(190px,38vw,430px)!important;
+    line-height:.73!important;
+    margin-bottom:26px!important;
   }
 }
 @media(max-width:760px){
   .home-page #site-title{
-    font-size:clamp(220px,58vw,300px)!important;
-    line-height:.78!important;
-    letter-spacing:-.035em!important;
+    font-size:clamp(170px,43vw,300px)!important;
+    line-height:.76!important;
+    letter-spacing:-.04em!important;
     margin-bottom:24px!important;
   }
 }
 @media(max-width:390px){
   .home-page #site-title{
-    font-size:clamp(190px,54vw,230px)!important;
-    line-height:.8!important;
-    letter-spacing:-.04em!important;
+    font-size:clamp(150px,42vw,220px)!important;
+    line-height:.78!important;
+    letter-spacing:-.045em!important;
   }
 }
