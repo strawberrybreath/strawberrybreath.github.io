@@ -30,7 +30,7 @@
 <link rel="stylesheet" href="assets/redesign.css?v=20261101">
 <link rel="stylesheet" href="assets/typography-fix.css?v=20261101">
 <link rel="stylesheet" href="assets/human-editorial.css?v=20261102">
-<link rel="stylesheet" href="assets/global-header.css?v=20261110-desktop-grid">
+<link rel="stylesheet" href="assets/global-header.css?v=20261120-nav-zh-only">
 <link rel="stylesheet" href="assets/responsive-editorial.css?v=20261102"><link rel="stylesheet" href="assets/home-editorial-overhaul.css?v=20261110-unified-scale">
 <link rel="stylesheet" href="assets/quiet-editorial-system.css?v=20261111-open-sections">
 <link rel="stylesheet" href="assets/article-index.css?v=20261109-article-theme-cards">
@@ -46,7 +46,24 @@
   <link rel="stylesheet" href="assets/site-typography.css?v=20261118-font-hierarchy-v2">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
-<link rel="stylesheet" href="assets/home-hero-title.css?v=20261120-dominant-title"><style>.home-page #site-title,.home-page #site-title .hero-word{font-family:"Great Vibes",cursive!important}</style>\n</head>
+<link rel="stylesheet" href="assets/home-hero-title.css?v=20261120-dominant-title-final">
+<style id="homepage-masthead-final">
+.home-page #site-title,
+.home-page .home-intro h1#site-title{
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+  width:100%!important;max-width:100%!important;margin:0 auto 34px!important;padding:0!important;
+  color:#E63F25!important;font-family:"Great Vibes",cursive!important;font-size:clamp(300px,35vw,600px)!important;
+  font-weight:400!important;line-height:.68!important;letter-spacing:-.04em!important;text-align:center!important;
+  white-space:normal!important;overflow:visible!important;border:0!important;box-shadow:none!important;
+}
+.home-page #site-title .hero-word{display:block!important;font-family:"Great Vibes",cursive!important;font-size:1em!important;line-height:inherit!important;white-space:nowrap!important;color:#E63F25!important}
+.site-header .site-nav .nav-en{display:none!important;visibility:hidden!important}
+.site-header .site-nav .nav-zh{display:inline!important;visibility:visible!important}
+@media(min-width:761px) and (max-width:1100px){.home-page #site-title,.home-page .home-intro h1#site-title{font-size:clamp(220px,40vw,460px)!important;line-height:.7!important}}
+@media(max-width:760px){.home-page #site-title,.home-page .home-intro h1#site-title{font-size:clamp(160px,48vw,250px)!important;line-height:.74!important;letter-spacing:-.045em!important;margin-bottom:28px!important}}
+@media(max-width:390px){.home-page #site-title,.home-page .home-intro h1#site-title{font-size:clamp(150px,46vw,220px)!important;line-height:.76!important}}
+</style>
+</head>
 <body class="home-page">
 <a class="skip-to-content" href="#main-content">跳到正文</a>
 <div class="site-frame">
