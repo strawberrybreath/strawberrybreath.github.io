@@ -1,10 +1,11 @@
-/* Homepage masthead: expressive calligraphy with a balanced introduction below. */
+/* Homepage masthead: a generous but restrained title, with clear Chinese copy hierarchy. */
 .home-page .home-intro{
-  width:min(1000px,100%)!important;
-  max-width:1000px!important;
-  padding:clamp(48px,7vw,82px) 0 clamp(38px,5vw,56px)!important;
-  margin-inline:auto!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:clamp(46px,5.5vw,72px) 24px clamp(48px,5.2vw,68px)!important;
   text-align:center!important;
+  box-sizing:border-box!important;
 }
 .home-page #site-title,
 .home-page .home-intro h1#site-title{
@@ -15,13 +16,13 @@
   gap:0!important;
   width:100%!important;
   max-width:100%!important;
-  margin:0 auto 20px!important;
+  margin:0 auto 12px!important;
   padding:0!important;
   color:#E63F25!important;
   font-family:"Ballet",cursive!important;
-  font-size:clamp(310px,39vw,590px)!important;
+  font-size:clamp(230px,29vw,410px)!important;
   font-weight:400!important;
-  line-height:.61!important;
+  line-height:.68!important;
   letter-spacing:-.025em!important;
   text-align:center!important;
   white-space:normal!important;
@@ -43,10 +44,11 @@
   transform-origin:center!important;
 }
 .home-page .home-subtitle{
-  margin:0 0 12px!important;
+  max-width:760px!important;
+  margin:0 auto 8px!important;
   color:#858D70!important;
-  font-size:clamp(16px,1.8vw,19px)!important;
-  line-height:1.85!important;
+  font-size:clamp(16px,1.55vw,18px)!important;
+  line-height:1.9!important;
   letter-spacing:.045em!important;
   font-weight:500!important;
 }
@@ -60,36 +62,44 @@
 .home-page .home-about p{
   margin:0!important;
   color:#625B53!important;
-  font-size:clamp(14px,1.45vw,16px)!important;
+  font-size:clamp(14px,1.35vw,16px)!important;
   line-height:2!important;
   letter-spacing:.02em!important;
 }
 @media(min-width:761px) and (max-width:1100px){
+  .home-page .home-intro{padding-top:48px!important;padding-bottom:50px!important}
   .home-page #site-title,.home-page .home-intro h1#site-title{
-    font-size:clamp(270px,43vw,480px)!important;
-    line-height:.64!important;
+    font-size:clamp(215px,32vw,330px)!important;
+    line-height:.7!important;
   }
 }
 @media(max-width:760px){
   .home-page .home-intro{
     width:100%!important;
-    padding:42px 12px 38px!important;
+    padding:36px 18px 38px!important;
   }
   .home-page #site-title,.home-page .home-intro h1#site-title{
-    font-size:clamp(190px,53vw,270px)!important;
-    line-height:.66!important;
-    margin-bottom:18px!important;
+    font-size:clamp(150px,43vw,205px)!important;
+    line-height:.72!important;
+    margin-bottom:12px!important;
     letter-spacing:-.035em!important;
   }
   .home-page #site-title .hero-word{transform:scaleX(.78)!important}
-  .home-page .home-subtitle{font-size:16px!important;line-height:1.8!important;margin-bottom:9px!important}
+  .home-page .home-subtitle{
+    max-width:520px!important;
+    font-size:15px!important;
+    line-height:1.85!important;
+    margin-bottom:7px!important;
+    letter-spacing:.025em!important;
+  }
   .home-page .home-about{max-width:520px!important;padding:0 8px!important}
   .home-page .home-about p{font-size:14px!important;line-height:1.9!important}
 }
 @media(max-width:390px){
-  .home-page .home-intro{padding-top:34px!important;padding-bottom:32px!important}
+  .home-page .home-intro{padding:30px 14px 32px!important}
   .home-page #site-title,.home-page .home-intro h1#site-title{
-    font-size:clamp(170px,51vw,215px)!important;
-    line-height:.68!important;
+    font-size:clamp(138px,42vw,166px)!important;
+    line-height:.74!important;
   }
+  .home-page .home-subtitle{font-size:14px!important}
 }
