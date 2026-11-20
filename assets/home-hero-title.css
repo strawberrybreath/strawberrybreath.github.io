@@ -1,23 +1,95 @@
-/* Oversized editorial calligraphy for the homepage wordmark. */
+/* Homepage masthead: expressive calligraphy with a balanced introduction below. */
+.home-page .home-intro{
+  width:min(1000px,100%)!important;
+  max-width:1000px!important;
+  padding:clamp(48px,7vw,82px) 0 clamp(38px,5vw,56px)!important;
+  margin-inline:auto!important;
+  text-align:center!important;
+}
 .home-page #site-title,
 .home-page .home-intro h1#site-title{
-  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
-  width:100%!important;max-width:100%!important;margin:0 auto 38px!important;padding:0!important;
-  color:#E63F25!important;font-family:"Ballet",cursive!important;font-size:clamp(360px,42vw,720px)!important;
-  font-weight:400!important;line-height:.62!important;letter-spacing:-.025em!important;text-align:center!important;
-  white-space:normal!important;overflow:visible!important;border:0!important;box-shadow:none!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0 auto 20px!important;
+  padding:0!important;
+  color:#E63F25!important;
+  font-family:"Ballet",cursive!important;
+  font-size:clamp(310px,39vw,590px)!important;
+  font-weight:400!important;
+  line-height:.61!important;
+  letter-spacing:-.025em!important;
+  text-align:center!important;
+  white-space:normal!important;
+  overflow:visible!important;
+  border:0!important;
+  box-shadow:none!important;
 }
 .home-page #site-title .hero-word{
-  display:block!important;width:max-content!important;max-width:100%!important;
-  font-family:"Ballet",cursive!important;font-size:1em!important;font-weight:400!important;
-  line-height:inherit!important;white-space:nowrap!important;color:#E63F25!important;
+  display:block!important;
+  width:max-content!important;
+  max-width:none!important;
+  font-family:"Ballet",cursive!important;
+  font-size:1em!important;
+  font-weight:400!important;
+  line-height:inherit!important;
+  white-space:nowrap!important;
+  color:#E63F25!important;
+  transform:scaleX(.82)!important;
+  transform-origin:center!important;
+}
+.home-page .home-subtitle{
+  margin:0 0 12px!important;
+  color:#858D70!important;
+  font-size:clamp(16px,1.8vw,19px)!important;
+  line-height:1.85!important;
+  letter-spacing:.045em!important;
+  font-weight:500!important;
+}
+.home-page .home-about{
+  max-width:680px!important;
+  margin:0 auto!important;
+  padding:0!important;
+  border:0!important;
+  text-align:center!important;
+}
+.home-page .home-about p{
+  margin:0!important;
+  color:#625B53!important;
+  font-size:clamp(14px,1.45vw,16px)!important;
+  line-height:2!important;
+  letter-spacing:.02em!important;
 }
 @media(min-width:761px) and (max-width:1100px){
-  .home-page #site-title,.home-page .home-intro h1#site-title{font-size:clamp(270px,44vw,520px)!important;line-height:.65!important}
+  .home-page #site-title,.home-page .home-intro h1#site-title{
+    font-size:clamp(270px,43vw,480px)!important;
+    line-height:.64!important;
+  }
 }
 @media(max-width:760px){
-  .home-page #site-title,.home-page .home-intro h1#site-title{font-size:clamp(185px,55vw,280px)!important;line-height:.68!important;letter-spacing:-.035em!important;margin-bottom:32px!important}
+  .home-page .home-intro{
+    width:100%!important;
+    padding:42px 12px 38px!important;
+  }
+  .home-page #site-title,.home-page .home-intro h1#site-title{
+    font-size:clamp(190px,53vw,270px)!important;
+    line-height:.66!important;
+    margin-bottom:18px!important;
+    letter-spacing:-.035em!important;
+  }
+  .home-page #site-title .hero-word{transform:scaleX(.78)!important}
+  .home-page .home-subtitle{font-size:16px!important;line-height:1.8!important;margin-bottom:9px!important}
+  .home-page .home-about{max-width:520px!important;padding:0 8px!important}
+  .home-page .home-about p{font-size:14px!important;line-height:1.9!important}
 }
 @media(max-width:390px){
-  .home-page #site-title,.home-page .home-intro h1#site-title{font-size:clamp(170px,52vw,235px)!important;line-height:.7!important}
+  .home-page .home-intro{padding-top:34px!important;padding-bottom:32px!important}
+  .home-page #site-title,.home-page .home-intro h1#site-title{
+    font-size:clamp(170px,51vw,215px)!important;
+    line-height:.68!important;
+  }
 }
