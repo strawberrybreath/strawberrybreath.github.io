@@ -1,4 +1,4 @@
-/* Homepage masthead: the Great Vibes wordmark is the dominant visual element. */
+/* Homepage masthead: oversized Great Vibes wordmark, scaled to dominate each viewport. */
 .home-page #site-title{
   display:flex!important;
   flex-direction:column!important;
@@ -7,45 +7,47 @@
   gap:0!important;
   width:100%!important;
   max-width:100%!important;
-  margin:0 auto 30px!important;
+  margin:0 auto 34px!important;
   padding:0!important;
   color:#E63F25!important;
   font-family:"Great Vibes",cursive!important;
-  font-size:clamp(220px,34vw,560px)!important;
+  font-size:clamp(300px,35vw,600px)!important;
   font-weight:400!important;
-  line-height:.7!important;
-  letter-spacing:-.035em!important;
+  line-height:.68!important;
+  letter-spacing:-.04em!important;
   text-align:center!important;
   white-space:normal!important;
   overflow:visible!important;
-  -webkit-text-stroke:.4px currentColor!important;
-  text-shadow:0 0 .6px currentColor!important;
+  -webkit-text-stroke:.45px currentColor!important;
+  text-shadow:0 0 .7px currentColor!important;
 }
 .home-page #site-title .hero-word{
   display:block!important;
   white-space:nowrap!important;
   color:#E63F25!important;
   font-family:"Great Vibes",cursive!important;
+  font-size:1em!important;
+  line-height:inherit!important;
 }
 @media(min-width:761px) and (max-width:1100px){
   .home-page #site-title{
-    font-size:clamp(190px,38vw,430px)!important;
-    line-height:.73!important;
-    margin-bottom:26px!important;
+    font-size:clamp(220px,40vw,460px)!important;
+    line-height:.7!important;
+    margin-bottom:30px!important;
   }
 }
 @media(max-width:760px){
   .home-page #site-title{
-    font-size:clamp(170px,43vw,300px)!important;
-    line-height:.76!important;
-    letter-spacing:-.04em!important;
-    margin-bottom:24px!important;
+    font-size:clamp(150px,46vw,240px)!important;
+    line-height:.74!important;
+    letter-spacing:-.045em!important;
+    margin-bottom:28px!important;
   }
 }
 @media(max-width:390px){
   .home-page #site-title{
-    font-size:clamp(150px,42vw,220px)!important;
-    line-height:.78!important;
-    letter-spacing:-.045em!important;
+    font-size:clamp(145px,44vw,210px)!important;
+    line-height:.76!important;
+    letter-spacing:-.05em!important;
   }
 }
