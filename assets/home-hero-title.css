@@ -79,7 +79,7 @@
     padding:36px 18px 38px!important;
   }
   .home-page #site-title,.home-page .home-intro h1#site-title{
-    font-size:clamp(150px,43vw,205px)!important;
+    font-size:clamp(190px,54vw,240px)!important;
     line-height:.72!important;
     margin-bottom:12px!important;
     letter-spacing:-.035em!important;
@@ -98,7 +98,7 @@
 @media(max-width:390px){
   .home-page .home-intro{padding:30px 14px 32px!important}
   .home-page #site-title,.home-page .home-intro h1#site-title{
-    font-size:clamp(138px,42vw,166px)!important;
+    font-size:clamp(185px,52vw,215px)!important;
     line-height:.74!important;
   }
   .home-page .home-subtitle{font-size:14px!important}
