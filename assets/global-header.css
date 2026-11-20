@@ -347,3 +347,8 @@
     min-width:0!important;
   }
 }
+
+
+/* Navigation labels are Chinese-only; remove duplicated English captions site-wide. */
+.site-header .site-nav .nav-en{display:none!important}
+.site-header .site-nav .nav-zh{display:inline!important}
