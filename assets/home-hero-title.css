@@ -1,47 +1,49 @@
-/* Homepage masthead: a generous but restrained title, with clear Chinese copy hierarchy. */
+/* Rebuilt homepage wordmark — Playfair Display, a clear editorial serif. */
 .home-page .home-intro{
   width:100%!important;
   max-width:none!important;
   margin:0!important;
-  padding:clamp(46px,5.5vw,72px) 24px clamp(48px,5.2vw,68px)!important;
+  padding:clamp(52px,6vw,76px) 20px clamp(44px,5vw,62px)!important;
   text-align:center!important;
   box-sizing:border-box!important;
 }
-.home-page #site-title,
-.home-page .home-intro h1#site-title{
+html body.home-page main .home-intro h1#site-title.home-wordmark{
   display:flex!important;
   flex-direction:column!important;
   align-items:center!important;
   justify-content:center!important;
   gap:0!important;
   width:100%!important;
-  max-width:100%!important;
-  margin:0 auto 12px!important;
+  max-width:none!important;
+  margin:0 auto 22px!important;
   padding:0!important;
   color:#E63F25!important;
-  font-family:"Ballet",cursive!important;
-  font-size:clamp(230px,29vw,410px)!important;
-  font-weight:400!important;
-  line-height:.68!important;
-  letter-spacing:-.025em!important;
+  font-family:"Playfair Display",Georgia,serif!important;
+  font-size:clamp(112px,13.2vw,184px)!important;
+  font-weight:600!important;
+  line-height:.91!important;
+  letter-spacing:-.065em!important;
   text-align:center!important;
   white-space:normal!important;
   overflow:visible!important;
   border:0!important;
   box-shadow:none!important;
 }
-.home-page #site-title .hero-word{
+html body.home-page main .home-intro h1#site-title.home-wordmark .home-wordmark-line{
   display:block!important;
-  width:max-content!important;
-  max-width:none!important;
-  font-family:"Ballet",cursive!important;
-  font-size:1em!important;
-  font-weight:400!important;
-  line-height:inherit!important;
-  white-space:nowrap!important;
+  width:auto!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:0!important;
   color:#E63F25!important;
-  transform:scaleX(.82)!important;
-  transform-origin:center!important;
+  font-family:"Playfair Display",Georgia,serif!important;
+  font-size:1em!important;
+  font-style:normal!important;
+  font-weight:600!important;
+  line-height:inherit!important;
+  letter-spacing:inherit!important;
+  white-space:nowrap!important;
+  transform:none!important;
 }
 .home-page .home-subtitle{
   max-width:760px!important;
@@ -67,24 +69,23 @@
   letter-spacing:.02em!important;
 }
 @media(min-width:761px) and (max-width:1100px){
-  .home-page .home-intro{padding-top:48px!important;padding-bottom:50px!important}
-  .home-page #site-title,.home-page .home-intro h1#site-title{
-    font-size:clamp(215px,32vw,330px)!important;
-    line-height:.7!important;
+  .home-page .home-intro{padding-top:48px!important;padding-bottom:48px!important}
+  html body.home-page main .home-intro h1#site-title.home-wordmark{
+    font-size:clamp(100px,13vw,142px)!important;
+    line-height:.94!important;
   }
 }
 @media(max-width:760px){
-  .home-page .home-intro{
-    width:100%!important;
-    padding:36px 18px 38px!important;
+  .home-page .home-intro{padding:38px 12px 38px!important}
+  html body.home-page main .home-intro h1#site-title.home-wordmark{
+    font-size:clamp(66px,19vw,82px)!important;
+    line-height:.96!important;
+    margin-bottom:18px!important;
+    letter-spacing:-.07em!important;
   }
-  .home-page #site-title,.home-page .home-intro h1#site-title{
-    font-size:clamp(190px,54vw,240px)!important;
-    line-height:.72!important;
-    margin-bottom:12px!important;
-    letter-spacing:-.035em!important;
+  html body.home-page main .home-intro h1#site-title.home-wordmark .home-wordmark-line{
+    font-size:1em!important;
   }
-  .home-page #site-title .hero-word{transform:scaleX(.78)!important}
   .home-page .home-subtitle{
     max-width:520px!important;
     font-size:15px!important;
@@ -96,10 +97,9 @@
   .home-page .home-about p{font-size:14px!important;line-height:1.9!important}
 }
 @media(max-width:390px){
-  .home-page .home-intro{padding:30px 14px 32px!important}
-  .home-page #site-title,.home-page .home-intro h1#site-title{
-    font-size:clamp(185px,52vw,215px)!important;
-    line-height:.74!important;
+  .home-page .home-intro{padding:32px 10px 34px!important}
+  html body.home-page main .home-intro h1#site-title.home-wordmark{
+    font-size:clamp(62px,18.5vw,72px)!important;
+    line-height:.98!important;
   }
-  .home-page .home-subtitle{font-size:14px!important}
 }
