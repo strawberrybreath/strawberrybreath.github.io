@@ -1,6 +1,19 @@
 /* Article catalogue: one source of truth for home cards, archive filters and search. */
 const articles = [
   {
+    "title": "你以为的价值，可能只是别人设下的标准",
+    "href": "article-14.html",
+    "date": "2026-11-22",
+    "dateLabel": "2026年11月22日",
+    "description": "从原生家庭的评价、亲密关系中的自我证明，到实用价值与存在性价值，重新思考女性如何走出他人设定的价值标准。",
+    "image": "https://images.unsplash.com/photo-1671229389033-8d301b1906c8?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8&ixlib=rb-4.1.0&q=60&w=3000",
+    "imageAlt": "一位女性坐在窗边，望向窗外，摄影：Mathilde Langevin / Unsplash",
+    "theme": "issue14",
+    "tags": ["女性主义","亲密关系","自我成长"],
+    "related": ["article-13.html", "article-09.html", "article-07.html"]
+  },
+
+  {
     "title": "重新定义亲密关系：友情也可以是人生的答案",
     "href": "article-13.html",
     "date": "2026-11-18",
