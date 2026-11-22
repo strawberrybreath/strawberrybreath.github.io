@@ -6,8 +6,8 @@ const articles = [
     "date": "2026-11-22",
     "dateLabel": "2026年11月22日",
     "description": "从原生家庭的评价、亲密关系中的自我证明，到实用价值与存在性价值，重新思考女性如何走出他人设定的价值标准。",
-    "image": "https://images.unsplash.com/photo-1780540771752-b4435e425e53?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
-    "imageAlt": "一位女性独自走在阳光穿过树荫的森林小径上，摄影：eldhose kuriyan / Unsplash",
+    "image": "https://images.pexels.com/photos/31095888/pexels-photo-31095888.jpeg?cs=srgb&dl=pexels-beccacorreiaph-31095888.jpg&fm=jpg",
+    "imageAlt": "一位女性在暖色光线中凝视镜中的自己，摄影：Becca Correia / Pexels",
     "theme": "issue14",
     "tags": ["女性主义","亲密关系","自我成长"],
     "related": ["article-13.html", "article-09.html", "article-07.html"]
