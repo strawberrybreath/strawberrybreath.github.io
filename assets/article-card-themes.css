@@ -46,3 +46,10 @@ body.archive-page .article-list-item[data-article-theme="issue13"]{
   --card-theme-bg:#F0E5E7;
   --card-theme-border:rgba(104,67,76,.28);
 }
+
+/* Issue 14: quiet olive, shared by the article page, homepage and archive. */
+body.home-page .article-list-item[data-article-theme="issue14"],
+body.archive-page .article-list-item[data-article-theme="issue14"]{
+  --card-theme-bg:#EDF0E7;
+  --card-theme-border:rgba(120,131,109,.28);
+}
