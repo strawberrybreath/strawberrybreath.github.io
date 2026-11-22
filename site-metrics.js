@@ -1,55 +1,48 @@
-/* Strawberry Breath footer metrics — GoatCounter visitor total */
+/* Strawberry Breath footer metrics + GoatCounter integration */
 (() => {
   const START_DATE = new Date("2026-08-18T00:00:00+08:00");
-  const GOATCOUNTER_BASE = "https://strawberrybreath.goatcounter.com";
-  const GOATCOUNTER_COUNT_URL = GOATCOUNTER_BASE + "/count";
-  const GOATCOUNTER_TOTAL_URL = GOATCOUNTER_BASE + "/counter/TOTAL.json";
+  const GOATCOUNTER_URL = "https://strawberrybreath.goatcounter.com";
+  const GOATCOUNTER_COUNT_URL = GOATCOUNTER_URL + "/counter/TOTAL.json";
 
-  const loadGoatCounter = () => {
-    if (document.querySelector("script[data-goatcounter]")) return;
+  // Load GoatCounter once on every page that includes this shared file.
+  if (!document.querySelector('script[data-goatcounter="https://strawberrybreath.goatcounter.com/count"]')) {
     const tracker = document.createElement("script");
-    tracker.dataset.goatcounter = GOATCOUNTER_COUNT_URL;
     tracker.async = true;
     tracker.src = "https://gc.zgo.at/count.js";
+    tracker.dataset.goatcounter = GOATCOUNTER_URL + "/count";
     document.head.appendChild(tracker);
-  };
+  }
 
   const render = () => {
-    const footerCard = document.querySelector(".site-footer .footer-glass-card");
-    if (!footerCard) return;
+    const footer = document.querySelector(".site-footer .footer-glass-card");
+    if (!footer || footer.querySelector(".site-metrics")) return;
 
-    loadGoatCounter();
+    const elapsed = Math.max(0, Math.floor((Date.now() - START_DATE.getTime()) / 86400000));
+    const metrics = document.createElement("div");
+    metrics.className = "site-metrics";
+    metrics.setAttribute("aria-label", "网站运行信息");
+    metrics.innerHTML =
+      '<span class="site-metric"><span class="site-metric-label">始于</span><strong class="site-metric-value">2026.08.18</strong></span>' +
+      '<span class="site-metric"><span class="site-metric-label">已运行</span><strong class="site-metric-value" data-site-runtime>' + elapsed.toLocaleString("zh-CN") + '</strong><span class="site-metric-unit">天</span></span>' +
+      '<span class="site-metric site-metric-counter"><span class="site-metric-label">累计访问量</span><strong class="site-metric-value site-metric-count" data-site-count aria-live="polite">统计中…</strong><span class="site-metric-unit">次</span></span>';
 
-    let metrics = footerCard.querySelector(".site-metrics");
-    if (!metrics) {
-      const elapsed = Math.max(0, Math.floor((Date.now() - START_DATE.getTime()) / 86400000));
-      metrics = document.createElement("div");
-      metrics.className = "site-metrics";
-      metrics.setAttribute("aria-label", "网站运行信息");
-      metrics.innerHTML =
-        '<span class="site-metric"><span class="site-metric-label">始于</span><strong class="site-metric-value">2026.08.18</strong></span>' +
-        '<span class="site-metric"><span class="site-metric-label">已运行</span><strong class="site-metric-value" data-site-runtime>' + elapsed.toLocaleString("zh-CN") + '</strong><span class="site-metric-unit">天</span></span>' +
-        '<span class="site-metric site-metric-counter"><span class="site-metric-label">累计访问量</span><strong class="site-metric-value site-metric-count" data-site-count aria-live="polite">统计中…</strong><span class="site-metric-unit">次</span></span>';
-      footerCard.appendChild(metrics);
-    }
+    // Keep the existing brand and copyright block; metrics are inserted before it.
+    footer.insertBefore(metrics, footer.firstChild);
 
     const count = metrics.querySelector("[data-site-count]");
-    if (!count || count.dataset.loaded === "true") return;
-
-    fetch(GOATCOUNTER_TOTAL_URL, {
+    fetch(GOATCOUNTER_COUNT_URL, {
       method: "GET",
       mode: "cors",
       cache: "no-store",
       credentials: "omit"
     })
       .then(response => {
-        if (!response.ok) throw new Error("GoatCounter request failed: " + response.status);
+        if (!response.ok) throw new Error("GoatCounter counter request failed: " + response.status);
         return response.json();
       })
       .then(data => {
-        if (data && data.count !== undefined) {
+        if (data && data.count !== undefined && data.count !== null) {
           count.textContent = String(data.count);
-          count.dataset.loaded = "true";
         } else {
           throw new Error("GoatCounter response has no count");
         }
